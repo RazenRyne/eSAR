@@ -66,6 +66,16 @@
     <Compile Include="TraitLogic.cs" />
     <Compile Include="UserLogic.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DCFIv5.6\eSAR\eSARDAL\eSARDAL.csproj">
+      <Project>{4947e5c5-e21e-4aeb-8f33-38eb18a38884}</Project>
+      <Name>eSARDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSARBDO\eSARBDO.csproj">
+      <Project>{dff644e0-6114-42d0-b1e4-dfc3c803fe07}</Project>
+      <Name>eSARBDO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

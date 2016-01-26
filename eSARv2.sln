@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSARBDO", "eSARBDO\eSARBDO.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSARLogic", "eSARLogic\eSARLogic.csproj", "{976A5FC8-D8C5-4A70-8B8E-42B5D3FA7EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSARDAL", "..\DCFIv5.6\eSAR\eSARDAL\eSARDAL.csproj", "{4947E5C5-E21E-4AEB-8F33-38EB18A38884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSARService", "..\DCFIv5.6\eSAR\eSARService\eSARService.csproj", "{2D979293-5398-4C01-9B22-1A7B1185FA9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,22 @@ Global
 		{976A5FC8-D8C5-4A70-8B8E-42B5D3FA7EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{976A5FC8-D8C5-4A70-8B8E-42B5D3FA7EB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{976A5FC8-D8C5-4A70-8B8E-42B5D3FA7EB7}.Release|x86.Build.0 = Release|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Debug|x86.Build.0 = Debug|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Release|x86.ActiveCfg = Release|Any CPU
+		{4947E5C5-E21E-4AEB-8F33-38EB18A38884}.Release|x86.Build.0 = Release|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Debug|x86.Build.0 = Debug|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D979293-5398-4C01-9B22-1A7B1185FA9D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

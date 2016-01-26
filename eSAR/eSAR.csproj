@@ -750,6 +750,18 @@
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
+    <ProjectReference Include="..\..\DCFIv5.6\eSAR\eSARDAL\eSARDAL.csproj">
+      <Project>{4947e5c5-e21e-4aeb-8f33-38eb18a38884}</Project>
+      <Name>eSARDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DCFIv5.6\eSAR\eSARService\eSARService.csproj">
+      <Project>{2d979293-5398-4c01-9b22-1a7b1185fa9d}</Project>
+      <Name>eSARService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSARBDO\eSARBDO.csproj">
+      <Project>{dff644e0-6114-42d0-b1e4-dfc3c803fe07}</Project>
+      <Name>eSARBDO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\decrypt.ico" />
