@@ -788,6 +788,8 @@
     <Content Include="Resources\Images\File.ico" />
     <Content Include="Resources\Images\Graph.ico" />
     <Content Include="Resources\Images\Learning.ico" />
+    <None Include="Resources\Images\manageUsers.png" />
+    <None Include="Resources\Images\lock.png" />
     <Content Include="Resources\Images\order-history.png" />
     <Content Include="Resources\Images\people.png" />
     <Content Include="Resources\Images\Peso Logo.png" />
@@ -815,6 +817,10 @@
     <Content Include="Resources\Images\Traits Grading.png" />
     <Content Include="Resources\Images\Upline.png" />
     <Content Include="Resources\Images\users.png" />
+    <None Include="Resources\sched.png" />
+    <None Include="Resources\school.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\profile.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
