@@ -1,6 +1,5 @@
-﻿using eSAR.LogServiceRef;
-using eSAR.TeacherServiceRef;
-using eSAR.Utility_Classes;
+﻿using eSAR.Utility_Classes;
+using eSARService;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -109,7 +108,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
             byte[] bImage = null;
             if (pbImage.BackgroundImage != null) bImage = imageToByteArray(pbImage.BackgroundImage, ImageFormat.Png);
 
-            TeacherServiceClient teacherService = new TeacherServiceClient();
+            TeacherService teacherService = new TeacherService();
 
             String fName = txtFirstName.Text;
             String mName = txtMiddleName.Text;
