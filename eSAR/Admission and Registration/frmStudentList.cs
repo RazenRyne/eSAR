@@ -6,20 +6,20 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.StudentServiceRef;
-using eSAR.RegistrationServiceRef;
-using eSAR.Utility_Classes;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Reports.GenerateStudentPermanentRecord;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
+using eSAR.Utility_Classes;
 
 namespace eSAR.Admission_and_Registration
 {
     public partial class frmStudentList : Telerik.WinControls.UI.RadForm
     {
         private List<string> RegisteredStudents;
-        private StudentServiceRef.Student studentSelected;
-        private List<StudentServiceRef.Student> studentList;
+        private Student studentSelected;
+        private List<Student> studentList;
         public frmStudentList()
         {
             InitializeComponent();
@@ -61,14 +61,14 @@ namespace eSAR.Admission_and_Registration
 
         public void LoadStudents()
         {
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
             RegisteredStudents= new List<string>(registrationService.GetEnrolledStudents(GlobalClass.currentsy));
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             string message = String.Empty;
             try
             {
                 var students = studentService.GetAllStudents();
-                studentList = new List<StudentServiceRef.Student>(students);
+                studentList = new List<Student>(students);
                 gvStudent.DataSource = students;
                 gvStudent.Refresh();
 
@@ -95,11 +95,11 @@ namespace eSAR.Admission_and_Registration
             if (selectedIndex >= 0)
             {
                 string sID = gvStudent.Rows[selectedIndex].Cells["StudentId"].Value.ToString();
-                List<StudentServiceRef.Student> item = new List<StudentServiceRef.Student>();
+                List<Student> item = new List<Student>();
                 item = studentList.FindAll(x => x.StudentId.ToString() == sID);
 
-                studentSelected = new StudentServiceRef.Student();
-                studentSelected = (StudentServiceRef.Student)item[0];
+                studentSelected = new Student();
+                studentSelected = (Student)item[0];
 
             }
         }
@@ -148,9 +148,9 @@ namespace eSAR.Admission_and_Registration
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             string message = String.Empty;
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             if (studentService.DismissStudent(studentSelected.StudentId, ref message)) {
-                LogServiceClient logService = new LogServiceClient();
+                ILogService logService = new LogService();
                 studentSelected.Dismissed = true;
                 string json = JsonConvert.SerializeObject(studentSelected);
                 Log log = new Log

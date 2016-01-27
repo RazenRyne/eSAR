@@ -7,10 +7,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradingServiceRef;
 using Telerik.WinControls.UI;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Quarterly_Grading.Grading
 {
@@ -70,8 +71,8 @@ namespace eSAR.Quarterly_Grading.Grading
                 }
             }
 
-            GradingServiceClient gradingService = new GradingServiceClient();
-            if (gradingService.SaveClassGrades(classList.ToArray()))
+            IGradingService gradingService = new GradingService();
+            if (gradingService.SaveClassGrades(classList))
             {
                 foreach (StudentSubject ss in classList)
                    Log("U", "StudentSubjects", ss);
@@ -104,7 +105,7 @@ namespace eSAR.Quarterly_Grading.Grading
             txtDescription.Text = selectedSubject.SubjectDescription;
             txtTimeslotInfo.Text = selectedSubject.TimeslotInfo;
 
-            GradingServiceClient gradingService = new GradingServiceClient();
+            IGradingService gradingService = new GradingService();
 
             classList = new List<StudentSubject>(gradingService.GetClassList(SubjectAssignments));
             gvGrades.DataSource = classList;
@@ -298,8 +299,8 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            GradingServiceClient gradingService = new GradingServiceClient();
-            if (gradingService.SaveClassGrades(classList.ToArray())) {
+            IGradingService gradingService = new GradingService();
+            if (gradingService.SaveClassGrades(classList)) {
                 foreach (StudentSubject ss in classList)
                     Log("U", "StudentSubjects", ss);
                  
@@ -316,7 +317,7 @@ namespace eSAR.Quarterly_Grading.Grading
         }
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

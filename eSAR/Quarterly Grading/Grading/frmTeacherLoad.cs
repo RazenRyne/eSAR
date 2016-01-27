@@ -6,11 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradingServiceRef;
 using eSAR.Utility_Classes;
 using Telerik.WinControls.Data;
-using System.Web.UI.WebControls;
 using Telerik.WinControls.UI;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Quarterly_Grading.Grading
 {
@@ -45,7 +46,7 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void frmTeacherLoad_Load(object sender, EventArgs e)
         {
-            GradingServiceClient gradingService = new GradingServiceClient();
+            IGradingService gradingService = new GradingService();
             sy = GlobalClass.currentsy;
 
             string fname = GlobalClass.user.FirstName;
@@ -63,7 +64,7 @@ namespace eSAR.Quarterly_Grading.Grading
 
         public void LoadTeacherSubjects()
         {
-            GradingServiceClient gradingService = new GradingServiceClient();
+            IGradingService gradingService = new GradingService();
             String message = String.Empty;
 
             try

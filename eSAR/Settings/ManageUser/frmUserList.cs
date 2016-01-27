@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.UserServiceRef;
-using System.ServiceModel;
-using eSAR.LogServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Utility_Classes;
 using Newtonsoft.Json;
 
@@ -54,7 +54,7 @@ namespace eSAR.Settings.ManageUser
         }
 
         public void LoadUsers() {
-            UserServiceClient userService = new UserServiceClient();
+            IUserService userService = new UserService();
             string message = String.Empty;
             try
             {
@@ -83,7 +83,7 @@ namespace eSAR.Settings.ManageUser
         {
             if (userSelected != null)
             {
-                UserServiceClient userService = new UserServiceClient();
+                IUserService userService = new UserService();
                 string message = String.Empty;
 
                 if (!userService.DeleteUser(userSelected.UserId, ref message))
@@ -119,7 +119,7 @@ namespace eSAR.Settings.ManageUser
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

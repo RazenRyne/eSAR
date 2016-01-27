@@ -6,33 +6,33 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.Utility_Classes;
-using eSAR.RegistrationServiceRef;
-using eSAR.PaymentServiceRef;
-using eSAR.App;
 using Telerik.WinControls.UI;
-using eSAR.StudentServiceRef;
+using eSAR.Utility_Classes;
+using eSAR.App;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Billing_and_Payment.StudentPayment
 {
     public partial class frmPaymentDetails : Telerik.WinControls.UI.RadForm
     {
-        RegistrationServiceClient registrationService = new RegistrationServiceClient();
-        PaymentServiceClient paymentService = new PaymentServiceClient();
-        StudentServiceClient studentServiceClient = new StudentServiceClient();
+        IRegistrationService registrationService = new RegistrationService();
+        IPaymentService paymentService = new PaymentService();
+        IStudentService studentService = new StudentService();
 
-        eSAR.RegistrationServiceRef.Student Student = new eSAR.RegistrationServiceRef.Student();
-        eSAR.StudentServiceRef.Student Studentv2 = new eSAR.StudentServiceRef.Student();
+        Student Student = new Student();
+       Student Studentv2 = new Student();
 
         Payment Payment = new Payment();
         PaymentDetail paymentDetails = new PaymentDetail();
         List<PaymentDetail> paymentDetailsList = new List<PaymentDetail>(new PaymentDetail[1]);
 
-        List<eSAR.StudentServiceRef.Student> studentsv2 = new List<eSAR.StudentServiceRef.Student>();
+        List<Student> studentsv2 = new List<Student>();
 
-        List<eSAR.RegistrationServiceRef.Student> students = new List<eSAR.RegistrationServiceRef.Student>();
-        List<eSAR.RegistrationServiceRef.Student> tempStudents;
-        List<eSAR.RegistrationServiceRef.Student> studentResult = new List<eSAR.RegistrationServiceRef.Student>();
+        List<Student> students = new List<Student>();
+        List<Student> tempStudents;
+        List<Student> studentResult = new List<Student>();
 
         
 
@@ -58,7 +58,7 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
             //Student = registrationService.GetStudent(txtStudentID.Text, ref message);
 
-            Studentv2 = studentServiceClient.GetStudent(txtStudentID.Text, ref message);
+            Studentv2 = studentService.GetStudent(txtStudentID.Text, ref message);
 
             if (StudentID == "")
             {

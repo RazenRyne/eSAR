@@ -616,6 +616,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Quarterly Grading\Grading\frmAdvisersLoad.resx">
       <DependentUpon>frmAdvisersLoad.cs</DependentUpon>
@@ -753,6 +754,18 @@
     <ProjectReference Include="..\eSARBDO\eSARBDO.csproj">
       <Project>{dff644e0-6114-42d0-b1e4-dfc3c803fe07}</Project>
       <Name>eSARBDO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSARServiceInterface\eSARServiceInterface.csproj">
+      <Project>{a8b8e24f-0bfd-4431-9f15-1d7d4ed01402}</Project>
+      <Name>eSARServiceInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSARServiceModels\eSARServiceModels.csproj">
+      <Project>{2680ba9d-449e-46cb-9364-2ff27c1a55f1}</Project>
+      <Name>eSARServiceModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSARServices\eSARServices.csproj">
+      <Project>{d4cd4728-2eae-473c-856f-f6048f96f2d3}</Project>
+      <Name>eSARServices</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

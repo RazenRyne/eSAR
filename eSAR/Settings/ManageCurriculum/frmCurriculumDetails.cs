@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.CurriculumServiceRef;
-using eSAR.GradeLevelServiceRef;
 using Telerik.WinControls.UI;
 using System.Linq;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageCurriculum
 {
@@ -21,14 +21,14 @@ namespace eSAR.Settings.ManageCurriculum
         public Boolean ret;
         public string Op { get; set; }
         public Curriculum SelectedCurriculum { get; set; }
-        public List<eSAR.GradeLevelServiceRef.GradeLevel> gradeLevels;
+        public List<GradeLevel> gradeLevels;
 
         public List<CurriculumSubject> currSub = new List<CurriculumSubject>();
         public List<CurriculumSubject> currSub1 = new List<CurriculumSubject>();
         public List<CurriculumSubject> currSub2 = new List<CurriculumSubject>();
 
-        GradeLevelServiceClient gs = new GradeLevelServiceClient();
-        CurriculumServiceClient cs = new CurriculumServiceClient();
+        IGradeLevelService gs = new GradeLevelService();
+        ICurriculumService cs = new CurriculumService();
         CurriculumSubject addedCurrSub;
 
         List<SubjectsDetails> subDetails;
@@ -51,7 +51,7 @@ namespace eSAR.Settings.ManageCurriculum
             string message = String.Empty;
             Curriculum c = new Curriculum();
 
-            CurriculumServiceClient curriculumService = new CurriculumServiceClient();
+            ICurriculumService curriculumService = new CurriculumService();
 
             var curri = curriculumService.GetAllCurriculums();
 
@@ -63,7 +63,7 @@ namespace eSAR.Settings.ManageCurriculum
             }
 
             c.CurriculumCode = txtCurrCode.Text;
-            c.CurriculumSubjects = currSub1.ToArray();
+            c.CurriculumSubjects = currSub1;
             c.Description = txtDescription.Text;
 
             String cCode = txtCurrCode.Text.Trim();
@@ -196,7 +196,7 @@ namespace eSAR.Settings.ManageCurriculum
         {
             subDetails = new List<SubjectsDetails>();
            
-            CurriculumServiceClient ss = new CurriculumServiceClient();
+            ICurriculumService ss = new CurriculumService();
            
         }
 
@@ -271,7 +271,7 @@ namespace eSAR.Settings.ManageCurriculum
         }
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

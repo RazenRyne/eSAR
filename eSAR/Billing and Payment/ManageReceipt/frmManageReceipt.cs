@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI;
 using eSAR.Utility_Classes;
 using eSAR.App;
-using Telerik.WinControls.UI;
 
 namespace eSAR.Billing_and_Payment.ManageReceipt
 {
@@ -22,10 +22,6 @@ namespace eSAR.Billing_and_Payment.ManageReceipt
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        //private void txtUnits_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (txtReceiptFrom.Text.Equals(String.Empty)) txtReceiptFrom.Text = "0";
-        //}
 
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {

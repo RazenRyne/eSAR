@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.CurriculumServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageCurriculum
 {
@@ -22,7 +24,7 @@ namespace eSAR.Settings.ManageCurriculum
 
         public void LoadCurriculums()
         {
-            CurriculumServiceClient currService = new CurriculumServiceClient();
+            ICurriculumService currService = new CurriculumService();
             string message = String.Empty;
             try
             {

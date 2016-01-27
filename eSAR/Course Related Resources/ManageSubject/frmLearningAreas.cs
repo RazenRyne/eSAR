@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.LearningAreaServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageSubject
 {
@@ -21,7 +23,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
         }
 
         public void LoadLearningAreas() {
-            LearningAreaServiceClient laService = new LearningAreaServiceClient();
+            ILearningAreaService laService = new LearningAreaService();
             string message = String.Empty;
             try
             {

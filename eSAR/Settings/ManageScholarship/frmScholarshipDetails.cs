@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.ScholarshipServiceRef;
 using Telerik.WinControls.UI;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 
 namespace eSAR.Settings.ManageScholarship
@@ -81,17 +83,10 @@ namespace eSAR.Settings.ManageScholarship
 
         private void Save()
         {
-            ScholarshipServiceClient sService = new ScholarshipServiceClient();
+            IScholarshipService sService = new ScholarshipService();
             Boolean ret = false;
             string message = String.Empty;
             ScholarshipDiscount scholarship = new ScholarshipDiscount();
-        //    {
-        //        ScholarshipCode = txtScholarshipCode.Text.ToString(),
-        //        Privilege = txtPrivilege.Text.ToString(),
-        //        Condition = txtCondition.Text.ToString(),
-        //        Description = txtDescription.Text.ToString(),
-        //        scholarshipDiscounts = scholarshipDiscountList.ToArray(),
-        //    };
             if (Op.Equals("edit"))
                 ret = sService.UpdateScholarship(ref scholarship, ref message);
             else
@@ -115,8 +110,7 @@ namespace eSAR.Settings.ManageScholarship
 
         private void fmScholarship_Load(object sender, EventArgs e)
         {
-            ScholarshipServiceClient sService = new ScholarshipServiceClient();
-        //    fee = new List<Fee>(sService.GetAllFees());
+            IScholarshipService sService = new ScholarshipService();
 
             colFee = new GridViewComboBoxColumn("Fee");
             colFee.HeaderText = "Fee";
@@ -125,7 +119,6 @@ namespace eSAR.Settings.ManageScholarship
             colFee.DisplayMember = "FeeDescription";
             colFee.Width = 180;
 
-          //  colFee.DataSource = fee;
 
             gvScholarshipDetails.Columns.Add(colFee);
 
@@ -145,11 +138,7 @@ namespace eSAR.Settings.ManageScholarship
 
         private void SetField()
         {
-            //txtScholarshipCode.Text = SelectedScholarship.ScholarshipCode;
             txtScholarshipCode.Enabled = false;
-            //txtPrivilege.Text = SelectedScholarship.Privilege;
-            //txtCondition.Text = SelectedScholarship.Condition;
-            //txtDescription.Text = SelectedScholarship.Description;
             gvScholarshipDetails.Enabled = true;
         }
 
@@ -161,7 +150,7 @@ namespace eSAR.Settings.ManageScholarship
 
         private void SetScholarshipDiscountGrid()
         {
-            scholarshipDiscountList = new List<ScholarshipDiscount>();//SelectedScholarship.scholarshipDiscounts);
+            scholarshipDiscountList = new List<ScholarshipDiscount>();
             this.gvScholarshipDetails.DataSource = scholarshipDiscountList;
         }
 
@@ -169,26 +158,7 @@ namespace eSAR.Settings.ManageScholarship
         {
             int index = this.gvScholarshipDetails.RowCount - 1;
 
-            //if (oldScholarshipDiscountList.Exists(x => x.FeeName == feeSelected.FeeDescription) == true)
-            //{
-            //    ScholarshipDiscount returnedSub = new ScholarshipDiscount();
-            //    returnedSub = oldScholarshipDiscountList.Find(x => x.FeeName == feeSelected.FeeDescription);
-            //    scholarshipDiscountList[index].ScholarshipDiscountId = returnedSub.ScholarshipDiscountId;
-            //    scholarshipDiscountList[index].ScholarshipCode = returnedSub.ScholarshipCode;
-            //    oldScholarshipDiscountList.RemoveAll(x => x.ScholarshipDiscountId == returnedSub.ScholarshipDiscountId);
-            //}
-
-            //else
-            //{
-            //    scholarshipDiscountList[index].ScholarshipDiscountId = 0;
-            //}
-
-            //scholarshipDiscountList[index].ScholarshipCode = this.txtScholarshipCode.Text;
-            //scholarshipDiscountList[index].FeeID = feeSelected.FeeID;
-            //scholarshipDiscountList[index].FeeName = feeSelected.FeeDescription;
-            //scholarshipDiscountList[index].FeeName = feeSelected.FeeDescription;
             gvScholarshipDetails.DataSource = scholarshipDiscountList;
-       //     feeSelected = null;
         }
 
 
@@ -206,14 +176,6 @@ namespace eSAR.Settings.ManageScholarship
             {
                 MessageBox.Show("Scholarship Discount should not be empty");
                 e.Cancel = true;
-            }
-            else
-            {
-                //if (scholarshipDiscountList.FindAll(x => x.FeeName == newFee.ToString()).Count > 0 )
-                //{
-                //    MessageBox.Show("Scholarship Discount for this Scholarship already exist");
-                //    e.Cancel = true;
-                //}
             }
         }
 
@@ -235,43 +197,12 @@ namespace eSAR.Settings.ManageScholarship
                 sDiscountSelected = new ScholarshipDiscount()
                 {
                     ScholarshipDiscountId = scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipDiscountId,
-                    //ScholarshipCode = scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipCode,
-                    //FeeID = scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].FeeID,
                     Discount = scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].Discount,
                     Deactivated = false,
-                 //   FeeName = scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].FeeName
                 };
 
                 oldScholarshipDiscountList.Add(sDiscountSelected);
 
-                //if (e.NewValue != e.OldValue)
-                //{
-                //    if (gvScholarshipDetails.CurrentColumn.Index == 2)
-                //    {
-                //        if (scholarshipDiscountList.FindAll(x => x.FeeName == e.NewValue.ToString()).Count <= 0)
-                //        {
-                //            if (oldScholarshipDiscountList.Exists(x => x.FeeName == e.NewValue.ToString()) == true)
-                //            {
-                //                ScholarshipDiscount returnedSub = new ScholarshipDiscount();
-                //                returnedSub = oldScholarshipDiscountList.Find(x => x.FeeName == e.NewValue.ToString());
-                //                scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipDiscountId = returnedSub.ScholarshipDiscountId;
-                //                scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipCode = returnedSub.ScholarshipCode;
-                //                oldScholarshipDiscountList.RemoveAll(x => x.ScholarshipCode == returnedSub.ScholarshipCode);
-                //            }
-                //            else
-                //            {
-                //                scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipDiscountId = 0;
-                //            }
-
-                //            scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].ScholarshipCode = this.txtScholarshipCode.Text;
-                //            scholarshipDiscountList[gvScholarshipDetails.CurrentRow.Index].FeeID = this.feeid;
-
-                //        }
-                //        else
-                //            MessageBox.Show("Scholarship Discount for this Scholarship already exists");
-                //            e.Cancel = true;
-                //    }
-               // }
             }
         }
 
@@ -298,107 +229,6 @@ namespace eSAR.Settings.ManageScholarship
 
 
         
-        //    private void Save()
-        //    {
-        //        ScholarshipServiceClient scholarshipService = new ScholarshipServiceClient();
-        //        Boolean ret = false;
-        //        string message = String.Empty;
-        //        Scholarship scholarship = new Scholarship()
-        //        {
-        //            ScholarshipCode = txtScholarshipCode.Text.ToString(),
-        //            Privilege = txtPrivilege.Text.ToString(),
-        //            Condition = txtCondition.Text.ToString(),
-        //            Description = txtDescription.Text.ToString(),
-        //            scholarshipDiscounts = scholarshipDiscountList.ToArray(),
-        //        };
-
-        //        if (Op.Equals("edit"))
-        //            ret = scholarshipService.UpdateScholarship(ref scholarship, ref message);
-        //        else
-        //            ret = scholarshipService.CreateScholarship(ref scholarship, ref message);
-
-        //        if (ret)
-        //            MessageBox.Show("Saved Successfully");
-        //        else
-        //            MessageBox.Show("Error Saving");
-
-        //        Close();
-        //    }
-
-        //    private void frmScholarshipDetails_Load(object sender, EventArgs e)
-        //    {
-
-        //        ScholarshipServiceClient sService = new ScholarshipServiceClient();
-        //        fee = new List<Fee>(sService.GetAllFees());
-
-        //        colFee = new GridViewComboBoxColumn("Fee");
-        //        colFee.HeaderText = "Fee";
-        //        colFee.FieldName = "Fee";
-        //        colFee.ValueMember = "FeeID";
-        //        colFee.DisplayMember = "FeeDescription";
-        //        colFee.Width = 180;
-
-        //        colFee.DataSource = fee;
-
-        //        gvScholarshipDetails.Columns.Add(colFee);
-
-        //        if (Op.Equals("edit"))
-        //        {
-        //            SetFields();
-        //            SetScholarshipDiscountGrid();
-        //        }
-
-        //        if (Op.Equals("new"))
-        //            {
-        //            ScholarshipServiceClient scholarshipService = new ScholarshipServiceClient();
-        //            BindScholarshipDiscountGrid();
-        //        }
-        //    }
-
-        //    private void SetFields()
-        //    {
-        //        txtScholarshipCode.Text = SelectedScholarship.ScholarshipCode;
-        //        txtPrivilege.Text = SelectedScholarship.Privilege;
-        //        txtCondition.Text = SelectedScholarship.Condition;
-        //        txtDescription.Text = SelectedScholarship.Description;
-        //    }
-
-        //    private void BindScholarshipDiscountGrid()
-        //    {
-        //        scholarshipDiscountList = new List<ScholarshipDiscount>();
-        //        gvScholarshipDetails.DataSource = scholarshipDiscountList;
-        //    }
-
-        //    private void SetScholarshipDiscountGrid()
-        //    {
-        //        scholarshipDiscountList = new List<ScholarshipDiscount>(SelectedScholarship.scholarshipDiscounts);
-        //        this.gvScholarshipDetails.DataSource = scholarshipDiscountList;
-        //    }
-
-        //    private void gvScholarshipDiscounts_UserAddedRow(object sender, Telerik.WinControls.UI.GridViewRowEventArgs e)
-        //    {
-        //        int index = this.gvScholarshipDetails.RowCount - 1;
-        //        scholarshipDiscountList[index].ScholarshipCode = this.txtScholarshipCode.Text;
-
-        //        //var editor = gvScholarshipDetails.ActiveEditor as RadDropDownListEditor;
-        //        //var editorElement = editor.EditorElement as RadDropDownListEditorElement;
-
-        //        //fe = fee[editorElement.SelectedIndex];
-
-        //        scholarshipDiscountList[index].FeeID = sd.FeeID;
-
-        //        gvScholarshipDetails.DataSource = scholarshipDiscountList;
-
-        //    }
-
-        //    private void gvScholarshipDiscount_UserAddingRow(object sender, GridViewRowCancelEventArgs e)
-        //    {
-
-        //    }
-
-        //    private void btnBackScholarship_Click(object sender, EventArgs e)
-        //    {
-        //        this.Close();
-        //    }
+        
     }
 }

@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using eSAR.SubjectServiceRef;
-//using eSAR.LearningAreaServiceRef;
-using eSAR.CurriculumServiceRef;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageCurriculum
 {

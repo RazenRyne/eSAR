@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.FeeServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageStudentFees
 {
@@ -20,7 +22,7 @@ namespace eSAR.Settings.ManageStudentFees
         }
         public void LoadStudentFees()
         {
-            FeeServiceClient feeService = new FeeServiceClient();
+            IFeeService feeService = new FeeService();
             string message = String.Empty;
             try
             {

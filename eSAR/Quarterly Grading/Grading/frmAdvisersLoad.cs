@@ -6,9 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradeSectionServiceRef;
-//using eSAR.GradingServiceRef;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Quarterly_Grading.Grading
 {
@@ -26,7 +27,7 @@ namespace eSAR.Quarterly_Grading.Grading
         public void LoadGradeSections()
         {
             String message = String.Empty;
-            GradeSectionServiceClient gService = new GradeSectionServiceClient();
+            IGradeSectionService gService = new GradeSectionService();
             gradeSectionList = new List<GradeSection>(gService.GetAllGradeSections());
             try
             {
@@ -74,7 +75,7 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void frmAdvisersLoad_Load(object sender, EventArgs e)
         {
-            GradeSectionServiceClient gService = new GradeSectionServiceClient();
+            IGradeSectionService gService = new GradeSectionService();
             sy = GlobalClass.currentsy;
 
             string fname = GlobalClass.user.FirstName;

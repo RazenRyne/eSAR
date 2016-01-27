@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using System.ServiceModel;
-using eSAR.SchoolYearServiceRef;
 using Telerik.WinControls.UI;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageSY
 {
@@ -28,7 +28,7 @@ namespace eSAR.Settings.ManageSY
         public void LoadSY()
         {
             gvSY.DataSource = null;
-            SchoolYearServiceClient syService = new SchoolYearServiceClient();
+            ISchoolYearService syService = new SchoolYearService();
             string message = String.Empty;
             try
             {
@@ -60,7 +60,7 @@ namespace eSAR.Settings.ManageSY
         {
             if (SYSelected != null)
             {
-                SchoolYearServiceClient syService = new SchoolYearServiceClient();
+                ISchoolYearService syService = new SchoolYearService();
                 string message = String.Empty;
 
                 if (!syService.DeleteSY(SYSelected.SY, ref message))
@@ -135,7 +135,7 @@ namespace eSAR.Settings.ManageSY
                 int SYto = 0;
                 SYto = int.Parse(txtSY.Text) + 1;
                                 
-                SchoolYearServiceClient syService = new SchoolYearServiceClient();
+                ISchoolYearService syService = new SchoolYearService();
                 SchoolYear schoolyear = new SchoolYear()
                 {
                     SY = txtSY.Text + "-" + SYto.ToString(),
@@ -178,7 +178,7 @@ namespace eSAR.Settings.ManageSY
                 Boolean ret = false;
                 string message = String.Empty;
 
-                SchoolYearServiceClient syService = new SchoolYearServiceClient();
+                ISchoolYearService syService = new SchoolYearService();
                 SchoolYear schoolyear = new SchoolYear()
                 {
                     SY = szSY,
@@ -223,7 +223,7 @@ namespace eSAR.Settings.ManageSY
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

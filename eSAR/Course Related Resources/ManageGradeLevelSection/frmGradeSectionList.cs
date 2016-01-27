@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradeSectionServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 {
@@ -21,7 +23,7 @@ namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 
         public void LoadGradeSections()
         {
-            GradeSectionServiceClient gService = new GradeSectionServiceClient();
+            IGradeSectionService gService = new GradeSectionService();
             gradeSectionList = new List<GradeSection>(gService.GetAllGradeSections());
             gvGradeSection.DataSource = gradeSectionList;
         }

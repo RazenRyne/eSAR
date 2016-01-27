@@ -1,5 +1,6 @@
-﻿using eSAR.GradingServiceRef;
-using eSAR.LogServiceRef;
+﻿using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Utility_Classes;
 using Newtonsoft.Json;
 using System;
@@ -52,7 +53,7 @@ namespace eSAR.Quarterly_Grading.Grading
             txtGradeLevel.Text = gradeLevel;
             txtSection.Text = section;
 
-            GradingServiceClient gradingService = new GradingServiceClient();
+            IGradingService gradingService = new GradingService();
 
             classList = new List<StudentTrait>(gradingService.GetAdvisees(gradeSectionCode));
             gvTraitsGrades.DataSource = classList;
@@ -192,8 +193,8 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            GradingServiceClient gradingService = new GradingServiceClient();
-            if (gradingService.SaveTraitsGrade(classList.ToArray()))
+            IGradingService gradingService = new GradingService();
+            if (gradingService.SaveTraitsGrade(classList))
             {
                 foreach (StudentTrait ss in classList)
                     Log("U", "StudentTraits", ss);
@@ -211,7 +212,7 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {
@@ -282,8 +283,8 @@ namespace eSAR.Quarterly_Grading.Grading
                     ss.LockFourth = true;
                 }
             }
-            GradingServiceClient gradingService = new GradingServiceClient();
-            if (gradingService.SaveTraitsGrade(classList.ToArray()))
+            IGradingService gradingService = new GradingService();
+            if (gradingService.SaveTraitsGrade(classList))
             {
                 foreach (StudentTrait ss in classList)
                     Log("U", "StudentSubjects", ss);

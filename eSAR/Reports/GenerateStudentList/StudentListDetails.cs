@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.ScheduleServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Utility_Classes;
 
 namespace eSAR.Reports.GenerateStudentList
@@ -32,7 +34,7 @@ namespace eSAR.Reports.GenerateStudentList
 
         private void InitializeLists()
         {
-            SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
             
             syList = new List<SchoolYear>(schedService.GetAllSY());
         }

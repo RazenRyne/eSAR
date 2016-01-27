@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.BuildingServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageBuilding
 {
@@ -21,7 +23,7 @@ namespace eSAR.Settings.ManageBuilding
 
         public void LoadBuildings()
         {
-            BuildingServiceClient buildingService = new BuildingServiceClient();
+            IBuildingService buildingService = new BuildingService();
             string message = String.Empty;
             try
             {

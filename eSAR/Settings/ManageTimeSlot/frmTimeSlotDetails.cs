@@ -1,5 +1,7 @@
-﻿using eSAR.LogServiceRef;
-using eSAR.TimeslotServiceRef;
+﻿
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Utility_Classes;
 using Newtonsoft.Json;
 using System;
@@ -104,7 +106,7 @@ namespace eSAR.Settings.ManageTimeSlot
                 dtTimeStart = tPStart.Value;
                 dtTimeEnd = tpEnd.Value;
 
-                TimeslotServiceClient tService = new TimeslotServiceClient();
+                ITimeslotService tService = new TimeslotService();
                 Timeslot timeslot = new Timeslot()
                 {
                     TimeSlotCode = txtTimeslotCode.Text,
@@ -150,7 +152,7 @@ namespace eSAR.Settings.ManageTimeSlot
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

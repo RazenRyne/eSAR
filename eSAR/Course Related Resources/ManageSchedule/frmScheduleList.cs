@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.ScheduleServiceRef;
 using Telerik.WinControls.UI;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageSchedule
 {
@@ -29,7 +31,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
         private void InitializeLists()
         {
-            SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
             scheduleList = new List<SubjectAssignment>(schedService.GetAllSchedules());
             gradeLevels = new List<GradeLevel>(schedService.GetAllGradeLevels());
             gradeLevels.RemoveAll(x => x.GradeLev == "0");

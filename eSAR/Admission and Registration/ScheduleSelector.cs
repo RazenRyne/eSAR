@@ -6,9 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.RegistrationServiceRef;
 using Telerik.WinControls.UI;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Admission_and_Registration
 {
@@ -30,7 +32,7 @@ namespace eSAR.Admission_and_Registration
         private void ScheduleSelector_Load(object sender, EventArgs e)
         {
             Sy = GlobalClass.currentsy;
-            RegistrationServiceClient regService = new RegistrationServiceClient();
+            IRegistrationService regService = new RegistrationService();
             Schedules=new List<StudentSchedule>(regService.GetSubjectSchedules(Sy));
             gvSchedule.DataSource = Schedules;
         }

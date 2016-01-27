@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradeSectionServiceRef;
 using eSAR.Reports.GeneratePromotional;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Reports.GenerateGradingSheets
 {
@@ -19,7 +21,7 @@ namespace eSAR.Reports.GenerateGradingSheets
          List<GradeLevel> gradeLevels;
         List<SchoolYear> schoolYear;
         Teacher teach = new Teacher();
-        GradeSectionServiceClient gsService = new GradeSectionServiceClient();
+        IGradeSectionService gsService = new GradeSectionService();
         string _report = string.Empty;
 
         public frmGradingSheetInput()

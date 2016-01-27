@@ -120,7 +120,7 @@
             // 
             // 
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 176);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 162);
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.mnuLogOut});
             this.radRibbonBar1.TabIndex = 0;
@@ -130,7 +130,7 @@
             // 
             this.ribbonTab1.AccessibleDescription = "Admission and Registration";
             this.ribbonTab1.AccessibleName = "Admission and Registration";
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1});
             this.ribbonTab1.Name = "ribbonTab1";
@@ -150,7 +150,7 @@
             this.btnStudent.AccessibleDescription = "radButtonElement1";
             this.btnStudent.AccessibleName = "radButtonElement1";
             this.btnStudent.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.btnStudent.Image = global::eSAR.Properties.Resources.StudentAdmission;
+            this.btnStudent.Image = global::eSAR.Properties.Resources.people;
             this.btnStudent.Name = "btnStudent";
             this.btnStudent.Text = "";
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
@@ -159,7 +159,7 @@
             // 
             this.ribbonTab2.AccessibleDescription = "Course Related Resources";
             this.ribbonTab2.AccessibleName = "Course Related Resources";
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup2,
             this.radRibbonBarGroup5,
@@ -179,7 +179,6 @@
             // 
             this.btnTeacher.AccessibleDescription = "Manage Teacher";
             this.btnTeacher.AccessibleName = "Manage Teacher";
-            this.btnTeacher.Image = global::eSAR.Properties.Resources.users;
             this.btnTeacher.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTeacher.Name = "btnTeacher";
             this.btnTeacher.Text = "Manage Teacher";
@@ -197,7 +196,6 @@
             // 
             this.btnLearningArea.AccessibleDescription = "Manage Learning Area";
             this.btnLearningArea.AccessibleName = "Manage Learning Area";
-            this.btnLearningArea.Image = global::eSAR.Properties.Resources.school;
             this.btnLearningArea.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLearningArea.Name = "btnLearningArea";
             this.btnLearningArea.Text = "Manage Learning Area";
@@ -217,7 +215,6 @@
             // 
             this.btnTimeSlot.AccessibleDescription = "Manage Timeslot";
             this.btnTimeSlot.AccessibleName = "Manage Timeslot";
-            this.btnTimeSlot.Image = global::eSAR.Properties.Resources.timeslots;
             this.btnTimeSlot.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTimeSlot.Name = "btnTimeSlot";
             this.btnTimeSlot.Text = "Manage Timeslot";
@@ -237,7 +234,6 @@
             // 
             this.btnManageSchedule.AccessibleDescription = "Manage Schedule";
             this.btnManageSchedule.AccessibleName = "Manage Schedule";
-            this.btnManageSchedule.Image = global::eSAR.Properties.Resources.sched;
             this.btnManageSchedule.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnManageSchedule.Name = "btnManageSchedule";
             this.btnManageSchedule.Text = "Manage Schedule";
@@ -273,7 +269,6 @@
             // 
             this.btnUser.AccessibleDescription = "Manage Users";
             this.btnUser.AccessibleName = "Manage Users";
-            this.btnUser.Image = global::eSAR.Properties.Resources.users;
             this.btnUser.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUser.Name = "btnUser";
             this.btnUser.Text = "Manage Users";
@@ -291,7 +286,6 @@
             // 
             this.btnBuildings.AccessibleDescription = "Manage Buildings/Rooms";
             this.btnBuildings.AccessibleName = "Manage Buildings/Rooms";
-            this.btnBuildings.Image = global::eSAR.Properties.Resources.building;
             this.btnBuildings.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuildings.Name = "btnBuildings";
             this.btnBuildings.Text = "Manage Buildings";
@@ -309,7 +303,6 @@
             // 
             this.btnScholarship.AccessibleDescription = "Manage Scholarship";
             this.btnScholarship.AccessibleName = "Manage Scholarship";
-            this.btnScholarship.Image = global::eSAR.Properties.Resources.Scholarship;
             this.btnScholarship.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScholarship.Name = "btnScholarship";
             this.btnScholarship.Text = "Manage Scholarship";
@@ -329,7 +322,6 @@
             // 
             this.btnCurriculum.AccessibleDescription = "Manage Curriculum";
             this.btnCurriculum.AccessibleName = "Manage Curriculum";
-            this.btnCurriculum.Image = global::eSAR.Properties.Resources.Curri;
             this.btnCurriculum.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCurriculum.Name = "btnCurriculum";
             this.btnCurriculum.Text = "Manage Curriculum";
@@ -349,7 +341,6 @@
             // 
             this.btnTraits.AccessibleDescription = "Manage Traits";
             this.btnTraits.AccessibleName = "Manage Traits";
-            this.btnTraits.Image = global::eSAR.Properties.Resources.books;
             this.btnTraits.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTraits.Name = "btnTraits";
             this.btnTraits.Text = "Manage Traits";
@@ -367,7 +358,6 @@
             // 
             this.btnFees.AccessibleDescription = "Manage Student Fees";
             this.btnFees.AccessibleName = "Manage Student Fees";
-            this.btnFees.Image = global::eSAR.Properties.Resources.fee;
             this.btnFees.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFees.Name = "btnFees";
             this.btnFees.Text = "Manage Student Fees";
@@ -385,7 +375,6 @@
             // 
             this.btnGradeSection.AccessibleDescription = "Manage Grade Section";
             this.btnGradeSection.AccessibleName = "Manage Grade Section";
-            this.btnGradeSection.Image = global::eSAR.Properties.Resources.people;
             this.btnGradeSection.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGradeSection.Name = "btnGradeSection";
             this.btnGradeSection.Text = "Manage Grade Sections";
@@ -403,7 +392,6 @@
             // 
             this.btnSY.AccessibleDescription = "Manage SY";
             this.btnSY.AccessibleName = "Manage SY";
-            this.btnSY.Image = global::eSAR.Properties.Resources.sched;
             this.btnSY.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSY.Name = "btnSY";
             this.btnSY.Text = "Manage SY";
@@ -437,7 +425,6 @@
             // 
             this.radButtonElement6.AccessibleDescription = "Payment";
             this.radButtonElement6.AccessibleName = "Payment";
-            this.radButtonElement6.Image = global::eSAR.Properties.Resources.Peso_Logo;
             this.radButtonElement6.Name = "radButtonElement6";
             this.radButtonElement6.Text = "Payment";
             this.radButtonElement6.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
@@ -456,7 +443,6 @@
             // 
             this.radButtonElement7.AccessibleDescription = "Manage Receipt";
             this.radButtonElement7.AccessibleName = "Manage Receipt";
-            this.radButtonElement7.Image = global::eSAR.Properties.Resources.Receipt;
             this.radButtonElement7.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement7.Name = "radButtonElement7";
             this.radButtonElement7.Text = "Manage Receipt";
@@ -484,7 +470,6 @@
             // 
             this.btnQuarterlyGrading.AccessibleDescription = "Quarterly Grading";
             this.btnQuarterlyGrading.AccessibleName = "Quarterly Grading";
-            this.btnQuarterlyGrading.Image = global::eSAR.Properties.Resources.Quarterly_Grading;
             this.btnQuarterlyGrading.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQuarterlyGrading.Name = "btnQuarterlyGrading";
             this.btnQuarterlyGrading.Text = "Subjects Quarterly";
@@ -504,7 +489,6 @@
             // 
             this.btnTraitsGrading.AccessibleDescription = "Traits Quarterly Grading";
             this.btnTraitsGrading.AccessibleName = "Traits Quarterly Grading";
-            this.btnTraitsGrading.Image = global::eSAR.Properties.Resources.Traits_Grading;
             this.btnTraitsGrading.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTraitsGrading.Name = "btnTraitsGrading";
             this.btnTraitsGrading.Text = "Traits Quarterly";
@@ -542,7 +526,6 @@
             // 
             this.radButtonElement3.AccessibleDescription = "Prospectus";
             this.radButtonElement3.AccessibleName = "Prospectus";
-            this.radButtonElement3.Image = global::eSAR.Properties.Resources.prospectus;
             this.radButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement3.Name = "radButtonElement3";
             this.radButtonElement3.Text = "Prospectus";
@@ -562,7 +545,6 @@
             // 
             this.radButtonElement8.AccessibleDescription = "Promotional";
             this.radButtonElement8.AccessibleName = "Promotional";
-            this.radButtonElement8.Image = global::eSAR.Properties.Resources.distributor_report;
             this.radButtonElement8.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement8.Name = "radButtonElement8";
             this.radButtonElement8.Text = "Promotional";
@@ -583,7 +565,6 @@
             // 
             this.radButtonElement9.AccessibleDescription = "Teachers Load";
             this.radButtonElement9.AccessibleName = "Teachers Load";
-            this.radButtonElement9.Image = global::eSAR.Properties.Resources.product_sales_report__1_;
             this.radButtonElement9.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement9.Name = "radButtonElement9";
             this.radButtonElement9.Text = "Teachers Load";
@@ -602,7 +583,6 @@
             // 
             this.radButtonElement4.AccessibleDescription = "Payment";
             this.radButtonElement4.AccessibleName = "Payment";
-            this.radButtonElement4.Image = global::eSAR.Properties.Resources.sales_report;
             this.radButtonElement4.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement4.Name = "radButtonElement4";
             this.radButtonElement4.Text = "Payment";
@@ -624,7 +604,6 @@
             // 
             this.radButtonElement10.AccessibleDescription = "Billing";
             this.radButtonElement10.AccessibleName = "Billing";
-            this.radButtonElement10.Image = global::eSAR.Properties.Resources.Sales_by_Payment_Method_rep;
             this.radButtonElement10.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement10.Name = "radButtonElement10";
             this.radButtonElement10.Text = "Billing";
@@ -644,7 +623,6 @@
             // 
             this.radButtonElement11.AccessibleDescription = "Schedule";
             this.radButtonElement11.AccessibleName = "Schedule";
-            this.radButtonElement11.Image = global::eSAR.Properties.Resources.order_history;
             this.radButtonElement11.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement11.Name = "radButtonElement11";
             this.radButtonElement11.Text = "Schedule";
@@ -663,7 +641,6 @@
             // 
             this.radButtonElement5.AccessibleDescription = "Student List";
             this.radButtonElement5.AccessibleName = "Student List";
-            this.radButtonElement5.Image = global::eSAR.Properties.Resources.sign_up;
             this.radButtonElement5.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement5.Name = "radButtonElement5";
             this.radButtonElement5.Text = "Student List";
@@ -683,7 +660,6 @@
             // 
             this.radButtonElement12.AccessibleDescription = "Grading Sheets";
             this.radButtonElement12.AccessibleName = "Grading Sheets";
-            this.radButtonElement12.Image = global::eSAR.Properties.Resources.Rank_History;
             this.radButtonElement12.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement12.Name = "radButtonElement12";
             this.radButtonElement12.Text = "Grading Sheets";
@@ -701,7 +677,6 @@
             // 
             this.radButtonElement13.AccessibleDescription = "Student Permanent Record";
             this.radButtonElement13.AccessibleName = "Student Permanent Record";
-            this.radButtonElement13.Image = global::eSAR.Properties.Resources.reports_icon;
             this.radButtonElement13.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement13.Name = "radButtonElement13";
             this.radButtonElement13.Text = "Student Permanent Record";
@@ -730,7 +705,6 @@
             // 
             // radButtonElement2
             // 
-            this.radButtonElement2.Image = global::eSAR.Properties.Resources.decrypt;
             this.radButtonElement2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement2.Name = "radButtonElement2";
             this.radButtonElement2.Text = "";
@@ -759,7 +733,7 @@
             this.radDock1.Controls.Add(this.documentContainer1);
             this.radDock1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radDock1.IsCleanUpTarget = true;
-            this.radDock1.Location = new System.Drawing.Point(0, 176);
+            this.radDock1.Location = new System.Drawing.Point(0, 162);
             this.radDock1.MainDocumentContainer = this.documentContainer1;
             this.radDock1.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow;
             this.radDock1.Name = "radDock1";
@@ -767,7 +741,7 @@
             // 
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radDock1.Size = new System.Drawing.Size(1028, 541);
+            this.radDock1.Size = new System.Drawing.Size(1028, 555);
             this.radDock1.TabIndex = 7;
             this.radDock1.TabStop = false;
             this.radDock1.Text = "radDock1";

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\S.Tabanao\Source\Repos\DCFIv5.7\eSAR\eSARDAL\DCFIModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\S.Tabanao\Source\Repos\eSAR\eSARDAL\DCFIModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

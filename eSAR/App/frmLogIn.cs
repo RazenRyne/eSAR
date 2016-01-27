@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.UserServiceRef;
 using System.Security.Cryptography;
 using eSAR.Utility_Classes;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
-//using eSARDAL.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.App
 {
@@ -25,7 +25,7 @@ namespace eSAR.App
 
         private void butLogin_Click(object sender, EventArgs e)
         {
-            UserServiceClient userService = new UserServiceClient();
+            IUserService userService = new UserService();
             string message = String.Empty;
             if (txtPassword.Text.Equals("Enter Password")||txtPassword.Text.Equals(String.Empty) || txtUsername.Text.Equals("Enter Username")|| txtUsername.Text.Equals(String.Empty))
             {
@@ -36,9 +36,7 @@ namespace eSAR.App
             {
                 if (userService.AuthenticateUser(txtUsername.Text, txtPassword.Text, ref message))
                 {
-                    //try
-                    //{
-                        eSAR.UserServiceRef.User u = new eSAR.UserServiceRef.User();
+                        User u = new User();
                         u = userService.GetUser(txtUsername.Text);
                         LoggedUser lu = new LoggedUser();
 
@@ -54,7 +52,7 @@ namespace eSAR.App
                         GlobalClass.currentsy = userService.GetCurrentSy();
                     GlobalClass.userTypeCode = lu.UserType;
 
-                    LogServiceClient logService = new LogServiceClient();
+                    ILogService logService = new LogService();
                     string json = JsonConvert.SerializeObject(lu);
                     Log log = new Log
                     {
@@ -67,19 +65,9 @@ namespace eSAR.App
                     };
                     logService.AddLogs(log);
                     Close();
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    Console.WriteLine("Login Failed");
-                    //}
                 }
                 else MessageBox.Show(this, message, "Login Failed");
-                //frmLogIn FrmLogin = new frmLogIn();
-                //FrmLogin.Show();
             }
-            //this.Show();
-            //frmLogIn FrmLogin = new frmLogIn();
-            //FrmLogin.Show();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

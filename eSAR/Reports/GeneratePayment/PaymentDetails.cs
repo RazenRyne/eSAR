@@ -7,8 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using eSAR.Utility_Classes;
-using eSAR.StudentServiceRef;
-using eSAR.TeacherServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Reports.GeneratePayment
 {
@@ -58,7 +59,7 @@ namespace eSAR.Reports.GeneratePayment
         {
             Student student = new Student();
             string msg = string.Empty;
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             
             student = studentService.GetStudent(txtIDNumber.Text, ref msg);
             if (student.StudentId != null)

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using eSAR.RegistrationServiceRef;
 using Telerik.WinControls.UI;
 using System.Windows.Forms;
 using eSAR.Utility_Classes;
-using eSAR.LogServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using Newtonsoft.Json;
 
 namespace eSAR.Admission_and_Registration
@@ -51,7 +52,7 @@ namespace eSAR.Admission_and_Registration
         private void frmControlSubjects_Load(object sender, EventArgs e)
         {
            
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
             string message = String.Empty;
             
             ControlStudent = registrationService.GetStudent(controlStudentId,ref message);
@@ -74,7 +75,7 @@ namespace eSAR.Admission_and_Registration
 
             if (StudentSubs.Count > 0)
             {
-                ExistingSchedule = new List<StudentSchedule>(registrationService.GetStudentExistingSchedule(StudentSubs.ToArray(), SY));
+                ExistingSchedule = new List<StudentSchedule>(registrationService.GetStudentExistingSchedule(StudentSubs, SY));
 
                
             }
@@ -83,22 +84,6 @@ namespace eSAR.Admission_and_Registration
                 foreach (StudentSchedule ss in ExistingSchedule) {
                     int index = Schedules.FindIndex(item => item.SubjectAssignments == ss.SubjectAssignments);
                     Schedules.RemoveAt(index);
-                    //StudentSubject s = new StudentSubject()
-                    //{
-                    //    StudentSY = controlStudentId + SY,
-                    //    SubjectCode = ss.SubjectCode,
-                    //    SubjectAssignments = ss.SubjectAssignments,
-                    //    StudentEnrSubCode = controlStudentId + SY + ss.SubjectCode,
-                    //    LockFirst = false,
-                    //    LockSecond = false,
-                    //    LockThird = false,
-                    //    LockFourth = false,
-                    //    FirstPeriodicRating = 0.00,
-                    //    SecondPeriodicRating = 0.00,
-                    //    ThirdPeriodicRating = 0.00,
-                    //    FourthPeriodicRating = 0.00
-                    //};
-                    //subjects.Add(s);
                 }    
             }
 
@@ -139,7 +124,6 @@ namespace eSAR.Admission_and_Registration
                 ControlSchedule = ExistingSchedule;
                 gvAllSchedules.ReadOnly = false;
                 gvSchedule.ReadOnly = false;
-                //   btnSelect.Enabled = true;
                 gvSchedule.DataSource = ControlSchedule;
             }
              else if (ControlStudent.UnitsFailedLastYear > 0)
@@ -238,11 +222,11 @@ namespace eSAR.Admission_and_Registration
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
-            LogServiceClient logService = new LogServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
+            ILogService logService = new LogService();
             if (ExistingSchedRemove.Count > 0)
             {
-                if (registrationService.DeleteLoadedSubjects(controlStudentId, SY, ExistingSchedRemove.ToArray()))
+                if (registrationService.DeleteLoadedSubjects(controlStudentId, SY, ExistingSchedRemove))
                 {
 
                     foreach (StudentSubject ss in ExistingSchedRemove)
@@ -270,7 +254,7 @@ namespace eSAR.Admission_and_Registration
             }
             if (subjects.Count > 0)
             {
-                if (registrationService.ControlSubjects(controlStudentId, SY, subjects.ToArray()))
+                if (registrationService.ControlSubjects(controlStudentId, SY, subjects))
                 {
                     foreach (StudentSubject ss in subjects)
                     {
@@ -336,9 +320,6 @@ namespace eSAR.Admission_and_Registration
 
             if ((Telerik.WinControls.Enumerations.ToggleState)cbEditor1.Value == Telerik.WinControls.Enumerations.ToggleState.On)
             {
-                //foreach (StudentSchedule sc in ControlSchedule) {
-                //   // if (sc.TimeslotInfo.Contains(sa.TimeslotInfo))
-                //}
                 sa.Selected = false;
                 AddFromControl.Add(sa);
                 subjects.Add(ss);

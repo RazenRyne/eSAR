@@ -1,4 +1,6 @@
-﻿using eSAR.RegistrationServiceRef;
+﻿using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +40,7 @@ namespace eSAR.Reports
 
         private void loadList()
         {
-            RegistrationServiceClient regService = new RegistrationServiceClient();
+            IRegistrationService regService = new RegistrationService();
             stEnrolled = new List<StudentEnrollment>(regService.GetCurrentStudents(sY));
             
             gridView.DataSource = stEnrolled;

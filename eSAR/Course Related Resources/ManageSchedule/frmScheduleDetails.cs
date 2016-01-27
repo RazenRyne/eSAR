@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.ScheduleServiceRef;
-using eSAR.Utility_Classes;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
+using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageSchedule
 {
@@ -46,7 +47,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
         private void InitializeLists()
         {
-            SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
             currentSY = schedService.GetCurrentSY();
             gradeLevels = new List<GradeLevel>(schedService.GetAllGradeLevels());
             gradeLevels.RemoveAll(x => x.GradeLev == "0");
@@ -60,7 +61,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
         private void frmScheduleDetails_Load(object sender, EventArgs e)
         {
-            SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
             schedules = new List<SubjectAssignment>(schedService.GetAllSchedules());
             LoadSchedules();
         }
@@ -83,7 +84,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
         {
             if (SelectedSchedule != null)
             {
-                SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+                ISubjectAssignmentService schedService = new SubjectAssignmentService();
                 createdSchedule = new List<SubjectAssignment>(schedService.GetStudentExSchedule(SelectedSchedule.GradeSectionCode, currentSY));
                 gvSchedule.DataSource = createdSchedule;
             }
@@ -177,17 +178,8 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
             int selected_TimeStart = timeStringToInt(selectedTimeslot.TimeStart);
             int selected_TimeEnd = timeStringToInt(selectedTimeslot.TimeEnd);
 
-            //Subject sb = new Subject();
-            //sb = subjects.Find(x => x.SubjectCode == cmbSubject.SelectedValue.ToString());
-
-            //if (sb.LArea.Academic == true)
-            //{
-            //    availTeach = new List<Teacher>(teachers.FindAll(x => x.Academic == true));
-            //}
-            //else
-            //{
+          
             availTeach = new List<Teacher>(teachers);
-            //}
 
             foreach (Teacher tc in teachers)
             {
@@ -213,11 +205,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                     }
                 }
             }
-            //if (cmbSubject.SelectedIndex >= 0)
-            //{
-            //    if (subjects[cmbSubject.SelectedIndex].LArea.Academic == true)
-            //    {
-
+     
           
 
             if (availTeach.Count > 0)
@@ -286,11 +274,10 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
         private void SaveSchedule()
         {
             Boolean ret = false;
-            radWaitingBar1.StartWaiting();
 
-            SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
            
-            ret = schedService.CreateSchedule(createdSchedule.ToArray());
+            ret = schedService.CreateSchedule(createdSchedule);
             foreach (SubjectAssignment sa in createdSchedule) 
                 Log("C", "SubjectAssignments",sa);
               
@@ -300,14 +287,12 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 createdSchedule.Clear();
                 InitializeLists();
                 LoadSchedules();
-
-                radWaitingBar1.StopWaiting();
+                
 
                 MessageBox.Show(this, "Schedule saved successfully!");
             }
             else
             {
-                radWaitingBar1.StopWaiting();
                 MessageBox.Show("Error Saving");
             }
         }
@@ -451,7 +436,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 {
                     int iSAid = int.Parse(gvSchedule.Rows[selectedIndex].Cells[4].Value.ToString());
 
-                SubjectAssignmentServiceClient schedService = new SubjectAssignmentServiceClient();
+                ISubjectAssignmentService schedService = new SubjectAssignmentService();
                 string message = String.Empty;
                     schedService.DeleteSchedule(iSAid, ref message);
                     Log("D", "StudentSubjects", gvSchedule.Rows[selectedIndex]);
@@ -561,7 +546,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

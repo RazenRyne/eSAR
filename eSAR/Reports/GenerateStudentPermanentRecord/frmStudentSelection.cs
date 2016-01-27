@@ -1,4 +1,6 @@
-﻿using eSAR.StudentServiceRef;
+﻿using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Utility_Classes;
 using System;
 using System.Collections.Generic;
@@ -23,12 +25,12 @@ namespace eSAR.Reports.GenerateStudentPermanentRecord
 
         public void LoadStudents()
         {
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             string message = String.Empty;
             try
             {
                 var students = studentService.GetAllStudents();
-                studentList = new List<StudentServiceRef.Student>(students);
+                studentList = new List<Student>(students);
                 gvStudent.DataSource = students;
                 gvStudent.Refresh();
 

@@ -7,7 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using eSAR.Utility_Classes;
-using eSAR.FeeServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Reports.GenerateProspectus
 {
@@ -31,7 +33,7 @@ namespace eSAR.Reports.GenerateProspectus
 
         private void LoadMe(object sender, EventArgs e)
         {
-            FeeServiceClient feeService = new FeeServiceClient();
+            IFeeService feeService = new FeeService();
             gradeLevels = new List<GradeLevel>(feeService.GetAllGradeLevels());
             schoolYears = new List<SchoolYear>(feeService.GetLastFiveSY());
 

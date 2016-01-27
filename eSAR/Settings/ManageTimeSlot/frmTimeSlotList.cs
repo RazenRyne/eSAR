@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.TimeslotServiceRef;
-using System.ServiceModel;
 using eSAR.Settings.ManageTimeSlot;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageTimeSlot
 {
@@ -43,7 +43,7 @@ namespace eSAR.Settings.ManageTimeSlot
 
         public void LoadTimeslots()
         {
-            TimeslotServiceClient tService = new TimeslotServiceClient();
+            ITimeslotService tService = new TimeslotService();
             string message = String.Empty;
             try
             {
@@ -94,7 +94,7 @@ namespace eSAR.Settings.ManageTimeSlot
         {
             if (timeslotSelected != null)
             {
-                TimeslotServiceClient tService = new TimeslotServiceClient();
+                ITimeslotService tService = new TimeslotService();
                 string message = String.Empty;
 
                 if (!tService.DeleteTimeslot(timeslotSelected.TimeSlotCode, ref message))
@@ -112,7 +112,7 @@ namespace eSAR.Settings.ManageTimeSlot
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

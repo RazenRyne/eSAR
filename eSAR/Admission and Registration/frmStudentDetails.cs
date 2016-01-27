@@ -5,15 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Telerik.WinControls;
-using eSAR.StudentServiceRef;
 using System.IO;
 using System.Drawing.Imaging;
 using Telerik.WinControls.UI;
-using eSAR.GradeLevelServiceRef;
-using eSAR.LogServiceRef;
+using Telerik.WinControls;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Admission_and_Registration
 {
@@ -41,7 +41,7 @@ namespace eSAR.Admission_and_Registration
         {
             pvStudent.SelectedPage = pvStudent.Pages[0];
 
-            GradeLevelServiceClient glService = new GradeLevelServiceClient();
+            IGradeLevelService glService = new GradeLevelService();
             gradeLevel = new List<GradeLevel>(glService.GetAllGradeLevels());
 
             cmbGradeLevel.DataSource = gradeLevel;
@@ -52,7 +52,6 @@ namespace eSAR.Admission_and_Registration
             if (Op.Equals("new"))
             {
                 GenerateStudentID();
-              //  txtAge.Text = calculateAge(dtDOB.Value).ToString();
             }
 
             if (Op.Equals("edit"))
@@ -63,13 +62,8 @@ namespace eSAR.Admission_and_Registration
 
         private void SetFields()
         {
-            //var religions = new[] { new { religion = "Islam" }, new { religion = "Aglipayan" }, new { religion = "Evangelical" }, new { religion = "Roman Catholic" }, new { religion = "Iglesia ni Kristo" }, new { religion = "Other Christian" }, new { religion = "Other" }, new { religion = "Unspecified" }, new { religion = "None" } };
-            //cbReligion.DataSource = religions;
-            //cbReligion.ValueMember = "religion";
-            //cbReligion.DisplayMember = "religion";
-
+          
             txtStudentId.Enabled = false;
-            //txtLRN.Text=SelectedStudent.LRN
             txtStudentId.Text = SelectedStudent.StudentId;
             txtFirstName.Text = SelectedStudent.FirstName;
             txtMiddleName.Text = SelectedStudent.MiddleName;
@@ -87,7 +81,6 @@ namespace eSAR.Admission_and_Registration
             if (SelectedStudent.Gender == "F")
                 cmbGender.Text = "Female";
             dtDOB.Value = (DateTime)SelectedStudent.DOB;
-            //txtAge.Text = calculateAge(dtDOB.Value).ToString();
             if (SelectedStudent.MadrasahEnrolled == true)
                 chkMadrasah.Checked = true;
             else
@@ -136,7 +129,7 @@ namespace eSAR.Admission_and_Registration
 
         private void GenerateStudentID()
         {
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             szStudentID = studentService.GenerateStudentId();
             txtStudentId.Text = szStudentID;
         }
@@ -214,7 +207,7 @@ namespace eSAR.Admission_and_Registration
         {
             Student student = new Student();
             string msg = string.Empty;
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
 
             if (txtStudentId.Text == string.Empty) txtStudentId.Text = szStudentID;
 
@@ -251,7 +244,7 @@ namespace eSAR.Admission_and_Registration
             byte[] bImage = null;
             if (pbImage.BackgroundImage != null) bImage = imageToByteArray(pbImage.BackgroundImage, ImageFormat.Png);
             var convertDecimal = Convert.ToDecimal(txtFail.Text);
-            StudentServiceClient studentService = new StudentServiceClient();
+            IStudentService studentService = new StudentService();
             int schoId= studentService.GetScholarshipDiscountId("none");
             Student student = new Student();
 
@@ -381,13 +374,7 @@ namespace eSAR.Admission_and_Registration
             return ageInYears;
         }
 
-        //private void dtDOB_ValueChanged(object sender, EventArgs e)
-        //{
-        //    if (dtDOB.Value != null || dtDOB.Text != string.Empty)
-        //        int age = calculateAge(dtDOB.Value);
-        //    //  txtAge.Text = calculateAge(dtDOB.Value).ToString();
-        //}
-
+     
         private void btnPromote_Click(object sender, EventArgs e)
         {
             frmStudentRegister fmStudentRegister = new frmStudentRegister();
@@ -396,7 +383,7 @@ namespace eSAR.Admission_and_Registration
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

@@ -7,16 +7,17 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using eSAR.Utility_Classes;
-using eSAR.FeeServiceRef;
-using eSAR.ScheduleServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using eSAR.Reports.GenerateProspectus;
 
 namespace eSAR.Reports.GeneratePromotional
 {
     public partial class PromotionalDetails : Telerik.WinControls.UI.RadForm
     {
-        public List<FeeServiceRef.SchoolYear> schoolYears;
-        public List<ScheduleServiceRef.GradeLevel> gradeLevels;
+        public List<SchoolYear> schoolYears;
+        public List<GradeLevel> gradeLevels;
         public List<GradeSection> sections;
         public string gradelevel;
 
@@ -36,11 +37,11 @@ namespace eSAR.Reports.GeneratePromotional
 
         private void LoadMe(object sender, EventArgs e)
         {
-            SubjectAssignmentServiceClient subjectAss = new SubjectAssignmentServiceClient();
-            FeeServiceClient feeSer = new FeeServiceClient();
+           ISubjectAssignmentService subjectAss = new SubjectAssignmentService();
+            IFeeService feeSer = new FeeService();
 
-            gradeLevels = new List<ScheduleServiceRef.GradeLevel>(subjectAss.GetAllGradeLevels());
-            schoolYears = new List<FeeServiceRef.SchoolYear>(feeSer.GetLastFiveSY());
+            gradeLevels = new List<GradeLevel>(subjectAss.GetAllGradeLevels());
+            schoolYears = new List<SchoolYear>(feeSer.GetLastFiveSY());
             sections = new List<GradeSection>(subjectAss.GetAllSections());
 
             cmbGradeLevel.DataSource = gradeLevels;

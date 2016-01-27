@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.LearningAreaServiceRef;
 using Telerik.WinControls.UI;
-using eSAR.GradeLevelServiceRef;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageSubject
 {
@@ -77,7 +77,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
 
         private void Save()
         {
-            LearningAreaServiceClient laService = new LearningAreaServiceClient();
+            ILearningAreaService laService = new LearningAreaService();
             Boolean ret = false;
             string message = String.Empty;
             bool chec = checkAcademic.Checked;
@@ -86,7 +86,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
                 LearningAreaCode = txtLearningAreaCode.Text.ToString(),
                 Description = txtDescription.Text.ToString(),
                 Units = Double.Parse(txtUnits.Text.ToString()),
-                Subjects = subjects.ToArray(),
+                Subjects = subjects,
                 RatePerUnit = Double.Parse(txtRate.Text.ToString()),
                 RatePerSubject = Double.Parse(txtRatePerSubject.Text.ToString()),
                 Academic = chec
@@ -142,8 +142,8 @@ namespace eSAR.Course_Related_Resources.ManageSubject
         private void frmManageSubject_Load(object sender, EventArgs e)
         {
             
-            LearningAreaServiceClient laService = new LearningAreaServiceClient();
-            GradeLevelServiceClient glService = new GradeLevelServiceClient();
+            ILearningAreaService laService = new LearningAreaService();
+            IGradeLevelService glService = new GradeLevelService();
             gradeLevel = new List<GradeLevel>(glService.GetAllGradeLevels());
             
 
@@ -286,7 +286,6 @@ namespace eSAR.Course_Related_Resources.ManageSubject
                 oldsub = new Subject()
                 {
                     Description = subjects[gvSubjects.CurrentRow.Index].Description,
-                    ExtensionData = subjects[gvSubjects.CurrentRow.Index].ExtensionData,
                     GradeLevel = subjects[gvSubjects.CurrentRow.Index].GradeLevel,
                     LArea = subjects[gvSubjects.CurrentRow.Index].LArea,
                     LearningAreaCode = subjects[gvSubjects.CurrentRow.Index].LearningAreaCode,
@@ -363,7 +362,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
         {
             LearningArea la = new LearningArea();
             string msg = string.Empty;
-            LearningAreaServiceClient laService = new LearningAreaServiceClient();
+            ILearningAreaService laService = new LearningAreaService();
 
             la = laService.GetLearningArea(txtLearningAreaCode.Text);
             if (la.LearningAreaCode != null)
@@ -382,7 +381,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

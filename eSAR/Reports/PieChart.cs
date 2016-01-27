@@ -1,4 +1,7 @@
-﻿using eSAR.RegistrationServiceRef;
+﻿
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +20,7 @@ namespace eSAR.Reports
         List<StudentEnrollment> stEnrolled;
         string groupedBy;
         string sY;
-        RegistrationServiceClient regService = new RegistrationServiceClient();
+        IRegistrationService regService = new RegistrationService();
 
         public PieChart()
         {

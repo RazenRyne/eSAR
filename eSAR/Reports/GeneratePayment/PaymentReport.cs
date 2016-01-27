@@ -6,9 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.ScheduleServiceRef;
 using eSAR.Utility_Classes;
-using eSAR.PaymentServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
 
@@ -32,7 +33,7 @@ namespace eSAR.Reports.GeneratePayment
 
         private void loadList()
         {
-            PaymentServiceClient payService = new PaymentServiceClient();
+           IPaymentService payService = new PaymentService();
 
             if (IDnum == "All")
                 payment = new List<Payment>(payService.GetAllPayments());

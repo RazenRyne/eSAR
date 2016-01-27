@@ -7,7 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using eSAR.Utility_Classes;
-using eSAR.RegistrationServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using Telerik.WinControls.UI;
 using Telerik.Charting;
 
@@ -18,7 +20,7 @@ namespace eSAR.Reports
         List<StudentEnrollment> stEnrolled;
         string groupedBy;
         string sY;
-        RegistrationServiceClient regService = new RegistrationServiceClient();
+        IRegistrationService regService = new RegistrationService();
 
         public LineChart()
         {

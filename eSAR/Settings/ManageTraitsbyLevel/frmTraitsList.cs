@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.TraitsServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageTraitsbyLevel
 {
@@ -22,7 +24,7 @@ namespace eSAR.Settings.ManageTraitsbyLevel
 
         public void LoadTraits()
         {
-            TraitServiceClient traitService = new TraitServiceClient();
+            ITraitService traitService = new TraitService();
             string message = String.Empty;
             try
             {

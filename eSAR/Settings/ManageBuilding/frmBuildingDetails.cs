@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.BuildingServiceRef;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageBuilding
 {
@@ -33,7 +34,7 @@ namespace eSAR.Settings.ManageBuilding
 
         private void Save()
         {
-            BuildingServiceClient buildingService = new BuildingServiceClient();
+            IBuildingService buildingService = new BuildingService();
             Boolean ret = false;
             string message = String.Empty;
             Building building = new Building()
@@ -41,7 +42,7 @@ namespace eSAR.Settings.ManageBuilding
                 BuildingCode = txtBuildingCode.Text.ToString(),
                 Description = txtDescription.Text.ToString(),
                 BuildingName = txtName.Text.ToString(),
-                Rooms = rooms.ToArray()
+                Rooms = rooms
 
             };
             if (Op.Equals("edit"))
@@ -101,7 +102,7 @@ namespace eSAR.Settings.ManageBuilding
 
             if (Op.Equals("new"))
             {
-                BuildingServiceClient buildingService = new BuildingServiceClient();
+                IBuildingService buildingService = new BuildingService();
                 BindRoomGrid();
             }
         }
@@ -191,7 +192,7 @@ namespace eSAR.Settings.ManageBuilding
         {
             Building bldg = new Building();
             string msg = string.Empty;
-            BuildingServiceClient bldgService = new BuildingServiceClient();
+            IBuildingService bldgService = new BuildingService();
 
            
             bldg = bldgService.GetBuilding(txtBuildingCode.Text, ref msg);
@@ -206,7 +207,7 @@ namespace eSAR.Settings.ManageBuilding
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

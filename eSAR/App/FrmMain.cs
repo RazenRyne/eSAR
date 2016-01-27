@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls.UI.Docking;
-using eSAR.UserServiceRef;
 using eSAR.Utility_Classes;
 using eSAR.Settings.ManageBuilding;
 using eSAR.Settings.ManageTimeSlot;
@@ -35,6 +34,7 @@ using eSAR.Reports;
 using eSAR.App;
 using eSAR.Reports.GenerateGradingSheets;
 using eSAR.Reports.GenerateStudentPermanentRecord;
+using eSARServiceModels;
 
 namespace eSAR.App
 {

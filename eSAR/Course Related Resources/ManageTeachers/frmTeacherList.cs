@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using System.ServiceModel;
-using eSAR.TeacherServiceRef;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageTeachers
 {
@@ -29,7 +29,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
 
         public void LoadTeachers()
         {
-            TeacherServiceClient teacherService = new TeacherServiceClient();
+            ITeacherService teacherService = new TeacherService();
             string message = String.Empty;
             try
             {
@@ -99,7 +99,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
         {
             if (teacherSelected != null)
             {
-                TeacherServiceClient teacherService = new TeacherServiceClient();
+                ITeacherService teacherService = new TeacherService();
                 string message = String.Empty;
 
                 if (!teacherService.DeactivateTeacher(teacherSelected.TeacherId, ref message))
@@ -118,7 +118,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

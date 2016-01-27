@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.RegistrationServiceRef;
-using eSAR.ScholarshipServiceRef;
-using eSAR.LogServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using System.Linq;
 using eSAR.Utility_Classes;
 using Newtonsoft.Json;
@@ -47,10 +47,10 @@ namespace eSAR.Admission_and_Registration
 
         private void AssessStudent_Load(object sender, EventArgs e)
         {
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
             List<Fee> fees = new List<Fee>();
-            ScholarshipServiceClient scholarshipService = new ScholarshipServiceClient();
-            List<RegistrationServiceRef.ScholarshipDiscount> scholarships = new List<RegistrationServiceRef.ScholarshipDiscount>();
+            IScholarshipService scholarshipService = new ScholarshipService();
+            List<ScholarshipDiscount> scholarships = new List<ScholarshipDiscount>();
 
             currentSY = registrationService.GetCurrentSY();
 
@@ -60,20 +60,16 @@ namespace eSAR.Admission_and_Registration
             txtName.Text = StudentAssessed.StudentName;
             txtSY.Text = currentSY.SY;
 
-            //scholarshipDiscount = scholarshipService.GetAllScholarshipDiscount(StudentAssessed.DiscountId);
-            //scholarshipDiscount = scholarshipService.GetAllScholarships();
-
-
             
             fees = new List<Fee>(registrationService.GetStudentFees(StudentAssessed));
             gvAssessment.DataSource = fees;
             fees.ToArray();
 
-            scholarships = new List<RegistrationServiceRef.ScholarshipDiscount>(registrationService.GetScholarshipDiscounts());
+            scholarships = new List<ScholarshipDiscount>(registrationService.GetScholarshipDiscounts());
 
             int scholarshipDiscountId = StudentAssessed.DiscountId;
 
-            RegistrationServiceRef.ScholarshipDiscount sd = new RegistrationServiceRef.ScholarshipDiscount();
+            ScholarshipDiscount sd = new ScholarshipDiscount();
 
             sd = scholarships.Find(v => v.ScholarshipDiscountId == scholarshipDiscountId);
 
@@ -178,7 +174,6 @@ namespace eSAR.Admission_and_Registration
                 string fullPaymentDiscS = fullPaymentDisc.ToString();
                 string discountByAmountS = discountByAmount.ToString();
 
-                //MessageBox.Show("Dili Null ang Duha" + fullPaymentDiscS + " " + fullPaymentDiscS);
 
                 // Full Payment Discount Part
 
@@ -214,7 +209,6 @@ namespace eSAR.Admission_and_Registration
             }
             else if (!string.IsNullOrWhiteSpace(fullPaymentDisc.Text))
             {
-                //MessageBox.Show("Dili Null ang Full Payment Discount");
                 if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscount)) ;
 
                 double partialValue = 0;
@@ -236,7 +230,6 @@ namespace eSAR.Admission_and_Registration
             }
             else if (!string.IsNullOrWhiteSpace(discountByAmount.Text))
             {
-                //MessageBox.Show("Dili Null ang Discount by Amount");
                 if (double.TryParse(discountByAmount.Text, out discountByAmountPar));
 
                 if (subTotalValue < discountByAmountPar)
@@ -258,10 +251,10 @@ namespace eSAR.Admission_and_Registration
         private void btnPrint_Click(object sender, EventArgs e)
         {
             calculate.Visible = false;
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
-            LogServiceClient logService = new LogServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
+            ILogService logService = new LogService();
             var assessments = registrationService.AssessMe(StudentAssessed);
-            if (assessments.Length> 0)
+            if (assessments.Count > 0)
             {
                 string json = JsonConvert.SerializeObject(StudentAssessed);
                 Log log = new Log

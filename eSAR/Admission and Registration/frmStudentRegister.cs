@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.RegistrationServiceRef;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Admission_and_Registration
 {
@@ -79,7 +80,7 @@ namespace eSAR.Admission_and_Registration
         private void btnSave_Click(object sender, EventArgs e)
         {
             
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
 
             EnrolMe.StudentSY = RegisterStudent.StudentId + SY;
             EnrolMe.StudentId = RegisterStudent.StudentId;
@@ -132,7 +133,7 @@ namespace eSAR.Admission_and_Registration
 
         private void frmStudentRegister_Load(object sender, EventArgs e)
         {
-            RegistrationServiceClient registrationService = new RegistrationServiceClient();
+            IRegistrationService registrationService = new RegistrationService();
            
             RegisterStudent =registrationService.StudentInfoWithRank(StudentId,GradeLevel,Gender);
             SY = GlobalClass.currentsy;
@@ -190,7 +191,7 @@ namespace eSAR.Admission_and_Registration
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

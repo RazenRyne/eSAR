@@ -1,5 +1,4 @@
 ﻿using eSAR.Utility_Classes;
-using eSARService;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,6 +12,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageTeachers
 {
@@ -164,11 +166,11 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
                 PERAA = txtPERAA.Text,
                 Academic = acad,
 
-                TeacherChildrens = teachChild.ToArray(),
-                TeacherEducationalBackgrounds = educBack.ToArray(),
-                TeacherEligibilities = teachElig.ToArray(),
-                WorkExperiences = workExp.ToArray(),
-                TrainingSeminars=trainSem.ToArray(),
+                TeacherChildrens = teachChild,
+                TeacherEducationalBackgrounds = educBack,
+                TeacherEligibilities = teachElig,
+                WorkExperiences = workExp,
+                TrainingSeminars=trainSem,
                 
             };
 
@@ -177,7 +179,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
             if (Op.Equals("edit"))
             {
                 ret = teacherService.UpdateTeacher(ref teacher, ref message);
-                LogServiceClient logService = new LogServiceClient();
+                ILogService logService = new LogService();
                 teacher.TeacherChildrens = null;
                 teacher.TeacherEducationalBackgrounds = null;
                 teacher.TeacherEligibilities = null;
@@ -248,7 +250,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
 
             if (Op.Equals("new"))
             {
-                TeacherServiceClient teacherService = new TeacherServiceClient();
+                ITeacherService teacherService = new TeacherService();
                 szTeacherID = teacherService.GenerateTeacherId();
                 txtTeacherID.Text = szTeacherID;
                 BindGrids();
@@ -441,7 +443,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
         {
             Teacher teach = new Teacher();
             string msg = string.Empty;
-            TeacherServiceClient teacherService = new TeacherServiceClient();
+            ITeacherService teacherService = new TeacherService();
 
             if (txtTeacherID.Text == string.Empty) txtTeacherID.Text = szTeacherID;
 
@@ -588,7 +590,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
         }
 
         private void Log(string clud,string table, Object obj) {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

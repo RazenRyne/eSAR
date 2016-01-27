@@ -52,7 +52,6 @@
             this.radPanel3 = new Telerik.WinControls.UI.RadPanel();
             this.gvSchedule = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
-            this.radWaitingBar1 = new Telerik.WinControls.UI.RadWaitingBar();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.btnCalendar = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
@@ -78,7 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSchedule.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCalendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
@@ -282,7 +280,6 @@
             // 
             // radPanel2
             // 
-            this.radPanel2.Controls.Add(this.radWaitingBar1);
             this.radPanel2.Controls.Add(this.btnSave);
             this.radPanel2.Controls.Add(this.btnCalendar);
             this.radPanel2.Controls.Add(this.btnDelete);
@@ -292,14 +289,6 @@
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(870, 50);
             this.radPanel2.TabIndex = 58;
-            // 
-            // radWaitingBar1
-            // 
-            this.radWaitingBar1.Location = new System.Drawing.Point(95, 14);
-            this.radWaitingBar1.Name = "radWaitingBar1";
-            this.radWaitingBar1.Size = new System.Drawing.Size(491, 24);
-            this.radWaitingBar1.TabIndex = 60;
-            this.radWaitingBar1.Text = "Start";
             // 
             // btnSave
             // 
@@ -382,7 +371,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCalendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
@@ -415,6 +403,5 @@
         private Telerik.WinControls.UI.RadButton btnCancelSchedule;
         private Telerik.WinControls.UI.RadButton btnCalendar;
         private Telerik.WinControls.UI.RadButton btnSave;
-        private Telerik.WinControls.UI.RadWaitingBar radWaitingBar1;
     }
 }

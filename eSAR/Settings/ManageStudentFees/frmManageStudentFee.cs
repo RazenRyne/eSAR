@@ -6,12 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.FeeServiceRef;
 using System.Globalization;
 using Telerik.WinControls.UI;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageStudentFees
 {
@@ -39,7 +40,7 @@ namespace eSAR.Settings.ManageStudentFees
         }
 
         private void Save() {
-            FeeServiceClient feeService = new FeeServiceClient();
+            IFeeService feeService = new FeeService();
             Boolean ret = false;
             string message = String.Empty;
             string dis = txtDiscount.Text.ToString();
@@ -104,7 +105,7 @@ namespace eSAR.Settings.ManageStudentFees
 
         }
         private void LoadMe() {
-          FeeServiceClient feeService = new FeeServiceClient();
+          IFeeService feeService = new FeeService();
             ExistingFees = new List<Fee>(feeService.GetAllFees());
             gradeLevels = new List<GradeLevel>(feeService.GetAllGradeLevels());
             schoolYears = new List<SchoolYear>(feeService.GetLastFiveSY());
@@ -165,7 +166,7 @@ namespace eSAR.Settings.ManageStudentFees
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

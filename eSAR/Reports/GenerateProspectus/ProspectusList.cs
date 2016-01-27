@@ -1,4 +1,6 @@
-﻿using eSAR.SubjectServiceRef;
+﻿using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +32,7 @@ namespace eSAR.Reports.GenerateProspectus
 
         private void ProspectusList_Load(object sender, EventArgs e)
         {
-            SubjectServiceClient ssR = new SubjectServiceClient();
+            ISubjectService ssR = new SubjectService();
             if (zGradeLevel == "0")
                 subj = new List<Subject>(ssR.GetAllSubjects());
             else

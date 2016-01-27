@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.GradeSectionServiceRef;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 {
@@ -56,7 +57,7 @@ namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
         }
 
         private void SetComboBoxes() {
-            GradeSectionServiceClient gService = new GradeSectionServiceClient();
+            IGradeSectionService gService = new GradeSectionService();
             gLevels= new List<GradeLevel>(gService.GetAllGradeLevels());
             teachers = new List<Teacher>(gService.GetAllTeachers());
             
@@ -95,7 +96,7 @@ namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 
             string message=String.Empty;
             bool ret = false;
-            GradeSectionServiceClient gservice = new GradeSectionServiceClient();
+            IGradeSectionService gservice = new GradeSectionService();
             if (Op == "edit")
             {
                 gs.GradeSectionCode = SelectedGradeSection.GradeSectionCode;
@@ -121,7 +122,7 @@ namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+            ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

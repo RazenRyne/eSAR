@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using eSAR.UserServiceRef;
-using System.ServiceModel;
 using System.Security.Cryptography;
 using System.Linq;
-using eSAR.LogServiceRef;
 using Newtonsoft.Json;
 using eSAR.Utility_Classes;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Settings.ManageUser
 {
@@ -67,7 +67,7 @@ namespace eSAR.Settings.ManageUser
 
         private void loadUserTypes()
         {
-            UserServiceClient userService = new UserServiceClient();
+            IUserService userService = new UserService();
             cmbUserRole.DataSource = userService.GetAllUserTypes();
             cmbUserRole.DisplayMember = "UsersType";
             cmbUserRole.ValueMember = "UserTypeCode";
@@ -146,7 +146,7 @@ namespace eSAR.Settings.ManageUser
                 {
                     string hashPWD = GenerateKeyHash(txtPassword.Text);
 
-                    UserServiceClient userService = new UserServiceClient();
+                    IUserService userService = new UserService();
                     User user = new User()
                     {
                         UserName = txtUsername.Text,
@@ -302,7 +302,7 @@ namespace eSAR.Settings.ManageUser
         }
         private void Log(string clud, string table, Object obj)
         {
-            LogServiceClient logService = new LogServiceClient();
+           ILogService logService = new LogService();
             string json = JsonConvert.SerializeObject(obj);
             Log log = new Log
             {

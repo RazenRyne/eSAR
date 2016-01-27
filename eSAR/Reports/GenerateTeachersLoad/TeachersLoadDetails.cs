@@ -7,7 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using eSAR.Utility_Classes;
-using eSAR.GradeSectionServiceRef;
+using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 
 namespace eSAR.Reports.GenerateTeachersLoad
 {
@@ -36,7 +38,7 @@ namespace eSAR.Reports.GenerateTeachersLoad
             //cmbSY.DataSource = schoolYears;
             //cmbSY.ValueMember = "SY";
             //cmbSY.DisplayMember = "SY";
-            GradeSectionServiceClient gService = new GradeSectionServiceClient();
+           IGradeSectionService gService = new GradeSectionService();
             teachers = new List<Teacher>(gService.GetAllTeachers());
 
             cmbTeacher.DataSource = teachers;

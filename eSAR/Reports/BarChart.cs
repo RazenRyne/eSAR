@@ -1,4 +1,6 @@
-﻿using eSAR.RegistrationServiceRef;
+﻿using eSARServices;
+using eSARServiceInterface;
+using eSARServiceModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +19,7 @@ namespace eSAR.Reports
         List<StudentEnrollment> stEnrolled;
         string groupedBy;
         string sY;
-        RegistrationServiceClient regService = new RegistrationServiceClient();
+        IRegistrationService regService = new RegistrationService();
 
         public BarChart()
         {
@@ -114,7 +116,6 @@ namespace eSAR.Reports
             {
                 iCntGradeLevelMale = stEnrolled.FindAll(x => x.student.GradeLevel == gl.GradeLev && x.student.Gender == "M").Count;
                 series.DataPoints.Add(new CategoricalDataPoint(iCntGradeLevelMale, gl.Description));
-                //(series.HorizontalAxis as CategoricalAxis).GapLength = 0.75;
 
                 iCntGradeLevelFemale = stEnrolled.FindAll(x => x.student.GradeLevel == gl.GradeLev && x.student.Gender == "F").Count;
                 series2.DataPoints.Add(new CategoricalDataPoint(iCntGradeLevelFemale, gl.Description));
