@@ -837,6 +837,11 @@ namespace eSAR.App
             scheduleDetails.ShowDialog(this);
             scheduleDetails.Location = new Point(25, 25);
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

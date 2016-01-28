@@ -95,6 +95,7 @@
             this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement14 = new Telerik.WinControls.UI.RadButtonElement();
+            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
             this.radDock1.SuspendLayout();
@@ -122,7 +123,8 @@
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radRibbonBar1.Size = new System.Drawing.Size(1028, 162);
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
-            this.mnuLogOut});
+            this.mnuLogOut,
+            this.Exit});
             this.radRibbonBar1.TabIndex = 0;
             this.radRibbonBar1.Text = "DCFI e-SAR";
             // 
@@ -130,7 +132,7 @@
             // 
             this.ribbonTab1.AccessibleDescription = "Admission and Registration";
             this.ribbonTab1.AccessibleName = "Admission and Registration";
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1});
             this.ribbonTab1.Name = "ribbonTab1";
@@ -248,7 +250,7 @@
             // 
             this.ribbonTab3.AccessibleDescription = "Settings";
             this.ribbonTab3.AccessibleName = "Settings";
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup3,
             this.radRibbonBarGroup4,
@@ -792,6 +794,14 @@
             this.radButtonElement14.Text = "Student Permanent Record";
             this.radButtonElement14.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // Exit
+            // 
+            this.Exit.AccessibleDescription = "Exit";
+            this.Exit.AccessibleName = "Exit";
+            this.Exit.Name = "Exit";
+            this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -887,5 +897,6 @@
         private Telerik.WinControls.UI.RadButtonElement radButtonElement13;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement14;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement15;
+        private Telerik.WinControls.UI.RadMenuItem Exit;
     }
 }
