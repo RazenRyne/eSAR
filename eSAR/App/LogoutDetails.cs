@@ -24,31 +24,31 @@ namespace eSAR.App
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            //Application.Restart();
+            Application.Restart();
             
-            GlobalClass.currentsy = null;
-            GlobalClass.fromScreen = null;
-            GlobalClass.gvDatasource = null;
-            GlobalClass.receiptCurrent = null;
-            GlobalClass.receiptFrom = null;
-            GlobalClass.receiptTo = null;
-            GlobalClass.selectedSY = null;
-            GlobalClass.user = null;
-            GlobalClass.UserLoggedIn = false;
-            GlobalClass.WindowAttendanceDetails = false;
-            GlobalClass.WindowBillingDetails = false;
-            GlobalClass.WindowPaymentDetails = false;
-            GlobalClass.WindowPromotionalDetails = false;
-            GlobalClass.WindowProspectusDetails = false;
-            GlobalClass.WindowReligionDetails = false;
-            GlobalClass.WindowScheduleDetails = false;
-            GlobalClass.WindowStatusManageReceipt = false;
-            GlobalClass.WindowStatusPaymentDetails = false;
-            GlobalClass.WindowStudentListDetails = false;
-            GlobalClass.WindowTeachersLoadDetails = false;
-            GlobalClass.WindowLogoutDetails = false;
+            //GlobalClass.currentsy = null;
+            //GlobalClass.fromScreen = null;
+            //GlobalClass.gvDatasource = null;
+            //GlobalClass.receiptCurrent = null;
+            //GlobalClass.receiptFrom = null;
+            //GlobalClass.receiptTo = null;
+            //GlobalClass.selectedSY = null;
+            //GlobalClass.user = null;
+            //GlobalClass.UserLoggedIn = false;
+            //GlobalClass.WindowAttendanceDetails = false;
+            //GlobalClass.WindowBillingDetails = false;
+            //GlobalClass.WindowPaymentDetails = false;
+            //GlobalClass.WindowPromotionalDetails = false;
+            //GlobalClass.WindowProspectusDetails = false;
+            //GlobalClass.WindowReligionDetails = false;
+            //GlobalClass.WindowScheduleDetails = false;
+            //GlobalClass.WindowStatusManageReceipt = false;
+            //GlobalClass.WindowStatusPaymentDetails = false;
+            //GlobalClass.WindowStudentListDetails = false;
+            //GlobalClass.WindowTeachersLoadDetails = false;
+            //GlobalClass.WindowLogoutDetails = false;
 
-            this.Close();
+            //this.Close();
             
             frmLogIn FrmLogin = new frmLogIn();
             FrmLogin.ShowDialog();

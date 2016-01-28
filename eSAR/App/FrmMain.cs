@@ -100,7 +100,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
@@ -128,7 +127,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = true;
                 this.btnTimeSlot.Enabled = true;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = true;
                 this.btnTraits.Enabled = true;
                 this.btnFees.Enabled = false;
@@ -156,7 +154,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
@@ -184,7 +181,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
@@ -607,53 +603,53 @@ namespace eSAR.App
 
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            if (GlobalClass.receiptFrom == null)
-            {
-                MessageBox.Show("Set Receipt Number First");
-            }
-            else {
+        //private void btnPayment_Click(object sender, EventArgs e)
+        //{
+        //    if (GlobalClass.receiptFrom == null)
+        //    {
+        //        MessageBox.Show("Set Receipt Number First");
+        //    }
+        //    else {
 
-                if (GlobalClass.WindowStatusPaymentDetails == true)
-                {
+        //        if (GlobalClass.WindowStatusPaymentDetails == true)
+        //        {
 
-                }
-                else
-                {
-                    frmPaymentDetails fmPaymentDetails = new frmPaymentDetails();
-                    fmPaymentDetails.Show(this);
-                    fmPaymentDetails.Location = new Point(25, 25);
-                    GlobalClass.WindowStatusPaymentDetails = true;
-                }
-            }
-        }
+        //        }
+        //        else
+        //        {
+        //            frmPaymentDetails fmPaymentDetails = new frmPaymentDetails();
+        //            fmPaymentDetails.Show(this);
+        //            fmPaymentDetails.Location = new Point(25, 25);
+        //            GlobalClass.WindowStatusPaymentDetails = true;
+        //        }
+        //    }
+        //}
 
     
 
-        private void btnManageReceipt_Click(Object sender, EventArgs e)
-        {
-            if (GlobalClass.WindowStatusManageReceipt == true)
-            {
+        //private void btnManageReceipt_Click(Object sender, EventArgs e)
+        //{
+        //    if (GlobalClass.WindowStatusManageReceipt == true)
+        //    {
                 
-            } else {
-                frmManageReceipt fmManageReceipt = new frmManageReceipt();
-                fmManageReceipt.Show(this);
-                fmManageReceipt.Location = new Point(50, 50);
-                GlobalClass.WindowStatusManageReceipt = true;
-            }
+        //    } else {
+        //        frmManageReceipt fmManageReceipt = new frmManageReceipt();
+        //        fmManageReceipt.Show(this);
+        //        fmManageReceipt.Location = new Point(50, 50);
+        //        GlobalClass.WindowStatusManageReceipt = true;
+        //    }
             
-        }
+        //}
 
        
 
   
 
-        private void btnTeachersLoadList_Click(object sender, EventArgs e)
-        {
-                frmTeacherLoad fmTeachLoad = new frmTeacherLoad();
-                fmTeachLoad.ShowDialog();
-        }
+        //private void btnTeachersLoadList_Click(object sender, EventArgs e)
+        //{
+        //        frmTeacherLoad fmTeachLoad = new frmTeacherLoad();
+        //        fmTeachLoad.ShowDialog();
+        //}
 
        
         private void btnAttendanceList_Click(object sender, EventArgs e)
@@ -680,12 +676,12 @@ namespace eSAR.App
                 billingDetails.Location = new Point(25, 25);
         }
 
-        private void btnScheduleList_Click(object sender, EventArgs e)
-        {
-                ScheduleDetails scheduleDetails = new ScheduleDetails();
-                scheduleDetails.ShowDialog(this);
-                scheduleDetails.Location = new Point(25, 25);
-        }
+        //private void btnScheduleList_Click(object sender, EventArgs e)
+        //{
+        //        ScheduleDetails scheduleDetails = new ScheduleDetails();
+        //        scheduleDetails.ShowDialog(this);
+        //        scheduleDetails.Location = new Point(25, 25);
+        //}
 
      
         private void btnLogout_Click(object sender, EventArgs e)
@@ -791,6 +787,55 @@ namespace eSAR.App
                 PermanentRecordDockWindow.Show();
             }
             this.radDock1.ActiveWindow = PermanentRecordDockWindow;
+        }
+
+        private void btnPayment_Click_1(object sender, EventArgs e)
+        {
+            if (GlobalClass.receiptFrom == null)
+            {
+                MessageBox.Show("Set Receipt Number First");
+            }
+            else {
+
+                if (GlobalClass.WindowStatusPaymentDetails == true)
+                {
+
+                }
+                else
+                {
+                    frmPaymentDetails fmPaymentDetails = new frmPaymentDetails();
+                    fmPaymentDetails.Show(this);
+                    fmPaymentDetails.Location = new Point(25, 25);
+                    GlobalClass.WindowStatusPaymentDetails = true;
+                }
+            }
+        }
+
+        private void btnManageReceipt_Click_1(object sender, EventArgs e)
+        {
+            if (GlobalClass.WindowStatusManageReceipt == true)
+            {
+
+            }
+            else {
+                frmManageReceipt fmManageReceipt = new frmManageReceipt();
+                fmManageReceipt.Show(this);
+                fmManageReceipt.Location = new Point(50, 50);
+                GlobalClass.WindowStatusManageReceipt = true;
+            }
+        }
+
+        private void btnTeachersLoadList_Click_1(object sender, EventArgs e)
+        {
+            frmTeacherLoad fmTeachLoad = new frmTeacherLoad();
+            fmTeachLoad.ShowDialog();
+        }
+
+        private void btnScheduleList_Click_1(object sender, EventArgs e)
+        {
+            ScheduleDetails scheduleDetails = new ScheduleDetails();
+            scheduleDetails.ShowDialog(this);
+            scheduleDetails.Location = new Point(25, 25);
         }
     }
 }

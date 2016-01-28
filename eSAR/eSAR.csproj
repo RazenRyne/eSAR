@@ -66,8 +66,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Reporting, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Reporting, Version=9.1.15.731, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.1.15.731, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
@@ -788,6 +788,8 @@
     <Content Include="Resources\Images\File.ico" />
     <Content Include="Resources\Images\Graph.ico" />
     <Content Include="Resources\Images\Learning.ico" />
+    <None Include="Resources\Images\manageUsers.png" />
+    <None Include="Resources\Images\lock.png" />
     <Content Include="Resources\Images\order-history.png" />
     <Content Include="Resources\Images\people.png" />
     <Content Include="Resources\Images\Peso Logo.png" />
@@ -815,6 +817,10 @@
     <Content Include="Resources\Images\Traits Grading.png" />
     <Content Include="Resources\Images\Upline.png" />
     <Content Include="Resources\Images\users.png" />
+    <None Include="Resources\sched.png" />
+    <None Include="Resources\school.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\profile.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
