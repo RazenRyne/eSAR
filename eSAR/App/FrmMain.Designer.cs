@@ -46,8 +46,6 @@
             this.btnUser = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup4 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnBuildings = new Telerik.WinControls.UI.RadButtonElement();
-            this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.btnScholarship = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup9 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnCurriculum = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup10 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -250,12 +248,11 @@
             // 
             this.ribbonTab3.AccessibleDescription = "Settings";
             this.ribbonTab3.AccessibleName = "Settings";
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup3,
             this.radRibbonBarGroup4,
             this.radRibbonBarGroup6,
-            this.radRibbonBarGroup8,
             this.radRibbonBarGroup9,
             this.radRibbonBarGroup10,
             this.radRibbonBarGroup11,
@@ -299,24 +296,6 @@
             this.btnBuildings.Text = "Manage Buildings";
             this.btnBuildings.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuildings.Click += new System.EventHandler(this.btnBuildings_Click);
-            // 
-            // radRibbonBarGroup8
-            // 
-            this.radRibbonBarGroup8.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.btnScholarship});
-            this.radRibbonBarGroup8.Name = "radRibbonBarGroup8";
-            this.radRibbonBarGroup8.Text = "";
-            // 
-            // btnScholarship
-            // 
-            this.btnScholarship.AccessibleDescription = "Manage Scholarship";
-            this.btnScholarship.AccessibleName = "Manage Scholarship";
-            this.btnScholarship.Image = global::eSAR.Properties.Resources.Scholarship;
-            this.btnScholarship.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnScholarship.Name = "btnScholarship";
-            this.btnScholarship.Text = "Manage Scholarship";
-            this.btnScholarship.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnScholarship.Click += new System.EventHandler(this.btnScholarship_Click);
             // 
             // radRibbonBarGroup9
             // 
@@ -519,7 +498,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
@@ -860,8 +839,6 @@
         private Telerik.WinControls.UI.RadButtonElement btnLearningArea;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup6;
         private Telerik.WinControls.UI.RadButtonElement btnTimeSlot;
-        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup8;
-        private Telerik.WinControls.UI.RadButtonElement btnScholarship;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;
         private Telerik.WinControls.UI.RadButtonElement btnCurriculum;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup10;
