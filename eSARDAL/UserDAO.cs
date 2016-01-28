@@ -18,7 +18,7 @@ namespace eSARDAL
             try { 
             using (var DCEnt = new DCFIEntities())
             {
-                User user = (from u in DCEnt.Users
+                 User user = (from u in DCEnt.Users
                              where u.UserName== username
                              select u).FirstOrDefault();
                 if (user != null) {
