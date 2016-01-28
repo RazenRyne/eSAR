@@ -788,6 +788,7 @@
     <Content Include="Resources\Images\Curri.png" />
     <Content Include="Resources\Images\decrypt.ico" />
     <Content Include="Resources\Images\distributor-report.png" />
+    <None Include="Resources\Images\Exit.png" />
     <Content Include="Resources\Images\fee.png" />
     <Content Include="Resources\Images\File.ico" />
     <Content Include="Resources\Images\Graph.ico" />

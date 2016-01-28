@@ -856,6 +856,11 @@ namespace eSAR.App
                 GlobalClass.WindowLogoutDetails = true;
             }
         }
+
+        private void radButtonElement7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
