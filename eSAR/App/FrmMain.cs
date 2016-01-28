@@ -100,7 +100,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
@@ -128,7 +127,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = true;
                 this.btnTimeSlot.Enabled = true;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = true;
                 this.btnTraits.Enabled = true;
                 this.btnFees.Enabled = false;
@@ -156,7 +154,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
@@ -184,7 +181,6 @@ namespace eSAR.App
                 this.btnUser.Enabled = false;
                 this.btnBuildings.Enabled = false;
                 this.btnTimeSlot.Enabled = false;
-                this.btnScholarship.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
                 this.btnFees.Enabled = false;
