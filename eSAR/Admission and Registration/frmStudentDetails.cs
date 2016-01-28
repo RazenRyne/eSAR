@@ -396,5 +396,6 @@ namespace eSAR.Admission_and_Registration
             };
             logService.AddLogs(log);
         }
+
     }
 }
