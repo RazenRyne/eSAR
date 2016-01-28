@@ -91,11 +91,11 @@
             this.radButtonElement15 = new Telerik.WinControls.UI.RadButtonElement();
             this.LoggedUser = new Telerik.WinControls.UI.RadButtonElement();
             this.mnuLogOut = new Telerik.WinControls.UI.RadMenuItem();
+            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radDock1 = new Telerik.WinControls.UI.Docking.RadDock();
             this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement14 = new Telerik.WinControls.UI.RadButtonElement();
-            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
             this.radDock1.SuspendLayout();
@@ -132,7 +132,7 @@
             // 
             this.ribbonTab1.AccessibleDescription = "Admission and Registration";
             this.ribbonTab1.AccessibleName = "Admission and Registration";
-            this.ribbonTab1.IsSelected = true;
+            this.ribbonTab1.IsSelected = false;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1});
             this.ribbonTab1.Name = "ribbonTab1";
@@ -699,7 +699,7 @@
             // 
             this.ribbonTab7.AccessibleDescription = "User";
             this.ribbonTab7.AccessibleName = "User";
-            this.ribbonTab7.IsSelected = false;
+            this.ribbonTab7.IsSelected = true;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnLogout});
             this.ribbonTab7.Name = "ribbonTab7";
@@ -730,6 +730,7 @@
             this.radButtonElement15.Image = global::eSAR.Properties.Resources._lock;
             this.radButtonElement15.Name = "radButtonElement15";
             this.radButtonElement15.Text = "";
+            this.radButtonElement15.Click += new System.EventHandler(this.radButtonElement15_Click);
             // 
             // LoggedUser
             // 
@@ -747,6 +748,14 @@
             this.mnuLogOut.Name = "mnuLogOut";
             this.mnuLogOut.Text = "Log Out";
             this.mnuLogOut.Click += new System.EventHandler(this.mnuLogOut_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.AccessibleDescription = "Exit";
+            this.Exit.AccessibleName = "Exit";
+            this.Exit.Name = "Exit";
+            this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // radDock1
             // 
@@ -793,14 +802,6 @@
             this.radButtonElement14.Name = "radButtonElement14";
             this.radButtonElement14.Text = "Student Permanent Record";
             this.radButtonElement14.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // Exit
-            // 
-            this.Exit.AccessibleDescription = "Exit";
-            this.Exit.AccessibleName = "Exit";
-            this.Exit.Name = "Exit";
-            this.Exit.Text = "Exit";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // FrmMain
             // 
