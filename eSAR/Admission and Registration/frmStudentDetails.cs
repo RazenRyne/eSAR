@@ -65,6 +65,7 @@ namespace eSAR.Admission_and_Registration
           
             txtStudentId.Enabled = false;
             txtStudentId.Text = SelectedStudent.StudentId;
+            txtLRN.Text = SelectedStudent.StudentLRN;
             txtFirstName.Text = SelectedStudent.FirstName;
             txtMiddleName.Text = SelectedStudent.MiddleName;
             txtLastName.Text = SelectedStudent.LastName;
@@ -285,6 +286,7 @@ namespace eSAR.Admission_and_Registration
             student.UnitsFailedLastYear = convertDecimal;
             student.DateAdmitted = System.DateTime.Now;
             student.Religion = cbReligion.Text;
+            student.StudentLRN = txtLRN.Text;
                
 
 
@@ -396,5 +398,6 @@ namespace eSAR.Admission_and_Registration
             };
             logService.AddLogs(log);
         }
+
     }
 }

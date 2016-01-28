@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem16 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem17 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem18 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn27 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn43 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn44 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn45 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn46 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn47 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn48 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentDetails));
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnPromote = new Telerik.WinControls.UI.RadButton();
@@ -258,7 +259,7 @@
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnFooter.Location = new System.Drawing.Point(0, 451);
             this.pnFooter.Name = "pnFooter";
-            this.pnFooter.Size = new System.Drawing.Size(720, 50);
+            this.pnFooter.Size = new System.Drawing.Size(748, 50);
             this.pnFooter.TabIndex = 3;
             // 
             // radPanel1
@@ -269,13 +270,13 @@
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(720, 50);
+            this.radPanel1.Size = new System.Drawing.Size(748, 50);
             this.radPanel1.TabIndex = 4;
             // 
             // btnPromote
             // 
             this.btnPromote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPromote.Location = new System.Drawing.Point(10, 14);
+            this.btnPromote.Location = new System.Drawing.Point(38, 14);
             this.btnPromote.Name = "btnPromote";
             this.btnPromote.Size = new System.Drawing.Size(83, 24);
             this.btnPromote.TabIndex = 38;
@@ -286,7 +287,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(536, 14);
+            this.btnSave.Location = new System.Drawing.Point(564, 14);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 24);
             this.btnSave.TabIndex = 36;
@@ -296,7 +297,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(625, 14);
+            this.btnCancel.Location = new System.Drawing.Point(653, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
             this.btnCancel.TabIndex = 37;
@@ -312,7 +313,7 @@
             this.pvStudent.Location = new System.Drawing.Point(0, 0);
             this.pvStudent.Name = "pvStudent";
             this.pvStudent.SelectedPage = this.StudentDetails;
-            this.pvStudent.Size = new System.Drawing.Size(720, 451);
+            this.pvStudent.Size = new System.Drawing.Size(748, 451);
             this.pvStudent.TabIndex = 4;
             // 
             // StudentDetails
@@ -321,7 +322,7 @@
             this.StudentDetails.ItemSize = new System.Drawing.SizeF(92F, 28F);
             this.StudentDetails.Location = new System.Drawing.Point(10, 37);
             this.StudentDetails.Name = "StudentDetails";
-            this.StudentDetails.Size = new System.Drawing.Size(699, 403);
+            this.StudentDetails.Size = new System.Drawing.Size(727, 403);
             this.StudentDetails.Text = "Student Details";
             // 
             // radPanel2
@@ -360,7 +361,7 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(699, 403);
+            this.radPanel2.Size = new System.Drawing.Size(727, 403);
             this.radPanel2.TabIndex = 6;
             // 
             // txtLRN
@@ -381,20 +382,20 @@
             // 
             // cbReligion
             // 
-            radListDataItem1.Text = "Islam";
-            radListDataItem2.Text = "UCCP";
-            radListDataItem9.Text = "Roman Catholic";
-            radListDataItem10.Text = "Iglesia Ni Kristo";
-            radListDataItem11.Text = "Other Christian";
-            radListDataItem12.Text = "Other";
-            radListDataItem13.Text = "None";
-            this.cbReligion.Items.Add(radListDataItem1);
-            this.cbReligion.Items.Add(radListDataItem2);
-            this.cbReligion.Items.Add(radListDataItem9);
-            this.cbReligion.Items.Add(radListDataItem10);
-            this.cbReligion.Items.Add(radListDataItem11);
-            this.cbReligion.Items.Add(radListDataItem12);
-            this.cbReligion.Items.Add(radListDataItem13);
+            radListDataItem3.Text = "Islam";
+            radListDataItem4.Text = "UCCP";
+            radListDataItem14.Text = "Roman Catholic";
+            radListDataItem15.Text = "Iglesia Ni Kristo";
+            radListDataItem16.Text = "Other Christian";
+            radListDataItem17.Text = "Other";
+            radListDataItem18.Text = "None";
+            this.cbReligion.Items.Add(radListDataItem3);
+            this.cbReligion.Items.Add(radListDataItem4);
+            this.cbReligion.Items.Add(radListDataItem14);
+            this.cbReligion.Items.Add(radListDataItem15);
+            this.cbReligion.Items.Add(radListDataItem16);
+            this.cbReligion.Items.Add(radListDataItem17);
+            this.cbReligion.Items.Add(radListDataItem18);
             this.cbReligion.Location = new System.Drawing.Point(526, 95);
             this.cbReligion.Name = "cbReligion";
             this.cbReligion.Size = new System.Drawing.Size(163, 20);
@@ -492,10 +493,10 @@
             // cmbGradeLevel
             // 
             this.cmbGradeLevel.DisplayMember = "Description";
-            radListDataItem3.Text = "Female";
-            radListDataItem4.Text = "Male";
-            this.cmbGradeLevel.Items.Add(radListDataItem3);
-            this.cmbGradeLevel.Items.Add(radListDataItem4);
+            radListDataItem5.Text = "Female";
+            radListDataItem6.Text = "Male";
+            this.cmbGradeLevel.Items.Add(radListDataItem5);
+            this.cmbGradeLevel.Items.Add(radListDataItem6);
             this.cmbGradeLevel.Location = new System.Drawing.Point(611, 26);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
             this.cmbGradeLevel.Size = new System.Drawing.Size(78, 20);
@@ -504,10 +505,10 @@
             // 
             // cmbGender
             // 
-            radListDataItem5.Text = "Female";
-            radListDataItem6.Text = "Male";
-            this.cmbGender.Items.Add(radListDataItem5);
-            this.cmbGender.Items.Add(radListDataItem6);
+            radListDataItem7.Text = "Female";
+            radListDataItem8.Text = "Male";
+            this.cmbGender.Items.Add(radListDataItem7);
+            this.cmbGender.Items.Add(radListDataItem8);
             this.cmbGender.Location = new System.Drawing.Point(573, 50);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(116, 20);
@@ -810,7 +811,7 @@
             // btnInsertImage
             // 
             this.btnInsertImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsertImage.Location = new System.Drawing.Point(12, 132);
+            this.btnInsertImage.Location = new System.Drawing.Point(40, 132);
             this.btnInsertImage.Name = "btnInsertImage";
             this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
             this.btnInsertImage.TabIndex = 12;
@@ -1117,25 +1118,25 @@
             // 
             // 
             this.radGridView2.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn25.FieldName = "StudentID";
-            gridViewTextBoxColumn25.HeaderText = "ID Number";
-            gridViewTextBoxColumn25.Name = "StudentID";
-            gridViewTextBoxColumn25.Width = 100;
-            gridViewTextBoxColumn25.WrapText = true;
-            gridViewTextBoxColumn26.FieldName = "Name";
-            gridViewTextBoxColumn26.HeaderText = "Name";
-            gridViewTextBoxColumn26.Name = "Name";
-            gridViewTextBoxColumn26.Width = 300;
-            gridViewTextBoxColumn26.WrapText = true;
-            gridViewTextBoxColumn27.FieldName = "Grade";
-            gridViewTextBoxColumn27.HeaderText = "Grade";
-            gridViewTextBoxColumn27.Name = "Grade";
-            gridViewTextBoxColumn27.Width = 193;
-            gridViewTextBoxColumn27.WrapText = true;
+            gridViewTextBoxColumn43.FieldName = "StudentID";
+            gridViewTextBoxColumn43.HeaderText = "ID Number";
+            gridViewTextBoxColumn43.Name = "StudentID";
+            gridViewTextBoxColumn43.Width = 100;
+            gridViewTextBoxColumn43.WrapText = true;
+            gridViewTextBoxColumn44.FieldName = "Name";
+            gridViewTextBoxColumn44.HeaderText = "Name";
+            gridViewTextBoxColumn44.Name = "Name";
+            gridViewTextBoxColumn44.Width = 300;
+            gridViewTextBoxColumn44.WrapText = true;
+            gridViewTextBoxColumn45.FieldName = "Grade";
+            gridViewTextBoxColumn45.HeaderText = "Grade";
+            gridViewTextBoxColumn45.Name = "Grade";
+            gridViewTextBoxColumn45.Width = 193;
+            gridViewTextBoxColumn45.WrapText = true;
             this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn25,
-            gridViewTextBoxColumn26,
-            gridViewTextBoxColumn27});
+            gridViewTextBoxColumn43,
+            gridViewTextBoxColumn44,
+            gridViewTextBoxColumn45});
             this.radGridView2.MasterTemplate.EnableGrouping = false;
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.Size = new System.Drawing.Size(611, 145);
@@ -1161,25 +1162,25 @@
             // 
             // 
             this.gvBuilding.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn28.FieldName = "StudentID";
-            gridViewTextBoxColumn28.HeaderText = "ID Number";
-            gridViewTextBoxColumn28.Name = "StudentID";
-            gridViewTextBoxColumn28.Width = 100;
-            gridViewTextBoxColumn28.WrapText = true;
-            gridViewTextBoxColumn29.FieldName = "Name";
-            gridViewTextBoxColumn29.HeaderText = "Name";
-            gridViewTextBoxColumn29.Name = "Name";
-            gridViewTextBoxColumn29.Width = 300;
-            gridViewTextBoxColumn29.WrapText = true;
-            gridViewTextBoxColumn30.FieldName = "Grade";
-            gridViewTextBoxColumn30.HeaderText = "Grade";
-            gridViewTextBoxColumn30.Name = "Grade";
-            gridViewTextBoxColumn30.Width = 193;
-            gridViewTextBoxColumn30.WrapText = true;
+            gridViewTextBoxColumn46.FieldName = "StudentID";
+            gridViewTextBoxColumn46.HeaderText = "ID Number";
+            gridViewTextBoxColumn46.Name = "StudentID";
+            gridViewTextBoxColumn46.Width = 100;
+            gridViewTextBoxColumn46.WrapText = true;
+            gridViewTextBoxColumn47.FieldName = "Name";
+            gridViewTextBoxColumn47.HeaderText = "Name";
+            gridViewTextBoxColumn47.Name = "Name";
+            gridViewTextBoxColumn47.Width = 300;
+            gridViewTextBoxColumn47.WrapText = true;
+            gridViewTextBoxColumn48.FieldName = "Grade";
+            gridViewTextBoxColumn48.HeaderText = "Grade";
+            gridViewTextBoxColumn48.Name = "Grade";
+            gridViewTextBoxColumn48.Width = 193;
+            gridViewTextBoxColumn48.WrapText = true;
             this.gvBuilding.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn28,
-            gridViewTextBoxColumn29,
-            gridViewTextBoxColumn30});
+            gridViewTextBoxColumn46,
+            gridViewTextBoxColumn47,
+            gridViewTextBoxColumn48});
             this.gvBuilding.MasterTemplate.EnableGrouping = false;
             this.gvBuilding.Name = "gvBuilding";
             this.gvBuilding.Size = new System.Drawing.Size(611, 145);
@@ -1225,10 +1226,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(720, 501);
+            this.ClientSize = new System.Drawing.Size(748, 501);
             this.Controls.Add(this.pvStudent);
             this.Controls.Add(this.pnFooter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmStudentDetails";
             // 
             // 
