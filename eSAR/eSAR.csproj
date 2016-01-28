@@ -755,6 +755,10 @@
       <Project>{dff644e0-6114-42d0-b1e4-dfc3c803fe07}</Project>
       <Name>eSARBDO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eSARReportLibrary\eSARReportLibrary.csproj">
+      <Project>{27ec2cd2-af00-4de5-b631-eddc45e8d2d4}</Project>
+      <Name>eSARReportLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\eSARServiceInterface\eSARServiceInterface.csproj">
       <Project>{a8b8e24f-0bfd-4431-9f15-1d7d4ed01402}</Project>
       <Name>eSARServiceInterface</Name>
