@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem16 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem17 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem18 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn27 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnPromote = new Telerik.WinControls.UI.RadButton();
@@ -278,7 +278,7 @@
             this.btnPromote.Location = new System.Drawing.Point(10, 14);
             this.btnPromote.Name = "btnPromote";
             this.btnPromote.Size = new System.Drawing.Size(83, 24);
-            this.btnPromote.TabIndex = 39;
+            this.btnPromote.TabIndex = 38;
             this.btnPromote.Text = "Promote";
             this.btnPromote.Visible = false;
             this.btnPromote.Click += new System.EventHandler(this.btnPromote_Click);
@@ -289,7 +289,7 @@
             this.btnSave.Location = new System.Drawing.Point(536, 14);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 24);
-            this.btnSave.TabIndex = 37;
+            this.btnSave.TabIndex = 36;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -299,7 +299,7 @@
             this.btnCancel.Location = new System.Drawing.Point(625, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
-            this.btnCancel.TabIndex = 38;
+            this.btnCancel.TabIndex = 37;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -369,7 +369,7 @@
             this.txtLRN.MaxLength = 8;
             this.txtLRN.Name = "txtLRN";
             this.txtLRN.Size = new System.Drawing.Size(206, 20);
-            this.txtLRN.TabIndex = 38;
+            this.txtLRN.TabIndex = 1;
             // 
             // radLabel10
             // 
@@ -381,24 +381,24 @@
             // 
             // cbReligion
             // 
-            radListDataItem12.Text = "Islam";
-            radListDataItem13.Text = "UCCP";
-            radListDataItem14.Text = "Roman Catholic";
-            radListDataItem15.Text = "Iglesia Ni Kristo";
-            radListDataItem16.Text = "Other Christian";
-            radListDataItem17.Text = "Other";
-            radListDataItem18.Text = "None";
+            radListDataItem1.Text = "Islam";
+            radListDataItem2.Text = "UCCP";
+            radListDataItem9.Text = "Roman Catholic";
+            radListDataItem10.Text = "Iglesia Ni Kristo";
+            radListDataItem11.Text = "Other Christian";
+            radListDataItem12.Text = "Other";
+            radListDataItem13.Text = "None";
+            this.cbReligion.Items.Add(radListDataItem1);
+            this.cbReligion.Items.Add(radListDataItem2);
+            this.cbReligion.Items.Add(radListDataItem9);
+            this.cbReligion.Items.Add(radListDataItem10);
+            this.cbReligion.Items.Add(radListDataItem11);
             this.cbReligion.Items.Add(radListDataItem12);
             this.cbReligion.Items.Add(radListDataItem13);
-            this.cbReligion.Items.Add(radListDataItem14);
-            this.cbReligion.Items.Add(radListDataItem15);
-            this.cbReligion.Items.Add(radListDataItem16);
-            this.cbReligion.Items.Add(radListDataItem17);
-            this.cbReligion.Items.Add(radListDataItem18);
             this.cbReligion.Location = new System.Drawing.Point(526, 95);
             this.cbReligion.Name = "cbReligion";
             this.cbReligion.Size = new System.Drawing.Size(163, 20);
-            this.cbReligion.TabIndex = 36;
+            this.cbReligion.TabIndex = 9;
             // 
             // radGroupBox2
             // 
@@ -419,7 +419,7 @@
             this.chkBirthCertificate.Location = new System.Drawing.Point(341, 9);
             this.chkBirthCertificate.Name = "chkBirthCertificate";
             this.chkBirthCertificate.Size = new System.Drawing.Size(97, 18);
-            this.chkBirthCertificate.TabIndex = 14;
+            this.chkBirthCertificate.TabIndex = 16;
             this.chkBirthCertificate.Text = "Birth Certificate";
             // 
             // chkGoodMoral
@@ -427,7 +427,7 @@
             this.chkGoodMoral.Location = new System.Drawing.Point(226, 9);
             this.chkGoodMoral.Name = "chkGoodMoral";
             this.chkGoodMoral.Size = new System.Drawing.Size(80, 18);
-            this.chkGoodMoral.TabIndex = 13;
+            this.chkGoodMoral.TabIndex = 15;
             this.chkGoodMoral.Text = "Good Moral";
             // 
             // chkReportCard
@@ -435,7 +435,7 @@
             this.chkReportCard.Location = new System.Drawing.Point(112, 9);
             this.chkReportCard.Name = "chkReportCard";
             this.chkReportCard.Size = new System.Drawing.Size(80, 18);
-            this.chkReportCard.TabIndex = 12;
+            this.chkReportCard.TabIndex = 14;
             this.chkReportCard.Text = "Report Card";
             // 
             // chkMadrasah
@@ -443,7 +443,7 @@
             this.chkMadrasah.Location = new System.Drawing.Point(15, 9);
             this.chkMadrasah.Name = "chkMadrasah";
             this.chkMadrasah.Size = new System.Drawing.Size(69, 18);
-            this.chkMadrasah.TabIndex = 11;
+            this.chkMadrasah.TabIndex = 13;
             this.chkMadrasah.Text = "Madrasah";
             // 
             // txtFail
@@ -451,7 +451,7 @@
             this.txtFail.Location = new System.Drawing.Point(654, 145);
             this.txtFail.Name = "txtFail";
             this.txtFail.Size = new System.Drawing.Size(35, 20);
-            this.txtFail.TabIndex = 34;
+            this.txtFail.TabIndex = 11;
             this.txtFail.Text = "0.00";
             this.txtFail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtFail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
@@ -469,7 +469,7 @@
             this.txtPrevGPA.Location = new System.Drawing.Point(647, 122);
             this.txtPrevGPA.Name = "txtPrevGPA";
             this.txtPrevGPA.Size = new System.Drawing.Size(42, 20);
-            this.txtPrevGPA.TabIndex = 32;
+            this.txtPrevGPA.TabIndex = 10;
             this.txtPrevGPA.Text = "0.00";
             this.txtPrevGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrevGPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
@@ -487,31 +487,31 @@
             this.txtMiddleName.Location = new System.Drawing.Point(236, 97);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(156, 20);
-            this.txtMiddleName.TabIndex = 2;
+            this.txtMiddleName.TabIndex = 3;
             // 
             // cmbGradeLevel
             // 
             this.cmbGradeLevel.DisplayMember = "Description";
-            radListDataItem1.Text = "Female";
-            radListDataItem2.Text = "Male";
-            this.cmbGradeLevel.Items.Add(radListDataItem1);
-            this.cmbGradeLevel.Items.Add(radListDataItem2);
+            radListDataItem3.Text = "Female";
+            radListDataItem4.Text = "Male";
+            this.cmbGradeLevel.Items.Add(radListDataItem3);
+            this.cmbGradeLevel.Items.Add(radListDataItem4);
             this.cmbGradeLevel.Location = new System.Drawing.Point(611, 26);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
             this.cmbGradeLevel.Size = new System.Drawing.Size(78, 20);
-            this.cmbGradeLevel.TabIndex = 5;
+            this.cmbGradeLevel.TabIndex = 6;
             this.cmbGradeLevel.ValueMember = "GradeLev";
             // 
             // cmbGender
             // 
-            radListDataItem3.Text = "Female";
-            radListDataItem4.Text = "Male";
-            this.cmbGender.Items.Add(radListDataItem3);
-            this.cmbGender.Items.Add(radListDataItem4);
+            radListDataItem5.Text = "Female";
+            radListDataItem6.Text = "Male";
+            this.cmbGender.Items.Add(radListDataItem5);
+            this.cmbGender.Items.Add(radListDataItem6);
             this.cmbGender.Location = new System.Drawing.Point(573, 50);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(116, 20);
-            this.cmbGender.TabIndex = 6;
+            this.cmbGender.TabIndex = 7;
             this.cmbGender.Text = "Male";
             // 
             // pbImage
@@ -633,7 +633,7 @@
             this.txtPOB_Province.MaxLength = 50;
             this.txtPOB_Province.Name = "txtPOB_Province";
             this.txtPOB_Province.Size = new System.Drawing.Size(250, 20);
-            this.txtPOB_Province.TabIndex = 19;
+            this.txtPOB_Province.TabIndex = 20;
             // 
             // txtPOB_Brgy
             // 
@@ -641,7 +641,7 @@
             this.txtPOB_Brgy.MaxLength = 50;
             this.txtPOB_Brgy.Name = "txtPOB_Brgy";
             this.txtPOB_Brgy.Size = new System.Drawing.Size(250, 20);
-            this.txtPOB_Brgy.TabIndex = 17;
+            this.txtPOB_Brgy.TabIndex = 18;
             // 
             // radLabel13
             // 
@@ -665,7 +665,7 @@
             this.txtPOB_Town.MaxLength = 50;
             this.txtPOB_Town.Name = "txtPOB_Town";
             this.txtPOB_Town.Size = new System.Drawing.Size(250, 20);
-            this.txtPOB_Town.TabIndex = 18;
+            this.txtPOB_Town.TabIndex = 19;
             // 
             // radLabel14
             // 
@@ -681,7 +681,7 @@
             this.txtPOB_Street.MaxLength = 50;
             this.txtPOB_Street.Name = "txtPOB_Street";
             this.txtPOB_Street.Size = new System.Drawing.Size(250, 20);
-            this.txtPOB_Street.TabIndex = 16;
+            this.txtPOB_Street.TabIndex = 17;
             // 
             // radLabel11
             // 
@@ -696,7 +696,7 @@
             this.dtDOB.Location = new System.Drawing.Point(528, 72);
             this.dtDOB.Name = "dtDOB";
             this.dtDOB.Size = new System.Drawing.Size(161, 20);
-            this.dtDOB.TabIndex = 7;
+            this.dtDOB.TabIndex = 8;
             this.dtDOB.TabStop = false;
             this.dtDOB.Text = "Wednesday, April 22, 2015";
             this.dtDOB.Value = new System.DateTime(2015, 4, 22, 0, 0, 0, 0);
@@ -739,7 +739,7 @@
             this.txtSchoolLastAttended.MaxLength = 50;
             this.txtSchoolLastAttended.Name = "txtSchoolLastAttended";
             this.txtSchoolLastAttended.Size = new System.Drawing.Size(292, 20);
-            this.txtSchoolLastAttended.TabIndex = 4;
+            this.txtSchoolLastAttended.TabIndex = 5;
             // 
             // txtLastName
             // 
@@ -747,7 +747,7 @@
             this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(156, 20);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 4;
             // 
             // txtFirstName
             // 
@@ -755,7 +755,7 @@
             this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(156, 20);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 2;
             // 
             // txtStudentId
             // 
@@ -813,7 +813,7 @@
             this.btnInsertImage.Location = new System.Drawing.Point(12, 132);
             this.btnInsertImage.Name = "btnInsertImage";
             this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
-            this.btnInsertImage.TabIndex = 9;
+            this.btnInsertImage.TabIndex = 12;
             this.btnInsertImage.Text = "Insert Image";
             this.btnInsertImage.Click += new System.EventHandler(this.btnInsertImage_Click);
             // 
@@ -874,7 +874,7 @@
             this.txtGuardian_Income.Location = new System.Drawing.Point(169, 287);
             this.txtGuardian_Income.Name = "txtGuardian_Income";
             this.txtGuardian_Income.Size = new System.Drawing.Size(132, 20);
-            this.txtGuardian_Income.TabIndex = 36;
+            this.txtGuardian_Income.TabIndex = 35;
             this.txtGuardian_Income.Text = "0";
             this.txtGuardian_Income.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGuardian_Income.TextChanged += new System.EventHandler(this.txtGuardian_Income_TextChanged);
@@ -886,7 +886,7 @@
             this.txtMother_EducAttainment.MaxLength = 50;
             this.txtMother_EducAttainment.Name = "txtMother_EducAttainment";
             this.txtMother_EducAttainment.Size = new System.Drawing.Size(276, 20);
-            this.txtMother_EducAttainment.TabIndex = 33;
+            this.txtMother_EducAttainment.TabIndex = 31;
             // 
             // txtGuardian_Occupation
             // 
@@ -894,7 +894,7 @@
             this.txtGuardian_Occupation.MaxLength = 50;
             this.txtGuardian_Occupation.Name = "txtGuardian_Occupation";
             this.txtGuardian_Occupation.Size = new System.Drawing.Size(198, 20);
-            this.txtGuardian_Occupation.TabIndex = 35;
+            this.txtGuardian_Occupation.TabIndex = 34;
             // 
             // txtMother_Income
             // 
@@ -913,7 +913,7 @@
             this.txtFather_EducAttainment.MaxLength = 50;
             this.txtFather_EducAttainment.Name = "txtFather_EducAttainment";
             this.txtFather_EducAttainment.Size = new System.Drawing.Size(276, 20);
-            this.txtFather_EducAttainment.TabIndex = 29;
+            this.txtFather_EducAttainment.TabIndex = 27;
             // 
             // txtGuardian_FullName
             // 
@@ -921,7 +921,7 @@
             this.txtGuardian_FullName.MaxLength = 100;
             this.txtGuardian_FullName.Name = "txtGuardian_FullName";
             this.txtGuardian_FullName.Size = new System.Drawing.Size(198, 20);
-            this.txtGuardian_FullName.TabIndex = 34;
+            this.txtGuardian_FullName.TabIndex = 33;
             // 
             // radLabel39
             // 
@@ -953,7 +953,7 @@
             this.txtMother_Occupation.MaxLength = 50;
             this.txtMother_Occupation.Name = "txtMother_Occupation";
             this.txtMother_Occupation.Size = new System.Drawing.Size(198, 20);
-            this.txtMother_Occupation.TabIndex = 31;
+            this.txtMother_Occupation.TabIndex = 30;
             // 
             // txtFather_Income
             // 
@@ -972,7 +972,7 @@
             this.txtMother_FullName.MaxLength = 100;
             this.txtMother_FullName.Name = "txtMother_FullName";
             this.txtMother_FullName.Size = new System.Drawing.Size(198, 20);
-            this.txtMother_FullName.TabIndex = 30;
+            this.txtMother_FullName.TabIndex = 29;
             // 
             // radLabel43
             // 
@@ -1012,7 +1012,7 @@
             this.txtFather_Occupation.MaxLength = 50;
             this.txtFather_Occupation.Name = "txtFather_Occupation";
             this.txtFather_Occupation.Size = new System.Drawing.Size(198, 20);
-            this.txtFather_Occupation.TabIndex = 27;
+            this.txtFather_Occupation.TabIndex = 26;
             // 
             // txtFather_FullName
             // 
@@ -1020,7 +1020,7 @@
             this.txtFather_FullName.MaxLength = 100;
             this.txtFather_FullName.Name = "txtFather_FullName";
             this.txtFather_FullName.Size = new System.Drawing.Size(198, 20);
-            this.txtFather_FullName.TabIndex = 26;
+            this.txtFather_FullName.TabIndex = 25;
             // 
             // radLabel47
             // 
@@ -1117,25 +1117,25 @@
             // 
             // 
             this.radGridView2.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn7.FieldName = "StudentID";
-            gridViewTextBoxColumn7.HeaderText = "ID Number";
-            gridViewTextBoxColumn7.Name = "StudentID";
-            gridViewTextBoxColumn7.Width = 100;
-            gridViewTextBoxColumn7.WrapText = true;
-            gridViewTextBoxColumn8.FieldName = "Name";
-            gridViewTextBoxColumn8.HeaderText = "Name";
-            gridViewTextBoxColumn8.Name = "Name";
-            gridViewTextBoxColumn8.Width = 300;
-            gridViewTextBoxColumn8.WrapText = true;
-            gridViewTextBoxColumn9.FieldName = "Grade";
-            gridViewTextBoxColumn9.HeaderText = "Grade";
-            gridViewTextBoxColumn9.Name = "Grade";
-            gridViewTextBoxColumn9.Width = 193;
-            gridViewTextBoxColumn9.WrapText = true;
+            gridViewTextBoxColumn25.FieldName = "StudentID";
+            gridViewTextBoxColumn25.HeaderText = "ID Number";
+            gridViewTextBoxColumn25.Name = "StudentID";
+            gridViewTextBoxColumn25.Width = 100;
+            gridViewTextBoxColumn25.WrapText = true;
+            gridViewTextBoxColumn26.FieldName = "Name";
+            gridViewTextBoxColumn26.HeaderText = "Name";
+            gridViewTextBoxColumn26.Name = "Name";
+            gridViewTextBoxColumn26.Width = 300;
+            gridViewTextBoxColumn26.WrapText = true;
+            gridViewTextBoxColumn27.FieldName = "Grade";
+            gridViewTextBoxColumn27.HeaderText = "Grade";
+            gridViewTextBoxColumn27.Name = "Grade";
+            gridViewTextBoxColumn27.Width = 193;
+            gridViewTextBoxColumn27.WrapText = true;
             this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9});
+            gridViewTextBoxColumn25,
+            gridViewTextBoxColumn26,
+            gridViewTextBoxColumn27});
             this.radGridView2.MasterTemplate.EnableGrouping = false;
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.Size = new System.Drawing.Size(611, 145);
@@ -1161,25 +1161,25 @@
             // 
             // 
             this.gvBuilding.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn10.FieldName = "StudentID";
-            gridViewTextBoxColumn10.HeaderText = "ID Number";
-            gridViewTextBoxColumn10.Name = "StudentID";
-            gridViewTextBoxColumn10.Width = 100;
-            gridViewTextBoxColumn10.WrapText = true;
-            gridViewTextBoxColumn11.FieldName = "Name";
-            gridViewTextBoxColumn11.HeaderText = "Name";
-            gridViewTextBoxColumn11.Name = "Name";
-            gridViewTextBoxColumn11.Width = 300;
-            gridViewTextBoxColumn11.WrapText = true;
-            gridViewTextBoxColumn12.FieldName = "Grade";
-            gridViewTextBoxColumn12.HeaderText = "Grade";
-            gridViewTextBoxColumn12.Name = "Grade";
-            gridViewTextBoxColumn12.Width = 193;
-            gridViewTextBoxColumn12.WrapText = true;
+            gridViewTextBoxColumn28.FieldName = "StudentID";
+            gridViewTextBoxColumn28.HeaderText = "ID Number";
+            gridViewTextBoxColumn28.Name = "StudentID";
+            gridViewTextBoxColumn28.Width = 100;
+            gridViewTextBoxColumn28.WrapText = true;
+            gridViewTextBoxColumn29.FieldName = "Name";
+            gridViewTextBoxColumn29.HeaderText = "Name";
+            gridViewTextBoxColumn29.Name = "Name";
+            gridViewTextBoxColumn29.Width = 300;
+            gridViewTextBoxColumn29.WrapText = true;
+            gridViewTextBoxColumn30.FieldName = "Grade";
+            gridViewTextBoxColumn30.HeaderText = "Grade";
+            gridViewTextBoxColumn30.Name = "Grade";
+            gridViewTextBoxColumn30.Width = 193;
+            gridViewTextBoxColumn30.WrapText = true;
             this.gvBuilding.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
+            gridViewTextBoxColumn28,
+            gridViewTextBoxColumn29,
+            gridViewTextBoxColumn30});
             this.gvBuilding.MasterTemplate.EnableGrouping = false;
             this.gvBuilding.Name = "gvBuilding";
             this.gvBuilding.Size = new System.Drawing.Size(611, 145);
