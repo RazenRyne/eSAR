@@ -144,6 +144,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Time Slots";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmTimeSlotList_Activated);

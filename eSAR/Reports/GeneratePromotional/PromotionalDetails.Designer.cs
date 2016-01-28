@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
-            this.radLabel89 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.cmbGradeLevel = new Telerik.WinControls.UI.RadDropDownList();
-            this.btnCancelScholarshipDiscount = new Telerik.WinControls.UI.RadButton();
-            this.btnGenerate = new Telerik.WinControls.UI.RadButton();
-            this.cmbSY = new Telerik.WinControls.UI.RadDropDownList();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.cmbSection = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.cmbSY = new Telerik.WinControls.UI.RadDropDownList();
+            this.btnGenerate = new Telerik.WinControls.UI.RadButton();
+            this.btnCancelScholarshipDiscount = new Telerik.WinControls.UI.RadButton();
+            this.cmbGradeLevel = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel89 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelScholarshipDiscount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGenerate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenerate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelScholarshipDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,39 +66,27 @@
             this.radPanel1.Size = new System.Drawing.Size(283, 155);
             this.radPanel1.TabIndex = 4;
             // 
-            // radLabel89
+            // cmbSection
             // 
-            this.radLabel89.Location = new System.Drawing.Point(69, 27);
-            this.radLabel89.Name = "radLabel89";
-            this.radLabel89.Size = new System.Drawing.Size(26, 18);
-            this.radLabel89.TabIndex = 21;
-            this.radLabel89.Text = "S.Y.:";
+            this.cmbSection.Location = new System.Drawing.Point(111, 79);
+            this.cmbSection.Name = "cmbSection";
+            this.cmbSection.Size = new System.Drawing.Size(130, 20);
+            this.cmbSection.TabIndex = 53;
             // 
-            // radLabel2
+            // radLabel1
             // 
-            this.radLabel2.Location = new System.Drawing.Point(27, 53);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(67, 18);
-            this.radLabel2.TabIndex = 25;
-            this.radLabel2.Text = "Grade Level:";
+            this.radLabel1.Location = new System.Drawing.Point(49, 79);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(45, 18);
+            this.radLabel1.TabIndex = 52;
+            this.radLabel1.Text = "Section:";
             // 
-            // cmbGradeLevel
+            // cmbSY
             // 
-            this.cmbGradeLevel.Location = new System.Drawing.Point(111, 53);
-            this.cmbGradeLevel.Name = "cmbGradeLevel";
-            this.cmbGradeLevel.Size = new System.Drawing.Size(130, 20);
-            this.cmbGradeLevel.TabIndex = 26;
-            this.cmbGradeLevel.SelectedValueChanged += new System.EventHandler(this.cmbGradeLevel_SelectedValueChanged);
-            // 
-            // btnCancelScholarshipDiscount
-            // 
-            this.btnCancelScholarshipDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelScholarshipDiscount.Location = new System.Drawing.Point(158, 116);
-            this.btnCancelScholarshipDiscount.Name = "btnCancelScholarshipDiscount";
-            this.btnCancelScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
-            this.btnCancelScholarshipDiscount.TabIndex = 49;
-            this.btnCancelScholarshipDiscount.Text = "Close";
-            this.btnCancelScholarshipDiscount.Click += new System.EventHandler(this.btnCancelScholarshipDiscount_Click);
+            this.cmbSY.Location = new System.Drawing.Point(111, 27);
+            this.cmbSY.Name = "cmbSY";
+            this.cmbSY.Size = new System.Drawing.Size(130, 20);
+            this.cmbSY.TabIndex = 51;
             // 
             // btnGenerate
             // 
@@ -110,53 +98,68 @@
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // cmbSY
+            // btnCancelScholarshipDiscount
             // 
-            this.cmbSY.Location = new System.Drawing.Point(111, 27);
-            this.cmbSY.Name = "cmbSY";
-            this.cmbSY.Size = new System.Drawing.Size(130, 20);
-            this.cmbSY.TabIndex = 51;
+            this.btnCancelScholarshipDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelScholarshipDiscount.Location = new System.Drawing.Point(158, 116);
+            this.btnCancelScholarshipDiscount.Name = "btnCancelScholarshipDiscount";
+            this.btnCancelScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
+            this.btnCancelScholarshipDiscount.TabIndex = 49;
+            this.btnCancelScholarshipDiscount.Text = "Close";
+            this.btnCancelScholarshipDiscount.Click += new System.EventHandler(this.btnCancelScholarshipDiscount_Click);
             // 
-            // radLabel1
+            // cmbGradeLevel
             // 
-            this.radLabel1.Location = new System.Drawing.Point(49, 79);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(45, 18);
-            this.radLabel1.TabIndex = 52;
-            this.radLabel1.Text = "Section:";
+            this.cmbGradeLevel.Location = new System.Drawing.Point(111, 53);
+            this.cmbGradeLevel.Name = "cmbGradeLevel";
+            this.cmbGradeLevel.Size = new System.Drawing.Size(130, 20);
+            this.cmbGradeLevel.TabIndex = 26;
+            this.cmbGradeLevel.SelectedValueChanged += new System.EventHandler(this.cmbGradeLevel_SelectedValueChanged);
             // 
-            // cmbSection
+            // radLabel2
             // 
-            this.cmbSection.Location = new System.Drawing.Point(111, 79);
-            this.cmbSection.Name = "cmbSection";
-            this.cmbSection.Size = new System.Drawing.Size(130, 20);
-            this.cmbSection.TabIndex = 53;
+            this.radLabel2.Location = new System.Drawing.Point(27, 53);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(67, 18);
+            this.radLabel2.TabIndex = 25;
+            this.radLabel2.Text = "Grade Level:";
+            // 
+            // radLabel89
+            // 
+            this.radLabel89.Location = new System.Drawing.Point(69, 27);
+            this.radLabel89.Name = "radLabel89";
+            this.radLabel89.Size = new System.Drawing.Size(26, 18);
+            this.radLabel89.TabIndex = 21;
+            this.radLabel89.Text = "S.Y.:";
             // 
             // PromotionalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 155);
+            this.ControlBox = false;
             this.Controls.Add(this.radPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PromotionalDetails";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prospectus";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.LoadMe);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelScholarshipDiscount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGenerate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenerate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelScholarshipDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

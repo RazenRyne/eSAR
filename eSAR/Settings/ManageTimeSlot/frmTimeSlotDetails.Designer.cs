@@ -208,6 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(269, 258);
+            this.ControlBox = false;
             this.Controls.Add(this.tpEnd);
             this.Controls.Add(this.tPStart);
             this.Controls.Add(this.chkSaturday);

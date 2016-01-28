@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btCancel = new Telerik.WinControls.UI.RadButton();
             this.btnEdit = new Telerik.WinControls.UI.RadButton();
@@ -104,45 +104,45 @@
             this.gvFees.MasterTemplate.AllowDeleteRow = false;
             this.gvFees.MasterTemplate.AllowEditRow = false;
             this.gvFees.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn1.FieldName = "FeeID";
-            gridViewTextBoxColumn1.HeaderText = "Fee Code";
-            gridViewTextBoxColumn1.IsVisible = false;
-            gridViewTextBoxColumn1.Name = "FeeID";
-            gridViewTextBoxColumn2.FieldName = "Amount";
-            gridViewTextBoxColumn2.HeaderText = "Amount";
-            gridViewTextBoxColumn2.Name = "Amount";
-            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn2.Width = 100;
-            gridViewTextBoxColumn3.FieldName = "FeeDescription";
-            gridViewTextBoxColumn3.HeaderText = "Description";
-            gridViewTextBoxColumn3.Name = "FeeDescription";
-            gridViewTextBoxColumn3.Width = 250;
-            gridViewTextBoxColumn4.FieldName = "NumPay";
-            gridViewTextBoxColumn4.HeaderText = "# of Payments";
-            gridViewTextBoxColumn4.Name = "NumPay";
-            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn4.Width = 80;
-            gridViewTextBoxColumn5.FieldName = "SYImplemented";
-            gridViewTextBoxColumn5.HeaderText = "School Year";
-            gridViewTextBoxColumn5.Name = "SYImplemented";
-            gridViewTextBoxColumn5.Width = 100;
-            gridViewTextBoxColumn6.FieldName = "GradeLev";
-            gridViewTextBoxColumn6.HeaderText = "Grade Level";
-            gridViewTextBoxColumn6.Name = "GradeLev";
-            gridViewTextBoxColumn6.Width = 100;
-            gridViewTextBoxColumn7.FieldName = "DiscountFullPay";
-            gridViewTextBoxColumn7.HeaderText = "Discount for FP";
-            gridViewTextBoxColumn7.Name = "DiscountFullPay";
-            gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn8.FieldName = "FeeID";
+            gridViewTextBoxColumn8.HeaderText = "Fee Code";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "FeeID";
+            gridViewTextBoxColumn9.FieldName = "Amount";
+            gridViewTextBoxColumn9.HeaderText = "Amount";
+            gridViewTextBoxColumn9.Name = "Amount";
+            gridViewTextBoxColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn9.Width = 100;
+            gridViewTextBoxColumn10.FieldName = "FeeDescription";
+            gridViewTextBoxColumn10.HeaderText = "Description";
+            gridViewTextBoxColumn10.Name = "FeeDescription";
+            gridViewTextBoxColumn10.Width = 250;
+            gridViewTextBoxColumn11.FieldName = "NumPay";
+            gridViewTextBoxColumn11.HeaderText = "# of Payments";
+            gridViewTextBoxColumn11.Name = "NumPay";
+            gridViewTextBoxColumn11.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn11.Width = 80;
+            gridViewTextBoxColumn12.FieldName = "SYImplemented";
+            gridViewTextBoxColumn12.HeaderText = "School Year";
+            gridViewTextBoxColumn12.Name = "SYImplemented";
+            gridViewTextBoxColumn12.Width = 100;
+            gridViewTextBoxColumn13.FieldName = "GradeLev";
+            gridViewTextBoxColumn13.HeaderText = "Grade Level";
+            gridViewTextBoxColumn13.Name = "GradeLev";
+            gridViewTextBoxColumn13.Width = 100;
+            gridViewTextBoxColumn14.FieldName = "DiscountFullPay";
+            gridViewTextBoxColumn14.HeaderText = "Discount for FP";
+            gridViewTextBoxColumn14.Name = "DiscountFullPay";
+            gridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn14.Width = 100;
             this.gvFees.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7});
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14});
             this.gvFees.MasterTemplate.EnableGrouping = false;
             this.gvFees.Name = "gvFees";
             this.gvFees.ReadOnly = true;
@@ -164,6 +164,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Student Fees";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.StudentFeeList_Load);

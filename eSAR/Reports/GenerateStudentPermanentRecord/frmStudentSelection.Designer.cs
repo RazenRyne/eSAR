@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.gvStudent = new Telerik.WinControls.UI.RadGridView();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.btnGenerate = new Telerik.WinControls.UI.RadButton();
@@ -56,31 +56,31 @@
             this.gvStudent.MasterTemplate.AllowEditRow = false;
             this.gvStudent.MasterTemplate.AllowRowReorder = true;
             this.gvStudent.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn13.FieldName = "StudentId";
-            gridViewTextBoxColumn13.HeaderText = "Student ID";
-            gridViewTextBoxColumn13.MaxLength = 50;
-            gridViewTextBoxColumn13.Name = "StudentId";
-            gridViewTextBoxColumn13.Width = 150;
-            gridViewTextBoxColumn14.FieldName = "LastName";
-            gridViewTextBoxColumn14.HeaderText = "Last Name";
-            gridViewTextBoxColumn14.MaxLength = 50;
-            gridViewTextBoxColumn14.Name = "LastName";
-            gridViewTextBoxColumn14.Width = 257;
-            gridViewTextBoxColumn15.FieldName = "FirstName";
-            gridViewTextBoxColumn15.HeaderText = "First Name";
-            gridViewTextBoxColumn15.MaxLength = 50;
-            gridViewTextBoxColumn15.Name = "FirstName";
-            gridViewTextBoxColumn15.Width = 260;
-            gridViewTextBoxColumn16.FieldName = "MiddleName";
-            gridViewTextBoxColumn16.HeaderText = "Middle Name";
-            gridViewTextBoxColumn16.MaxLength = 50;
-            gridViewTextBoxColumn16.Name = "MiddleName";
-            gridViewTextBoxColumn16.Width = 270;
+            gridViewTextBoxColumn1.FieldName = "StudentId";
+            gridViewTextBoxColumn1.HeaderText = "Student ID";
+            gridViewTextBoxColumn1.MaxLength = 50;
+            gridViewTextBoxColumn1.Name = "StudentId";
+            gridViewTextBoxColumn1.Width = 150;
+            gridViewTextBoxColumn2.FieldName = "LastName";
+            gridViewTextBoxColumn2.HeaderText = "Last Name";
+            gridViewTextBoxColumn2.MaxLength = 50;
+            gridViewTextBoxColumn2.Name = "LastName";
+            gridViewTextBoxColumn2.Width = 257;
+            gridViewTextBoxColumn3.FieldName = "FirstName";
+            gridViewTextBoxColumn3.HeaderText = "First Name";
+            gridViewTextBoxColumn3.MaxLength = 50;
+            gridViewTextBoxColumn3.Name = "FirstName";
+            gridViewTextBoxColumn3.Width = 260;
+            gridViewTextBoxColumn4.FieldName = "MiddleName";
+            gridViewTextBoxColumn4.HeaderText = "Middle Name";
+            gridViewTextBoxColumn4.MaxLength = 50;
+            gridViewTextBoxColumn4.Name = "MiddleName";
+            gridViewTextBoxColumn4.Width = 270;
             this.gvStudent.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.gvStudent.MasterTemplate.EnableGrouping = false;
             this.gvStudent.Name = "gvStudent";
             this.gvStudent.ShowGroupPanel = false;
@@ -120,6 +120,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student List Selection";
             this.Activated += new System.EventHandler(this.frmStudentSelection_Activated);

@@ -406,6 +406,12 @@
     <Compile Include="Reports\GenerateStudentList\StudentListDetails.designer.cs">
       <DependentUpon>StudentListDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\GenerateStudentPermanentRecord\frmReportDetailsPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GenerateStudentPermanentRecord\frmReportDetailsPR.Designer.cs">
+      <DependentUpon>frmReportDetailsPR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\GenerateStudentPermanentRecord\frmStudentSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -668,6 +674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GenerateStudentList\StudentListDetails.resx">
       <DependentUpon>StudentListDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GenerateStudentPermanentRecord\frmReportDetailsPR.resx">
+      <DependentUpon>frmReportDetailsPR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GenerateStudentPermanentRecord\frmStudentSelection.resx">
       <DependentUpon>frmStudentSelection.cs</DependentUpon>

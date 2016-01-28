@@ -154,6 +154,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.Text = "Building List";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmBuildingList_Activated);

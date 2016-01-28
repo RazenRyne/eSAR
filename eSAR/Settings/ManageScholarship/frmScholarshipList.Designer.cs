@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.gvScholarship = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
@@ -72,30 +72,30 @@
             this.gvScholarship.MasterTemplate.AllowDragToGroup = false;
             this.gvScholarship.MasterTemplate.AllowEditRow = false;
             this.gvScholarship.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn1.FieldName = "ScholarshipCode";
-            gridViewTextBoxColumn1.HeaderText = "Scholarship Code";
-            gridViewTextBoxColumn1.Name = "ScholarshipCode";
-            gridViewTextBoxColumn1.Width = 206;
-            gridViewTextBoxColumn1.WrapText = true;
-            gridViewTextBoxColumn2.FieldName = "Description";
-            gridViewTextBoxColumn2.HeaderText = "Description";
-            gridViewTextBoxColumn2.Name = "Description";
-            gridViewTextBoxColumn2.Width = 400;
-            gridViewTextBoxColumn2.WrapText = true;
-            gridViewTextBoxColumn3.FieldName = "Privilege";
-            gridViewTextBoxColumn3.HeaderText = "Privilege";
-            gridViewTextBoxColumn3.Name = "Privilege";
-            gridViewTextBoxColumn3.Width = 200;
-            gridViewTextBoxColumn3.WrapText = true;
-            gridViewTextBoxColumn4.FieldName = "Condition";
-            gridViewTextBoxColumn4.HeaderText = "Condition";
-            gridViewTextBoxColumn4.Name = "Condition";
-            gridViewTextBoxColumn4.Width = 131;
+            gridViewTextBoxColumn5.FieldName = "ScholarshipCode";
+            gridViewTextBoxColumn5.HeaderText = "Scholarship Code";
+            gridViewTextBoxColumn5.Name = "ScholarshipCode";
+            gridViewTextBoxColumn5.Width = 206;
+            gridViewTextBoxColumn5.WrapText = true;
+            gridViewTextBoxColumn6.FieldName = "Description";
+            gridViewTextBoxColumn6.HeaderText = "Description";
+            gridViewTextBoxColumn6.Name = "Description";
+            gridViewTextBoxColumn6.Width = 400;
+            gridViewTextBoxColumn6.WrapText = true;
+            gridViewTextBoxColumn7.FieldName = "Privilege";
+            gridViewTextBoxColumn7.HeaderText = "Privilege";
+            gridViewTextBoxColumn7.Name = "Privilege";
+            gridViewTextBoxColumn7.Width = 200;
+            gridViewTextBoxColumn7.WrapText = true;
+            gridViewTextBoxColumn8.FieldName = "Condition";
+            gridViewTextBoxColumn8.HeaderText = "Condition";
+            gridViewTextBoxColumn8.Name = "Condition";
+            gridViewTextBoxColumn8.Width = 131;
             this.gvScholarship.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.gvScholarship.MasterTemplate.EnableGrouping = false;
             this.gvScholarship.Name = "gvScholarship";
             this.gvScholarship.ShowGroupPanel = false;
@@ -159,6 +159,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scholarship List";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmScholarshipList_Activated);

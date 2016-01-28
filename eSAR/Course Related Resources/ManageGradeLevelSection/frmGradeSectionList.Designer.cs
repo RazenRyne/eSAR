@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn22 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn23 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn24 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnEdit = new Telerik.WinControls.UI.RadButton();
@@ -104,37 +104,37 @@
             this.gvGradeSection.MasterTemplate.AllowDragToGroup = false;
             this.gvGradeSection.MasterTemplate.AllowEditRow = false;
             this.gvGradeSection.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn1.FieldName = "SY";
-            gridViewTextBoxColumn1.HeaderText = "School Year";
-            gridViewTextBoxColumn1.Name = "SY";
-            gridViewTextBoxColumn1.Width = 100;
-            gridViewTextBoxColumn2.FieldName = "GradeLevel";
-            gridViewTextBoxColumn2.HeaderText = "Grade Level";
-            gridViewTextBoxColumn2.Name = "GradeLevel";
-            gridViewTextBoxColumn2.Width = 100;
-            gridViewTextBoxColumn3.FieldName = "Section";
-            gridViewTextBoxColumn3.HeaderText = "Section";
-            gridViewTextBoxColumn3.Name = "Section";
-            gridViewTextBoxColumn3.Width = 150;
-            gridViewTextBoxColumn4.FieldName = "HomeRoom.RoomCode";
-            gridViewTextBoxColumn4.HeaderText = "Home Room";
-            gridViewTextBoxColumn4.Name = "HomeRoom";
-            gridViewTextBoxColumn4.Width = 100;
-            gridViewTextBoxColumn5.FieldName = "TeacherName";
-            gridViewTextBoxColumn5.HeaderText = "Adviser";
-            gridViewTextBoxColumn5.Name = "TeacherName";
-            gridViewTextBoxColumn5.Width = 200;
-            gridViewTextBoxColumn6.FieldName = "GradeSectionCode";
-            gridViewTextBoxColumn6.HeaderText = "column1";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "GradeSectionCode";
+            gridViewTextBoxColumn19.FieldName = "SY";
+            gridViewTextBoxColumn19.HeaderText = "School Year";
+            gridViewTextBoxColumn19.Name = "SY";
+            gridViewTextBoxColumn19.Width = 100;
+            gridViewTextBoxColumn20.FieldName = "GradeLevel";
+            gridViewTextBoxColumn20.HeaderText = "Grade Level";
+            gridViewTextBoxColumn20.Name = "GradeLevel";
+            gridViewTextBoxColumn20.Width = 100;
+            gridViewTextBoxColumn21.FieldName = "Section";
+            gridViewTextBoxColumn21.HeaderText = "Section";
+            gridViewTextBoxColumn21.Name = "Section";
+            gridViewTextBoxColumn21.Width = 150;
+            gridViewTextBoxColumn22.FieldName = "HomeRoom.RoomCode";
+            gridViewTextBoxColumn22.HeaderText = "Home Room";
+            gridViewTextBoxColumn22.Name = "HomeRoom";
+            gridViewTextBoxColumn22.Width = 100;
+            gridViewTextBoxColumn23.FieldName = "TeacherName";
+            gridViewTextBoxColumn23.HeaderText = "Adviser";
+            gridViewTextBoxColumn23.Name = "TeacherName";
+            gridViewTextBoxColumn23.Width = 200;
+            gridViewTextBoxColumn24.FieldName = "GradeSectionCode";
+            gridViewTextBoxColumn24.HeaderText = "column1";
+            gridViewTextBoxColumn24.IsVisible = false;
+            gridViewTextBoxColumn24.Name = "GradeSectionCode";
             this.gvGradeSection.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn19,
+            gridViewTextBoxColumn20,
+            gridViewTextBoxColumn21,
+            gridViewTextBoxColumn22,
+            gridViewTextBoxColumn23,
+            gridViewTextBoxColumn24});
             this.gvGradeSection.MasterTemplate.EnableGrouping = false;
             this.gvGradeSection.Name = "gvGradeSection";
             this.gvGradeSection.ReadOnly = true;
@@ -155,6 +155,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.Text = "List of HomeRoom Information";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.frmGradeSectionList_Load);

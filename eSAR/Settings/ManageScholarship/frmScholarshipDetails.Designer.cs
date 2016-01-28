@@ -219,6 +219,8 @@
             this.ClientSize = new System.Drawing.Size(538, 470);
             this.Controls.Add(this.radPanel3);
             this.Controls.Add(this.radPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmScholarshipDetails";
             // 
             // 

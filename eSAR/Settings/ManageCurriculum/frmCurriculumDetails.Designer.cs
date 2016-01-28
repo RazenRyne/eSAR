@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn5 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn6 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn7 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn8 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.gvSubjects = new Telerik.WinControls.UI.RadGridView();
@@ -97,49 +97,49 @@
             // 
             this.gvSubjects.MasterTemplate.AllowAddNewRow = false;
             this.gvSubjects.MasterTemplate.AllowDragToGroup = false;
-            gridViewCheckBoxColumn5.FieldName = "Added";
-            gridViewCheckBoxColumn5.HeaderText = "Tick to Add";
-            gridViewCheckBoxColumn5.Name = "Added";
-            gridViewCheckBoxColumn5.Width = 100;
-            gridViewTextBoxColumn11.FieldName = "SubjectCode";
-            gridViewTextBoxColumn11.HeaderText = "Subject Code";
-            gridViewTextBoxColumn11.Name = "SubjectCode";
-            gridViewTextBoxColumn11.ReadOnly = true;
-            gridViewTextBoxColumn11.Width = 100;
-            gridViewTextBoxColumn12.AllowFiltering = false;
-            gridViewTextBoxColumn12.FieldName = "SubjectDescription";
-            gridViewTextBoxColumn12.HeaderText = "Description";
-            gridViewTextBoxColumn12.Name = "SubjectDescription";
-            gridViewTextBoxColumn12.ReadOnly = true;
-            gridViewTextBoxColumn12.Width = 200;
-            gridViewTextBoxColumn13.AllowFiltering = false;
-            gridViewTextBoxColumn13.FieldName = "Units";
-            gridViewTextBoxColumn13.HeaderText = "Number Of Units";
-            gridViewTextBoxColumn13.Name = "Units";
-            gridViewTextBoxColumn13.ReadOnly = true;
-            gridViewTextBoxColumn13.Width = 125;
-            gridViewCheckBoxColumn6.FieldName = "Academic";
-            gridViewCheckBoxColumn6.HeaderText = "Acad";
-            gridViewCheckBoxColumn6.Name = "Academic";
-            gridViewCheckBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn14.FieldName = "GradeLevel";
-            gridViewTextBoxColumn14.HeaderText = "GradeLevel";
-            gridViewTextBoxColumn14.Name = "GradeLevel";
-            gridViewTextBoxColumn14.ReadOnly = true;
-            gridViewTextBoxColumn14.Width = 100;
-            gridViewTextBoxColumn15.FieldName = "CurrSub";
-            gridViewTextBoxColumn15.HeaderText = "CurrSub";
-            gridViewTextBoxColumn15.IsVisible = false;
-            gridViewTextBoxColumn15.Name = "CurrSub";
-            gridViewTextBoxColumn15.ReadOnly = true;
+            gridViewCheckBoxColumn7.FieldName = "Added";
+            gridViewCheckBoxColumn7.HeaderText = "Tick to Add";
+            gridViewCheckBoxColumn7.Name = "Added";
+            gridViewCheckBoxColumn7.Width = 100;
+            gridViewTextBoxColumn16.FieldName = "SubjectCode";
+            gridViewTextBoxColumn16.HeaderText = "Subject Code";
+            gridViewTextBoxColumn16.Name = "SubjectCode";
+            gridViewTextBoxColumn16.ReadOnly = true;
+            gridViewTextBoxColumn16.Width = 100;
+            gridViewTextBoxColumn17.AllowFiltering = false;
+            gridViewTextBoxColumn17.FieldName = "SubjectDescription";
+            gridViewTextBoxColumn17.HeaderText = "Description";
+            gridViewTextBoxColumn17.Name = "SubjectDescription";
+            gridViewTextBoxColumn17.ReadOnly = true;
+            gridViewTextBoxColumn17.Width = 200;
+            gridViewTextBoxColumn18.AllowFiltering = false;
+            gridViewTextBoxColumn18.FieldName = "Units";
+            gridViewTextBoxColumn18.HeaderText = "Number Of Units";
+            gridViewTextBoxColumn18.Name = "Units";
+            gridViewTextBoxColumn18.ReadOnly = true;
+            gridViewTextBoxColumn18.Width = 125;
+            gridViewCheckBoxColumn8.FieldName = "Academic";
+            gridViewCheckBoxColumn8.HeaderText = "Acad";
+            gridViewCheckBoxColumn8.Name = "Academic";
+            gridViewCheckBoxColumn8.ReadOnly = true;
+            gridViewTextBoxColumn19.FieldName = "GradeLevel";
+            gridViewTextBoxColumn19.HeaderText = "GradeLevel";
+            gridViewTextBoxColumn19.Name = "GradeLevel";
+            gridViewTextBoxColumn19.ReadOnly = true;
+            gridViewTextBoxColumn19.Width = 100;
+            gridViewTextBoxColumn20.FieldName = "CurrSub";
+            gridViewTextBoxColumn20.HeaderText = "CurrSub";
+            gridViewTextBoxColumn20.IsVisible = false;
+            gridViewTextBoxColumn20.Name = "CurrSub";
+            gridViewTextBoxColumn20.ReadOnly = true;
             this.gvSubjects.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewCheckBoxColumn5,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewCheckBoxColumn6,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15});
+            gridViewCheckBoxColumn7,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18,
+            gridViewCheckBoxColumn8,
+            gridViewTextBoxColumn19,
+            gridViewTextBoxColumn20});
             this.gvSubjects.MasterTemplate.EnableFiltering = true;
             this.gvSubjects.MasterTemplate.EnableGrouping = false;
             this.gvSubjects.Name = "gvSubjects";
@@ -241,11 +241,14 @@
             this.ClientSize = new System.Drawing.Size(843, 473);
             this.Controls.Add(this.radPanel2);
             this.Controls.Add(this.radPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCurriculumDetails";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Curriculum";
             this.ThemeName = "ControlDefault";

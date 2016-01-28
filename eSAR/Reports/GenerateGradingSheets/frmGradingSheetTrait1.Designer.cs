@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.Reporting.TypeReportSource typeReportSource2 = new Telerik.Reporting.TypeReportSource();
+            Telerik.Reporting.TypeReportSource typeReportSource1 = new Telerik.Reporting.TypeReportSource();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnClose = new Telerik.WinControls.UI.RadButton();
             this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
@@ -62,16 +62,16 @@
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("Category", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("GradeLevel", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("GradeLevelSection", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("HomeroomTeacher", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("SectionCode", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("SY", null));
-            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("Title", null));
-            typeReportSource2.TypeName = "eSARReportLibrary.gradingSheetTraits, eSARReportLibrary, Version=1.0.0.0, Culture" +
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("Category", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("GradeLevel", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("GradeLevelSection", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("HomeroomTeacher", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("SectionCode", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("SY", null));
+            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("Title", null));
+            typeReportSource1.TypeName = "eSARReportLibrary.gradingSheetTraits, eSARReportLibrary, Version=1.0.0.0, Culture" +
     "=neutral, PublicKeyToken=null";
-            this.reportViewer1.ReportSource = typeReportSource2;
+            this.reportViewer1.ReportSource = typeReportSource1;
             this.reportViewer1.Size = new System.Drawing.Size(796, 492);
             this.reportViewer1.TabIndex = 3;
             // 
@@ -87,6 +87,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traits Grading Sheet";
             this.Load += new System.EventHandler(this.frmGradingSheetTrait1_Load);

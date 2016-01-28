@@ -137,6 +137,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Curriculum";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmManageCurriculum_Activated);

@@ -32,6 +32,7 @@
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.cmbClass = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.cmbTeacher = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
@@ -43,13 +44,13 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.cmbGradeLevel = new Telerik.WinControls.UI.RadDropDownList();
-            this.cmbClass = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTeacher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,6 +112,13 @@
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(566, 237);
             this.radPanel2.TabIndex = 4;
+            // 
+            // cmbClass
+            // 
+            this.cmbClass.Location = new System.Drawing.Point(374, 23);
+            this.cmbClass.Name = "cmbClass";
+            this.cmbClass.Size = new System.Drawing.Size(73, 20);
+            this.cmbClass.TabIndex = 12;
             // 
             // radLabel6
             // 
@@ -196,13 +203,6 @@
             this.cmbGradeLevel.Size = new System.Drawing.Size(150, 20);
             this.cmbGradeLevel.TabIndex = 0;
             // 
-            // cmbClass
-            // 
-            this.cmbClass.Location = new System.Drawing.Point(374, 23);
-            this.cmbClass.Name = "cmbClass";
-            this.cmbClass.Size = new System.Drawing.Size(73, 20);
-            this.cmbClass.TabIndex = 12;
-            // 
             // ManageGradeLevelSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +210,8 @@
             this.ClientSize = new System.Drawing.Size(566, 237);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "ManageGradeLevelSection";
             // 
             // 
@@ -226,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             this.radPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTeacher)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
@@ -237,7 +240,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGradeLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

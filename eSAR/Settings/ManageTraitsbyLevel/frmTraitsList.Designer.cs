@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btCancel = new Telerik.WinControls.UI.RadButton();
             this.btEdit = new Telerik.WinControls.UI.RadButton();
@@ -93,31 +93,31 @@
             // 
             // 
             this.gvTraits.MasterTemplate.AllowDragToGroup = false;
-            gridViewCheckBoxColumn1.FieldName = "CurrTrait";
-            gridViewCheckBoxColumn1.HeaderText = "Current";
-            gridViewCheckBoxColumn1.Name = "CurrTrait";
-            gridViewTextBoxColumn1.FieldName = "Description";
-            gridViewTextBoxColumn1.HeaderText = "Description";
-            gridViewTextBoxColumn1.Name = "Description";
-            gridViewTextBoxColumn1.Width = 300;
-            gridViewTextBoxColumn2.FieldName = "Cat";
-            gridViewTextBoxColumn2.HeaderText = "Category";
-            gridViewTextBoxColumn2.Name = "Cat";
-            gridViewTextBoxColumn2.Width = 100;
-            gridViewTextBoxColumn3.FieldName = "TraitsID";
-            gridViewTextBoxColumn3.HeaderText = "TraitsID";
-            gridViewTextBoxColumn3.IsVisible = false;
-            gridViewTextBoxColumn3.Name = "TraitsID";
-            gridViewTextBoxColumn4.FieldName = "Category";
-            gridViewTextBoxColumn4.HeaderText = "column1";
-            gridViewTextBoxColumn4.IsVisible = false;
-            gridViewTextBoxColumn4.Name = "Category";
+            gridViewCheckBoxColumn2.FieldName = "CurrTrait";
+            gridViewCheckBoxColumn2.HeaderText = "Current";
+            gridViewCheckBoxColumn2.Name = "CurrTrait";
+            gridViewTextBoxColumn5.FieldName = "Description";
+            gridViewTextBoxColumn5.HeaderText = "Description";
+            gridViewTextBoxColumn5.Name = "Description";
+            gridViewTextBoxColumn5.Width = 300;
+            gridViewTextBoxColumn6.FieldName = "Cat";
+            gridViewTextBoxColumn6.HeaderText = "Category";
+            gridViewTextBoxColumn6.Name = "Cat";
+            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn7.FieldName = "TraitsID";
+            gridViewTextBoxColumn7.HeaderText = "TraitsID";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "TraitsID";
+            gridViewTextBoxColumn8.FieldName = "Category";
+            gridViewTextBoxColumn8.HeaderText = "column1";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Category";
             this.gvTraits.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewCheckBoxColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewCheckBoxColumn2,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.gvTraits.MasterTemplate.EnableGrouping = false;
             this.gvTraits.Name = "gvTraits";
             this.gvTraits.ReadOnly = true;
@@ -137,6 +137,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Traits";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmTraitsList_Activated);

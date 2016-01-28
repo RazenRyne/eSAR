@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
-            this.btnSaveScholarshipDiscount = new Telerik.WinControls.UI.RadButton();
-            this.btnClose = new Telerik.WinControls.UI.RadButton();
             this.txtIDNumber = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel89 = new Telerik.WinControls.UI.RadLabel();
+            this.btnSaveScholarshipDiscount = new Telerik.WinControls.UI.RadButton();
+            this.btnClose = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSaveScholarshipDiscount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSaveScholarshipDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,23 @@
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Size = new System.Drawing.Size(287, 117);
             this.radPanel1.TabIndex = 5;
+            // 
+            // txtIDNumber
+            // 
+            this.txtIDNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtIDNumber.Location = new System.Drawing.Point(100, 23);
+            this.txtIDNumber.MaxLength = 5;
+            this.txtIDNumber.Name = "txtIDNumber";
+            this.txtIDNumber.Size = new System.Drawing.Size(140, 20);
+            this.txtIDNumber.TabIndex = 55;
+            // 
+            // radLabel89
+            // 
+            this.radLabel89.Location = new System.Drawing.Point(30, 25);
+            this.radLabel89.Name = "radLabel89";
+            this.radLabel89.Size = new System.Drawing.Size(64, 18);
+            this.radLabel89.TabIndex = 54;
+            this.radLabel89.Text = "ID Number:";
             // 
             // btnSaveScholarshipDiscount
             // 
@@ -73,44 +90,30 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtIDNumber
-            // 
-            this.txtIDNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIDNumber.Location = new System.Drawing.Point(100, 23);
-            this.txtIDNumber.MaxLength = 5;
-            this.txtIDNumber.Name = "txtIDNumber";
-            this.txtIDNumber.Size = new System.Drawing.Size(140, 20);
-            this.txtIDNumber.TabIndex = 55;
-            // 
-            // radLabel89
-            // 
-            this.radLabel89.Location = new System.Drawing.Point(30, 25);
-            this.radLabel89.Name = "radLabel89";
-            this.radLabel89.Size = new System.Drawing.Size(64, 18);
-            this.radLabel89.TabIndex = 54;
-            this.radLabel89.Text = "ID Number:";
-            // 
             // ScheduleDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 117);
+            this.ControlBox = false;
             this.Controls.Add(this.radPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ScheduleDetails";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.LoadMe);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSaveScholarshipDiscount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel89)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSaveScholarshipDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
