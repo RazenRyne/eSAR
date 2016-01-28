@@ -163,6 +163,7 @@ namespace eSAR.Settings.ManageSY
                 if (SYcurrent != null)
                 {
                     UpdateCurrentSY(SYcurrent.SY, false);
+                    GlobalClass.currentsy = SYcurrent.SY;
                     SYcurrent.CurrentSY = false;
                     Log("U", "SchoolYear", SYcurrent);
                 }
