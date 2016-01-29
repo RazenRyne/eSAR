@@ -108,40 +108,49 @@ namespace eSAR.Admission_and_Registration
 
         private void btnAssess_Click(object sender, EventArgs e)
         {
-            if (!RegisteredStudents.Contains(studentSelected.StudentId))
-                MessageBox.Show(this, "Student Should be Registered First!");
-            else
+            if (gvStudent.CurrentRow.Index >= 0)
             {
-                AssessStudent fmAssessment = new AssessStudent();
-                fmAssessment.StudentId = studentSelected.StudentId;
-                fmAssessment.ShowDialog(this);
+                if (!RegisteredStudents.Contains(studentSelected.StudentId))
+                    MessageBox.Show(this, "Student Should be Registered First!");
+                else
+                {
+                    AssessStudent fmAssessment = new AssessStudent();
+                    fmAssessment.StudentId = studentSelected.StudentId;
+                    fmAssessment.ShowDialog(this);
+                }
             }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (RegisteredStudents.Contains(studentSelected.StudentId))
-                  MessageBox.Show(this, "Student Already Registered!");
-            else
+            if (gvStudent.CurrentRow.Index >= 0)
             {
-                frmStudentRegister fmStudentRegister = new frmStudentRegister();
-                fmStudentRegister.StudentId = studentSelected.StudentId;
-                fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
-                fmStudentRegister.Gender = studentSelected.Gender;
-                fmStudentRegister.Show(this);
+                if (RegisteredStudents.Contains(studentSelected.StudentId))
+                    MessageBox.Show(this, "Student Already Registered!");
+                else
+                {
+                    frmStudentRegister fmStudentRegister = new frmStudentRegister();
+                    fmStudentRegister.StudentId = studentSelected.StudentId;
+                    fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
+                    fmStudentRegister.Gender = studentSelected.Gender;
+                    fmStudentRegister.Show(this);
+                }
             }
         }
 
         private void btnControl_Click(object sender, EventArgs e)
         {
-            if (!RegisteredStudents.Contains(studentSelected.StudentId))
-                MessageBox.Show(this, "Student Needs to be Registered First!");
-             else
+            if (gvStudent.CurrentRow.Index >= 0)
             {
-                frmControlSubjects fmControlSubjects = new frmControlSubjects();
-                fmControlSubjects.controlStudentId = studentSelected.StudentId;
-                
-                fmControlSubjects.ShowDialog(this);
+                if (!RegisteredStudents.Contains(studentSelected.StudentId))
+                    MessageBox.Show(this, "Student Needs to be Registered First!");
+                else
+                {
+                    frmControlSubjects fmControlSubjects = new frmControlSubjects();
+                    fmControlSubjects.controlStudentId = studentSelected.StudentId;
+
+                    fmControlSubjects.ShowDialog(this);
+                }
             }
         }
 

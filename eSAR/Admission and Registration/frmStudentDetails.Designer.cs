@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem16 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem17 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem18 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn43 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn44 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn45 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn46 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn47 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn48 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentDetails));
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
@@ -382,20 +382,20 @@
             // 
             // cbReligion
             // 
-            radListDataItem3.Text = "Islam";
-            radListDataItem4.Text = "UCCP";
-            radListDataItem14.Text = "Roman Catholic";
-            radListDataItem15.Text = "Iglesia Ni Kristo";
-            radListDataItem16.Text = "Other Christian";
-            radListDataItem17.Text = "Other";
-            radListDataItem18.Text = "None";
+            radListDataItem1.Text = "Islam";
+            radListDataItem2.Text = "UCCP";
+            radListDataItem3.Text = "Roman Catholic";
+            radListDataItem4.Text = "Iglesia Ni Kristo";
+            radListDataItem5.Text = "Other Christian";
+            radListDataItem6.Text = "Other";
+            radListDataItem7.Text = "None";
+            this.cbReligion.Items.Add(radListDataItem1);
+            this.cbReligion.Items.Add(radListDataItem2);
             this.cbReligion.Items.Add(radListDataItem3);
             this.cbReligion.Items.Add(radListDataItem4);
-            this.cbReligion.Items.Add(radListDataItem14);
-            this.cbReligion.Items.Add(radListDataItem15);
-            this.cbReligion.Items.Add(radListDataItem16);
-            this.cbReligion.Items.Add(radListDataItem17);
-            this.cbReligion.Items.Add(radListDataItem18);
+            this.cbReligion.Items.Add(radListDataItem5);
+            this.cbReligion.Items.Add(radListDataItem6);
+            this.cbReligion.Items.Add(radListDataItem7);
             this.cbReligion.Location = new System.Drawing.Point(526, 95);
             this.cbReligion.Name = "cbReligion";
             this.cbReligion.Size = new System.Drawing.Size(163, 20);
@@ -493,10 +493,10 @@
             // cmbGradeLevel
             // 
             this.cmbGradeLevel.DisplayMember = "Description";
-            radListDataItem5.Text = "Female";
-            radListDataItem6.Text = "Male";
-            this.cmbGradeLevel.Items.Add(radListDataItem5);
-            this.cmbGradeLevel.Items.Add(radListDataItem6);
+            radListDataItem8.Text = "Female";
+            radListDataItem9.Text = "Male";
+            this.cmbGradeLevel.Items.Add(radListDataItem8);
+            this.cmbGradeLevel.Items.Add(radListDataItem9);
             this.cmbGradeLevel.Location = new System.Drawing.Point(611, 26);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
             this.cmbGradeLevel.Size = new System.Drawing.Size(78, 20);
@@ -505,10 +505,10 @@
             // 
             // cmbGender
             // 
-            radListDataItem7.Text = "Female";
-            radListDataItem8.Text = "Male";
-            this.cmbGender.Items.Add(radListDataItem7);
-            this.cmbGender.Items.Add(radListDataItem8);
+            radListDataItem10.Text = "Female";
+            radListDataItem11.Text = "Male";
+            this.cmbGender.Items.Add(radListDataItem10);
+            this.cmbGender.Items.Add(radListDataItem11);
             this.cmbGender.Location = new System.Drawing.Point(573, 50);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(116, 20);
@@ -810,8 +810,7 @@
             // 
             // btnInsertImage
             // 
-            this.btnInsertImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsertImage.Location = new System.Drawing.Point(40, 132);
+            this.btnInsertImage.Location = new System.Drawing.Point(11, 131);
             this.btnInsertImage.Name = "btnInsertImage";
             this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
             this.btnInsertImage.TabIndex = 12;
@@ -1118,25 +1117,25 @@
             // 
             // 
             this.radGridView2.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn43.FieldName = "StudentID";
-            gridViewTextBoxColumn43.HeaderText = "ID Number";
-            gridViewTextBoxColumn43.Name = "StudentID";
-            gridViewTextBoxColumn43.Width = 100;
-            gridViewTextBoxColumn43.WrapText = true;
-            gridViewTextBoxColumn44.FieldName = "Name";
-            gridViewTextBoxColumn44.HeaderText = "Name";
-            gridViewTextBoxColumn44.Name = "Name";
-            gridViewTextBoxColumn44.Width = 300;
-            gridViewTextBoxColumn44.WrapText = true;
-            gridViewTextBoxColumn45.FieldName = "Grade";
-            gridViewTextBoxColumn45.HeaderText = "Grade";
-            gridViewTextBoxColumn45.Name = "Grade";
-            gridViewTextBoxColumn45.Width = 193;
-            gridViewTextBoxColumn45.WrapText = true;
+            gridViewTextBoxColumn1.FieldName = "StudentID";
+            gridViewTextBoxColumn1.HeaderText = "ID Number";
+            gridViewTextBoxColumn1.Name = "StudentID";
+            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn1.WrapText = true;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 300;
+            gridViewTextBoxColumn2.WrapText = true;
+            gridViewTextBoxColumn3.FieldName = "Grade";
+            gridViewTextBoxColumn3.HeaderText = "Grade";
+            gridViewTextBoxColumn3.Name = "Grade";
+            gridViewTextBoxColumn3.Width = 193;
+            gridViewTextBoxColumn3.WrapText = true;
             this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn43,
-            gridViewTextBoxColumn44,
-            gridViewTextBoxColumn45});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3});
             this.radGridView2.MasterTemplate.EnableGrouping = false;
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.Size = new System.Drawing.Size(611, 145);
@@ -1162,25 +1161,25 @@
             // 
             // 
             this.gvBuilding.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn46.FieldName = "StudentID";
-            gridViewTextBoxColumn46.HeaderText = "ID Number";
-            gridViewTextBoxColumn46.Name = "StudentID";
-            gridViewTextBoxColumn46.Width = 100;
-            gridViewTextBoxColumn46.WrapText = true;
-            gridViewTextBoxColumn47.FieldName = "Name";
-            gridViewTextBoxColumn47.HeaderText = "Name";
-            gridViewTextBoxColumn47.Name = "Name";
-            gridViewTextBoxColumn47.Width = 300;
-            gridViewTextBoxColumn47.WrapText = true;
-            gridViewTextBoxColumn48.FieldName = "Grade";
-            gridViewTextBoxColumn48.HeaderText = "Grade";
-            gridViewTextBoxColumn48.Name = "Grade";
-            gridViewTextBoxColumn48.Width = 193;
-            gridViewTextBoxColumn48.WrapText = true;
+            gridViewTextBoxColumn4.FieldName = "StudentID";
+            gridViewTextBoxColumn4.HeaderText = "ID Number";
+            gridViewTextBoxColumn4.Name = "StudentID";
+            gridViewTextBoxColumn4.Width = 100;
+            gridViewTextBoxColumn4.WrapText = true;
+            gridViewTextBoxColumn5.FieldName = "Name";
+            gridViewTextBoxColumn5.HeaderText = "Name";
+            gridViewTextBoxColumn5.Name = "Name";
+            gridViewTextBoxColumn5.Width = 300;
+            gridViewTextBoxColumn5.WrapText = true;
+            gridViewTextBoxColumn6.FieldName = "Grade";
+            gridViewTextBoxColumn6.HeaderText = "Grade";
+            gridViewTextBoxColumn6.Name = "Grade";
+            gridViewTextBoxColumn6.Width = 193;
+            gridViewTextBoxColumn6.WrapText = true;
             this.gvBuilding.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn46,
-            gridViewTextBoxColumn47,
-            gridViewTextBoxColumn48});
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.gvBuilding.MasterTemplate.EnableGrouping = false;
             this.gvBuilding.Name = "gvBuilding";
             this.gvBuilding.Size = new System.Drawing.Size(611, 145);
