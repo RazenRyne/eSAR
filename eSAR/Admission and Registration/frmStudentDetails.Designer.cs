@@ -102,7 +102,6 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.btnInsertImage = new Telerik.WinControls.UI.RadButton();
             this.AdditionalDetails = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPanel3 = new Telerik.WinControls.UI.RadPanel();
             this.radGroupBox7 = new Telerik.WinControls.UI.RadGroupBox();
@@ -141,6 +140,7 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radCheckBox1 = new Telerik.WinControls.UI.RadCheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnInsertImage = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnFooter)).BeginInit();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -204,7 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).BeginInit();
             this.AdditionalDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
             this.radPanel3.SuspendLayout();
@@ -250,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -329,6 +329,7 @@
             // 
             this.radPanel2.AutoScroll = true;
             this.radPanel2.AutoScrollMinSize = new System.Drawing.Size(2, 0);
+            this.radPanel2.Controls.Add(this.btnInsertImage);
             this.radPanel2.Controls.Add(this.txtLRN);
             this.radPanel2.Controls.Add(this.radLabel10);
             this.radPanel2.Controls.Add(this.cbReligion);
@@ -357,7 +358,6 @@
             this.radPanel2.Controls.Add(this.radLabel3);
             this.radPanel2.Controls.Add(this.radLabel2);
             this.radPanel2.Controls.Add(this.radLabel1);
-            this.radPanel2.Controls.Add(this.btnInsertImage);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
             this.radPanel2.Name = "radPanel2";
@@ -808,15 +808,6 @@
             this.radLabel1.TabIndex = 9;
             this.radLabel1.Text = "Student ID:";
             // 
-            // btnInsertImage
-            // 
-            this.btnInsertImage.Location = new System.Drawing.Point(11, 131);
-            this.btnInsertImage.Name = "btnInsertImage";
-            this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
-            this.btnInsertImage.TabIndex = 12;
-            this.btnInsertImage.Text = "Insert Image";
-            this.btnInsertImage.Click += new System.EventHandler(this.btnInsertImage_Click);
-            // 
             // AdditionalDetails
             // 
             this.AdditionalDetails.Controls.Add(this.radPanel3);
@@ -1220,6 +1211,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnInsertImage
+            // 
+            this.btnInsertImage.Location = new System.Drawing.Point(12, 131);
+            this.btnInsertImage.Name = "btnInsertImage";
+            this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
+            this.btnInsertImage.TabIndex = 38;
+            this.btnInsertImage.Text = "Insert Image";
+            // 
             // frmStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1307,7 +1306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).EndInit();
             this.AdditionalDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).EndInit();
             this.radPanel3.ResumeLayout(false);
@@ -1355,6 +1353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1403,7 +1402,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadButton btnInsertImage;
         private Telerik.WinControls.UI.RadPanel radPanel3;
         private Telerik.WinControls.UI.RadPageViewPage Siblings;
         private Telerik.WinControls.UI.RadPanel radPanel4;
@@ -1457,5 +1455,6 @@
         private Telerik.WinControls.UI.RadDropDownList cbReligion;
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadTextBox txtLRN;
+        private Telerik.WinControls.UI.RadButton btnInsertImage;
     }
 }
