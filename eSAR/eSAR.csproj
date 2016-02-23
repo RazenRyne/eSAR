@@ -756,7 +756,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
@@ -801,6 +803,7 @@
     <Content Include="Resources\Images\fee.png" />
     <Content Include="Resources\Images\File.ico" />
     <Content Include="Resources\Images\Graph.ico" />
+    <Content Include="Resources\Images\Icon.ico" />
     <Content Include="Resources\Images\Learning.ico" />
     <None Include="Resources\Images\manageUsers.png" />
     <None Include="Resources\Images\lock.png" />
