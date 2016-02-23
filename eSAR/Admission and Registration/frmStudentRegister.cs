@@ -140,7 +140,11 @@ namespace eSAR.Admission_and_Registration
             
             Discounts = new List<ScholarshipDiscount>(registrationService.GetScholarshipDiscounts());
             txtSY.Text = SY;
-            txtPrevGradeLevel.Text = RegisterStudent.GradeLevel;
+            if (IsNew(RegisterStudent))
+               txtPrevGradeLevel.Text = RegisterStudent.GradeBeforeDC;
+            else
+                txtPrevGradeLevel.Text = RegisterStudent.GradeLevel;
+
             txtStudentId.Text = RegisterStudent.StudentId;
             txtName.Text = RegisterStudent.LastName + "," + RegisterStudent.FirstName + " " + RegisterStudent.MiddleName;
             txtGpa.Text = RegisterStudent.Average.ToString();
@@ -179,6 +183,12 @@ namespace eSAR.Admission_and_Registration
 
         }
 
+        private Boolean IsNew(Student student)
+        {
+            if (String.IsNullOrEmpty(student.GradeLevel))
+                return true;
+            else return false;
+        }
         private void radButton2_Click(object sender, EventArgs e)
         {
             this.Close();
