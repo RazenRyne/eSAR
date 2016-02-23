@@ -49,54 +49,55 @@ namespace eSARDAL
             try{ 
             using (var DCEnt = new DCFIEntities())
             {
-                 var slist = (from s in DCEnt.Students
-                               orderby s.Average descending, s.LastName
-                               where (s.GradeLevel.Equals(grade) && s.Gender.Equals(gender))
-                               select new StudentBDO
-                               {
-                                   StudentId=s.StudentId,
-                                   LastName= s.LastName,
-                                   FirstName=s.FirstName,
-                                   MiddleName=s.MiddleName,
-                                   DOB=s.DOB,
-                                   POBAddress=s.POBAddress,
-                                   POBBarangay=s.POBBarangay,
-                                   POBTownCity=s.POBTownCity,
-                                   POBProvince=s.POBProvince,
-                                   HomeAddress=s.HomeAddress,
-                                   HomeBarangay=s.HomeBarangay,
-                                   HomeTownCity=s.HomeTownCity,
-                                   HomeProvince=s.HomeProvince,
-                                   SchoolLastAttended=s.SchoolLastAttended,
-                                   FathersName=s.FathersName,
-                                   FathersOccupation=s.FathersOccupation,
-                                   FathersAverageYearlyIncome=s.FathersAverageYearlyIncome,
-                                   FathersEducation=s.FathersEducation,
-                                   MothersMaidenName= s.MothersMaidenName,
-                                   MothersOccupation=s.MothersOccupation,
-                                   MothersAverageYearlyIncome=s.MothersAverageYearlyIncome,
-                                   MothersEducation=s.MothersEducation,
-                                   GuardiansName=s.GuardiansName,
-                                   GuardiansOccupation=s.GuardiansOccupation,
-                                   GuardiansAverageYearlyIncome=s.GuardiansAverageYearlyIncome,
-                                   MadrasahEnrolled=s.MadrasahEnrolled,
-                                   DateAdmitted=s.DateAdmitted,
-                                   GradeLevel=s.GradeLevel,
-                                   Average=s.Average,
-                                   Card=s.Card,
-                                   GoodMoral=s.GoodMoral,
-                                   BirthCertificate=s.BirthCertificate,
-                                   LastSYAttendedDCFI=s.LastSYAttendedDCFI,
-                                   Dismissed=s.Dismissed,
-                                   Graduated=s.Graduated,
-                                   Religion=s.Religion,
-                                   Image=s.Image,
-                                   Gender=s.Gender,
-                                   ScholarshipDiscountId=s.ScholarshipDiscountId,
-                                   UnitsFailedLastYear=(decimal)s.UnitsFailedLastYear,
-                                   RunningBalance=(float)s.RunningBalance,
-                                   StudentLRN=s.StudentLRN
-                               });
+                    var slist = (from s in DCEnt.Students
+                                 orderby s.Average descending, s.LastName
+                                 where (s.GradeLevel.Equals(grade) && s.Gender.Equals(gender))
+                                 select new StudentBDO
+                                 {
+                                     StudentId = s.StudentId,
+                                     LastName = s.LastName,
+                                     FirstName = s.FirstName,
+                                     MiddleName = s.MiddleName,
+                                     DOB = s.DOB,
+                                     POBAddress = s.POBAddress,
+                                     POBBarangay = s.POBBarangay,
+                                     POBTownCity = s.POBTownCity,
+                                     POBProvince = s.POBProvince,
+                                     HomeAddress = s.HomeAddress,
+                                     HomeBarangay = s.HomeBarangay,
+                                     HomeTownCity = s.HomeTownCity,
+                                     HomeProvince = s.HomeProvince,
+                                     SchoolLastAttended = s.SchoolLastAttended,
+                                     FathersName = s.FathersName,
+                                     FathersOccupation = s.FathersOccupation,
+                                     FathersAverageYearlyIncome = s.FathersAverageYearlyIncome,
+                                     FathersEducation = s.FathersEducation,
+                                     MothersMaidenName = s.MothersMaidenName,
+                                     MothersOccupation = s.MothersOccupation,
+                                     MothersAverageYearlyIncome = s.MothersAverageYearlyIncome,
+                                     MothersEducation = s.MothersEducation,
+                                     GuardiansName = s.GuardiansName,
+                                     GuardiansOccupation = s.GuardiansOccupation,
+                                     GuardiansAverageYearlyIncome = s.GuardiansAverageYearlyIncome,
+                                     MadrasahEnrolled = s.MadrasahEnrolled,
+                                     DateAdmitted = s.DateAdmitted,
+                                     GradeLevel = s.GradeLevel,
+                                     Average = s.Average,
+                                     Card = s.Card,
+                                     GoodMoral = s.GoodMoral,
+                                     BirthCertificate = s.BirthCertificate,
+                                     LastSYAttendedDCFI = s.LastSYAttendedDCFI,
+                                     Dismissed = s.Dismissed,
+                                     Graduated = s.Graduated,
+                                     Religion = s.Religion,
+                                     Image = s.Image,
+                                     Gender = s.Gender,
+                                     ScholarshipDiscountId = s.ScholarshipDiscountId,
+                                     UnitsFailedLastYear = (decimal)s.UnitsFailedLastYear,
+                                     RunningBalance = (float)s.RunningBalance,
+                                     StudentLRN = s.StudentLRN,
+                                     GradeBeforeDC = s.GradeBeforeDC
+    });
                 sbdolist=slist.ToList<StudentBDO>();
 
                          }
@@ -344,6 +345,7 @@ namespace eSARDAL
                 studentInDB.Section = studentBDO.Section;
                 studentInDB.ranking = studentBDO.ranking;
                 studentInDB.StudentLRN = studentBDO.StudentLRN;
+                studentInDB.GradeBeforeDC = studentBDO.GradeBeforeDC;
 
                 DCEnt.Students.Attach(studentInDB);
                 DCEnt.Entry(studentInDB).State = System.Data.Entity.EntityState.Modified;
@@ -524,6 +526,7 @@ namespace eSARDAL
             sbdo.ranking = s.ranking;
             sbdo.Section = s.Section;
             sbdo.StudentLRN = s.StudentLRN;
+            sbdo.GradeBeforeDC = s.GradeBeforeDC;
         }
 
 
@@ -575,6 +578,7 @@ namespace eSARDAL
             sbdo.ranking = s.ranking;
             sbdo.Section = s.Section;
             sbdo.StudentLRN = s.StudentLRN;
+            sbdo.GradeBeforeDC = s.GradeBeforeDC;
         }
 
         private List<SiblingBDO> ToSiblingBDOList(List<Sibling> siblings) {

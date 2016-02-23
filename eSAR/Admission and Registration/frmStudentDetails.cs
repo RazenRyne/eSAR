@@ -71,7 +71,7 @@ namespace eSAR.Admission_and_Registration
             txtLastName.Text = SelectedStudent.LastName;
             txtSchoolLastAttended.Text = SelectedStudent.SchoolLastAttended;
             txtPrevGPA.Text =SelectedStudent.Average.ToString();
-            cmbGradeLevel.SelectedValue = SelectedStudent.GradeLevel;
+            cmbGradeLevel.SelectedValue = SelectedStudent.GradeBeforeDC;
             if (SelectedStudent.Image != null)
             {
                 img = byteArrayToImage(SelectedStudent.Image);
@@ -126,6 +126,7 @@ namespace eSAR.Admission_and_Registration
             txtGuardian_FullName.Text = SelectedStudent.GuardiansName;
             txtGuardian_Income.Text = SelectedStudent.GuardiansAverageYearlyIncome.ToString();
             txtGuardian_Occupation.Text = SelectedStudent.GuardiansOccupation;
+            txtCurrentGradeLevel.Text = SelectedStudent.GradeLevel;
         }
 
         private void GenerateStudentID()
@@ -256,7 +257,7 @@ namespace eSAR.Admission_and_Registration
             student.Average = double.Parse(txtPrevGPA.Text);
             student.Image = bImage;
             student.SchoolLastAttended = txtSchoolLastAttended.Text;
-            student.GradeLevel = cmbGradeLevel.SelectedValue.ToString();
+            student.GradeBeforeDC = cmbGradeLevel.SelectedValue.ToString();
             student.DOB = dtDOB.Value;
             student.MadrasahEnrolled = chkMadrasah.Checked;
             student.Card = chkReportCard.Checked;

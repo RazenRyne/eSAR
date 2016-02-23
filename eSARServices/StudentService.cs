@@ -150,6 +150,7 @@ namespace eSARServices
             studentBDO.Image = student.Image;
             studentBDO.Section = student.Section;
             studentBDO.StudentLRN = student.StudentLRN;
+            studentBDO.GradeBeforeDC = student.GradeBeforeDC;
         }
 
         public void TranslateStudentBDOToStudentDTO(StudentBDO studentBDO, Student student)
@@ -208,7 +209,8 @@ namespace eSARServices
             student.RunningBalance = (float)studentBDO.RunningBalance;
             student.ranking = studentBDO.ranking;
             student.Section = studentBDO.Section;
-            student.StudentLRN = student.StudentLRN;
+            student.StudentLRN = studentBDO.StudentLRN;
+            student.GradeBeforeDC = studentBDO.GradeBeforeDC;
 
         }
 

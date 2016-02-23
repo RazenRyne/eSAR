@@ -70,6 +70,7 @@ namespace eSARDAL
         public Nullable<double> FirstAverage { get; set; }
         public Nullable<double> SecondAverage { get; set; }
         public Nullable<double> ThirdAverage { get; set; }
+        public string GradeBeforeDC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payment> Payments { get; set; }

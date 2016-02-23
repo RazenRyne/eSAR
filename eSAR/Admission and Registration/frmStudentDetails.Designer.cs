@@ -54,6 +54,7 @@
             this.pvStudent = new Telerik.WinControls.UI.RadPageView();
             this.StudentDetails = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.btnInsertImage = new Telerik.WinControls.UI.RadButton();
             this.txtLRN = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.cbReligion = new Telerik.WinControls.UI.RadDropDownList();
@@ -140,7 +141,8 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radCheckBox1 = new Telerik.WinControls.UI.RadCheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnInsertImage = new Telerik.WinControls.UI.RadButton();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.txtCurrentGradeLevel = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnFooter)).BeginInit();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -153,6 +155,7 @@
             this.StudentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLRN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbReligion)).BeginInit();
@@ -249,7 +252,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -329,6 +333,8 @@
             // 
             this.radPanel2.AutoScroll = true;
             this.radPanel2.AutoScrollMinSize = new System.Drawing.Size(2, 0);
+            this.radPanel2.Controls.Add(this.txtCurrentGradeLevel);
+            this.radPanel2.Controls.Add(this.radLabel21);
             this.radPanel2.Controls.Add(this.btnInsertImage);
             this.radPanel2.Controls.Add(this.txtLRN);
             this.radPanel2.Controls.Add(this.radLabel10);
@@ -363,6 +369,14 @@
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(727, 403);
             this.radPanel2.TabIndex = 6;
+            // 
+            // btnInsertImage
+            // 
+            this.btnInsertImage.Location = new System.Drawing.Point(12, 131);
+            this.btnInsertImage.Name = "btnInsertImage";
+            this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
+            this.btnInsertImage.TabIndex = 38;
+            this.btnInsertImage.Text = "Insert Image";
             // 
             // txtLRN
             // 
@@ -730,9 +744,9 @@
             // 
             this.radLabel6.Location = new System.Drawing.Point(448, 26);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(96, 18);
+            this.radLabel6.Size = new System.Drawing.Size(121, 18);
             this.radLabel6.TabIndex = 10;
-            this.radLabel6.Text = "Current Grd Level:";
+            this.radLabel6.Text = "Grade Level Before DC:";
             // 
             // txtSchoolLastAttended
             // 
@@ -1211,13 +1225,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnInsertImage
+            // radLabel21
             // 
-            this.btnInsertImage.Location = new System.Drawing.Point(12, 131);
-            this.btnInsertImage.Name = "btnInsertImage";
-            this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
-            this.btnInsertImage.TabIndex = 38;
-            this.btnInsertImage.Text = "Insert Image";
+            this.radLabel21.Location = new System.Drawing.Point(509, 181);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(108, 18);
+            this.radLabel21.TabIndex = 40;
+            this.radLabel21.Text = "Current Grade Level:";
+            // 
+            // txtCurrentGradeLevel
+            // 
+            this.txtCurrentGradeLevel.Location = new System.Drawing.Point(626, 179);
+            this.txtCurrentGradeLevel.MaxLength = 8;
+            this.txtCurrentGradeLevel.Name = "txtCurrentGradeLevel";
+            this.txtCurrentGradeLevel.Size = new System.Drawing.Size(63, 20);
+            this.txtCurrentGradeLevel.TabIndex = 41;
             // 
             // frmStudentDetails
             // 
@@ -1252,6 +1274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             this.radPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLRN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbReligion)).EndInit();
@@ -1353,7 +1376,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1456,5 +1480,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadTextBox txtLRN;
         private Telerik.WinControls.UI.RadButton btnInsertImage;
+        private Telerik.WinControls.UI.RadTextBox txtCurrentGradeLevel;
+        private Telerik.WinControls.UI.RadLabel radLabel21;
     }
 }

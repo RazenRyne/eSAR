@@ -57,6 +57,7 @@ namespace eSARBDO
         public Nullable<double> SecondAverage { get; set; }
         public Nullable<double> ThirdAverage { get; set; }
         public ScholarshipDiscountBDO Scholarship { get; set; }
+        public string GradeBeforeDC { get; set; }
 
         public List<SiblingBDO> Siblings
         {

@@ -235,6 +235,7 @@
           <Property Name="FirstAverage" Type="float" />
           <Property Name="SecondAverage" Type="float" />
           <Property Name="ThirdAverage" Type="float" />
+          <Property Name="GradeBeforeDC" Type="nvarchar" MaxLength="4" />
         </EntityType>
         <EntityType Name="StudentSubjects">
           <Key>
@@ -1635,6 +1636,7 @@
           <NavigationProperty Name="Siblings" Relationship="DCFIModel.fk_StudentSibling" FromRole="Student" ToRole="Sibling" />
           <NavigationProperty Name="Siblings1" Relationship="DCFIModel.fk_StudentSibling_Stud" FromRole="Student" ToRole="Sibling" />
           <NavigationProperty Name="StudentEnrollments" Relationship="DCFIModel.fk_StudentEnr_Stud" FromRole="Student" ToRole="StudentEnrollment" />
+          <Property Name="GradeBeforeDC" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="StudentSubject">
           <Key>
@@ -2592,6 +2594,7 @@
           <EntitySetMapping Name="Students">
             <EntityTypeMapping TypeName="DCFIModel.Student">
               <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="GradeBeforeDC" ColumnName="GradeBeforeDC" />
                 <ScalarProperty Name="ThirdAverage" ColumnName="ThirdAverage" />
                 <ScalarProperty Name="SecondAverage" ColumnName="SecondAverage" />
                 <ScalarProperty Name="FirstAverage" ColumnName="FirstAverage" />

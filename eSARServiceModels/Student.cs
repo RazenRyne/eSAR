@@ -99,7 +99,9 @@ namespace eSARServiceModels
         public float RunningBalance { get; set; }
          
         public string StudentLRN { get; set; }
-         
+
+        public string GradeBeforeDC { get; set; }
+
         public Nullable<double> FirstAverage { get; set; }
          
         public Nullable<double> SecondAverage { get; set; }
