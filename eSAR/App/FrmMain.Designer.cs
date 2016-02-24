@@ -164,7 +164,7 @@
             // 
             this.ribbonTab2.AccessibleDescription = "Course Related Resources";
             this.ribbonTab2.AccessibleName = "Course Related Resources";
-            this.ribbonTab2.IsSelected = false;
+            this.ribbonTab2.IsSelected = true;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup2,
             this.radRibbonBarGroup5,
@@ -182,12 +182,12 @@
             // 
             // btnTeacher
             // 
-            this.btnTeacher.AccessibleDescription = "Manage Teacher";
-            this.btnTeacher.AccessibleName = "Manage Teacher";
+            this.btnTeacher.AccessibleDescription = "Manage Faculty";
+            this.btnTeacher.AccessibleName = "Manage Faculty";
             this.btnTeacher.Image = global::eSAR.Properties.Resources.users;
             this.btnTeacher.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTeacher.Name = "btnTeacher";
-            this.btnTeacher.Text = "Manage Teacher";
+            this.btnTeacher.Text = "Manage Faculty";
             this.btnTeacher.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
@@ -503,7 +503,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
