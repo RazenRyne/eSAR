@@ -165,6 +165,8 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
                 Image = bImage,
                 PERAA = txtPERAA.Text,
                 Academic = acad,
+                Salary = double.Parse(txtSalary.Text),
+                Department = txtDepartment.Text,
 
                 TeacherChildrens = teachChild,
                 TeacherEducationalBackgrounds = educBack,
@@ -305,65 +307,72 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
         }
 
 
-        private void SetFields() {
-                txtTeacherID.Enabled = false;
-                txtTeacherID.Text = SelectedTeacher.TeacherId;
-                if (SelectedTeacher.Image != null)
+        private void SetFields()
+        {
+            txtTeacherID.Enabled = false;
+            txtTeacherID.Text = SelectedTeacher.TeacherId;
+            if (SelectedTeacher.Image != null)
             {
                 img = byteArrayToImage(SelectedTeacher.Image);
                 pbImage.BackgroundImage = ResizeImage(100, 100, img);
             }
-                txtFirstName.Text = SelectedTeacher.FirstName;
-                txtMiddleName.Text = SelectedTeacher.MiddleName;
-                txtLastName.Text = SelectedTeacher.LastName;
-                dtBirth.Value = SelectedTeacher.DOB;
+            txtFirstName.Text = SelectedTeacher.FirstName;
+            txtMiddleName.Text = SelectedTeacher.MiddleName;
+            txtLastName.Text = SelectedTeacher.LastName;
+            dtBirth.Value = SelectedTeacher.DOB;
 
-                if (SelectedTeacher.Gender == "F") cmbGender.Text = "Female";
-                if (SelectedTeacher.Gender == "M") cmbGender.Text = "Male";
+            if (SelectedTeacher.Gender == "F") cmbGender.Text = "Female";
+            if (SelectedTeacher.Gender == "M") cmbGender.Text = "Male";
 
-                if (SelectedTeacher.BloodType == "A") cmbBloodType.Text = "A";
-                if (SelectedTeacher.BloodType == "O") cmbBloodType.Text = "O";
-                if (SelectedTeacher.BloodType == "AB") cmbBloodType.Text = "AB";
-                if (SelectedTeacher.BloodType == "A") cmbBloodType.Text = "A";
+            if (SelectedTeacher.BloodType == "A") cmbBloodType.Text = "A";
+            if (SelectedTeacher.BloodType == "O") cmbBloodType.Text = "O";
+            if (SelectedTeacher.BloodType == "AB") cmbBloodType.Text = "AB";
+            if (SelectedTeacher.BloodType == "A") cmbBloodType.Text = "A";
 
-                cmbCivilState.Text = SelectedTeacher.CivilStatus;
-                txtCellphone.Text = SelectedTeacher.MobileNo;
-                txtDialect.Text = SelectedTeacher.DialectSpoken;
-                txtEmailAdd.Text = SelectedTeacher.EmailAddress;
-                txtPOB_Province.Text = SelectedTeacher.POBProvince;
-                txtPOB_Municipality.Text = SelectedTeacher.POBMunicipality;
-                txtTIN.Text = SelectedTeacher.TIN;
-                txtPagIbig.Text = SelectedTeacher.PagIBIGNo;
-                txtSSS.Text = SelectedTeacher.SSSNum;
-                txtPhilHealth.Text = SelectedTeacher.PhilHealthNo;
-                txtPERAA.Text = SelectedTeacher.PERAA;
-                cmbBloodType.Text = SelectedTeacher.BloodType;
-                txtHeight.Text = SelectedTeacher.HeightCm.ToString();
-                txtWeight.Text = SelectedTeacher.WeightKg.ToString();
-                dtAppointment.Value = SelectedTeacher.DateOfAppointment;
-                txtEmploymentState.Text = SelectedTeacher.EmploymentStatus;
-                txtSchoolReassigned.Text = SelectedTeacher.PreviousSchool;
-                txtSpouse_FirstName.Text = SelectedTeacher.SpouseFirstName;
-                txtSpouse_MiddleName.Text = SelectedTeacher.SpouseMiddleName;
-                txtSpouse_LastName.Text = SelectedTeacher.SpouseLastName;
-                txtSpouse_Occupation.Text = SelectedTeacher.SpouseOccupation;
-                txtSpouse_BusinessAdd.Text = SelectedTeacher.SpouseBusinessAdd;
-                txtSpouse_Employer.Text = SelectedTeacher.SpouseEmployerName;
-                txtSpouse_Contact.Text = SelectedTeacher.SpouseTelephoneNo;
-                txtRes_StreetName.Text = SelectedTeacher.RAStreetName;
-                txtRes_Province.Text = SelectedTeacher.RAProvince;
-                txtRes_Municipality.Text = SelectedTeacher.RAMunicipality;
-                cmbRes_Region.SelectedValue = SelectedTeacher.RARegion;
-                txtRes_TelNo.Text = SelectedTeacher.ResTelephoneNo;
-                txtPA_StreetName.Text = SelectedTeacher.PAStreetName;
-                txtPA_Province.Text = SelectedTeacher.PAProvince;
-                txtPA_Municipality.Text = SelectedTeacher.PAMunicipality;
-                cmbPA_Region.SelectedValue = SelectedTeacher.PARegion;
+            cmbCivilState.Text = SelectedTeacher.CivilStatus;
+            txtCellphone.Text = SelectedTeacher.MobileNo;
+            txtDialect.Text = SelectedTeacher.DialectSpoken;
+            txtEmailAdd.Text = SelectedTeacher.EmailAddress;
+            txtPOB_Province.Text = SelectedTeacher.POBProvince;
+            txtPOB_Municipality.Text = SelectedTeacher.POBMunicipality;
+            txtTIN.Text = SelectedTeacher.TIN;
+            txtPagIbig.Text = SelectedTeacher.PagIBIGNo;
+            txtSSS.Text = SelectedTeacher.SSSNum;
+            txtPhilHealth.Text = SelectedTeacher.PhilHealthNo;
+            txtPERAA.Text = SelectedTeacher.PERAA;
+            cmbBloodType.Text = SelectedTeacher.BloodType;
+            txtHeight.Text = SelectedTeacher.HeightCm.ToString();
+            txtWeight.Text = SelectedTeacher.WeightKg.ToString();
+            dtAppointment.Value = SelectedTeacher.DateOfAppointment;
+            txtEmploymentState.Text = SelectedTeacher.EmploymentStatus;
+            txtSchoolReassigned.Text = SelectedTeacher.PreviousSchool;
+            txtSpouse_FirstName.Text = SelectedTeacher.SpouseFirstName;
+            txtSpouse_MiddleName.Text = SelectedTeacher.SpouseMiddleName;
+            txtSpouse_LastName.Text = SelectedTeacher.SpouseLastName;
+            txtSpouse_Occupation.Text = SelectedTeacher.SpouseOccupation;
+            txtSpouse_BusinessAdd.Text = SelectedTeacher.SpouseBusinessAdd;
+            txtSpouse_Employer.Text = SelectedTeacher.SpouseEmployerName;
+            txtSpouse_Contact.Text = SelectedTeacher.SpouseTelephoneNo;
+            txtRes_StreetName.Text = SelectedTeacher.RAStreetName;
+            txtRes_Province.Text = SelectedTeacher.RAProvince;
+            txtRes_Municipality.Text = SelectedTeacher.RAMunicipality;
+            cmbRes_Region.SelectedValue = SelectedTeacher.RARegion;
+            txtRes_TelNo.Text = SelectedTeacher.ResTelephoneNo;
+            txtPA_StreetName.Text = SelectedTeacher.PAStreetName;
+            txtPA_Province.Text = SelectedTeacher.PAProvince;
+            txtPA_Municipality.Text = SelectedTeacher.PAMunicipality;
+            cmbPA_Region.SelectedValue = SelectedTeacher.PARegion;
             if (SelectedTeacher.Academic == true)
                 radioAcademic.Checked = true;
             else
                 radioNonAcad.Checked = true;
-            }
+
+            Age age = new Age(dtAppointment.Value, DateTime.Today);
+            txtYearsService.Text = (age.Years + " years, " + age.Months + " months, " + age.Days + " days");
+            txtSalary.Text = SelectedTeacher.Salary.ToString() ?? "0.00";
+            txtDepartment.Text = SelectedTeacher.Department;
+        }
+                
 
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -603,5 +612,21 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
             };
             logService.AddLogs(log);
         }
+
+        private void txtSalary_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSalary.Text == string.Empty) txtSalary.Text = "0";
+        }
+
+        private void dtAppointment_Leave(object sender, EventArgs e)
+        {
+            if (dtAppointment.Value != null)
+            {
+                Age age = new Age(dtAppointment.Value, DateTime.Today);
+                txtYearsService.Text = (age.Years + " years, " + age.Months + " months, " + age.Days + " days");
+
+            }
+        }
+
     }
 }

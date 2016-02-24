@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.gvTraits = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
-            this.btCancel = new Telerik.WinControls.UI.RadButton();
             this.btEdit = new Telerik.WinControls.UI.RadButton();
             this.btAdd = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -45,7 +44,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTraits.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -68,31 +66,31 @@
             // 
             // 
             this.gvTraits.MasterTemplate.AllowDragToGroup = false;
-            gridViewCheckBoxColumn1.FieldName = "CurrTrait";
-            gridViewCheckBoxColumn1.HeaderText = "Current";
-            gridViewCheckBoxColumn1.Name = "CurrTrait";
-            gridViewTextBoxColumn1.FieldName = "Description";
-            gridViewTextBoxColumn1.HeaderText = "Description";
-            gridViewTextBoxColumn1.Name = "Description";
-            gridViewTextBoxColumn1.Width = 300;
-            gridViewTextBoxColumn2.FieldName = "Cat";
-            gridViewTextBoxColumn2.HeaderText = "Category";
-            gridViewTextBoxColumn2.Name = "Cat";
-            gridViewTextBoxColumn2.Width = 100;
-            gridViewTextBoxColumn3.FieldName = "TraitsID";
-            gridViewTextBoxColumn3.HeaderText = "TraitsID";
-            gridViewTextBoxColumn3.IsVisible = false;
-            gridViewTextBoxColumn3.Name = "TraitsID";
-            gridViewTextBoxColumn4.FieldName = "Category";
-            gridViewTextBoxColumn4.HeaderText = "column1";
-            gridViewTextBoxColumn4.IsVisible = false;
-            gridViewTextBoxColumn4.Name = "Category";
+            gridViewCheckBoxColumn2.FieldName = "CurrTrait";
+            gridViewCheckBoxColumn2.HeaderText = "Current";
+            gridViewCheckBoxColumn2.Name = "CurrTrait";
+            gridViewTextBoxColumn5.FieldName = "Description";
+            gridViewTextBoxColumn5.HeaderText = "Description";
+            gridViewTextBoxColumn5.Name = "Description";
+            gridViewTextBoxColumn5.Width = 300;
+            gridViewTextBoxColumn6.FieldName = "Cat";
+            gridViewTextBoxColumn6.HeaderText = "Category";
+            gridViewTextBoxColumn6.Name = "Cat";
+            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn7.FieldName = "TraitsID";
+            gridViewTextBoxColumn7.HeaderText = "TraitsID";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "TraitsID";
+            gridViewTextBoxColumn8.FieldName = "Category";
+            gridViewTextBoxColumn8.HeaderText = "column1";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Category";
             this.gvTraits.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewCheckBoxColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewCheckBoxColumn2,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.gvTraits.MasterTemplate.EnableGrouping = false;
             this.gvTraits.Name = "gvTraits";
             this.gvTraits.ReadOnly = true;
@@ -103,7 +101,6 @@
             // 
             // radPanel2
             // 
-            this.radPanel2.Controls.Add(this.btCancel);
             this.radPanel2.Controls.Add(this.btEdit);
             this.radPanel2.Controls.Add(this.btAdd);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -112,20 +109,10 @@
             this.radPanel2.Size = new System.Drawing.Size(598, 50);
             this.radPanel2.TabIndex = 1;
             // 
-            // btCancel
-            // 
-            this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btCancel.Location = new System.Drawing.Point(517, 14);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(69, 24);
-            this.btCancel.TabIndex = 6;
-            this.btCancel.Text = "Cancel";
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
-            // 
             // btEdit
             // 
             this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEdit.Location = new System.Drawing.Point(444, 14);
+            this.btEdit.Location = new System.Drawing.Point(517, 14);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(69, 24);
             this.btEdit.TabIndex = 5;
@@ -135,7 +122,7 @@
             // btAdd
             // 
             this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAdd.Location = new System.Drawing.Point(372, 14);
+            this.btAdd.Location = new System.Drawing.Point(445, 14);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(69, 24);
             this.btAdd.TabIndex = 4;
@@ -166,7 +153,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTraits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -179,7 +165,6 @@
         private Telerik.WinControls.UI.RadPanel radPanel1;
         private Telerik.WinControls.UI.RadGridView gvTraits;
         private Telerik.WinControls.UI.RadPanel radPanel2;
-        private Telerik.WinControls.UI.RadButton btCancel;
         private Telerik.WinControls.UI.RadButton btEdit;
         private Telerik.WinControls.UI.RadButton btAdd;
     }
