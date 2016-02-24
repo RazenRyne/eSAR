@@ -155,31 +155,7 @@ namespace eSAR.Admission_and_Registration
             txtFailed.Text = RegisterStudent.UnitsFailedLastYear.ToString();
             txtranking.Text = RegisterStudent.ranking.ToString();
             decimal cri = 3.50M;
-            
-          if (RegisterStudent.UnitsFailedLastYear.CompareTo(0.0M) == 0)
-            {
-                chkRetain.Checked = false;
-                chkPromote.Checked = true;
-                chkIrreg.Checked = false;
-                Promote();
-                EnrolMe.Stat = "a";
-            }
-           else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) > 0)
-            {
-                chkRetain.Checked = true;
-                chkPromote.Checked = false;
-                chkIrreg.Checked = false;
-                EnrolMe.Stat = "c";
-                GradeLevel = RegisterStudent.GradeLevel;
-            }
-            else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) <= 0) {
-                chkRetain.Checked = false ;
-                chkPromote.Checked = false;
-                chkIrreg.Checked = true;
-                Promote();
-                EnrolMe.Stat = "b";
-            }
-            else if (RegisterStudent.GradeLevel.Equals("N"))
+            if (RegisterStudent.GradeLevel.Equals("N"))
             {
                 chkRetain.Checked = false;
                 chkPromote.Checked = false;
@@ -187,6 +163,34 @@ namespace eSAR.Admission_and_Registration
                 Promote();
                 EnrolMe.Stat = "a";
             }
+            else
+            {
+                if (RegisterStudent.UnitsFailedLastYear.CompareTo(0.0M) == 0)
+                {
+                    chkRetain.Checked = false;
+                    chkPromote.Checked = true;
+                    chkIrreg.Checked = false;
+                    Promote();
+                    EnrolMe.Stat = "a";
+                }
+                else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) > 0)
+                {
+                    chkRetain.Checked = true;
+                    chkPromote.Checked = false;
+                    chkIrreg.Checked = false;
+                    EnrolMe.Stat = "c";
+                    GradeLevel = RegisterStudent.GradeLevel;
+                }
+                else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) <= 0)
+                {
+                    chkRetain.Checked = false;
+                    chkPromote.Checked = false;
+                    chkIrreg.Checked = true;
+                    Promote();
+                    EnrolMe.Stat = "b";
+                }
+            }
+          
 
             cmbScholarship.DataSource = Discounts;
             cmbScholarship.ValueMember = "ScholarshipDiscountId";

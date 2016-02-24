@@ -131,10 +131,10 @@ namespace eSAR.Admission_and_Registration
                 {
                     frmStudentRegister fmStudentRegister = new frmStudentRegister();
                     fmStudentRegister.StudentId = studentSelected.StudentId;
-                    if(IsNew(studentSelected))
-                        fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
+                    if (String.IsNullOrEmpty(studentSelected.GradeLevel))
+                        fmStudentRegister.GradeLevel = "N";
                     else
-                        fmStudentRegister.GradeLevel = studentSelected.GradeBeforeDC;
+                        fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
 
                     fmStudentRegister.Gender = studentSelected.Gender;
                     fmStudentRegister.Show(this);
@@ -142,11 +142,7 @@ namespace eSAR.Admission_and_Registration
             }
         }
 
-        private Boolean IsNew(Student student) {
-            if (String.IsNullOrEmpty(student.GradeLevel))
-                return true;
-            else return false;
-        }
+       
         private void btnControl_Click(object sender, EventArgs e)
         {
             if (gvStudent.CurrentRow.Index >= 0)
