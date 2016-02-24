@@ -39,7 +39,7 @@ namespace eSAR.Admission_and_Registration
 
         private void Promote()
         {
-            switch (RegisterStudent.GradeLevel)
+            switch (RegisterStudent.GradeBeforeDC)
             {
                 case "N":
                     GradeLevel = "K1";

@@ -50,7 +50,6 @@
             this.gvFail = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.gvAllSchedules = new Telerik.WinControls.UI.RadGridView();
-            this.txtSection = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.txtStudentId = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
@@ -69,6 +68,7 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
+            this.txtSection = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).BeginInit();
@@ -81,7 +81,6 @@
             this.radGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllSchedules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllSchedules.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
@@ -103,16 +102,17 @@
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.txtSection);
             this.radPanel1.Controls.Add(this.btnRemove);
             this.radPanel1.Controls.Add(this.btnAdd);
             this.radPanel1.Controls.Add(this.radGroupBox1);
             this.radPanel1.Controls.Add(this.radGroupBox3);
-            this.radPanel1.Controls.Add(this.txtSection);
             this.radPanel1.Controls.Add(this.radLabel8);
             this.radPanel1.Controls.Add(this.txtStudentId);
             this.radPanel1.Controls.Add(this.radLabel6);
@@ -247,16 +247,9 @@
             this.gvAllSchedules.Text = "radGridView1";
             this.gvAllSchedules.CellEditorInitialized += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gvAllSchedules_CellEditorInitialized);
             // 
-            // txtSection
-            // 
-            this.txtSection.Location = new System.Drawing.Point(489, 12);
-            this.txtSection.Name = "txtSection";
-            this.txtSection.Size = new System.Drawing.Size(97, 20);
-            this.txtSection.TabIndex = 18;
-            // 
             // radLabel8
             // 
-            this.radLabel8.Location = new System.Drawing.Point(434, 13);
+            this.radLabel8.Location = new System.Drawing.Point(383, 15);
             this.radLabel8.Name = "radLabel8";
             this.radLabel8.Size = new System.Drawing.Size(49, 18);
             this.radLabel8.TabIndex = 17;
@@ -435,6 +428,15 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // txtSection
+            // 
+            this.txtSection.DisplayMember = "Section";
+            this.txtSection.Location = new System.Drawing.Point(456, 13);
+            this.txtSection.Name = "txtSection";
+            this.txtSection.Size = new System.Drawing.Size(130, 20);
+            this.txtSection.TabIndex = 49;
+            this.txtSection.ValueMember = "GradeSectionCode";
+            // 
             // frmControlSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,7 +468,6 @@
             this.radGroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvAllSchedules.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllSchedules)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
@@ -488,6 +489,7 @@
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -514,7 +516,6 @@
      //   private Telerik.WinControls.UI.RadButton btnSelect;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadGridView gvSchedule;
-        private Telerik.WinControls.UI.RadTextBox txtSection;
         private Telerik.WinControls.UI.RadLabel radLabel8;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox3;
         private Telerik.WinControls.UI.RadGridView gvAllSchedules;
@@ -522,5 +523,6 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView gvFail;
         private Telerik.WinControls.UI.RadButton btnRemove;
+        private Telerik.WinControls.UI.RadDropDownList txtSection;
     }
 }
