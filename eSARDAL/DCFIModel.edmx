@@ -397,6 +397,8 @@
           <Property Name="PERAA" Type="nvarchar" MaxLength="100" />
           <Property Name="Image" Type="varbinary(max)" />
           <Property Name="Academic" Type="bit" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="Department" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Timeslots">
           <Key>
@@ -1823,6 +1825,8 @@
           <NavigationProperty Name="TeacherEligibilities" Relationship="DCFIModel.fk_Elig_Teacher" FromRole="Teacher" ToRole="TeacherEligibility" />
           <NavigationProperty Name="TrainingSeminars" Relationship="DCFIModel.fk_TS_Teacher" FromRole="Teacher" ToRole="TrainingSeminar" />
           <NavigationProperty Name="WorkExperiences" Relationship="DCFIModel.fk_WE_Teacher" FromRole="Teacher" ToRole="WorkExperience" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="Department" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Timeslot">
           <Key>
@@ -2769,6 +2773,8 @@
           <EntitySetMapping Name="Teachers">
             <EntityTypeMapping TypeName="DCFIModel.Teacher">
               <MappingFragment StoreEntitySet="Teachers">
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
                 <ScalarProperty Name="Academic" ColumnName="Academic" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="PERAA" ColumnName="PERAA" />

@@ -39,8 +39,12 @@ namespace eSAR.Admission_and_Registration
 
         private void Promote()
         {
-            switch (RegisterStudent.GradeBeforeDC)
+            if (String.IsNullOrEmpty(RegisterStudent.GradeLevel))
+                   RegisterStudent.GradeLevel = "0";
+            switch (RegisterStudent.GradeLevel)
             {
+                case "0": GradeLevel="N";
+                    break;
                 case "N":
                     GradeLevel = "K1";
                     break;
@@ -174,6 +178,14 @@ namespace eSAR.Admission_and_Registration
                 chkIrreg.Checked = true;
                 Promote();
                 EnrolMe.Stat = "b";
+            }
+            else if (RegisterStudent.GradeLevel.Equals("N"))
+            {
+                chkRetain.Checked = false;
+                chkPromote.Checked = false;
+                chkIrreg.Checked = true;
+                Promote();
+                EnrolMe.Stat = "a";
             }
 
             cmbScholarship.DataSource = Discounts;

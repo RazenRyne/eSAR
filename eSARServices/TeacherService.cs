@@ -141,6 +141,8 @@ namespace eSARServices
             tb.TrainingSeminars = ToTrainSemBDO(teacher.TrainingSeminars);
             tb.WorkExperiences = ToWorkExpBDO(teacher.WorkExperiences);
             tb.Academic = teacher.Academic ?? false;
+            tb.Salary = teacher.Salary;
+            tb.Department = teacher.Department;
         }
 
         public void TranslateTeacherBDOToTeacherDTO(TeacherBDO teacher, Teacher tb)
@@ -197,6 +199,7 @@ namespace eSARServices
             tb.TrainingSeminars = ToTrainSemDTO(teacher.TrainingSeminars);
             tb.WorkExperiences = ToWorkExpDTO(teacher.WorkExperiences);
             tb.Academic = teacher.Academic;
+            tb.Salary = teacher.Salary;
         }
 
         public List<TeacherChildrenBDO> ToChildrenBDO(List<TeacherChildren> tc)
