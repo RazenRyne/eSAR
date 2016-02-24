@@ -200,6 +200,7 @@ namespace eSARServices
             tb.WorkExperiences = ToWorkExpDTO(teacher.WorkExperiences);
             tb.Academic = teacher.Academic;
             tb.Salary = teacher.Salary;
+            tb.Department = teacher.Department;
         }
 
         public List<TeacherChildrenBDO> ToChildrenBDO(List<TeacherChildren> tc)

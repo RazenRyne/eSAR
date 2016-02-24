@@ -316,7 +316,7 @@
             this.pvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pvStudent.Location = new System.Drawing.Point(0, 0);
             this.pvStudent.Name = "pvStudent";
-            this.pvStudent.SelectedPage = this.StudentDetails;
+            this.pvStudent.SelectedPage = this.AdditionalDetails;
             this.pvStudent.Size = new System.Drawing.Size(748, 451);
             this.pvStudent.TabIndex = 4;
             // 
@@ -372,6 +372,7 @@
             // 
             // txtCurrentGradeLevel
             // 
+            this.txtCurrentGradeLevel.Enabled = false;
             this.txtCurrentGradeLevel.Location = new System.Drawing.Point(578, 179);
             this.txtCurrentGradeLevel.MaxLength = 8;
             this.txtCurrentGradeLevel.Name = "txtCurrentGradeLevel";
@@ -760,9 +761,9 @@
             // 
             this.radLabel6.Location = new System.Drawing.Point(448, 26);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(121, 18);
+            this.radLabel6.Size = new System.Drawing.Size(112, 18);
             this.radLabel6.TabIndex = 10;
-            this.radLabel6.Text = "Grade Level Before DC:";
+            this.radLabel6.Text = "Previous Grade Level:";
             // 
             // txtSchoolLastAttended
             // 
@@ -844,7 +845,7 @@
             this.AdditionalDetails.ItemSize = new System.Drawing.SizeF(105F, 28F);
             this.AdditionalDetails.Location = new System.Drawing.Point(10, 37);
             this.AdditionalDetails.Name = "AdditionalDetails";
-            this.AdditionalDetails.Size = new System.Drawing.Size(699, 403);
+            this.AdditionalDetails.Size = new System.Drawing.Size(727, 403);
             this.AdditionalDetails.Text = "Additional Details";
             // 
             // radPanel3
@@ -855,7 +856,7 @@
             this.radPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel3.Location = new System.Drawing.Point(0, 0);
             this.radPanel3.Name = "radPanel3";
-            this.radPanel3.Size = new System.Drawing.Size(699, 403);
+            this.radPanel3.Size = new System.Drawing.Size(727, 403);
             this.radPanel3.TabIndex = 7;
             // 
             // radGroupBox7

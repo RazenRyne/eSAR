@@ -44,6 +44,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmControlSubjects));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.txtSection = new Telerik.WinControls.UI.RadDropDownList();
             this.btnRemove = new Telerik.WinControls.UI.RadButton();
             this.btnAdd = new Telerik.WinControls.UI.RadButton();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -68,9 +69,9 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
-            this.txtSection = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
@@ -102,7 +103,6 @@
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +132,16 @@
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Size = new System.Drawing.Size(997, 548);
             this.radPanel1.TabIndex = 1;
+            // 
+            // txtSection
+            // 
+            this.txtSection.DisplayMember = "Section";
+            this.txtSection.Location = new System.Drawing.Point(456, 13);
+            this.txtSection.Name = "txtSection";
+            this.txtSection.Size = new System.Drawing.Size(130, 20);
+            this.txtSection.TabIndex = 49;
+            this.txtSection.ValueMember = "GradeSectionCode";
+            this.txtSection.SelectedValueChanged += new System.EventHandler(this.txtSection_SelectedValueChanged);
             // 
             // btnRemove
             // 
@@ -428,15 +438,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtSection
-            // 
-            this.txtSection.DisplayMember = "Section";
-            this.txtSection.Location = new System.Drawing.Point(456, 13);
-            this.txtSection.Name = "txtSection";
-            this.txtSection.Size = new System.Drawing.Size(130, 20);
-            this.txtSection.TabIndex = 49;
-            this.txtSection.ValueMember = "GradeSectionCode";
-            // 
             // frmControlSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +459,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
@@ -489,7 +491,6 @@
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

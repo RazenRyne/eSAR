@@ -71,38 +71,70 @@ namespace eSAR.Admission_and_Registration
             gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
             txtSection.DataSource = gs;
 
+
+            loadSched();
+           
+            txtSection.Text = ControlStudent.Section;
+            txtSY.Text = SY;
+            txtGradeLevel.Text = ControlStudent.GradeLevel;
+            txtStudentId.Text = ControlStudent.StudentId;
+            txtStudentName.Text = ControlStudent.LastName + "," + ControlStudent.FirstName + " " + ControlStudent.MiddleName;
+            txtPrevGPA.Text = ControlStudent.Average.ToString();
+            txtUnitsFailed.Text = ControlStudent.UnitsFailedLastYear.ToString();
+           
+        }
+
+        private void loadSched()
+        {
+            IRegistrationService registrationService = new RegistrationService();
+            string message = String.Empty;
+
             EnrolMe.StudentSY = controlStudentId + SY;
-            int prev =Int32.Parse(SY.Substring(0,4));
+            int prev = Int32.Parse(SY.Substring(0, 4));
             prev--;
             int sy = Int32.Parse(SY.Substring(5, 4));
             sy--;
             string prevSY = prev.ToString() + "-" + sy.ToString();
 
             string prevRecord = controlStudentId + prevSY;
+
+            gvAllSchedules.DataSource = null;
+            gvSchedule.DataSource = null;
+            gvFail.DataSource = null;
+            //FailedSubjects.Clear();
+            //StudentSubs.Clear();
+            //Schedules.Clear();
+            //Schedule.Clear();
+            ExistingSchedRemove.Clear();
+
             FailedSubjects = new List<StudentSubject>(registrationService.GetFailedSubjects(prevRecord));
             StudentSubs = new List<StudentSubject>(registrationService.GetStudentSubjects(EnrolMe.StudentSY));
             Schedules = new List<StudentSchedule>(registrationService.GetSubjectSchedules(SY));
 
             if (StudentSubs.Count > 0)
             {
-                ExistingSchedule = new List<StudentSchedule>(registrationService.GetStudentExistingSchedule(StudentSubs, SY));             
+                ExistingSchedule = new List<StudentSchedule>(registrationService.GetStudentExistingSchedule(StudentSubs, SY));
             }
 
-            if (ExistingSchedule.Count > 0) {
-                foreach (StudentSchedule ss in ExistingSchedule) {
+            if (ExistingSchedule.Count > 0)
+            {
+                foreach (StudentSchedule ss in ExistingSchedule)
+                {
                     int index = Schedules.FindIndex(item => item.SubjectAssignments == ss.SubjectAssignments);
                     Schedules.RemoveAt(index);
-                }    
+                }
             }
 
-            gvAllSchedules.DataSource = Schedules;
+
             gvFail.DataSource = FailedSubjects;
+            gvAllSchedules.DataSource = Schedules;
 
             if (ControlStudent.UnitsFailedLastYear == 0 && StudentSubs.Count == 0)
             {
-                int sectionCode = (int)enrStudent.GradeSectionCode;
+                int sectionCode = (int)txtSection.SelectedValue;
                 Schedule = new List<StudentSchedule>(registrationService.GetSubjectsOfSection(sectionCode, SY));
-                foreach (StudentSchedule sch in Schedule) {
+                foreach (StudentSchedule sch in Schedule)
+                {
                     StudentSubject ss = new StudentSubject()
                     {
                         StudentSY = controlStudentId + SY,
@@ -134,20 +166,12 @@ namespace eSAR.Admission_and_Registration
                 gvSchedule.ReadOnly = false;
                 gvSchedule.DataSource = ControlSchedule;
             }
-             else if (ControlStudent.UnitsFailedLastYear > 0)
-             {
+            else if (ControlStudent.UnitsFailedLastYear > 0)
+            {
                 GlobalClass.gvDatasource = 3;
                 gvAllSchedules.ReadOnly = false;
                 gvSchedule.ReadOnly = false;
             }
-            txtSection.Text = ControlStudent.Section;
-            txtSY.Text = SY;
-            txtGradeLevel.Text = ControlStudent.GradeLevel;
-            txtStudentId.Text = ControlStudent.StudentId;
-            txtStudentName.Text = ControlStudent.LastName + "," + ControlStudent.FirstName + " " + ControlStudent.MiddleName;
-            txtPrevGPA.Text = ControlStudent.Average.ToString();
-            txtUnitsFailed.Text = ControlStudent.UnitsFailedLastYear.ToString();
-           
         }
 
         private void gvSchedule_CellEditorInitialized(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -418,6 +442,10 @@ namespace eSAR.Admission_and_Registration
             gvSchedule.DataSource = ControlSchedule;
             AddFromAll.Clear();
         }
-               
+
+        private void txtSection_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

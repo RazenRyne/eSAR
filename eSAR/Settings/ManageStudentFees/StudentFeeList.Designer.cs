@@ -36,13 +36,11 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
-            this.btCancel = new Telerik.WinControls.UI.RadButton();
             this.btnEdit = new Telerik.WinControls.UI.RadButton();
             this.btnAdd = new Telerik.WinControls.UI.RadButton();
             this.gvFees = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvFees)).BeginInit();
@@ -52,7 +50,6 @@
             // 
             // radPanel2
             // 
-            this.radPanel2.Controls.Add(this.btCancel);
             this.radPanel2.Controls.Add(this.btnEdit);
             this.radPanel2.Controls.Add(this.btnAdd);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -61,21 +58,10 @@
             this.radPanel2.Size = new System.Drawing.Size(823, 50);
             this.radPanel2.TabIndex = 1;
             // 
-            // btCancel
-            // 
-            this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btCancel.Location = new System.Drawing.Point(742, 14);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(69, 24);
-            this.btCancel.TabIndex = 2;
-            this.btCancel.Text = "Cancel";
-            this.btCancel.Visible = false;
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(670, 15);
+            this.btnEdit.Location = new System.Drawing.Point(742, 14);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(69, 24);
             this.btnEdit.TabIndex = 1;
@@ -85,7 +71,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(597, 15);
+            this.btnAdd.Location = new System.Drawing.Point(669, 14);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 24);
             this.btnAdd.TabIndex = 0;
@@ -171,7 +157,6 @@
             this.Load += new System.EventHandler(this.StudentFeeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvFees.MasterTemplate)).EndInit();
@@ -184,7 +169,6 @@
         #endregion
 
         private Telerik.WinControls.UI.RadPanel radPanel2;
-        private Telerik.WinControls.UI.RadButton btCancel;
         private Telerik.WinControls.UI.RadButton btnEdit;
         private Telerik.WinControls.UI.RadButton btnAdd;
         private Telerik.WinControls.UI.RadGridView gvFees;
