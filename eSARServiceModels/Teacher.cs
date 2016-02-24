@@ -101,7 +101,11 @@ namespace eSARServiceModels
          
         public bool? Academic { get; set; }
 
-         
+        public double? Salary { get; set; }
+
+        public string Department { get; set; }
+
+
         public List<TeacherChildren> TeacherChildrens
         {
             get { return teachChild; }

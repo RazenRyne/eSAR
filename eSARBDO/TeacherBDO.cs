@@ -56,9 +56,11 @@ namespace eSARBDO
         public string PERAA { get; set; }
         public byte[] Image { get; set; }
         public Nullable<bool> Academic { get; set; }
+        public Nullable<double> Salary { get; set; }
+        public string Department { get; set; }
 
 
-    public List<TeacherChildrenBDO> TeacherChildrens
+        public List<TeacherChildrenBDO> TeacherChildrens
         {
             get { return teachChild; }
             set { teachChild = value; }

@@ -68,6 +68,8 @@ namespace eSARDAL
         public string PERAA { get; set; }
         public byte[] Image { get; set; }
         public Nullable<bool> Academic { get; set; }
+        public Nullable<double> Salary { get; set; }
+        public string Department { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GradeSection> GradeSections { get; set; }
