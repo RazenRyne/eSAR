@@ -43,6 +43,8 @@ namespace eSAR.Admission_and_Registration
 
             IGradeLevelService glService = new GradeLevelService();
             gradeLevel = new List<GradeLevel>(glService.GetAllGradeLevels());
+            if (gradeLevel.Count > 0)
+                gradeLevel[0].Description = "None";
 
             cmbGradeLevel.DataSource = gradeLevel;
             cmbGradeLevel.ValueMember = "GradeLev";
@@ -52,6 +54,7 @@ namespace eSAR.Admission_and_Registration
             if (Op.Equals("new"))
             {
                 GenerateStudentID();
+                cmbGradeLevel.SelectedIndex = 0;
             }
 
             if (Op.Equals("edit"))
@@ -127,6 +130,11 @@ namespace eSAR.Admission_and_Registration
             txtGuardian_Income.Text = SelectedStudent.GuardiansAverageYearlyIncome.ToString();
             txtGuardian_Occupation.Text = SelectedStudent.GuardiansOccupation;
             txtCurrentGradeLevel.Text = SelectedStudent.GradeLevel;
+            if (txtCurrentGradeLevel.Text == string.Empty)
+            {
+                radLabel6.Visible = false;
+                cmbGradeLevel.Visible = false;
+            }
         }
 
         private void GenerateStudentID()
@@ -226,7 +234,7 @@ namespace eSAR.Admission_and_Registration
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtFirstName.Text) && !string.IsNullOrEmpty(txtLastName.Text) && cmbGradeLevel.SelectedIndex!=0 && !string.IsNullOrEmpty(txtPrevGPA.Text))
+            if (!string.IsNullOrEmpty(txtFirstName.Text) && !string.IsNullOrEmpty(txtLastName.Text) && cmbGradeLevel.SelectedIndex>=0 && !string.IsNullOrEmpty(txtPrevGPA.Text))
                 Save();
             else
             {
