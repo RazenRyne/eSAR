@@ -90,7 +90,7 @@ namespace eSAR.Admission_and_Registration
             EnrolMe.StudentSY = RegisterStudent.StudentId + SY;
             EnrolMe.StudentId = RegisterStudent.StudentId;
             EnrolMe.SY = SY;
-            EnrolMe.GradeLevel = RegisterStudent.StudentId;
+            EnrolMe.GradeLevel = GradeLevel;
             EnrolMe.Dismissed = false;
             EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
             EnrolMe.Rank = (int)RegisterStudent.ranking;
