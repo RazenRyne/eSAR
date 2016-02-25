@@ -131,11 +131,9 @@ namespace eSAR.Admission_and_Registration
                 {
                     frmStudentRegister fmStudentRegister = new frmStudentRegister();
                     fmStudentRegister.StudentId = studentSelected.StudentId;
-                    if (String.IsNullOrEmpty(studentSelected.GradeLevel))
-                        fmStudentRegister.GradeLevel = "N";
-                    else
+                  //  if(String.IsNullOrEmpty(studentSelected.GradeLevel))
                         fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
-
+                    fmStudentRegister.RegisterStudent = studentSelected;
                     fmStudentRegister.Gender = studentSelected.Gender;
                     fmStudentRegister.Show(this);
                 }
