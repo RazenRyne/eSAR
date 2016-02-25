@@ -189,7 +189,7 @@ namespace eSAR.Admission_and_Registration
             txtGpa.Text = RegisterStudent.Average.ToString();
             txtFailed.Text = RegisterStudent.UnitsFailedLastYear.ToString();
             txtranking.Text = RegisterStudent.ranking.ToString();
-
+            txtPrevGradeLevel.Text = RegisterStudent.GradeLevel;
             cmbScholarship.DataSource = Discounts;
             cmbScholarship.ValueMember = "ScholarshipDiscountId";
             cmbScholarship.DisplayMember = "Scholarship";
