@@ -316,7 +316,7 @@
             this.pvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pvStudent.Location = new System.Drawing.Point(0, 0);
             this.pvStudent.Name = "pvStudent";
-            this.pvStudent.SelectedPage = this.AdditionalDetails;
+            this.pvStudent.SelectedPage = this.StudentDetails;
             this.pvStudent.Size = new System.Drawing.Size(748, 451);
             this.pvStudent.TabIndex = 4;
             // 
