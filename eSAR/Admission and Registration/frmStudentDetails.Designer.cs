@@ -54,6 +54,8 @@
             this.pvStudent = new Telerik.WinControls.UI.RadPageView();
             this.StudentDetails = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.txtCurrentGradeLevel = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
             this.btnInsertImage = new Telerik.WinControls.UI.RadButton();
             this.txtLRN = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
@@ -141,8 +143,6 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radCheckBox1 = new Telerik.WinControls.UI.RadCheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
-            this.txtCurrentGradeLevel = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnFooter)).BeginInit();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -155,6 +155,8 @@
             this.StudentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLRN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
@@ -252,8 +254,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -369,6 +369,23 @@
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(727, 403);
             this.radPanel2.TabIndex = 6;
+            // 
+            // txtCurrentGradeLevel
+            // 
+            this.txtCurrentGradeLevel.Enabled = false;
+            this.txtCurrentGradeLevel.Location = new System.Drawing.Point(578, 179);
+            this.txtCurrentGradeLevel.MaxLength = 8;
+            this.txtCurrentGradeLevel.Name = "txtCurrentGradeLevel";
+            this.txtCurrentGradeLevel.Size = new System.Drawing.Size(111, 20);
+            this.txtCurrentGradeLevel.TabIndex = 41;
+            // 
+            // radLabel21
+            // 
+            this.radLabel21.Location = new System.Drawing.Point(464, 180);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(108, 18);
+            this.radLabel21.TabIndex = 40;
+            this.radLabel21.Text = "Current Grade Level:";
             // 
             // btnInsertImage
             // 
@@ -511,9 +528,9 @@
             radListDataItem9.Text = "Male";
             this.cmbGradeLevel.Items.Add(radListDataItem8);
             this.cmbGradeLevel.Items.Add(radListDataItem9);
-            this.cmbGradeLevel.Location = new System.Drawing.Point(611, 26);
+            this.cmbGradeLevel.Location = new System.Drawing.Point(574, 26);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
-            this.cmbGradeLevel.Size = new System.Drawing.Size(78, 20);
+            this.cmbGradeLevel.Size = new System.Drawing.Size(115, 20);
             this.cmbGradeLevel.TabIndex = 6;
             this.cmbGradeLevel.ValueMember = "GradeLev";
             // 
@@ -744,9 +761,9 @@
             // 
             this.radLabel6.Location = new System.Drawing.Point(448, 26);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(121, 18);
+            this.radLabel6.Size = new System.Drawing.Size(112, 18);
             this.radLabel6.TabIndex = 10;
-            this.radLabel6.Text = "Grade Level Before DC:";
+            this.radLabel6.Text = "Previous Grade Level:";
             // 
             // txtSchoolLastAttended
             // 
@@ -828,7 +845,7 @@
             this.AdditionalDetails.ItemSize = new System.Drawing.SizeF(105F, 28F);
             this.AdditionalDetails.Location = new System.Drawing.Point(10, 37);
             this.AdditionalDetails.Name = "AdditionalDetails";
-            this.AdditionalDetails.Size = new System.Drawing.Size(699, 403);
+            this.AdditionalDetails.Size = new System.Drawing.Size(727, 403);
             this.AdditionalDetails.Text = "Additional Details";
             // 
             // radPanel3
@@ -839,7 +856,7 @@
             this.radPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel3.Location = new System.Drawing.Point(0, 0);
             this.radPanel3.Name = "radPanel3";
-            this.radPanel3.Size = new System.Drawing.Size(699, 403);
+            this.radPanel3.Size = new System.Drawing.Size(727, 403);
             this.radPanel3.TabIndex = 7;
             // 
             // radGroupBox7
@@ -1225,22 +1242,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // radLabel21
-            // 
-            this.radLabel21.Location = new System.Drawing.Point(509, 181);
-            this.radLabel21.Name = "radLabel21";
-            this.radLabel21.Size = new System.Drawing.Size(108, 18);
-            this.radLabel21.TabIndex = 40;
-            this.radLabel21.Text = "Current Grade Level:";
-            // 
-            // txtCurrentGradeLevel
-            // 
-            this.txtCurrentGradeLevel.Location = new System.Drawing.Point(626, 179);
-            this.txtCurrentGradeLevel.MaxLength = 8;
-            this.txtCurrentGradeLevel.Name = "txtCurrentGradeLevel";
-            this.txtCurrentGradeLevel.Size = new System.Drawing.Size(63, 20);
-            this.txtCurrentGradeLevel.TabIndex = 41;
-            // 
             // frmStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1274,6 +1275,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             this.radPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInsertImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLRN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
@@ -1376,8 +1379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentGradeLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

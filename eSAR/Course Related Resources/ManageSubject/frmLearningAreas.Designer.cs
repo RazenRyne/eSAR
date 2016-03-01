@@ -38,7 +38,6 @@
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.gvLearningArea = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
-            this.btnDeactivateBuilding = new Telerik.WinControls.UI.RadButton();
             this.btnAddBuilding = new Telerik.WinControls.UI.RadButton();
             this.btnEditBuilding = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -47,7 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvLearningArea.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeactivateBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -124,7 +122,6 @@
             // 
             // radPanel2
             // 
-            this.radPanel2.Controls.Add(this.btnDeactivateBuilding);
             this.radPanel2.Controls.Add(this.btnAddBuilding);
             this.radPanel2.Controls.Add(this.btnEditBuilding);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -133,20 +130,10 @@
             this.radPanel2.Size = new System.Drawing.Size(770, 50);
             this.radPanel2.TabIndex = 41;
             // 
-            // btnDeactivateBuilding
-            // 
-            this.btnDeactivateBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeactivateBuilding.Location = new System.Drawing.Point(675, 14);
-            this.btnDeactivateBuilding.Name = "btnDeactivateBuilding";
-            this.btnDeactivateBuilding.Size = new System.Drawing.Size(83, 24);
-            this.btnDeactivateBuilding.TabIndex = 3;
-            this.btnDeactivateBuilding.Text = "Cancel";
-            this.btnDeactivateBuilding.Click += new System.EventHandler(this.btnDeleteBuilding_Click);
-            // 
             // btnAddBuilding
             // 
             this.btnAddBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBuilding.Location = new System.Drawing.Point(497, 14);
+            this.btnAddBuilding.Location = new System.Drawing.Point(586, 14);
             this.btnAddBuilding.Name = "btnAddBuilding";
             this.btnAddBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnAddBuilding.TabIndex = 1;
@@ -156,7 +143,7 @@
             // btnEditBuilding
             // 
             this.btnEditBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBuilding.Location = new System.Drawing.Point(586, 14);
+            this.btnEditBuilding.Location = new System.Drawing.Point(675, 14);
             this.btnEditBuilding.Name = "btnEditBuilding";
             this.btnEditBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnEditBuilding.TabIndex = 2;
@@ -185,7 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvLearningArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeactivateBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -200,6 +186,5 @@
         private Telerik.WinControls.UI.RadButton btnAddBuilding;
         private Telerik.WinControls.UI.RadButton btnEditBuilding;
         private Telerik.WinControls.UI.RadGridView gvLearningArea;
-        private Telerik.WinControls.UI.RadButton btnDeactivateBuilding;
     }
 }

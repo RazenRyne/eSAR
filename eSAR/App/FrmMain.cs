@@ -102,7 +102,7 @@ namespace eSAR.App
                 this.btnTimeSlot.Enabled = false;
                 this.btnCurriculum.Enabled = false;
                 this.btnTraits.Enabled = false;
-                this.btnFees.Enabled = false;
+                this.btnFees.Enabled = true;
                 this.btnGradeSection.Enabled = false;
                 this.btnSY.Enabled = false;
                 this.btnPayment.Enabled = true;
@@ -112,7 +112,7 @@ namespace eSAR.App
                 this.radButtonElement3.Enabled = false;
                 this.btnPromotionalList.Enabled = false;
                 this.btnTeachersLoadList.Enabled = false;
-                this.radButtonElement4.Enabled = false;
+                this.radButtonElement4.Enabled = true;
                 this.btnBillingList.Enabled = true;
                 this.btnScheduleList.Enabled = false;
                 this.radButtonElement5.Enabled = false;
@@ -134,8 +134,8 @@ namespace eSAR.App
                 this.btnSY.Enabled = true;
                 this.btnPayment.Enabled = false;
                 this.btnManageReceipt.Enabled = false;
-                this.btnQuarterlyGrading.Enabled = false;
-                this.btnTraitsGrading.Enabled = false;
+                this.btnQuarterlyGrading.Enabled = true;
+                this.btnTraitsGrading.Enabled = true;
                 this.radButtonElement3.Enabled = true;
                 this.btnPromotionalList.Enabled = true;
                 this.btnTeachersLoadList.Enabled = true;
@@ -161,16 +161,16 @@ namespace eSAR.App
                 this.btnSY.Enabled = false;
                 this.btnPayment.Enabled = false;
                 this.btnManageReceipt.Enabled = false;
-                this.btnQuarterlyGrading.Enabled = false;
-                this.btnTraitsGrading.Enabled = false;
-                this.radButtonElement3.Enabled = false;
-                this.btnPromotionalList.Enabled = false;
-                this.btnTeachersLoadList.Enabled = false;
-                this.radButtonElement4.Enabled = false;
-                this.btnBillingList.Enabled = false;
-                this.btnScheduleList.Enabled = false;
-                this.radButtonElement5.Enabled = false;
-                this.radRibbonBarGroup15.Enabled = false;
+                this.btnQuarterlyGrading.Enabled = true;
+                this.btnTraitsGrading.Enabled = true;
+                this.radButtonElement3.Enabled = true;
+                this.btnPromotionalList.Enabled = true;
+                this.btnTeachersLoadList.Enabled = true;
+                this.radButtonElement4.Enabled = true;
+                this.btnBillingList.Enabled = true;
+                this.btnScheduleList.Enabled = true;
+                this.radButtonElement5.Enabled = true;
+                this.radRibbonBarGroup15.Enabled = true;
                 this.radButtonElement2.Enabled = true;
             } else if(GlobalClass.userTypeCode == "teach")
             {
@@ -268,7 +268,7 @@ namespace eSAR.App
                     case "Student List":
                         fmStudentList.LoadStudents();
                         break;
-                    case "Teacher List":
+                    case "Faculty List":
                         fmTeacherList.LoadTeachers();
                         break;
                     case "Building List":
@@ -325,7 +325,7 @@ namespace eSAR.App
                 case "Student List":
                     StudentDockWindow = null;
                     break;
-                case "Teacher List":
+                case "Faculty List":
                     TeacherDockWindow = null;
                     break;
                 case "Building List":

@@ -43,7 +43,7 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
             }
             catch (Exception ex)
             {
-                message = "Error Loading Teacher List";
+                message = "Error Loading Faculty List";
                 MessageBox.Show(ex.ToString());
             }
 

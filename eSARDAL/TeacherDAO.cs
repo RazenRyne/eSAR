@@ -1030,7 +1030,12 @@ namespace eSARDAL
             if (teacher.Academic == null)
                 tb.Academic = true;
             else
-                tb.Academic = (bool)teacher.Academic; 
+                tb.Academic = (bool)teacher.Academic;
+            if (teacher.Salary == null)
+                tb.Salary = 0.00;
+            else tb.Salary = teacher.Salary;
+
+            tb.Department = teacher.Department;
             
 
         }
@@ -1099,6 +1104,8 @@ namespace eSARDAL
             tb.TrainingSeminars = ts;
             tb.WorkExperiences = we;
             tb.Academic = teacher.Academic;
+            tb.Salary = teacher.Salary;
+            tb.Department = teacher.Department;
 
         }
 

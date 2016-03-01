@@ -69,7 +69,7 @@ namespace eSAR.Quarterly_Grading.Grading
 
             try
             {
-                if (GlobalClass.userTypeCode == "admin" || GlobalClass.user.UserType == "reg")
+                if (GlobalClass.userTypeCode == "admin" || GlobalClass.user.UserType == "reg" || GlobalClass.user.UserType == "princ")
                 {
                     var load = gradingService.GetAllTeachersLoad(sy);
                     teacherLoad = new List<TeacherLoad>(load);

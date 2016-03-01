@@ -37,7 +37,6 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnAddScholarship = new Telerik.WinControls.UI.RadButton();
             this.btnEditScholarship = new Telerik.WinControls.UI.RadButton();
-            this.btnCancel = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvScholarship)).BeginInit();
@@ -46,7 +45,6 @@
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddScholarship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditScholarship)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +107,6 @@
             // 
             this.radPanel2.Controls.Add(this.btnAddScholarship);
             this.radPanel2.Controls.Add(this.btnEditScholarship);
-            this.radPanel2.Controls.Add(this.btnCancel);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel2.Location = new System.Drawing.Point(0, 434);
             this.radPanel2.Name = "radPanel2";
@@ -119,7 +116,7 @@
             // btnAddScholarship
             // 
             this.btnAddScholarship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddScholarship.Location = new System.Drawing.Point(676, 14);
+            this.btnAddScholarship.Location = new System.Drawing.Point(771, 14);
             this.btnAddScholarship.Name = "btnAddScholarship";
             this.btnAddScholarship.Size = new System.Drawing.Size(83, 24);
             this.btnAddScholarship.TabIndex = 46;
@@ -129,23 +126,12 @@
             // btnEditScholarship
             // 
             this.btnEditScholarship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditScholarship.Location = new System.Drawing.Point(765, 14);
+            this.btnEditScholarship.Location = new System.Drawing.Point(860, 14);
             this.btnEditScholarship.Name = "btnEditScholarship";
             this.btnEditScholarship.Size = new System.Drawing.Size(83, 24);
             this.btnEditScholarship.TabIndex = 44;
             this.btnEditScholarship.Text = "Edit";
             this.btnEditScholarship.Click += new System.EventHandler(this.btnEditScholarship_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(854, 14);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(83, 24);
-            this.btnCancel.TabIndex = 45;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmScholarshipList
             // 
@@ -173,7 +159,6 @@
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAddScholarship)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditScholarship)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -185,7 +170,6 @@
         private Telerik.WinControls.UI.RadPanel radPanel2;
         private Telerik.WinControls.UI.RadButton btnAddScholarship;
         private Telerik.WinControls.UI.RadButton btnEditScholarship;
-        private Telerik.WinControls.UI.RadButton btnCancel;
         private Telerik.WinControls.UI.RadGridView gvScholarship;
     }
 }

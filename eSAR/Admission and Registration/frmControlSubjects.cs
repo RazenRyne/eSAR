@@ -36,6 +36,10 @@ namespace eSAR.Admission_and_Registration
         public StudentSchedule SelectedSchedule = new StudentSchedule();
         public List<StudentSchedule> AddedSched = new List<StudentSchedule>();
         public List<StudentSubject> subjects = new List<StudentSubject>();
+        public List<GradeSection> sections;
+        List<StudentSubject> listStSub = new List<StudentSubject>();
+        StudentSubject stSubj = new StudentSubject();
+
 
         public frmControlSubjects()
         {
@@ -50,8 +54,8 @@ namespace eSAR.Admission_and_Registration
         }
 
         private void frmControlSubjects_Load(object sender, EventArgs e)
-        {
-           
+        {        
+
             IRegistrationService registrationService = new RegistrationService();
             string message = String.Empty;
             
@@ -61,14 +65,48 @@ namespace eSAR.Admission_and_Registration
             SY = GlobalClass.currentsy;
             enrStudent = registrationService.GetStudentEnrolled(controlStudentId,SY);
 
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
+            sections = new List<GradeSection>(schedService.GetAllSections());
+            List<GradeSection> gs = new List<GradeSection>();
+            gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
+            txtSection.DataSource = gs;
+
+
+            loadSched();
+           
+            txtSection.Text = ControlStudent.Section;
+            txtSY.Text = SY;
+            txtGradeLevel.Text = ControlStudent.GradeLevel;
+            txtStudentId.Text = ControlStudent.StudentId;
+            txtStudentName.Text = ControlStudent.LastName + "," + ControlStudent.FirstName + " " + ControlStudent.MiddleName;
+            txtPrevGPA.Text = ControlStudent.Average.ToString();
+            txtUnitsFailed.Text = ControlStudent.UnitsFailedLastYear.ToString();
+           
+        }
+
+        private void loadSched()
+        {
+            IRegistrationService registrationService = new RegistrationService();
+            string message = String.Empty;
+
             EnrolMe.StudentSY = controlStudentId + SY;
-            int prev =Int32.Parse(SY.Substring(0,4));
+            int prev = Int32.Parse(SY.Substring(0, 4));
             prev--;
             int sy = Int32.Parse(SY.Substring(5, 4));
             sy--;
             string prevSY = prev.ToString() + "-" + sy.ToString();
 
             string prevRecord = controlStudentId + prevSY;
+
+            gvAllSchedules.DataSource = null;
+            gvSchedule.DataSource = null;
+            gvFail.DataSource = null;
+            //FailedSubjects.Clear();
+            //StudentSubs.Clear();
+            //Schedules.Clear();
+            //Schedule.Clear();
+            ExistingSchedRemove.Clear();
+
             FailedSubjects = new List<StudentSubject>(registrationService.GetFailedSubjects(prevRecord));
             StudentSubs = new List<StudentSubject>(registrationService.GetStudentSubjects(EnrolMe.StudentSY));
             Schedules = new List<StudentSchedule>(registrationService.GetSubjectSchedules(SY));
@@ -76,25 +114,27 @@ namespace eSAR.Admission_and_Registration
             if (StudentSubs.Count > 0)
             {
                 ExistingSchedule = new List<StudentSchedule>(registrationService.GetStudentExistingSchedule(StudentSubs, SY));
-
-               
             }
 
-            if (ExistingSchedule.Count > 0) {
-                foreach (StudentSchedule ss in ExistingSchedule) {
+            if (ExistingSchedule.Count > 0)
+            {
+                foreach (StudentSchedule ss in ExistingSchedule)
+                {
                     int index = Schedules.FindIndex(item => item.SubjectAssignments == ss.SubjectAssignments);
                     Schedules.RemoveAt(index);
-                }    
+                }
             }
 
-            gvAllSchedules.DataSource = Schedules;
+
             gvFail.DataSource = FailedSubjects;
+            gvAllSchedules.DataSource = Schedules;
 
             if (ControlStudent.UnitsFailedLastYear == 0 && StudentSubs.Count == 0)
             {
-                int sectionCode = (int)enrStudent.GradeSectionCode;
+                int sectionCode = (int)txtSection.SelectedValue;
                 Schedule = new List<StudentSchedule>(registrationService.GetSubjectsOfSection(sectionCode, SY));
-                foreach (StudentSchedule sch in Schedule) {
+                foreach (StudentSchedule sch in Schedule)
+                {
                     StudentSubject ss = new StudentSubject()
                     {
                         StudentSY = controlStudentId + SY,
@@ -126,20 +166,12 @@ namespace eSAR.Admission_and_Registration
                 gvSchedule.ReadOnly = false;
                 gvSchedule.DataSource = ControlSchedule;
             }
-             else if (ControlStudent.UnitsFailedLastYear > 0)
-             {
+            else if (ControlStudent.UnitsFailedLastYear > 0)
+            {
                 GlobalClass.gvDatasource = 3;
                 gvAllSchedules.ReadOnly = false;
                 gvSchedule.ReadOnly = false;
             }
-            txtSection.Text = ControlStudent.Section;
-            txtSY.Text = SY;
-            txtGradeLevel.Text = ControlStudent.GradeLevel;
-            txtStudentId.Text = ControlStudent.StudentId;
-            txtStudentName.Text = ControlStudent.LastName + "," + ControlStudent.FirstName + " " + ControlStudent.MiddleName;
-            txtPrevGPA.Text = ControlStudent.Average.ToString();
-            txtUnitsFailed.Text = ControlStudent.UnitsFailedLastYear.ToString();
-           
         }
 
         private void gvSchedule_CellEditorInitialized(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -298,42 +330,42 @@ namespace eSAR.Admission_and_Registration
             int i = gvAllSchedules.CurrentRow.Index;
             string subass = gvAllSchedules.Rows[i].Cells["SubjectAssignments"].Value.ToString();
             int index = Schedules.FindIndex(item => item.SubjectAssignments == subass);
+
             Schedules[index].Selected = false;
             sa = Schedules[index];
-          
-            RadCheckBoxEditor cbEditor1 = sender as RadCheckBoxEditor;
-            StudentSubject ss = new StudentSubject()
-            {
-                StudentSY = controlStudentId + SY,
-                SubjectCode = sa.SubjectCode,
-                SubjectAssignments = sa.SubjectAssignments,
-                StudentEnrSubCode = controlStudentId + SY + sa.SubjectCode,
-                LockFirst = false,
-                LockSecond = false,
-                LockThird = false,
-                LockFourth = false,
-                FirstPeriodicRating = 0.00,
-                SecondPeriodicRating = 0.00,
-                ThirdPeriodicRating = 0.00,
-                FourthPeriodicRating = 0.00
-            };
 
-            if ((Telerik.WinControls.Enumerations.ToggleState)cbEditor1.Value == Telerik.WinControls.Enumerations.ToggleState.On)
-            {
-                sa.Selected = false;
-                AddFromControl.Add(sa);
-                subjects.Add(ss);
-                Schedules.Remove(sa);
-                
-                
-            }
-            else if ((Telerik.WinControls.Enumerations.ToggleState)cbEditor1.Value == Telerik.WinControls.Enumerations.ToggleState.Off)
-            {
-                sa.Selected = false;
-                ControlSchedule.Remove(sa);
-                subjects.Remove(ss);
-                 AddFromAll.Add(sa);
-            }
+            RadCheckBoxEditor cbEditor1 = sender as RadCheckBoxEditor;
+                StudentSubject ss = new StudentSubject()
+                {
+                    StudentSY = controlStudentId + SY,
+                    SubjectCode = sa.SubjectCode,
+                    SubjectAssignments = sa.SubjectAssignments,
+                    StudentEnrSubCode = controlStudentId + SY + sa.SubjectCode,
+                    LockFirst = false,
+                    LockSecond = false,
+                    LockThird = false,
+                    LockFourth = false,
+                    FirstPeriodicRating = 0.00,
+                    SecondPeriodicRating = 0.00,
+                    ThirdPeriodicRating = 0.00,
+                    FourthPeriodicRating = 0.00
+                };
+
+                if ((Telerik.WinControls.Enumerations.ToggleState)cbEditor1.Value == Telerik.WinControls.Enumerations.ToggleState.On)
+                {
+                    sa.Selected = false;
+                    AddFromControl.Add(sa);
+                    subjects.Add(ss);
+                    Schedules.Remove(sa);
+                }
+                else if ((Telerik.WinControls.Enumerations.ToggleState)cbEditor1.Value == Telerik.WinControls.Enumerations.ToggleState.Off)
+                {
+                    sa.Selected = false;
+                    ControlSchedule.Remove(sa);
+                    subjects.Remove(ss);
+                    AddFromAll.Add(sa);
+                }
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -363,21 +395,57 @@ namespace eSAR.Admission_and_Registration
             gvSchedule.DataSource = ss;
 
             Schedules.AddRange(AddFromAll);
-            foreach (StudentSchedule sche in AddFromAll) {
-                int i = ControlSchedule.FindIndex(item => item.SubjectAssignments == sche.SubjectAssignments);
-                ControlSchedule.RemoveAt(i);
+
+            List<StudentSchedule> selControlledTrue = AddFromAll.FindAll(item => item.Selected == true);
+
+            IGradingService gradingService = new GradingService();
+            listStSub = gradingService.GetStudentGrades(controlStudentId, SY);
+            
+            foreach (StudentSchedule sche in selControlledTrue) {
+                if (listStSub != null)
+                    stSubj = listStSub.Find(item => item.StudentSY == controlStudentId + SY && item.SubjectCode == sche.SubjectCode);
+
+                if (stSubj != null)
+                {
+                    if (stSubj.FirstPeriodicRating > 0 || stSubj.SecondPeriodicRating > 0 || stSubj.ThirdPeriodicRating > 0 || stSubj.FourthPeriodicRating > 0 || stSubj.FinalRating > 0)
+                    {
+                        MessageBox.Show("Cannot remove " + stSubj.Description + ", already has grade/s inputted", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        int i = ControlSchedule.FindIndex(item => item.SubjectAssignments == sche.SubjectAssignments);
+                        ControlSchedule[i].Selected = false;
+
+                        int i3 = ExistingSchedRemove.FindIndex(item => item.SubjectAssignments == sche.SubjectAssignments);
+                        ExistingSchedRemove.RemoveAt(i3);
+                    }
+                    else
+                    {
+                        int i = ControlSchedule.FindIndex(item => item.SubjectAssignments == sche.SubjectAssignments);
+                        ControlSchedule.RemoveAt(i);
+
+                        int i2 = Schedules.FindIndex(item => item.SubjectAssignments == sche.SubjectAssignments);
+                        Schedules[i2].Selected = false;
+
+                    }
+                }
             }
-            List<StudentSchedule> seltrue = Schedules.FindAll(item => item.Selected == true);
-            foreach (StudentSchedule s in seltrue)
-            {
-                int i = Schedules.FindIndex(item => item.SubjectAssignments == s.SubjectAssignments);
-                Schedules[i].Selected = false;
-           }
+
+            //List<StudentSchedule> seltrue = Schedules.FindAll(item => item.Selected == true);
+
+           // foreach (StudentSchedule s in seltrue)
+           // {
+                
+           //     int i = Schedules.FindIndex(item => item.SubjectAssignments == s.SubjectAssignments);
+           //     Schedules[i].Selected = false;
+           //}
           
             gvAllSchedules.DataSource = Schedules;
             gvSchedule.DataSource = ControlSchedule;
             AddFromAll.Clear();
         }
-               
+
+        private void txtSection_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -39,8 +39,13 @@ namespace eSAR.Admission_and_Registration
 
         private void Promote()
         {
+            if (String.IsNullOrEmpty(RegisterStudent.GradeLevel)) 
+                     RegisterStudent.GradeLevel =RegisterStudent.GradeBeforeDC;
+                                
             switch (RegisterStudent.GradeLevel)
             {
+                case "0": GradeLevel="N";
+                    break;
                 case "N":
                     GradeLevel = "K1";
                     break;
@@ -85,7 +90,7 @@ namespace eSAR.Admission_and_Registration
             EnrolMe.StudentSY = RegisterStudent.StudentId + SY;
             EnrolMe.StudentId = RegisterStudent.StudentId;
             EnrolMe.SY = SY;
-            EnrolMe.GradeLevel = this.GradeLevel;
+            EnrolMe.GradeLevel = GradeLevel;
             EnrolMe.Dismissed = false;
             EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
             EnrolMe.Rank = (int)RegisterStudent.ranking;
@@ -134,25 +139,8 @@ namespace eSAR.Admission_and_Registration
         private void frmStudentRegister_Load(object sender, EventArgs e)
         {
             IRegistrationService registrationService = new RegistrationService();
-           
-            RegisterStudent =registrationService.StudentInfoWithRank(StudentId,GradeLevel,Gender);
-            SY = GlobalClass.currentsy;
-            
-            Discounts = new List<ScholarshipDiscount>(registrationService.GetScholarshipDiscounts());
-            txtSY.Text = SY;
-            if (IsNew(RegisterStudent))
-               txtPrevGradeLevel.Text = RegisterStudent.GradeBeforeDC;
-            else
-                txtPrevGradeLevel.Text = RegisterStudent.GradeLevel;
 
-            txtStudentId.Text = RegisterStudent.StudentId;
-            txtName.Text = RegisterStudent.LastName + "," + RegisterStudent.FirstName + " " + RegisterStudent.MiddleName;
-            txtGpa.Text = RegisterStudent.Average.ToString();
-            txtFailed.Text = RegisterStudent.UnitsFailedLastYear.ToString();
-            txtranking.Text = RegisterStudent.ranking.ToString();
-            decimal cri = 3.50M;
-            
-          if (RegisterStudent.UnitsFailedLastYear.CompareTo(0.0M) == 0)
+            if (String.IsNullOrEmpty(RegisterStudent.GradeLevel))
             {
                 chkRetain.Checked = false;
                 chkPromote.Checked = true;
@@ -160,22 +148,48 @@ namespace eSAR.Admission_and_Registration
                 Promote();
                 EnrolMe.Stat = "a";
             }
-           else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) > 0)
+            else
             {
-                chkRetain.Checked = true;
-                chkPromote.Checked = false;
-                chkIrreg.Checked = false;
-                EnrolMe.Stat = "c";
-                GradeLevel = RegisterStudent.GradeLevel;
+                
+                RegisterStudent =registrationService.StudentInfoWithRank(StudentId,GradeLevel,Gender);
+               
+                decimal cri = 3.50M;
+          
+                if (RegisterStudent.UnitsFailedLastYear.CompareTo(0.0M) == 0)
+                {
+                    chkRetain.Checked = false;
+                    chkPromote.Checked = true;
+                    chkIrreg.Checked = false;
+                    Promote();
+                    EnrolMe.Stat = "a";
+                }
+                else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) > 0)
+                {
+                    chkRetain.Checked = true;
+                    chkPromote.Checked = false;
+                    chkIrreg.Checked = false;
+                    EnrolMe.Stat = "c";
+                    GradeLevel = RegisterStudent.GradeLevel;
+                }
+                else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) <= 0)
+                {
+                    chkRetain.Checked = false;
+                    chkPromote.Checked = false;
+                    chkIrreg.Checked = true;
+                    Promote();
+                    EnrolMe.Stat = "b";
+                }
             }
-            else if (RegisterStudent.UnitsFailedLastYear.CompareTo(cri) <= 0) {
-                chkRetain.Checked = false ;
-                chkPromote.Checked = false;
-                chkIrreg.Checked = true;
-                Promote();
-                EnrolMe.Stat = "b";
-            }
+            SY = GlobalClass.currentsy;
+            Discounts = new List<ScholarshipDiscount>(registrationService.GetScholarshipDiscounts());
 
+            txtSY.Text = SY;
+            txtStudentId.Text = RegisterStudent.StudentId;
+            txtName.Text = RegisterStudent.LastName + "," + RegisterStudent.FirstName + " " + RegisterStudent.MiddleName;
+            txtGpa.Text = RegisterStudent.Average.ToString();
+            txtFailed.Text = RegisterStudent.UnitsFailedLastYear.ToString();
+            txtranking.Text = RegisterStudent.ranking.ToString();
+            txtPrevGradeLevel.Text = RegisterStudent.GradeLevel;
             cmbScholarship.DataSource = Discounts;
             cmbScholarship.ValueMember = "ScholarshipDiscountId";
             cmbScholarship.DisplayMember = "Scholarship";

@@ -36,7 +36,6 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnAddBuilding = new Telerik.WinControls.UI.RadButton();
             this.btnEditBuilding = new Telerik.WinControls.UI.RadButton();
-            this.btnCancel = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBuilding)).BeginInit();
@@ -45,7 +44,6 @@
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBuilding)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +102,6 @@
             // 
             this.radPanel2.Controls.Add(this.btnAddBuilding);
             this.radPanel2.Controls.Add(this.btnEditBuilding);
-            this.radPanel2.Controls.Add(this.btnCancel);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel2.Location = new System.Drawing.Point(0, 425);
             this.radPanel2.Name = "radPanel2";
@@ -114,7 +111,7 @@
             // btnAddBuilding
             // 
             this.btnAddBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBuilding.Location = new System.Drawing.Point(570, 14);
+            this.btnAddBuilding.Location = new System.Drawing.Point(665, 14);
             this.btnAddBuilding.Name = "btnAddBuilding";
             this.btnAddBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnAddBuilding.TabIndex = 46;
@@ -124,23 +121,12 @@
             // btnEditBuilding
             // 
             this.btnEditBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBuilding.Location = new System.Drawing.Point(659, 14);
+            this.btnEditBuilding.Location = new System.Drawing.Point(754, 14);
             this.btnEditBuilding.Name = "btnEditBuilding";
             this.btnEditBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnEditBuilding.TabIndex = 44;
             this.btnEditBuilding.Text = "Edit";
             this.btnEditBuilding.Click += new System.EventHandler(this.btnEditBuilding_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(748, 14);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(83, 24);
-            this.btnCancel.TabIndex = 45;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmBuildingList
             // 
@@ -167,7 +153,6 @@
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBuilding)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -179,7 +164,6 @@
         private Telerik.WinControls.UI.RadPanel radPanel2;
         private Telerik.WinControls.UI.RadButton btnAddBuilding;
         private Telerik.WinControls.UI.RadButton btnEditBuilding;
-        private Telerik.WinControls.UI.RadButton btnCancel;
         private Telerik.WinControls.UI.RadGridView gvBuilding;
     }
 }
