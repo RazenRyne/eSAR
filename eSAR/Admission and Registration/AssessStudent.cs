@@ -30,8 +30,10 @@ namespace eSAR.Admission_and_Registration
         public double enrollment = 0;
         public double percValue = 0;
         public double finalPercentDisc = 0;
+        public double totalLessDisc = 0;
         public double fullPaymentDiscount = 0;
         public double discountByAmountPar = 0;
+        public double fullPaymentDiscPar = 0;
 
         // public IEnumerable<StudentAssesment> assess= new List<StudentAssesment>();
 
@@ -60,7 +62,7 @@ namespace eSAR.Admission_and_Registration
             txtName.Text = StudentAssessed.StudentName;
             txtSY.Text = currentSY.SY;
 
-            
+
             fees = new List<Fee>(registrationService.GetStudentFees(StudentAssessed));
             gvAssessment.DataSource = fees;
             fees.ToArray();
@@ -79,7 +81,7 @@ namespace eSAR.Admission_and_Registration
             // Read Only TextBox
             tuitionFee.ReadOnly = true;
             discountPercent.ReadOnly = true;
-            totalTuitionFee.ReadOnly = true;
+            totalLessDiscount.ReadOnly = true;
             enrollmentFee.ReadOnly = true;
             enrTotalTuitionFee.ReadOnly = true;
             subTotal.ReadOnly = true;
@@ -94,7 +96,9 @@ namespace eSAR.Admission_and_Registration
             double perc = 0;
             double percRound = 0;
             double percInitial = 0;
-            
+
+            if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscPar)) ;
+
             perc = (double)sd.Discount;
             if (sd.Discount == null)
             {
@@ -102,32 +106,26 @@ namespace eSAR.Admission_and_Registration
             }
             else
             {
+
                 discountPercent.Text = perc.ToString("0.##");
                 percRound = perc / 100;
-                if (percRound == 1)
-                {
-                    percValue = amountTuition;
-                    fullPaymentDisc.ReadOnly = true;
-                } else { 
-                    percInitial = amountTuition * percRound;
-                    percValue = amountTuition - percInitial;
-                }
+                percInitial = amountTuition * percRound;
+                percValue = amountTuition - percInitial;
+                totalLessDisc = percValue;
+                finalPercentDisc = totalLessDisc - fullPaymentDiscPar;
+
+
             }
 
-               /* Operations */
+            if (perc == 100) {
+                fullPaymentDisc.ReadOnly = true;
+            }
+
+            /* Operations */
             // Operation for Percent Discount if not null
             
-            if (fullPaymentDisc != null)
-            {
-                finalPercentDisc = amountTuition - percValue - fullPaymentDiscount;
-            }
-            else
-            {
-                finalPercentDisc = amountTuition - percValue;
-            }
-
-            // Total Tuition Fee
-            totalTuitionFee.Text = finalPercentDisc.ToString("0.##");
+            //Total Less Discount
+            totalLessDiscount.Text = totalLessDisc.ToString("0.##");
 
             // Enrollment Fee
             enrollmentFee.Text = enrollment.ToString();
@@ -136,24 +134,13 @@ namespace eSAR.Admission_and_Registration
             enrTotalTuitionFee.Text = finalPercentDisc.ToString("0.##");
 
             // Sub Total
-            
+
             subTotalValue = enrollment + finalPercentDisc;
             subTotal.Text = subTotalValue.ToString("0.##");
 
 
             // Sub Total 
             discountbyAmountSubTotal.Text = subTotalValue.ToString("0.##");
-
-            // Discount by Amount
-            double discByAmout = 0;
-            //discByAmout = discountByAmount
-
-
-            // Para ma assess og ma save sa db
-            //var assessments = registrationService.AssessMe(StudentAssessed);
-
-            //gvAssessment.DataSource = assessments;
-
 
 
         }
@@ -165,87 +152,97 @@ namespace eSAR.Admission_and_Registration
 
         private void calculate_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(fullPaymentDisc.Text) && string.IsNullOrWhiteSpace(discountByAmount.Text))
+            if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscPar)) ;
+
+            if (double.TryParse(discountByAmount.Text, out discountByAmountPar)) ;
+            //Check of discount is less than 
+            if (fullPaymentDiscPar > totalLessDisc || discountByAmountPar > subTotalValue)
             {
-                Total.Text = subTotalValue.ToString("0.##");
+                MessageBox.Show("Full Payment Discount should be less than Total Less Discount or Discount by Amount should be less than Sub Total");
             }
-            else if (!string.IsNullOrWhiteSpace(fullPaymentDisc.Text) && !string.IsNullOrWhiteSpace(discountByAmount.Text))
-            {
-                string fullPaymentDiscS = fullPaymentDisc.ToString();
-                string discountByAmountS = discountByAmount.ToString();
+            else {
+                
 
-
-                // Full Payment Discount Part
-
-                if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscount)) ;
-
-                double partialValue = 0;
-                partialValue = amountTuition - percValue - fullPaymentDiscount;
-
-                totalTuitionFee.Text = partialValue.ToString("0.##");
-                enrTotalTuitionFee.Text = partialValue.ToString("0.##");
-
-
-                double subTotalPar = 0;
-
-                subTotalPar = enrollment + partialValue;
-
-                subTotal.Text = subTotalPar.ToString("0.##");
-
-                discountbyAmountSubTotal.Text = subTotalPar.ToString("0.##");
-
-                // Discount by Amount Part
-                if (double.TryParse(discountByAmount.Text, out discountByAmountPar)) ;
-
-               
-                double partialValueDiscbyAmo = 0;
-                partialValueDiscbyAmo = subTotalPar - discountByAmountPar;
-                Total.Text = partialValueDiscbyAmo.ToString("0.##");
-
-
-
-
-
-            }
-            else if (!string.IsNullOrWhiteSpace(fullPaymentDisc.Text))
-            {
-                if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscount)) ;
-
-                double partialValue = 0;
-                partialValue = amountTuition - percValue - fullPaymentDiscount;
-
-                totalTuitionFee.Text = partialValue.ToString("0.##");
-                enrTotalTuitionFee.Text = partialValue.ToString("0.##");
-
-
-                double subTotalPar = 0;
-
-                subTotalPar = enrollment + partialValue;
-
-                subTotal.Text = subTotalPar.ToString("0.##");
-
-                discountbyAmountSubTotal.Text = subTotalPar.ToString("0.##");
-
-                Total.Text = subTotalPar.ToString("0.##");
-            }
-            else if (!string.IsNullOrWhiteSpace(discountByAmount.Text))
-            {
-                if (double.TryParse(discountByAmount.Text, out discountByAmountPar));
-
-                if (subTotalValue < discountByAmountPar)
+                if (string.IsNullOrWhiteSpace(fullPaymentDisc.Text) && string.IsNullOrWhiteSpace(discountByAmount.Text))
                 {
-                    MessageBox.Show(this, "Discount is greater than Sub Total");
+                    Total.Text = subTotalValue.ToString("0.##");
                 }
-                else
+                else if (!string.IsNullOrWhiteSpace(fullPaymentDisc.Text) && !string.IsNullOrWhiteSpace(discountByAmount.Text))
                 {
+
+
+                    string fullPaymentDiscS = fullPaymentDisc.ToString();
+                    string discountByAmountS = discountByAmount.ToString();
+
+
+                    // Full Payment Discount Part
+
+                    if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscPar)) ;
+
                     double partialValue = 0;
-                    partialValue = subTotalValue - discountByAmountPar;
-                    Total.Text = partialValue.ToString("0.##");
+                    partialValue = totalLessDisc - fullPaymentDiscPar;
+
+
+                    enrTotalTuitionFee.Text = partialValue.ToString("0.##");
+
+
+                    double subTotalPar = 0;
+
+                    subTotalPar = enrollment + partialValue;
+
+                    subTotal.Text = subTotalPar.ToString("0.##");
+
+                    discountbyAmountSubTotal.Text = subTotalPar.ToString("0.##");
+
+                    // Discount by Amount Part
+                    if (double.TryParse(discountByAmount.Text, out discountByAmountPar)) ;
+
+
+                    double partialValueDiscbyAmo = 0;
+                    partialValueDiscbyAmo = subTotalPar - discountByAmountPar;
+                    Total.Text = partialValueDiscbyAmo.ToString("0.##");
+
 
                 }
-                
+                else if (!string.IsNullOrWhiteSpace(fullPaymentDisc.Text))
+                {
+                    if (double.TryParse(fullPaymentDisc.Text, out fullPaymentDiscPar)) ;
+
+                    double partialValue = 0;
+                    partialValue = totalLessDisc - fullPaymentDiscPar;
+
+                    enrTotalTuitionFee.Text = partialValue.ToString("0.##");
+
+
+                    double subTotalPar = 0;
+
+                    subTotalPar = enrollment + partialValue;
+
+                    subTotal.Text = subTotalPar.ToString("0.##");
+
+                    discountbyAmountSubTotal.Text = subTotalPar.ToString("0.##");
+
+                    Total.Text = subTotalPar.ToString("0.##");
+                }
+                else if (!string.IsNullOrWhiteSpace(discountByAmount.Text))
+                {
+                    if (double.TryParse(discountByAmount.Text, out discountByAmountPar)) ;
+
+                    if (subTotalValue < discountByAmountPar)
+                    {
+                        MessageBox.Show(this, "Discount is greater than Sub Total");
+                    }
+                    else
+                    {
+                        double partialValue = 0;
+                        partialValue = subTotalValue - discountByAmountPar;
+                        Total.Text = partialValue.ToString("0.##");
+
+                    }
+
+                }
             }
-                
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -271,8 +268,8 @@ namespace eSAR.Admission_and_Registration
                 PrintPane();
                 calculate.Visible = true;
             }
-        }     
-        
+        }
+
         private void PrintPane()
         {
             txtDate.Text = "Date: " + DateTime.Now.ToShortDateString();
@@ -286,7 +283,7 @@ namespace eSAR.Admission_and_Registration
             RadPrintPreviewDialog dialog = new RadPrintPreviewDialog(document);
             dialog.ShowDialog();
 
-            
+
             txtDate.Visible = false;
             radPanel2.Size = new Size(702, 361);
             this.Size = new Size(710, 431);
