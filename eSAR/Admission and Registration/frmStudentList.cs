@@ -13,6 +13,7 @@ using eSARServiceInterface;
 using eSARServiceModels;
 using eSAR.Utility_Classes;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.Data;
 
 namespace eSAR.Admission_and_Registration
 {
@@ -59,6 +60,16 @@ namespace eSAR.Admission_and_Registration
         private void frmStudentList_Load(object sender, EventArgs e)
         {
             LoadStudents();
+            
+            GroupDescriptor descriptor1 = new GroupDescriptor();
+            descriptor1.GroupNames.Add("GradeLevelDesc", ListSortDirection.Ascending);
+            GroupDescriptor descriptor2 = new GroupDescriptor();
+            descriptor2.GroupNames.Add("Section", ListSortDirection.Ascending);
+            GroupDescriptor descriptor3 = new GroupDescriptor();
+            descriptor3.GroupNames.Add("Gender", ListSortDirection.Ascending);
+            this.gvStudent.GroupDescriptors.Add(descriptor1);
+            this.gvStudent.GroupDescriptors.Add(descriptor2);
+            this.gvStudent.GroupDescriptors.Add(descriptor3);
         }
 
         public void LoadStudents()

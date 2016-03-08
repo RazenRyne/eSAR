@@ -85,6 +85,7 @@ namespace eSAR.Admission_and_Registration
             if (SelectedStudent.Gender == "F")
                 cmbGender.Text = "Female";
             dtDOB.Value = (DateTime)SelectedStudent.DOB;
+            cbReligion.Text = SelectedStudent.Religion;
             if (SelectedStudent.MadrasahEnrolled == true)
                 chkMadrasah.Checked = true;
             else
