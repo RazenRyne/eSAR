@@ -355,7 +355,12 @@ namespace eSAR.App
                 case "Student List Selection":
                     PermanentRecordDockWindow = null;
                     break;
-
+                case "List of Subjects Load":
+                    TeacherLoadingWindow = null;
+                    break;
+                case "List of Advisory Classes":
+                    AdvisoryListDockWindow = null;
+                    break;
                 default:
                     break;
             }

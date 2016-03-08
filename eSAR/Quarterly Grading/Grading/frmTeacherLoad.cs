@@ -111,14 +111,17 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void gvSubjects_SelectionChanged(object sender, EventArgs e)
         {
-            if (gvSubjects.CurrentRow.Index != -1)
+            if (gvSubjects.CurrentRow != null)
             {
-                subjectSelected.SubjectAssignments = gvSubjects.SelectedRows[0].Cells["SubjectAssignments"].Value.ToString();
-                subjectSelected.SubjectCode = gvSubjects.SelectedRows[0].Cells["SubjectCode"].Value.ToString();
-                subjectSelected.SubjectDescription = gvSubjects.SelectedRows[0].Cells["SubjectDescription"].Value.ToString();
-                subjectSelected.TimeslotInfo = gvSubjects.SelectedRows[0].Cells["TimeslotInfo"].Value.ToString();
-                teacher.TeacherId = gvSubjects.SelectedRows[0].Cells["TeacherId"].Value.ToString();
-                teacher.TeacherName = gvSubjects.SelectedRows[0].Cells["TeacherName"].Value.ToString();
+                if (gvSubjects.CurrentRow.Index != -1)
+                {
+                    subjectSelected.SubjectAssignments = gvSubjects.SelectedRows[0].Cells["SubjectAssignments"].Value.ToString();
+                    subjectSelected.SubjectCode = gvSubjects.SelectedRows[0].Cells["SubjectCode"].Value.ToString();
+                    subjectSelected.SubjectDescription = gvSubjects.SelectedRows[0].Cells["SubjectDescription"].Value.ToString();
+                    subjectSelected.TimeslotInfo = gvSubjects.SelectedRows[0].Cells["TimeslotInfo"].Value.ToString();
+                    teacher.TeacherId = gvSubjects.SelectedRows[0].Cells["TeacherId"].Value.ToString();
+                    teacher.TeacherName = gvSubjects.SelectedRows[0].Cells["TeacherName"].Value.ToString();
+                }
             }
         }
 
