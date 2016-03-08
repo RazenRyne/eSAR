@@ -32,6 +32,9 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.btnGenerate = new Telerik.WinControls.UI.RadButton();
             this.btnControl = new Telerik.WinControls.UI.RadButton();
@@ -171,17 +174,32 @@
             gridViewTextBoxColumn4.MaxLength = 50;
             gridViewTextBoxColumn4.Name = "MiddleName";
             gridViewTextBoxColumn4.Width = 270;
+            gridViewTextBoxColumn5.FieldName = "GradeLevel";
+            gridViewTextBoxColumn5.HeaderText = "Grade Level";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "GradeLevel";
+            gridViewTextBoxColumn6.HeaderText = "Grade Level";
+            gridViewTextBoxColumn6.Name = "GradeLevelDesc";
+            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn7.FieldName = "Section";
+            gridViewTextBoxColumn7.HeaderText = "Section";
+            gridViewTextBoxColumn7.Name = "Section";
+            gridViewTextBoxColumn7.Width = 100;
             this.gvStudent.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7});
             this.gvStudent.MasterTemplate.EnableGrouping = false;
             this.gvStudent.Name = "gvStudent";
             this.gvStudent.ShowGroupPanel = false;
             this.gvStudent.Size = new System.Drawing.Size(955, 434);
             this.gvStudent.TabIndex = 5;
             this.gvStudent.Text = "radGridView1";
+            this.gvStudent.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.gvStudent_CellFormatting);
             this.gvStudent.SelectionChanged += new System.EventHandler(this.gvStudent_SelectionChanged);
             this.gvStudent.DoubleClick += new System.EventHandler(this.btnEdit_Click);
             // 

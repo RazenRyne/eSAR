@@ -12,6 +12,7 @@ using eSARServices;
 using eSARServiceInterface;
 using eSARServiceModels;
 using eSAR.Utility_Classes;
+using Telerik.WinControls.UI;
 
 namespace eSAR.Admission_and_Registration
 {
@@ -20,6 +21,7 @@ namespace eSAR.Admission_and_Registration
         private List<string> RegisteredStudents;
         private Student studentSelected;
         private List<Student> studentList;
+        List<GradeLevel> gradeLevel;
         public frmStudentList()
         {
             InitializeComponent();
@@ -61,6 +63,11 @@ namespace eSAR.Admission_and_Registration
 
         public void LoadStudents()
         {
+            IGradeLevelService glService = new GradeLevelService();
+            gradeLevel = new List<GradeLevel>(glService.GetAllGradeLevels());
+            if (gradeLevel.Count > 0)
+                gradeLevel[0].Description = "None";
+
             IRegistrationService registrationService = new RegistrationService();
             RegisteredStudents= new List<string>(registrationService.GetEnrolledStudents(GlobalClass.currentsy));
             IStudentService studentService = new StudentService();
@@ -192,6 +199,37 @@ namespace eSAR.Admission_and_Registration
             }
         }
 
-     
+        private void gvStudent_CellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
+        {
+            string szGradeLev = string.Empty; 
+            GradeLevel gl;
+            foreach (GridViewRowInfo rowInfo in gvStudent.Rows)
+            {
+                foreach (GridViewCellInfo cellInfo in rowInfo.Cells)
+                {
+                    
+                    gl = new GradeLevel();
+
+                    if (cellInfo.ColumnInfo.Name == "GradeLevel")
+                    {
+                        szGradeLev = string.Empty;
+                        if (cellInfo.Value != null)
+                            szGradeLev = cellInfo.Value.ToString();
+                    }
+
+
+                    if (cellInfo.ColumnInfo.Name == "GradeLevelDesc")
+                    {
+                        if (szGradeLev == string.Empty || szGradeLev == null)
+                            cellInfo.Value = string.Empty;
+                        else
+                        {
+                            gl = gradeLevel.Find(x => x.GradeLev == szGradeLev);
+                            cellInfo.Value = gl.Description;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
