@@ -92,7 +92,12 @@ namespace eSAR.Settings.ManageTraitsbyLevel
                 {
                     ret = traitService.CreateTrait(ref trait, ref message);
                     if (ret && trait.CurrTrait)
-                        ret = regService.UpdateStudentCharacters(trait);
+                    {
+                        List<Trait> updatedTraits = new List<Trait>(traitService.GetAllTraits());
+                        Trait savedTrait = new Trait();
+                        savedTrait = updatedTraits.Find(t => t.Category == trait.Category && t.Description == trait.Description && t.CurrTrait == trait.CurrTrait);
+                        ret = regService.UpdateStudentCharacters(savedTrait);
+                    }
                 }
 
                 if (ret)

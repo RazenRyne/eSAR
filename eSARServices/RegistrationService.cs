@@ -140,11 +140,14 @@ namespace eSARServices
 
             foreach (string studentID in studentIDs)
             {
+                StudentEnrollment se = new StudentEnrollment();
+                se = GetEnrolledStudent(studentID, sy.SY);
                 StudentTrait st = new StudentTrait
                 {
-                    StudentSY = studentID + sy.SY,
+                    StudentSY = se.StudentSY,
                     TraitsID = tbdo.TraitsID,
-                    StudentEnrTraitCode = studentID + sy.SY + tbdo.TraitsID,
+                    StudentEnrTraitCode = se.StudentSY + tbdo.TraitsID,
+                    GradeSectionCode = (int)se.GradeSectionCode,
                     LockFirst = false,
                     LockSecond = false,
                     LockFourth = false,
@@ -354,6 +357,7 @@ namespace eSARServices
             stbdo.ThirdPeriodicRating = st.ThirdPeriodicRating;
             stbdo.FourthPeriodicRating = st.FourthPeriodicRating;
             stbdo.StudentEnrTraitCode = st.StudentEnrTraitCode;
+            stbdo.GradeSectionCode = st.GradeSectionCode;
         }
 
         public void TranslatetAssessBDOToAssess(StudentAssessmentBDO ab, StudentAssessment a)
