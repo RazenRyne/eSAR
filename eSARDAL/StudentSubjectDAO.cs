@@ -187,6 +187,85 @@ namespace eSARDAL
             return true;
         }
 
+        public Boolean DeleteExistingSubjects(string studentsy)
+        {
+            List<StudentSubject> ss = new List<StudentSubject>();
+            try
+            {
+                using (var DCEnt = new DCFIEntities())
+                {
+                    ss = (from sub in DCEnt.StudentSubjects
+                          where sub.StudentSY == studentsy
+                          select sub).ToList<StudentSubject>();
+
+
+                    foreach (StudentSubject s in ss)
+                    {
+                        DCEnt.StudentSubjects.Remove(s);
+                        DCEnt.SaveChanges();
+                    }
+                }
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}",
+                                                validationError.PropertyName,
+                                                validationError.ErrorMessage);
+                    }
+                }
+            }
+            return true;
+        }
+
+        public Boolean UpdateStudentSection(String studentSy, int gradeSectionCode) {
+             try
+            {
+                using (var DCEnt = new DCFIEntities())
+                {
+                    var x = (from ss in DCEnt.StudentEnrollments
+                             where ss.StudentSY == studentSy
+                             select ss).FirstOrDefault();
+
+
+                    StudentEnrollment se = new StudentEnrollment();
+                    se.DiscountId= x.DiscountId;
+                    se.Dismissed = x.Dismissed;
+                    se.GradeLevel = x.GradeLevel;
+                    se.GradeSectionCode = gradeSectionCode;
+                    se.StudentEnrollmentsID = x.StudentEnrollmentsID;
+                    se.StudentSY = x.StudentSY;
+                    se.StudentId = x.StudentId;
+                    se.Stat = x.Stat;
+                    se.SY = x.SY;
+
+                    DCEnt.StudentEnrollments.Remove(x);
+
+                    DCEnt.StudentEnrollments.Attach(se);
+                    DCEnt.Entry(se).State = System.Data.Entity.EntityState.Modified;
+                    int num = DCEnt.SaveChanges();
+
+                }
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}",
+                                                validationError.PropertyName,
+                                                validationError.ErrorMessage);
+                    }
+                }
+            }
+            return true;
+        }
+
+
         public List<StudentSubjectBDO> GetFailedSubjects(string IdSy) {
             List<StudentSubject> fails = new List<StudentSubject>();
             List<StudentSubjectBDO> ssbl = new List<StudentSubjectBDO>();

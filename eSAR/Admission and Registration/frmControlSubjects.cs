@@ -447,5 +447,19 @@ namespace eSAR.Admission_and_Registration
         {
             
         }
+
+        private void txtSection_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            IRegistrationService registrationService = new RegistrationService();
+            int index = txtSection.SelectedIndex;
+            GradeSection s = sections[index];
+            registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
+            registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
+            Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
+            ControlSchedule = Schedule;
+            GlobalClass.gvDatasource = 1;
+            gvSchedule.DataSource = ControlSchedule;
+            gvSchedule.ReadOnly = false;
+        }
     }
 }

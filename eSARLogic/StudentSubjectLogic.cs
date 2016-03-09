@@ -25,5 +25,13 @@ namespace eSARLogic
         public Boolean DeleteStudentLoad(StudentSubjectBDO ssb, ref string message) {
             return ssd.DeleteStudentSubject(ssb, ref message);
         }
+
+        public Boolean DeleteExistingSubjects(string studentsy) {
+            return ssd.DeleteExistingSubjects(studentsy);
+        }
+
+        public Boolean UpdateStudentSection(string studentsy, int gradeSectionCode) {
+            return ssd.UpdateStudentSection(studentsy, gradeSectionCode);
+        }
     }
 }
