@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssessStudent));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
@@ -216,18 +216,18 @@
             this.gvAssessment.MasterTemplate.AllowDeleteRow = false;
             this.gvAssessment.MasterTemplate.AllowDragToGroup = false;
             this.gvAssessment.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn3.FieldName = "FeeDescription";
-            gridViewTextBoxColumn3.HeaderText = "Fee";
-            gridViewTextBoxColumn3.Name = "FeeDescription";
-            gridViewTextBoxColumn3.Width = 400;
-            gridViewTextBoxColumn4.FieldName = "Amount";
-            gridViewTextBoxColumn4.HeaderText = "Amount";
-            gridViewTextBoxColumn4.Name = "Amount";
-            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn4.Width = 235;
+            gridViewTextBoxColumn5.FieldName = "FeeDescription";
+            gridViewTextBoxColumn5.HeaderText = "Fee";
+            gridViewTextBoxColumn5.Name = "FeeDescription";
+            gridViewTextBoxColumn5.Width = 400;
+            gridViewTextBoxColumn6.FieldName = "Amount";
+            gridViewTextBoxColumn6.HeaderText = "Amount";
+            gridViewTextBoxColumn6.Name = "Amount";
+            gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn6.Width = 235;
             this.gvAssessment.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.gvAssessment.MasterTemplate.EnableGrouping = false;
             this.gvAssessment.Name = "gvAssessment";
             this.gvAssessment.PrintStyle.BorderColor = System.Drawing.Color.Transparent;
@@ -373,7 +373,7 @@
             this.TuitionDet.Controls.Add(this.lblDetTotal);
             this.TuitionDet.Location = new System.Drawing.Point(3, 251);
             this.TuitionDet.Name = "TuitionDet";
-            this.TuitionDet.Size = new System.Drawing.Size(683, 104);
+            this.TuitionDet.Size = new System.Drawing.Size(683, 105);
             this.TuitionDet.TabIndex = 2;
             this.TuitionDet.Visible = false;
             // 

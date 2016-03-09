@@ -294,6 +294,7 @@ namespace eSAR.Admission_and_Registration
             lblDet2Val.Text = iTuitionPerGrade.ToString();
             lblDet3Val.Text = iTuitionPerGrade.ToString();
             lblDet4Val.Text = iTuitionPerGrade.ToString();
+
         }
 
         private void labelVisibility(bool bVisible)
