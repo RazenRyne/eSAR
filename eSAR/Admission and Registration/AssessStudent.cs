@@ -247,6 +247,7 @@ namespace eSAR.Admission_and_Registration
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+
             calculate.Visible = false;
             IRegistrationService registrationService = new RegistrationService();
             ILogService logService = new LogService();
@@ -267,11 +268,66 @@ namespace eSAR.Admission_and_Registration
 
                 PrintPane();
                 calculate.Visible = true;
+                labelVisibility(true);
+                TuitionDet.Visible = false;
+
             }
+        }
+
+        private void CalcPerGrading()
+        {
+            labelVisibility(false);
+            calculate_Click(null, null);
+            TuitionDet.Visible = true;
+            lblDetTotalVal.Text = Total.Text;
+
+            double iTuitionFee = 0;
+            double iTuitionPerGrade = 0;
+
+            if (!string.IsNullOrEmpty(enrTotalTuitionFee.Text))
+                iTuitionFee = double.Parse(enrTotalTuitionFee.Text);
+            else
+                iTuitionFee = 0;
+
+            iTuitionPerGrade = iTuitionFee / 4;
+            lblDet1Val.Text = iTuitionPerGrade.ToString();
+            lblDet2Val.Text = iTuitionPerGrade.ToString();
+            lblDet3Val.Text = iTuitionPerGrade.ToString();
+            lblDet4Val.Text = iTuitionPerGrade.ToString();
+        }
+
+        private void labelVisibility(bool bVisible)
+        {
+            radLabel5.Visible = bVisible;
+            tuitionFee.Visible = bVisible;
+            scholarshipDiscount.Visible = bVisible;
+            radLabel16.Visible = bVisible;
+            discountPercent.Visible = bVisible;
+            totalLessbyDiscount.Visible = bVisible;
+            totalLessDiscount.Visible = bVisible;
+            radLabel18.Visible = bVisible;
+            radLabel6.Visible = bVisible;
+            fullPaymentDisc.Visible = bVisible;
+            radLabel9.Visible = bVisible;
+            enrollmentFee.Visible = bVisible;
+            radLabel10.Visible = bVisible;
+            radLabel15.Visible = bVisible;
+            enrTotalTuitionFee.Visible = bVisible;
+            radLabel11.Visible = bVisible;
+            subTotal.Visible = bVisible;
+            radLabel14.Visible = bVisible;
+            discountbyAmountSubTotal.Visible = bVisible;
+            radLabel13.Visible = bVisible;
+            radLabel17.Visible = bVisible;
+            discountByAmount.Visible = bVisible;
+            radLabel12.Visible = bVisible;
+            Total.Visible = bVisible;
         }
 
         private void PrintPane()
         {
+            CalcPerGrading();
+
             txtDate.Text = "Date: " + DateTime.Now.ToShortDateString();
             txtDate.Visible = true;
             radPanel2.Size = new Size(702, 586);
