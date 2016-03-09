@@ -86,7 +86,7 @@ namespace eSAR.Admission_and_Registration
             enrTotalTuitionFee.ReadOnly = true;
             subTotal.ReadOnly = true;
             discountbyAmountSubTotal.ReadOnly = true;
-            Total.ReadOnly = true;
+            //Total.ReadOnly = true;
 
 
             // Total Tuition Fee

@@ -155,7 +155,7 @@ namespace eSARServices
                 };
                 string message = string.Empty;
                 StudentTraitBDO stb = new StudentTraitBDO();
-                TranslateStuTraitsToStuTraitsBDO(st, stb);
+                NewTraitsTranslateStuTraitsToStuTraitsBDO(st, stb);
                 ret = stl.AddStudentCharacters(stb, ref message);
             }
             return ret;
@@ -349,6 +349,18 @@ namespace eSARServices
         }
 
         public void TranslateStuTraitsToStuTraitsBDO(StudentTrait st, StudentTraitBDO stbdo)
+        {
+            stbdo.StudentSY = st.StudentSY;
+            stbdo.TraitsID = st.TraitsID;
+            stbdo.FirstPeriodicRating = st.FirstPeriodicRating;
+            stbdo.SecondPeriodicRating = st.SecondPeriodicRating;
+            stbdo.ThirdPeriodicRating = st.ThirdPeriodicRating;
+            stbdo.FourthPeriodicRating = st.FourthPeriodicRating;
+            stbdo.StudentEnrTraitCode = st.StudentEnrTraitCode;
+            //stbdo.GradeSectionCode = st.GradeSectionCode;
+        }
+
+        public void NewTraitsTranslateStuTraitsToStuTraitsBDO(StudentTrait st, StudentTraitBDO stbdo)
         {
             stbdo.StudentSY = st.StudentSY;
             stbdo.TraitsID = st.TraitsID;
