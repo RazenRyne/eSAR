@@ -57,10 +57,11 @@ namespace eSAR.Admission_and_Registration
             currentSY = registrationService.GetCurrentSY();
 
             StudentAssessed = registrationService.GetStudentEnrolled(StudentId, currentSY.SY);
-            txtGradeLevel.Text = StudentAssessed.GradeLevel;
+            txtGradeLevel.Text = StudentAssessed.GradeLevel; 
             txtIDnum.Text = StudentAssessed.StudentId;
             txtName.Text = StudentAssessed.StudentName;
             txtSY.Text = currentSY.SY;
+            lblSectionVal.Text = StudentAssessed.student.Section;
 
 
             fees = new List<Fee>(registrationService.GetStudentFees(StudentAssessed));

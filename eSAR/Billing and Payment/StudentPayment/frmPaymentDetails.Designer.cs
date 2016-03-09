@@ -157,6 +157,7 @@
             this.txtPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPayment.Size = new System.Drawing.Size(127, 20);
             this.txtPayment.TabIndex = 46;
+            this.txtPayment.Text = "0";
             this.txtPayment.TextChanged += new System.EventHandler(this.txtUnits_TextChanged);
             this.txtPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 
