@@ -33,9 +33,19 @@ namespace eSAR.Admission_and_Registration
                 this.btnAdd.Enabled = false;
                 this.btnEdit.Enabled = false;
                 this.btnDelete.Enabled = false;
-            } else if (GlobalClass.userTypeCode == "reg")
+                this.btnGenerate.Enabled = false;
+            }
+            else if (GlobalClass.userTypeCode == "reg")
             {
                 this.btnAssess.Enabled = false;
+                this.btnGenerate.Enabled = false;
+            }
+            else if (GlobalClass.userTypeCode == "princ") {
+                this.btnGenerate.Enabled = true;
+            }
+            else if (GlobalClass.userTypeCode == "teach")
+            {
+                this.btnGenerate.Enabled = false;
             }
         }
 
