@@ -24,7 +24,7 @@ namespace eSARServices
                 glList.Add(g);
             }
             return glList;
-        }
+        }    
 
         public string GetGradeLevel(string gradeLevel)
         {

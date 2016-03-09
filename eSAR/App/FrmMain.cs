@@ -134,10 +134,10 @@ namespace eSAR.App
                 this.btnSY.Enabled = true;
                 this.btnPayment.Enabled = false;
                 this.btnManageReceipt.Enabled = false;
-                this.btnQuarterlyGrading.Enabled = true;
-                this.btnTraitsGrading.Enabled = true;
+                this.btnQuarterlyGrading.Enabled = false;
+                this.btnTraitsGrading.Enabled = false;
                 this.radButtonElement3.Enabled = true;
-                this.btnPromotionalList.Enabled = true;
+                this.btnPromotionalList.Enabled = false;
                 this.btnTeachersLoadList.Enabled = true;
                 this.radButtonElement4.Enabled = true;
                 this.btnBillingList.Enabled = true;

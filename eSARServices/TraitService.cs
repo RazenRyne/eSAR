@@ -75,6 +75,7 @@ namespace eSARServices
                 tList.Add(tb);
             }
             return tList;
+
         }
 
         public List<Trait> GetAllTraitsOfCategory(int cat)

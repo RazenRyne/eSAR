@@ -120,6 +120,44 @@ namespace eSARServices
 
         }
 
+        public Boolean UpdateStudentCharacters(Trait tbdo)
+        {
+            SchoolYear sy = new SchoolYear();
+            sy = GetCurrentSY();
+
+            IGradeLevelService gradeLevelService = new GradeLevelService();
+            List<GradeLevel> gradeLevelList = new List<GradeLevel>(gradeLevelService.GetAllGradeLevels());
+            List<GradeLevel> gradeLevelCategory = new List<GradeLevel>();
+            gradeLevelCategory = gradeLevelList.FindAll(x => x.Category == tbdo.Category);
+
+            Boolean ret = false;
+
+            List<string> studentIDs = new List<string>();
+            foreach (GradeLevel gl in gradeLevelCategory)
+            {
+                studentIDs.AddRange(GetEnrolledStudentsforNewTraits(gl.GradeLev, sy.SY));
+            }
+
+            foreach (string studentID in studentIDs)
+            {
+                StudentTrait st = new StudentTrait
+                {
+                    StudentSY = studentID + sy.SY,
+                    TraitsID = tbdo.TraitsID,
+                    StudentEnrTraitCode = studentID + sy.SY + tbdo.TraitsID,
+                    LockFirst = false,
+                    LockSecond = false,
+                    LockFourth = false,
+                    LockThird = false
+                };
+                string message = string.Empty;
+                StudentTraitBDO stb = new StudentTraitBDO();
+                TranslateStuTraitsToStuTraitsBDO(st, stb);
+                ret = stl.AddStudentCharacters(stb, ref message);
+            }
+            return ret;
+        }
+
         public List<StudentAssessment> AssessMe(StudentEnrollment student)
         {
             FeeService fs = new FeeService();
@@ -158,6 +196,11 @@ namespace eSARServices
         public List<string> GetEnrolledStudents(string sy)
         {
             return sel.GetEnrolledIds(sy);
+        }
+
+        public List<string> GetEnrolledStudentsforNewTraits(string gradelevel, string sy)
+        {
+            return sel.GetEnrolledIdsNewTraits(gradelevel,sy);
         }
 
         public List<StudentAssessment> GetStudentAssessment(string IDNum, string SY)

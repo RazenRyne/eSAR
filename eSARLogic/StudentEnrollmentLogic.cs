@@ -22,6 +22,11 @@ namespace eSARLogic
            return enrolDAO.GetEnrolledIds(sy);
         }
 
+        public List<string> GetEnrolledIdsNewTraits(string gradelevel,string sy)
+        {
+            return enrolDAO.GetEnrolledIdsforNewTraits(gradelevel,sy);
+        }
+
         public List<StudentEnrollmentBDO> GetEnrolledStudents(string sy) {
             return enrolDAO.GetAllEnrollmentsForSy(sy);
         }

@@ -48,7 +48,7 @@ namespace eSAR.Admission_and_Registration
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gvStudent.CurrentRow.Index >= 0)
+            if (gvStudent.CurrentRow.Index >= 0 && GlobalClass.userTypeCode != "cash")
             {
                 frmStudentDetails fmStudentDetails = new frmStudentDetails();
                 fmStudentDetails.Op = "edit";

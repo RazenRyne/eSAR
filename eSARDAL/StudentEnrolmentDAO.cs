@@ -183,6 +183,41 @@ namespace eSARDAL
             return ids;
         }
 
+        public List<string> GetEnrolledIdsforNewTraits(string gradelevel,string sy)
+        {
+            List<StudentEnrollment> result = new List<StudentEnrollment>();
+            List<string> ids = new List<string>();
+            try
+            {
+                using (var DCEnt = new DCFIEntities())
+                {
+                    var res = (from e in DCEnt.StudentEnrollments
+                               where e.SY.Equals(sy) && e.GradeLevel.Equals(gradelevel)
+                               select e);
+                    result = res.ToList<StudentEnrollment>();
+                }
+
+
+                foreach (StudentEnrollment s in result)
+                {
+                    ids.Add(s.StudentId);
+                }
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}",
+                                                validationError.PropertyName,
+                                                validationError.ErrorMessage);
+                    }
+                }
+            }
+            return ids;
+        }
+
         public void ConvertEnrolToEnrolBDO(StudentEnrollment se, StudentEnrollmentBDO seb) {
             StudentDAO sd = new StudentDAO();
             StudentBDO stu = new StudentBDO();

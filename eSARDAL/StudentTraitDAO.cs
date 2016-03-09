@@ -86,7 +86,7 @@ namespace eSARDAL
             }
             return traitsList;
         }
-
+        
         public Boolean CreateStudentTrait(ref StudentTraitBDO sabdo, ref string message)
         {
             message = "Student Trait Successfully Saved";

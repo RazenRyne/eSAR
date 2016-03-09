@@ -67,6 +67,7 @@ namespace eSAR.Settings.ManageTraitsbyLevel
         }
 
         private void Save() {
+            IRegistrationService regService = new RegistrationService();
             ITraitService traitService = new TraitService();
             Boolean ret = false;
             string message = String.Empty;
@@ -88,7 +89,11 @@ namespace eSAR.Settings.ManageTraitsbyLevel
                     ret = traitService.UpdateTrait(ref trait, ref message);
                 }
                 else
+                {
                     ret = traitService.CreateTrait(ref trait, ref message);
+                    if (ret && trait.CurrTrait)
+                        ret = regService.UpdateStudentCharacters(trait);
+                }
 
                 if (ret)
                     MessageBox.Show(this, "Saved Successfully");

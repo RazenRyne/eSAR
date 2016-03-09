@@ -29,7 +29,7 @@ namespace eSARServiceInterface
         StudentEnrollment GetStudentEnrolled(string IDNum, string SY);
          
         Boolean CreateStudentAssessment(StudentAssessment studAss);
-         
+
         List<StudentAssessment> AssessMe(StudentEnrollment student);
          
         List<StudentAssessment> GetStudentAssessment(string IDNum, string SY);
@@ -61,5 +61,10 @@ namespace eSARServiceInterface
         List<StudentSchedule> GetSubjectsOfSection(int GradeSectionCode, string sy);
          
         List<GradeSection> GetAllGradeSection(string gradeLevel);
+
+        List<string> GetEnrolledStudentsforNewTraits(string gradelevel, string sy);
+
+        Boolean UpdateStudentCharacters(Trait tbdo);
+
     }
 }
