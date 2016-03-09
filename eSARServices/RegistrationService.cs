@@ -540,5 +540,15 @@ namespace eSARServices
             }
             return ret;
         }
+
+        public bool DeleteExistingSubjects(string studentsy)
+        {
+             return ssl.DeleteExistingSubjects(studentsy);
+        }
+
+        public bool UpdateStudentSection(string studentSy, int gradeSectionCode)
+        {
+            return ssl.UpdateStudentSection(studentSy, gradeSectionCode);
+        }
     }
 }

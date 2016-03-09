@@ -66,5 +66,8 @@ namespace eSARServiceInterface
 
         Boolean UpdateStudentCharacters(Trait tbdo);
 
+        Boolean DeleteExistingSubjects(String studentSy);
+
+        Boolean UpdateStudentSection(String studentSy, int gradeSectionCode);
     }
 }

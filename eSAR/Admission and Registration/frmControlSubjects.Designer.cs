@@ -141,6 +141,7 @@
             this.txtSection.Size = new System.Drawing.Size(130, 20);
             this.txtSection.TabIndex = 49;
             this.txtSection.ValueMember = "GradeSectionCode";
+            this.txtSection.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.txtSection_SelectedIndexChanged);
             this.txtSection.SelectedValueChanged += new System.EventHandler(this.txtSection_SelectedValueChanged);
             // 
             // btnRemove
