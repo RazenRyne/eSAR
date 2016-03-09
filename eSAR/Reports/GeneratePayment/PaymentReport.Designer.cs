@@ -75,6 +75,7 @@
             this.gridView.MasterTemplate.AllowAddNewRow = false;
             this.gridView.MasterTemplate.AllowDeleteRow = false;
             this.gridView.MasterTemplate.AllowEditRow = false;
+            this.gridView.MasterTemplate.AllowSearchRow = true;
             this.gridView.MasterTemplate.AutoExpandGroups = true;
             gridViewTextBoxColumn1.FieldName = "StudentId";
             gridViewTextBoxColumn1.HeaderText = "StudentID";

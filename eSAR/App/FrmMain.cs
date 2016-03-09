@@ -117,6 +117,7 @@ namespace eSAR.App
                 this.btnScheduleList.Enabled = false;
                 this.radButtonElement5.Enabled = false;
                 this.radRibbonBarGroup15.Enabled = false;
+                this.radRibbonBarGroup17.Enabled = false;
                 this.radButtonElement2.Enabled = true;
             } else if (GlobalClass.userTypeCode == "princ")
             {
@@ -144,6 +145,7 @@ namespace eSAR.App
                 this.btnScheduleList.Enabled = true;
                 this.radButtonElement5.Enabled = true;
                 this.radRibbonBarGroup15.Enabled = true;
+                this.radRibbonBarGroup17.Enabled = true;
                 this.radButtonElement2.Enabled = true;
             } else if (GlobalClass.userTypeCode == "reg")
             {
@@ -171,6 +173,7 @@ namespace eSAR.App
                 this.btnScheduleList.Enabled = true;
                 this.radButtonElement5.Enabled = true;
                 this.radRibbonBarGroup15.Enabled = true;
+                this.radRibbonBarGroup17.Enabled = true;
                 this.radButtonElement2.Enabled = true;
             } else if(GlobalClass.userTypeCode == "teach")
             {
@@ -198,6 +201,7 @@ namespace eSAR.App
                 this.btnScheduleList.Enabled = false;
                 this.radButtonElement5.Enabled = false;
                 this.radRibbonBarGroup15.Enabled = false;
+                this.radRibbonBarGroup17.Enabled = false;
                 this.radButtonElement2.Enabled = true;
             }
 
