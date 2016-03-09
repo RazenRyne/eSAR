@@ -73,7 +73,6 @@
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.Total = new Telerik.WinControls.UI.RadTextBox();
             this.subTotal = new Telerik.WinControls.UI.RadTextBox();
             this.discountbyAmountSubTotal = new Telerik.WinControls.UI.RadTextBox();
             this.enrollmentFee = new Telerik.WinControls.UI.RadTextBox();
@@ -85,6 +84,7 @@
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
+            this.Total = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
@@ -130,7 +130,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountbyAmountSubTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentFee)).BeginInit();
@@ -142,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,6 +197,7 @@
             gridViewTextBoxColumn2});
             this.gvAssessment.MasterTemplate.EnableGrouping = false;
             this.gvAssessment.Name = "gvAssessment";
+            this.gvAssessment.PrintStyle.BorderColor = System.Drawing.Color.Transparent;
             this.gvAssessment.Size = new System.Drawing.Size(656, 114);
             this.gvAssessment.TabIndex = 0;
             this.gvAssessment.Text = "radGridView1";
@@ -289,6 +290,8 @@
             // 
             // radPanel2
             // 
+            this.radPanel2.BackColor = System.Drawing.Color.White;
+            this.radPanel2.Controls.Add(this.Total);
             this.radPanel2.Controls.Add(this.radLabel6);
             this.radPanel2.Controls.Add(this.totalLessDiscount);
             this.radPanel2.Controls.Add(this.totalLessbyDiscount);
@@ -315,7 +318,6 @@
             this.radPanel2.Controls.Add(this.radLabel11);
             this.radPanel2.Controls.Add(this.radLabel13);
             this.radPanel2.Controls.Add(this.radLabel10);
-            this.radPanel2.Controls.Add(this.Total);
             this.radPanel2.Controls.Add(this.subTotal);
             this.radPanel2.Controls.Add(this.discountbyAmountSubTotal);
             this.radPanel2.Controls.Add(this.enrollmentFee);
@@ -602,14 +604,6 @@
             this.radLabel10.TabIndex = 16;
             this.radLabel10.Text = "Total Tuition Fee:";
             // 
-            // Total
-            // 
-            this.Total.Location = new System.Drawing.Point(589, 305);
-            this.Total.Name = "Total";
-            this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Total.Size = new System.Drawing.Size(93, 20);
-            this.Total.TabIndex = 22;
-            // 
             // subTotal
             // 
             this.subTotal.Location = new System.Drawing.Point(362, 307);
@@ -706,6 +700,14 @@
             this.radLabel25.Text = "     As proof that you have read the condition and agreed to it. Please sign on t" +
     "he space indicated below.";
             // 
+            // Total
+            // 
+            this.Total.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Total.Location = new System.Drawing.Point(589, 307);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(2, 2);
+            this.Total.TabIndex = 21;
+            // 
             // AssessStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,7 +771,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountbyAmountSubTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentFee)).EndInit();
@@ -781,6 +782,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -810,7 +812,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel11;
         private Telerik.WinControls.UI.RadLabel radLabel13;
         private Telerik.WinControls.UI.RadLabel radLabel10;
-        private Telerik.WinControls.UI.RadTextBox Total;
         private Telerik.WinControls.UI.RadTextBox subTotal;
         private Telerik.WinControls.UI.RadTextBox discountbyAmountSubTotal;
         private Telerik.WinControls.UI.RadTextBox enrollmentFee;
@@ -842,5 +843,6 @@
         private Telerik.WinControls.UI.RadLabel totalLessbyDiscount;
         private Telerik.WinControls.UI.RadLabel radLabel16;
         private Telerik.WinControls.UI.RadLabel radLabel6;
+        private Telerik.WinControls.UI.RadLabel Total;
     }
 }
