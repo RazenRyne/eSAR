@@ -39,7 +39,7 @@ namespace eSAR.Admission_and_Registration
         public List<GradeSection> sections;
         List<StudentSubject> listStSub = new List<StudentSubject>();
         StudentSubject stSubj = new StudentSubject();
-
+        Boolean change = false;
 
         public frmControlSubjects()
         {
@@ -443,23 +443,19 @@ namespace eSAR.Admission_and_Registration
             AddFromAll.Clear();
         }
 
-        private void txtSection_SelectedValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtSection_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            IRegistrationService registrationService = new RegistrationService();
-            int index = txtSection.SelectedIndex;
-            GradeSection s = sections[index];
-            registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
-            registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
-            Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
-            ControlSchedule = Schedule;
-            GlobalClass.gvDatasource = 1;
-            gvSchedule.DataSource = ControlSchedule;
-            gvSchedule.ReadOnly = false;
+                IRegistrationService registrationService = new RegistrationService();
+                int index = txtSection.SelectedIndex;
+                GradeSection s = sections[index];
+                registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
+                registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
+                Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
+                ControlSchedule = Schedule;
+                GlobalClass.gvDatasource = 1;
+                gvSchedule.DataSource = ControlSchedule;
+                gvSchedule.ReadOnly = false;
+          
         }
     }
 }
