@@ -454,7 +454,7 @@
             // 
             this.ribbonTab5.AccessibleDescription = "Grading";
             this.ribbonTab5.AccessibleName = "Grading";
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup14,
             this.radRibbonBarGroup16});
@@ -503,7 +503,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = false;
+            this.ribbonTab6.IsSelected = true;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
@@ -688,7 +688,6 @@
             // 
             // radRibbonBarGroup17
             // 
-            this.radRibbonBarGroup17.Enabled = false;
             this.radRibbonBarGroup17.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radButtonElement13});
             this.radRibbonBarGroup17.Name = "radRibbonBarGroup17";
@@ -699,7 +698,6 @@
             // 
             this.radButtonElement13.AccessibleDescription = "Student Permanent Record";
             this.radButtonElement13.AccessibleName = "Student Permanent Record";
-            this.radButtonElement13.Enabled = false;
             this.radButtonElement13.Image = global::eSAR.Properties.Resources.reports_icon;
             this.radButtonElement13.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement13.Name = "radButtonElement13";
