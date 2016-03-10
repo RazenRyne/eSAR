@@ -231,10 +231,22 @@ namespace eSARDAL
                              select ss).FirstOrDefault();
 
 
-                   
+                    StudentEnrollment s = new StudentEnrollment();
+                    s.DiscountId = x.DiscountId;
+                    s.Dismissed = x.Dismissed;
+                    s.GradeLevel = x.GradeLevel;
+                    s.Stat = x.Stat;
+                    s.StudentEnrollmentsID = x.StudentEnrollmentsID;
+                    //s.SY = x.SY;
+                    
                     DCEnt.StudentEnrollments.Remove(x);
                     x.StudentId = studentSy.Substring(0, 8);
                     x.GradeSectionCode = gradeSectionCode;
+                    x.SY = studentSy.Substring(8,9);
+                    x.DiscountId = s.DiscountId;
+                    x.GradeLevel = s.GradeLevel;
+                    x.Stat = s.Stat;
+
                     DCEnt.StudentEnrollments.Attach(x);
 
                     DCEnt.Entry(x).State = System.Data.Entity.EntityState.Modified;
