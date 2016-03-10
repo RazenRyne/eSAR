@@ -159,6 +159,7 @@ namespace eSARServices
                 ret = stl.AddStudentCharacters(stb, ref message);
             }
             return ret;
+
         }
 
         public List<StudentAssessment> AssessMe(StudentEnrollment student)

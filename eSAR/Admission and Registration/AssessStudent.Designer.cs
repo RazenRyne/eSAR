@@ -28,25 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssessStudent));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnPrint = new Telerik.WinControls.UI.RadButton();
             this.gvAssessment = new Telerik.WinControls.UI.RadGridView();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.txtIDnum = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.txtGradeLevel = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.txtName = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.tuitionFee = new Telerik.WinControls.UI.RadTextBox();
             this.discountPercent = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.txtSY = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.lblSection = new Telerik.WinControls.UI.RadLabel();
+            this.TuitionDet = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet4Val = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel35 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet3Val = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet2Val = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet1Val = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet4 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet3 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet2 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDet1 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.lblDetTotalVal = new Telerik.WinControls.UI.RadLabel();
+            this.lblDetTotal = new Telerik.WinControls.UI.RadLabel();
+            this.enrTotalTuitionFee = new Telerik.WinControls.UI.RadTextBox();
+            this.txtGradeLevel = new Telerik.WinControls.UI.RadLabel();
+            this.txtName = new Telerik.WinControls.UI.RadLabel();
+            this.txtIDnum = new Telerik.WinControls.UI.RadLabel();
+            this.txtSY = new Telerik.WinControls.UI.RadLabel();
+            this.Total = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.totalLessDiscount = new Telerik.WinControls.UI.RadTextBox();
             this.totalLessbyDiscount = new Telerik.WinControls.UI.RadLabel();
@@ -77,14 +96,13 @@
             this.discountbyAmountSubTotal = new Telerik.WinControls.UI.RadTextBox();
             this.enrollmentFee = new Telerik.WinControls.UI.RadTextBox();
             this.discountByAmount = new Telerik.WinControls.UI.RadTextBox();
-            this.enrTotalTuitionFee = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.scholarshipDiscount = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
-            this.Total = new Telerik.WinControls.UI.RadLabel();
+            this.lblSectionVal = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
@@ -92,18 +110,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAssessment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAssessment.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDnum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGradeLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuitionFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuitionDet)).BeginInit();
+            this.TuitionDet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet4Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet3Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet2Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet1Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDetTotalVal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDetTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrTotalTuitionFee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGradeLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDnum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalLessDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalLessbyDiscount)).BeginInit();
@@ -134,14 +172,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.discountbyAmountSubTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountByAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrTotalTuitionFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scholarshipDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +189,7 @@
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel1.Location = new System.Drawing.Point(0, 364);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(702, 35);
+            this.radPanel1.Size = new System.Drawing.Size(689, 35);
             this.radPanel1.TabIndex = 0;
             // 
             // btnCancel
@@ -175,7 +212,7 @@
             // 
             // gvAssessment
             // 
-            this.gvAssessment.Location = new System.Drawing.Point(26, 133);
+            this.gvAssessment.Location = new System.Drawing.Point(3, 133);
             // 
             // 
             // 
@@ -183,22 +220,22 @@
             this.gvAssessment.MasterTemplate.AllowDeleteRow = false;
             this.gvAssessment.MasterTemplate.AllowDragToGroup = false;
             this.gvAssessment.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn1.FieldName = "FeeDescription";
-            gridViewTextBoxColumn1.HeaderText = "Fee";
-            gridViewTextBoxColumn1.Name = "FeeDescription";
-            gridViewTextBoxColumn1.Width = 400;
-            gridViewTextBoxColumn2.FieldName = "Amount";
-            gridViewTextBoxColumn2.HeaderText = "Amount";
-            gridViewTextBoxColumn2.Name = "Amount";
-            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn2.Width = 235;
+            gridViewTextBoxColumn3.FieldName = "FeeDescription";
+            gridViewTextBoxColumn3.HeaderText = "Fee";
+            gridViewTextBoxColumn3.Name = "FeeDescription";
+            gridViewTextBoxColumn3.Width = 400;
+            gridViewTextBoxColumn4.FieldName = "Amount";
+            gridViewTextBoxColumn4.HeaderText = "Amount";
+            gridViewTextBoxColumn4.Name = "Amount";
+            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn4.Width = 235;
             this.gvAssessment.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.gvAssessment.MasterTemplate.EnableGrouping = false;
             this.gvAssessment.Name = "gvAssessment";
             this.gvAssessment.PrintStyle.BorderColor = System.Drawing.Color.Transparent;
-            this.gvAssessment.Size = new System.Drawing.Size(656, 114);
+            this.gvAssessment.Size = new System.Drawing.Size(682, 114);
             this.gvAssessment.TabIndex = 0;
             this.gvAssessment.Text = "radGridView1";
             // 
@@ -210,27 +247,13 @@
             this.radLabel1.TabIndex = 1;
             this.radLabel1.Text = "Student ID No. :";
             // 
-            // txtIDnum
-            // 
-            this.txtIDnum.Location = new System.Drawing.Point(114, 61);
-            this.txtIDnum.Name = "txtIDnum";
-            this.txtIDnum.Size = new System.Drawing.Size(100, 20);
-            this.txtIDnum.TabIndex = 2;
-            // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(294, 61);
+            this.radLabel2.Location = new System.Drawing.Point(296, 62);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(67, 18);
             this.radLabel2.TabIndex = 3;
             this.radLabel2.Text = "Grade Level:";
-            // 
-            // txtGradeLevel
-            // 
-            this.txtGradeLevel.Location = new System.Drawing.Point(367, 62);
-            this.txtGradeLevel.Name = "txtGradeLevel";
-            this.txtGradeLevel.Size = new System.Drawing.Size(91, 20);
-            this.txtGradeLevel.TabIndex = 4;
             // 
             // radLabel3
             // 
@@ -239,13 +262,6 @@
             this.radLabel3.Size = new System.Drawing.Size(81, 18);
             this.radLabel3.TabIndex = 5;
             this.radLabel3.Text = "Student Name:";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(114, 87);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(344, 20);
-            this.txtName.TabIndex = 6;
             // 
             // radLabel4
             // 
@@ -281,16 +297,17 @@
             this.radLabel8.TabIndex = 16;
             this.radLabel8.Text = "School Year:";
             // 
-            // txtSY
-            // 
-            this.txtSY.Location = new System.Drawing.Point(114, 35);
-            this.txtSY.Name = "txtSY";
-            this.txtSY.Size = new System.Drawing.Size(100, 20);
-            this.txtSY.TabIndex = 17;
-            // 
             // radPanel2
             // 
             this.radPanel2.BackColor = System.Drawing.Color.White;
+            this.radPanel2.Controls.Add(this.lblSectionVal);
+            this.radPanel2.Controls.Add(this.lblSection);
+            this.radPanel2.Controls.Add(this.TuitionDet);
+            this.radPanel2.Controls.Add(this.enrTotalTuitionFee);
+            this.radPanel2.Controls.Add(this.txtGradeLevel);
+            this.radPanel2.Controls.Add(this.txtName);
+            this.radPanel2.Controls.Add(this.txtIDnum);
+            this.radPanel2.Controls.Add(this.txtSY);
             this.radPanel2.Controls.Add(this.Total);
             this.radPanel2.Controls.Add(this.radLabel6);
             this.radPanel2.Controls.Add(this.totalLessDiscount);
@@ -322,21 +339,16 @@
             this.radPanel2.Controls.Add(this.discountbyAmountSubTotal);
             this.radPanel2.Controls.Add(this.enrollmentFee);
             this.radPanel2.Controls.Add(this.discountByAmount);
-            this.radPanel2.Controls.Add(this.enrTotalTuitionFee);
             this.radPanel2.Controls.Add(this.radLabel14);
             this.radPanel2.Controls.Add(this.radLabel9);
             this.radPanel2.Controls.Add(this.scholarshipDiscount);
-            this.radPanel2.Controls.Add(this.txtSY);
             this.radPanel2.Controls.Add(this.radLabel8);
             this.radPanel2.Controls.Add(this.discountPercent);
             this.radPanel2.Controls.Add(this.tuitionFee);
             this.radPanel2.Controls.Add(this.radLabel5);
             this.radPanel2.Controls.Add(this.radLabel4);
-            this.radPanel2.Controls.Add(this.txtName);
             this.radPanel2.Controls.Add(this.radLabel3);
-            this.radPanel2.Controls.Add(this.txtGradeLevel);
             this.radPanel2.Controls.Add(this.radLabel2);
-            this.radPanel2.Controls.Add(this.txtIDnum);
             this.radPanel2.Controls.Add(this.radLabel1);
             this.radPanel2.Controls.Add(this.gvAssessment);
             this.radPanel2.Controls.Add(this.radLabel15);
@@ -344,8 +356,213 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(702, 361);
+            this.radPanel2.Size = new System.Drawing.Size(689, 361);
             this.radPanel2.TabIndex = 1;
+            // 
+            // lblSection
+            // 
+            this.lblSection.Location = new System.Drawing.Point(296, 88);
+            this.lblSection.Name = "lblSection";
+            this.lblSection.Size = new System.Drawing.Size(45, 18);
+            this.lblSection.TabIndex = 45;
+            this.lblSection.Text = "Section:";
+            // 
+            // TuitionDet
+            // 
+            this.TuitionDet.BackColor = System.Drawing.Color.White;
+            this.TuitionDet.Controls.Add(this.radLabel36);
+            this.TuitionDet.Controls.Add(this.lblDet4Val);
+            this.TuitionDet.Controls.Add(this.radLabel35);
+            this.TuitionDet.Controls.Add(this.lblDet3Val);
+            this.TuitionDet.Controls.Add(this.radLabel34);
+            this.TuitionDet.Controls.Add(this.lblDet2Val);
+            this.TuitionDet.Controls.Add(this.radLabel33);
+            this.TuitionDet.Controls.Add(this.lblDet1Val);
+            this.TuitionDet.Controls.Add(this.lblDet4);
+            this.TuitionDet.Controls.Add(this.lblDet3);
+            this.TuitionDet.Controls.Add(this.lblDet2);
+            this.TuitionDet.Controls.Add(this.lblDet1);
+            this.TuitionDet.Controls.Add(this.radLabel7);
+            this.TuitionDet.Controls.Add(this.lblDetTotalVal);
+            this.TuitionDet.Controls.Add(this.lblDetTotal);
+            this.TuitionDet.Location = new System.Drawing.Point(3, 251);
+            this.TuitionDet.Name = "TuitionDet";
+            this.TuitionDet.Size = new System.Drawing.Size(683, 105);
+            this.TuitionDet.TabIndex = 2;
+            this.TuitionDet.Visible = false;
+            // 
+            // radLabel36
+            // 
+            this.radLabel36.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel36.Location = new System.Drawing.Point(95, 79);
+            this.radLabel36.Name = "radLabel36";
+            this.radLabel36.Size = new System.Drawing.Size(2, 2);
+            this.radLabel36.TabIndex = 27;
+            // 
+            // lblDet4Val
+            // 
+            this.lblDet4Val.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet4Val.Location = new System.Drawing.Point(110, 79);
+            this.lblDet4Val.Name = "lblDet4Val";
+            this.lblDet4Val.Size = new System.Drawing.Size(2, 2);
+            this.lblDet4Val.TabIndex = 27;
+            // 
+            // radLabel35
+            // 
+            this.radLabel35.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel35.Location = new System.Drawing.Point(95, 59);
+            this.radLabel35.Name = "radLabel35";
+            this.radLabel35.Size = new System.Drawing.Size(2, 2);
+            this.radLabel35.TabIndex = 26;
+            // 
+            // lblDet3Val
+            // 
+            this.lblDet3Val.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet3Val.Location = new System.Drawing.Point(110, 59);
+            this.lblDet3Val.Name = "lblDet3Val";
+            this.lblDet3Val.Size = new System.Drawing.Size(2, 2);
+            this.lblDet3Val.TabIndex = 26;
+            // 
+            // radLabel34
+            // 
+            this.radLabel34.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel34.Location = new System.Drawing.Point(95, 40);
+            this.radLabel34.Name = "radLabel34";
+            this.radLabel34.Size = new System.Drawing.Size(2, 2);
+            this.radLabel34.TabIndex = 25;
+            // 
+            // lblDet2Val
+            // 
+            this.lblDet2Val.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet2Val.Location = new System.Drawing.Point(110, 40);
+            this.lblDet2Val.Name = "lblDet2Val";
+            this.lblDet2Val.Size = new System.Drawing.Size(2, 2);
+            this.lblDet2Val.TabIndex = 25;
+            // 
+            // radLabel33
+            // 
+            this.radLabel33.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel33.Location = new System.Drawing.Point(95, 21);
+            this.radLabel33.Name = "radLabel33";
+            this.radLabel33.Size = new System.Drawing.Size(2, 2);
+            this.radLabel33.TabIndex = 24;
+            // 
+            // lblDet1Val
+            // 
+            this.lblDet1Val.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet1Val.Location = new System.Drawing.Point(110, 21);
+            this.lblDet1Val.Name = "lblDet1Val";
+            this.lblDet1Val.Size = new System.Drawing.Size(2, 2);
+            this.lblDet1Val.TabIndex = 24;
+            // 
+            // lblDet4
+            // 
+            this.lblDet4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet4.Location = new System.Drawing.Point(18, 79);
+            this.lblDet4.Name = "lblDet4";
+            this.lblDet4.Size = new System.Drawing.Size(91, 18);
+            this.lblDet4.TabIndex = 23;
+            this.lblDet4.Text = "Fourth Grading:";
+            // 
+            // lblDet3
+            // 
+            this.lblDet3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet3.Location = new System.Drawing.Point(18, 59);
+            this.lblDet3.Name = "lblDet3";
+            this.lblDet3.Size = new System.Drawing.Size(83, 18);
+            this.lblDet3.TabIndex = 22;
+            this.lblDet3.Text = "Third Grading:";
+            // 
+            // lblDet2
+            // 
+            this.lblDet2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet2.Location = new System.Drawing.Point(18, 40);
+            this.lblDet2.Name = "lblDet2";
+            this.lblDet2.Size = new System.Drawing.Size(94, 18);
+            this.lblDet2.TabIndex = 21;
+            this.lblDet2.Text = "Second Grading:";
+            // 
+            // lblDet1
+            // 
+            this.lblDet1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDet1.Location = new System.Drawing.Point(18, 21);
+            this.lblDet1.Name = "lblDet1";
+            this.lblDet1.Size = new System.Drawing.Size(78, 18);
+            this.lblDet1.TabIndex = 20;
+            this.lblDet1.Text = "First Grading:";
+            // 
+            // radLabel7
+            // 
+            this.radLabel7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel7.Location = new System.Drawing.Point(372, 7);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(2, 2);
+            this.radLabel7.TabIndex = 19;
+            // 
+            // lblDetTotalVal
+            // 
+            this.lblDetTotalVal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDetTotalVal.Location = new System.Drawing.Point(561, 7);
+            this.lblDetTotalVal.Name = "lblDetTotalVal";
+            this.lblDetTotalVal.Size = new System.Drawing.Size(2, 2);
+            this.lblDetTotalVal.TabIndex = 19;
+            // 
+            // lblDetTotal
+            // 
+            this.lblDetTotal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDetTotal.Location = new System.Drawing.Point(519, 7);
+            this.lblDetTotal.Name = "lblDetTotal";
+            this.lblDetTotal.Size = new System.Drawing.Size(40, 18);
+            this.lblDetTotal.TabIndex = 18;
+            this.lblDetTotal.Text = " Total:";
+            // 
+            // enrTotalTuitionFee
+            // 
+            this.enrTotalTuitionFee.Location = new System.Drawing.Point(362, 276);
+            this.enrTotalTuitionFee.Name = "enrTotalTuitionFee";
+            this.enrTotalTuitionFee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.enrTotalTuitionFee.Size = new System.Drawing.Size(91, 20);
+            this.enrTotalTuitionFee.TabIndex = 17;
+            // 
+            // txtGradeLevel
+            // 
+            this.txtGradeLevel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtGradeLevel.Location = new System.Drawing.Point(369, 62);
+            this.txtGradeLevel.Name = "txtGradeLevel";
+            this.txtGradeLevel.Size = new System.Drawing.Size(2, 2);
+            this.txtGradeLevel.TabIndex = 44;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(114, 88);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(2, 2);
+            this.txtName.TabIndex = 43;
+            // 
+            // txtIDnum
+            // 
+            this.txtIDnum.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtIDnum.Location = new System.Drawing.Point(114, 62);
+            this.txtIDnum.Name = "txtIDnum";
+            this.txtIDnum.Size = new System.Drawing.Size(2, 2);
+            this.txtIDnum.TabIndex = 42;
+            // 
+            // txtSY
+            // 
+            this.txtSY.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtSY.Location = new System.Drawing.Point(114, 36);
+            this.txtSY.Name = "txtSY";
+            this.txtSY.Size = new System.Drawing.Size(2, 2);
+            this.txtSY.TabIndex = 41;
+            // 
+            // Total
+            // 
+            this.Total.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Total.Location = new System.Drawing.Point(589, 307);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(2, 2);
+            this.Total.TabIndex = 21;
             // 
             // radLabel6
             // 
@@ -524,11 +741,12 @@
             // 
             // radLabel19
             // 
+            this.radLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel19.AutoSize = false;
             this.radLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.radLabel19.Location = new System.Drawing.Point(3, 12);
             this.radLabel19.Name = "radLabel19";
-            this.radLabel19.Size = new System.Drawing.Size(696, 18);
+            this.radLabel19.Size = new System.Drawing.Size(682, 18);
             this.radLabel19.TabIndex = 25;
             this.radLabel19.Text = "ASSESSMENT OF FEES";
             this.radLabel19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -636,14 +854,6 @@
             this.discountByAmount.Size = new System.Drawing.Size(93, 20);
             this.discountByAmount.TabIndex = 23;
             // 
-            // enrTotalTuitionFee
-            // 
-            this.enrTotalTuitionFee.Location = new System.Drawing.Point(362, 276);
-            this.enrTotalTuitionFee.Name = "enrTotalTuitionFee";
-            this.enrTotalTuitionFee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.enrTotalTuitionFee.Size = new System.Drawing.Size(91, 20);
-            this.enrTotalTuitionFee.TabIndex = 17;
-            // 
             // radLabel14
             // 
             this.radLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
@@ -700,19 +910,19 @@
             this.radLabel25.Text = "     As proof that you have read the condition and agreed to it. Please sign on t" +
     "he space indicated below.";
             // 
-            // Total
+            // lblSectionVal
             // 
-            this.Total.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Total.Location = new System.Drawing.Point(589, 307);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(2, 2);
-            this.Total.TabIndex = 21;
+            this.lblSectionVal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblSectionVal.Location = new System.Drawing.Point(369, 88);
+            this.lblSectionVal.Name = "lblSectionVal";
+            this.lblSectionVal.Size = new System.Drawing.Size(2, 2);
+            this.lblSectionVal.TabIndex = 46;
             // 
             // AssessStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 399);
+            this.ClientSize = new System.Drawing.Size(689, 399);
             this.Controls.Add(this.radPanel2);
             this.Controls.Add(this.radPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -732,19 +942,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAssessment.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAssessment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDnum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGradeLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuitionFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             this.radPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuitionDet)).EndInit();
+            this.TuitionDet.ResumeLayout(false);
+            this.TuitionDet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet4Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet3Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet2Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet1Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDetTotalVal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblDetTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrTotalTuitionFee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGradeLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDnum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalLessDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalLessbyDiscount)).EndInit();
@@ -775,14 +1006,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.discountbyAmountSubTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountByAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrTotalTuitionFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scholarshipDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -795,16 +1025,12 @@
         private Telerik.WinControls.UI.RadButton btnPrint;
         private Telerik.WinControls.UI.RadGridView gvAssessment;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadTextBox txtIDnum;
         private Telerik.WinControls.UI.RadLabel radLabel2;
-        private Telerik.WinControls.UI.RadTextBox txtGradeLevel;
         private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Telerik.WinControls.UI.RadTextBox txtName;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadTextBox tuitionFee;
         private Telerik.WinControls.UI.RadTextBox discountPercent;
         private Telerik.WinControls.UI.RadLabel radLabel8;
-        private Telerik.WinControls.UI.RadTextBox txtSY;
         private Telerik.WinControls.UI.RadPanel radPanel2;
         private Telerik.WinControls.UI.RadLabel radLabel17;
         private Telerik.WinControls.UI.RadLabel radLabel15;
@@ -844,5 +1070,27 @@
         private Telerik.WinControls.UI.RadLabel radLabel16;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel Total;
+        private Telerik.WinControls.UI.RadLabel txtSY;
+        private Telerik.WinControls.UI.RadLabel txtGradeLevel;
+        private Telerik.WinControls.UI.RadLabel txtName;
+        private Telerik.WinControls.UI.RadLabel txtIDnum;
+        private Telerik.WinControls.UI.RadPanel TuitionDet;
+        private Telerik.WinControls.UI.RadLabel lblDetTotalVal;
+        private Telerik.WinControls.UI.RadLabel lblDetTotal;
+        private Telerik.WinControls.UI.RadLabel radLabel36;
+        private Telerik.WinControls.UI.RadLabel lblDet4Val;
+        private Telerik.WinControls.UI.RadLabel radLabel34;
+        private Telerik.WinControls.UI.RadLabel radLabel35;
+        private Telerik.WinControls.UI.RadLabel lblDet3Val;
+        private Telerik.WinControls.UI.RadLabel radLabel33;
+        private Telerik.WinControls.UI.RadLabel lblDet2Val;
+        private Telerik.WinControls.UI.RadLabel radLabel7;
+        private Telerik.WinControls.UI.RadLabel lblDet1Val;
+        private Telerik.WinControls.UI.RadLabel lblDet4;
+        private Telerik.WinControls.UI.RadLabel lblDet3;
+        private Telerik.WinControls.UI.RadLabel lblDet2;
+        private Telerik.WinControls.UI.RadLabel lblDet1;
+        private Telerik.WinControls.UI.RadLabel lblSection;
+        private Telerik.WinControls.UI.RadLabel lblSectionVal;
     }
 }

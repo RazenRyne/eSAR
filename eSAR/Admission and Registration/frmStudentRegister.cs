@@ -92,7 +92,10 @@ namespace eSAR.Admission_and_Registration
             EnrolMe.SY = SY;
             EnrolMe.GradeLevel = GradeLevel;
             EnrolMe.Dismissed = false;
-            EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
+            if (!String.IsNullOrEmpty(cmbScholarship.SelectedValue.ToString()))
+            {
+                EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
+            }
             EnrolMe.Rank = (int)RegisterStudent.ranking;
             //EnrolMe.GradeSectionCode=
             if (EnrolMe.Stat.Equals("b") || EnrolMe.Stat.Equals("c"))
@@ -106,6 +109,7 @@ namespace eSAR.Admission_and_Registration
                     MessageBox.Show(this, "Student Successfully Registered.");
                     frmControlSubjects fmControlSubjects = new frmControlSubjects();
                     fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                  //  fmControlSubjects.changed = false;
                     fmControlSubjects.ShowDialog(this);
 
                 }
@@ -126,6 +130,7 @@ namespace eSAR.Admission_and_Registration
 
                     frmControlSubjects fmControlSubjects = new frmControlSubjects();
                     fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                  //  fmControlSubjects.changed = false;
                     fmControlSubjects.ShowDialog(this);
 
                     

@@ -182,7 +182,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Attendance";
+            this.Text = "Payment Record";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.PaymentReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
