@@ -428,15 +428,7 @@ namespace eSAR.Admission_and_Registration
                 }
             }
 
-            //List<StudentSchedule> seltrue = Schedules.FindAll(item => item.Selected == true);
-
-           // foreach (StudentSchedule s in seltrue)
-           // {
-                
-           //     int i = Schedules.FindIndex(item => item.SubjectAssignments == s.SubjectAssignments);
-           //     Schedules[i].Selected = false;
-           //}
-          
+                  
             gvAllSchedules.DataSource = Schedules;
             gvSchedule.DataSource = ControlSchedule;
             AddFromAll.Clear();
@@ -450,8 +442,30 @@ namespace eSAR.Admission_and_Registration
                 int index = cbSection.SelectedIndex;
             GradeSection s = sections[index];
             registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
-            registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
+            registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode, s.Section);
+
             Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
+            subjects.Clear();
+            foreach (StudentSchedule sch in Schedule)
+                {
+                    StudentSubject ss = new StudentSubject()
+                    {
+                        StudentSY = controlStudentId + SY,
+                        SubjectCode = sch.SubjectCode,
+                        SubjectAssignments = sch.SubjectAssignments,
+                        StudentEnrSubCode = controlStudentId + SY + sch.SubjectCode,
+                        LockFirst = false,
+                        LockSecond = false,
+                        LockThird = false,
+                        LockFourth = false,
+                        FirstPeriodicRating = 0.00,
+                        SecondPeriodicRating = 0.00,
+                        ThirdPeriodicRating = 0.00,
+                        FourthPeriodicRating = 0.00
+                    };
+                    subjects.Add(ss);
+                }
+
             ControlSchedule = Schedule;
             GlobalClass.gvDatasource = 1;
             gvSchedule.DataSource = ControlSchedule;
@@ -463,10 +477,10 @@ namespace eSAR.Admission_and_Registration
         private void btnChangeSection_Click(object sender, EventArgs e)
         {
             ISubjectAssignmentService schedService = new SubjectAssignmentService();
-            sections = new List<GradeSection>(schedService.GetAllSections());
-            List<GradeSection> gs = new List<GradeSection>();
-            gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
-            cbSection.DataSource = gs;
+            sections = new List<GradeSection>(schedService.GetAllSectionsOfGradeLevel(ControlStudent.GradeLevel));
+            //List<GradeSection> gs = new List<GradeSection>();
+            //gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
+            cbSection.DataSource = sections;
             cbSection.DisplayMember = "Section";
             cbSection.ValueMember = "GradeSectionCode";
             this.txtSection.Visible = false;
