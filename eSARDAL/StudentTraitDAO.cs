@@ -132,9 +132,9 @@ namespace eSARDAL
             {
                 using (var DCEnt = new DCFIEntities())
                 {
-            
+
                     var ss = (from sub in DCEnt.StudentTraits
-                              where sub.GradeSectionCode==GradeSectionCode & sub.StudentEnrollment.Student.Gender == gender
+                              where sub.GradeSectionCode == GradeSectionCode & sub.StudentEnrollment.Student.Gender == gender & sub.StudentEnrollment.Student.Dismissed == false
                               orderby sub.StudentEnrollment.Student.LastName
                               select sub).ToList<StudentTrait>();
 

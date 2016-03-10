@@ -442,7 +442,7 @@ namespace eSAR.Admission_and_Registration
             AddFromAll.Clear();
         }
 
-        private void txtSection_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void cbSection_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             if (changed)
             {
