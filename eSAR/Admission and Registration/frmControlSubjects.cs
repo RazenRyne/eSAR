@@ -39,8 +39,8 @@ namespace eSAR.Admission_and_Registration
         public List<GradeSection> sections;
         List<StudentSubject> listStSub = new List<StudentSubject>();
         StudentSubject stSubj = new StudentSubject();
-
-
+        public int gradeSectionCode = -1;
+        public Boolean changed { get; set; }
         public frmControlSubjects()
         {
             GlobalClass.fromScreen = String.Empty;
@@ -69,12 +69,14 @@ namespace eSAR.Admission_and_Registration
             sections = new List<GradeSection>(schedService.GetAllSections());
             List<GradeSection> gs = new List<GradeSection>();
             gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
-            txtSection.DataSource = gs;
 
+            //   cbSection.DataSource = gs;
 
+            int index = gs.FindIndex(s => s.Section == ControlStudent.Section);
+            gradeSectionCode = gs[index].GradeSectionCode;
             loadSched();
-           
             txtSection.Text = ControlStudent.Section;
+          //  cbSection.Text = ControlStudent.Section;
             txtSY.Text = SY;
             txtGradeLevel.Text = ControlStudent.GradeLevel;
             txtStudentId.Text = ControlStudent.StudentId;
@@ -101,10 +103,7 @@ namespace eSAR.Admission_and_Registration
             gvAllSchedules.DataSource = null;
             gvSchedule.DataSource = null;
             gvFail.DataSource = null;
-            //FailedSubjects.Clear();
-            //StudentSubs.Clear();
-            //Schedules.Clear();
-            //Schedule.Clear();
+        
             ExistingSchedRemove.Clear();
 
             FailedSubjects = new List<StudentSubject>(registrationService.GetFailedSubjects(prevRecord));
@@ -131,8 +130,8 @@ namespace eSAR.Admission_and_Registration
 
             if (ControlStudent.UnitsFailedLastYear == 0 && StudentSubs.Count == 0)
             {
-                int sectionCode = (int)txtSection.SelectedValue;
-                Schedule = new List<StudentSchedule>(registrationService.GetSubjectsOfSection(sectionCode, SY));
+              //  int sectionCode = (int)cbSection.SelectedValue;
+                Schedule = new List<StudentSchedule>(registrationService.GetSubjectsOfSection(gradeSectionCode, SY));
                 foreach (StudentSchedule sch in Schedule)
                 {
                     StudentSubject ss = new StudentSubject()
@@ -450,16 +449,37 @@ namespace eSAR.Admission_and_Registration
 
         private void txtSection_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            IRegistrationService registrationService = new RegistrationService();
-            int index = txtSection.SelectedIndex;
-            GradeSection s = sections[index];
-            registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
-            registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
-            Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
-            ControlSchedule = Schedule;
-            GlobalClass.gvDatasource = 1;
-            gvSchedule.DataSource = ControlSchedule;
-            gvSchedule.ReadOnly = false;
+            if (changed)
+            {
+                IRegistrationService registrationService = new RegistrationService();
+                int index = cbSection.SelectedIndex;
+                GradeSection s = sections[index];
+                registrationService.DeleteExistingSubjects(ControlStudent.StudentId + SY);
+                registrationService.UpdateStudentSection(ControlStudent.StudentId + SY, s.GradeSectionCode);
+                Schedule = registrationService.GetSubjectsOfSection(s.GradeSectionCode, SY);
+                ControlSchedule = Schedule;
+                GlobalClass.gvDatasource = 1;
+                gvSchedule.DataSource = ControlSchedule;
+                gvSchedule.ReadOnly = false;
+            }
+         }
+
+        private void btnChangeSection_Click(object sender, EventArgs e)
+        {
+            ISubjectAssignmentService schedService = new SubjectAssignmentService();
+            sections = new List<GradeSection>(schedService.GetAllSections());
+            List<GradeSection> gs = new List<GradeSection>();
+            gs = sections.FindAll(s => s.GradeLevel == ControlStudent.GradeLevel);
+            cbSection.DataSource = gs;
+            cbSection.DisplayMember = "Section";
+            cbSection.ValueMember = "GradeSectionCode";
+            this.txtSection.Visible = false;
+            this.cbSection.Visible = true;
+
+            changed = true;
+          
+          //  cbSection.Text = ControlStudent.Section;
+
         }
     }
 }
