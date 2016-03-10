@@ -54,7 +54,7 @@ namespace eSARDAL
             {
                 DCEnt.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
                 var ss = (from sub in DCEnt.StudentSubjects
-                          where sub.SubjectAssignments == SubjectAssignments & sub.StudentEnrollment.Student.Gender == gender
+                          where sub.SubjectAssignments == SubjectAssignments & sub.StudentEnrollment.Student.Gender == gender & sub.StudentEnrollment.Student.Dismissed== false 
                           orderby sub.StudentEnrollment.Student.LastName
                           select sub).ToList<StudentSubject>();
                 
