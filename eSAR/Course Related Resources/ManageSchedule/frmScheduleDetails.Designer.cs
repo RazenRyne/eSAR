@@ -116,11 +116,14 @@
             // 
             // cmbTeacher
             // 
+            this.cmbTeacher.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTeacher.DisplayMember = "TeacherName";
             this.cmbTeacher.Enabled = false;
             this.cmbTeacher.Location = new System.Drawing.Point(12, 344);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(173, 20);
             this.cmbTeacher.TabIndex = 54;
+            this.cmbTeacher.ValueMember = "TeacherId";
             // 
             // radLabel5
             // 
@@ -132,6 +135,7 @@
             // 
             // cmbSubject
             // 
+            this.cmbSubject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbSubject.DisplayMember = "SubjectCode";
             this.cmbSubject.Enabled = false;
             this.cmbSubject.Location = new System.Drawing.Point(12, 164);
@@ -151,11 +155,14 @@
             // 
             // cmbRoom
             // 
+            this.cmbRoom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRoom.DisplayMember = "RoomCode";
             this.cmbRoom.Enabled = false;
             this.cmbRoom.Location = new System.Drawing.Point(12, 284);
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.Size = new System.Drawing.Size(130, 20);
             this.cmbRoom.TabIndex = 50;
+            this.cmbRoom.ValueMember = "RoomId";
             // 
             // radLabel3
             // 
@@ -167,6 +174,7 @@
             // 
             // cmbSection
             // 
+            this.cmbSection.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbSection.DisplayMember = "Section";
             this.cmbSection.Enabled = false;
             this.cmbSection.Location = new System.Drawing.Point(12, 104);
@@ -186,13 +194,14 @@
             // 
             // cmbTimeslot
             // 
-            this.cmbTimeslot.DisplayMember = "TimeslotInfo";
+            this.cmbTimeslot.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTimeslot.DisplayMember = "TimeSlotInfo";
             this.cmbTimeslot.Enabled = false;
             this.cmbTimeslot.Location = new System.Drawing.Point(12, 224);
             this.cmbTimeslot.Name = "cmbTimeslot";
             this.cmbTimeslot.Size = new System.Drawing.Size(173, 20);
             this.cmbTimeslot.TabIndex = 46;
-            this.cmbTimeslot.ValueMember = "TimeslotCode";
+            this.cmbTimeslot.ValueMember = "TimeSlotCode";
             this.cmbTimeslot.SelectedValueChanged += new System.EventHandler(this.cmbTimeslot_SelectedValueChanged);
             // 
             // radLabel1
@@ -205,6 +214,7 @@
             // 
             // cmbGradeLevel
             // 
+            this.cmbGradeLevel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbGradeLevel.DisplayMember = "Description";
             this.cmbGradeLevel.Location = new System.Drawing.Point(12, 46);
             this.cmbGradeLevel.Name = "cmbGradeLevel";

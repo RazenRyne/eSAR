@@ -33,10 +33,11 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
         public string gradelevel;
         public string section;
         public int sectioncode;
-        public List<SubjectAssignment> createdSchedule;
+        public List<SubjectAssignment> createdSchedule = new List<SubjectAssignment>();
         List<SubjectAssignment> slist = new List<SubjectAssignment>();
         List<Room> roomUsed = new List<Room>();
         List<Teacher> teacherUsed = new List<Teacher>();
+        bool academicSubject = false;
 
         public frmScheduleDetails()
         {
@@ -69,8 +70,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
         public void LoadSchedules()
         {
             SetComboBoxes();
-            if (Op == "edit")
-                SetFields();
+               // SetFields();
         }
 
         private void SetFields()
@@ -95,7 +95,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
             //Disable();
             cmbGradeLevel.DataSource = gradeLevels;
             if (cmbGradeLevel.SelectedIndex >= 0)
-            cmbGradeLevel.SelectedIndex = 0;
+                cmbGradeLevel.SelectedIndex = 0;
 
             if (cmbSection.SelectedIndex >= 0)
                 cmbSection.SelectedIndex = 0;
@@ -120,6 +120,8 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
             List<SubjectAssignment> roomSchedule = new List<SubjectAssignment>(schedules.FindAll(s => s.SY == GlobalClass.currentsy));
             Timeslot selectedTimeslot = new Timeslot();
             string szVal = string.Empty;
+            cmbTimeslot.ValueMember = "TimeSlotCode";
+            cmbTimeslot.DisplayMember = "TimeSlotInfo";
             szVal = cmbTimeslot.SelectedValue.ToString();
             selectedTimeslot = timeslots.Find(x => x.TimeSlotCode == szVal);
 
@@ -213,7 +215,17 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 cmbTeacher.Enabled = true;
                 cmbTeacher.ValueMember = "TeacherId";
                 cmbTeacher.DisplayMember = "TeacherName";
-                cmbTeacher.DataSource = availTeach;
+
+                if (academicSubject == true)
+                {
+                    academicTeachers = new List<Teacher>(teachers.FindAll(x => x.Academic == true));
+                    cmbTeacher.DataSource = availTeach;
+                }
+                else
+                {
+                    cmbTeacher.DataSource = availTeach;
+                }
+                //cmbTeacher.DataSource = availTeach;
             }
 
         }
@@ -239,7 +251,6 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 Teacher tc = new Teacher();
                 tc = teachers.Find(x => x.TeacherId == cmbTeacher.SelectedValue.ToString());
 
-
                 SubjectAssignment sa = new SubjectAssignment();
                 sa.GradeLevel = cmbGradeLevel.SelectedValue.ToString() ;
                 sa.TeacherName = cmbTeacher.Text;
@@ -262,12 +273,27 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 sa.Days = t.Days;
                 sa.Deactivated = false;
                 createdSchedule.Add(sa);
-                gvSchedule.DataSource = createdSchedule;
                 schedules.Add(sa);
 
-                LoadSchedules();
+                
+                cmbTimeslot.DataSource = null;
+                availTimeSlot.RemoveAll(x => x.TimeSlotCode == t.TimeSlotCode);
+                if (availTimeSlot.Count > 0)
+                {
+                    cmbTimeslot.DataSource = availTimeSlot;
+                    cmbTimeslot.SelectedIndex = 0;
+                    cmbTimeslot.Refresh();
+                }
+                else
+                    cmbTimeslot.Enabled = false;
 
-               
+                gvSchedule.DataSource = null;
+                gvSchedule.DataSource = schedules.FindAll(x => x.GradeSectionCode == sectioncode);
+                gvSchedule.Refresh();
+
+                // LoadSchedules();
+
+
             }
         }
         
@@ -301,15 +327,18 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
            
             //Get timeslot that are already assigned
             List<Timeslot> usedtslot = new List<Timeslot>();
-            foreach (SubjectAssignment sch in createdSchedule)
+            foreach (SubjectAssignment sch in schedules)
             {
-                Timeslot ts = new Timeslot();
-                ts.TimeSlotCode = sch.TimeSlotCode;
-                ts.TimeSlotInfo = sch.TimeslotInfo;
-                ts.TimeStart = sch.Timestart;
-                ts.TimeEnd = sch.TimeEnd;
-                ts.Days = sch.Days;
-                usedtslot.Add(ts);
+                if (sch.GradeLevel == gradelevel && sch.GradeSectionCode == int.Parse(cmbSection.SelectedValue.ToString()))
+                {
+                    Timeslot ts = new Timeslot();
+                    ts.TimeSlotCode = sch.TimeSlotCode;
+                    ts.TimeSlotInfo = sch.TimeslotInfo;
+                    ts.TimeStart = sch.Timestart;
+                    ts.TimeEnd = sch.TimeEnd;
+                    ts.Days = sch.Days;
+                    usedtslot.Add(ts);
+                }
             }
 
             //get the list of all timeslots
@@ -427,18 +456,21 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                     schedules.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
                                    && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
                                    && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
-            
+
                     createdSchedule.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
                                         && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
                                         && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
                 }
                 else
                 {
-                    int iSAid = int.Parse(gvSchedule.Rows[selectedIndex].Cells[4].Value.ToString());
+                    schedules.RemoveAll(x => x.SubjectAssignmentsID == iSelectedSAid && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
+                                   && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
+                                   && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
 
-                ISubjectAssignmentService schedService = new SubjectAssignmentService();
-                string message = String.Empty;
-                    schedService.DeleteSchedule(iSAid, ref message);
+
+                    ISubjectAssignmentService schedService = new SubjectAssignmentService();
+                    string message = String.Empty;
+                    schedService.DeleteSchedule(iSelectedSAid, ref message);
                     Log("D", "StudentSubjects", gvSchedule.Rows[selectedIndex]);
                     
                 }
@@ -446,7 +478,12 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
                 InitializeLists();
                 LoadSchedules();
-        }
+
+                gvSchedule.DataSource = null;
+                gvSchedule.DataSource = schedules.FindAll(x => x.GradeSectionCode == sectioncode); ;
+                gvSchedule.Refresh();
+
+            }
             
         }
 
@@ -496,7 +533,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 sectioncode = Int32.Parse(code);
                 section = cmbSection.Text.ToString();
 
-                createdSchedule = new List<SubjectAssignment>(schedules.FindAll(s => s.GradeSectionCode == sectioncode && s.SY == GlobalClass.currentsy));
+                //existingSchedule = new List<SubjectAssignment>(schedules.FindAll(s => s.GradeSectionCode == sectioncode && s.SY == GlobalClass.currentsy));
 
                 cmbTimeslot.DataSource = null;
                 SetTimeSlotCombo();
@@ -532,15 +569,17 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 Subject sb = new Subject();
                 sb = subjects.Find(x => x.SubjectCode == cmbSubject.SelectedValue.ToString());
 
-                if (sb.Academic ==true)
-                {
-                    academicTeachers = new List<Teacher>(teachers.FindAll(x => x.Academic == true));
-                    cmbTeacher.DataSource = academicTeachers;
-                }
-                else
-                {
-                    cmbTeacher.DataSource = teachers;
-                }
+                academicSubject = sb.Academic;
+
+                //if (sb.Academic ==true)
+                //{
+                //    academicTeachers = new List<Teacher>(teachers.FindAll(x => x.Academic == true));
+                //    cmbTeacher.DataSource = academicTeachers;
+                //}
+                //else
+                //{
+                //    cmbTeacher.DataSource = teachers;
+                //}
             }
         }
 
