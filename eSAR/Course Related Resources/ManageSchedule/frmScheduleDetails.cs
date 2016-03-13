@@ -262,7 +262,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 sa.Days = t.Days;
                 sa.Deactivated = false;
                 createdSchedule.Add(sa);
-
+                gvSchedule.DataSource = createdSchedule;
                 schedules.Add(sa);
 
                 LoadSchedules();

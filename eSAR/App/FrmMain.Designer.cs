@@ -253,7 +253,7 @@
             // 
             this.ribbonTab3.AccessibleDescription = "Settings";
             this.ribbonTab3.AccessibleName = "Settings";
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup3,
             this.radRibbonBarGroup4,
@@ -503,7 +503,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
