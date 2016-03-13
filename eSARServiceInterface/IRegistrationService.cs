@@ -68,6 +68,6 @@ namespace eSARServiceInterface
 
         Boolean DeleteExistingSubjects(String studentSy);
 
-        Boolean UpdateStudentSection(String studentSy, int gradeSectionCode);
+        Boolean UpdateStudentSection(String studentSy, int gradeSectionCode, string section);
     }
 }
