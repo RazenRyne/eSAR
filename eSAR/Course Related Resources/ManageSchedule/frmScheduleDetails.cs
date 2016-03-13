@@ -257,6 +257,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
                 sa.SY = currentSY;
                 sa.Subject = su;
                 sa.SubjectCode = su.SubjectCode;
+                sa.SubjectDescription = su.Description;
                 sa.TimeslotInfo = t.TimeSlotInfo;
                 sa.TimeSlotCode = t.TimeSlotCode;
                 sa.Room = rm;
@@ -450,22 +451,22 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
             
             if (selectedIndex >= 0)
             {
-                int iSelectedSAid = int.Parse(gvSchedule.Rows[selectedIndex].Cells[4].Value.ToString());
+                int iSelectedSAid = int.Parse(gvSchedule.Rows[selectedIndex].Cells["SubjectAssignmentId"].Value.ToString());
                 if (iSelectedSAid == 0)
                 {
-                    schedules.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
-                                   && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
-                                   && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
+                    schedules.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells["SubjectCode"].Value.ToString()
+                                   && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells["TimeslotInfo"].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells["RoomCode"].Value.ToString()
+                                   && x.TeacherId == gvSchedule.Rows[selectedIndex].Cells["TeacherId"].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells["Section"].Value.ToString());
 
-                    createdSchedule.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
-                                        && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
-                                        && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
+                    createdSchedule.RemoveAll(x => x.SubjectAssignmentsID == 0 && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells["SubjectCode"].Value.ToString()
+                                        && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells["TimeslotInfo"].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells["RoomCode"].Value.ToString()
+                                        && x.TeacherId == gvSchedule.Rows[selectedIndex].Cells["TeacherId"].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells["Section"].Value.ToString());
                 }
                 else
                 {
-                    schedules.RemoveAll(x => x.SubjectAssignmentsID == iSelectedSAid && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells[0].Value.ToString()
-                                   && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells[1].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells[2].Value.ToString()
-                                   && x.TeacherName == gvSchedule.Rows[selectedIndex].Cells[3].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells[5].Value.ToString());
+                    schedules.RemoveAll(x => x.SubjectAssignmentsID == iSelectedSAid && x.SubjectCode == gvSchedule.Rows[selectedIndex].Cells["SubjectCode"].Value.ToString()
+                                   && x.TimeslotInfo == gvSchedule.Rows[selectedIndex].Cells["TimeslotInfo"].Value.ToString() && x.RoomCode == gvSchedule.Rows[selectedIndex].Cells["RoomCode"].Value.ToString()
+                                   && x.TeacherId == gvSchedule.Rows[selectedIndex].Cells["TeacherId"].Value.ToString() && x.Section == gvSchedule.Rows[selectedIndex].Cells["Section"].Value.ToString());
 
 
                     ISubjectAssignmentService schedService = new SubjectAssignmentService();
