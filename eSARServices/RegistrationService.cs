@@ -32,7 +32,7 @@ namespace eSARServices
             int div = studentEnr.Rank / 20;
             div++;
             int index = sections.FindIndex(item => item.Class == div);
-            studentEnr.GradeSectionCode = sections[index].GradeSectionCode;
+            studentEnr.GradeSectionCode = (int?)sections[index].GradeSectionCode;
             TranslatEnrolToEnrolBDO(studentEnr, studentBDO);
             if (sel.RegisterStudent(studentBDO, ref message))
             {
@@ -112,6 +112,9 @@ namespace eSARServices
                     LockFourth = false,
                     LockThird = false
                 };
+                if (student.GradeSectionCode != null)
+                    st.GradeSectionCode = (int)student.GradeSectionCode;
+
                 string message = string.Empty;
                 StudentTraitBDO stb = new StudentTraitBDO();
                 TranslateStuTraitsToStuTraitsBDO(st, stb);
@@ -358,7 +361,7 @@ namespace eSARServices
             stbdo.ThirdPeriodicRating = st.ThirdPeriodicRating;
             stbdo.FourthPeriodicRating = st.FourthPeriodicRating;
             stbdo.StudentEnrTraitCode = st.StudentEnrTraitCode;
-            //stbdo.GradeSectionCode = st.GradeSectionCode;
+            stbdo.GradeSectionCode = st.GradeSectionCode;
         }
 
         public void NewTraitsTranslateStuTraitsToStuTraitsBDO(StudentTrait st, StudentTraitBDO stbdo)
@@ -547,9 +550,12 @@ namespace eSARServices
              return ssl.DeleteExistingSubjects(studentsy);
         }
 
-        public bool UpdateStudentSection(string studentSy, int gradeSectionCode)
+        public bool UpdateStudentSection(string studentSy, int gradeSectionCode, string section)
         {
-            return ssl.UpdateStudentSection(studentSy, gradeSectionCode);
+            ssl.UpdateStudentSection(studentSy, gradeSectionCode);
+            StudentService ss = new StudentService();
+            ss.UpdateStudent(studentSy.Substring(0,8), section);
+            return true;
         }
     }
 }

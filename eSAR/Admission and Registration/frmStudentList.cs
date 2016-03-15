@@ -60,6 +60,9 @@ namespace eSAR.Admission_and_Registration
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (gvStudent.CurrentRow == null)
+                return;
+
             if (gvStudent.CurrentRow.Index >= 0 && GlobalClass.userTypeCode != "cash")
             {
                 frmStudentDetails fmStudentDetails = new frmStudentDetails();
@@ -132,6 +135,9 @@ namespace eSAR.Admission_and_Registration
 
         private void btnAssess_Click(object sender, EventArgs e)
         {
+            if (gvStudent.CurrentRow == null)
+                return;
+
             if (gvStudent.CurrentRow.Index >= 0)
             {
                 if (!RegisteredStudents.Contains(studentSelected.StudentId))
@@ -147,6 +153,9 @@ namespace eSAR.Admission_and_Registration
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            if (gvStudent.CurrentRow == null)
+                return;
+
             if (gvStudent.CurrentRow.Index >= 0)
             {
                 String next = getNext(studentSelected.GradeLevel);
@@ -217,6 +226,9 @@ namespace eSAR.Admission_and_Registration
 
         private void btnControl_Click(object sender, EventArgs e)
         {
+            if (gvStudent.CurrentRow == null)
+                return;
+
             if (gvStudent.CurrentRow.Index >= 0)
             {
                 if (!RegisteredStudents.Contains(studentSelected.StudentId))
@@ -233,6 +245,9 @@ namespace eSAR.Admission_and_Registration
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
+            if (gvStudent.CurrentRow == null)
+                return;
+
             string message = String.Empty;
             IStudentService studentService = new StudentService();
             if (studentService.DismissStudent(studentSelected.StudentId, ref message)) {

@@ -76,10 +76,10 @@ namespace eSAR.Quarterly_Grading.Grading
 
             if (classList.Count > 0)
             {
-                bool lockedfirst = (bool)classList[0].LockFirst;
-                bool lockedsec = (bool)classList[0].LockSecond;
-                bool lockedthird = (bool)classList[0].LockThird;
-                bool lockedfourth = (bool)classList[0].LockFourth;
+                bool lockedfirst = (bool?)classList[0].LockFirst ?? false;
+                bool lockedsec = (bool?)classList[0].LockSecond ?? false;
+                bool lockedthird = (bool?)classList[0].LockThird ?? false;
+                bool lockedfourth = (bool?)classList[0].LockFourth ?? false;
                 switch (selectedIndex)
                 {
 

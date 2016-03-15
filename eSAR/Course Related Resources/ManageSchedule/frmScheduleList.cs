@@ -92,7 +92,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
 
                     for (int i = 0; i < days.Length; i++)
                     {
-                        lDT = getDayDates(DateTime.Now.Month, int.Parse(sa.SY.Substring(0, 4)), days[i]);
+                        lDT = getDayDates(DateTime.Now.Month, DateTime.Now.Year, days[i]);
 
                         foreach (DateTime dt in lDT)
                         {

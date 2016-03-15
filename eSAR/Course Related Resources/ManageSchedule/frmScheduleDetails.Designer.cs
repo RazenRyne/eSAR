@@ -34,6 +34,8 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScheduleDetails));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnAddSchedule = new Telerik.WinControls.UI.RadButton();
@@ -116,11 +118,14 @@
             // 
             // cmbTeacher
             // 
+            this.cmbTeacher.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTeacher.DisplayMember = "TeacherName";
             this.cmbTeacher.Enabled = false;
             this.cmbTeacher.Location = new System.Drawing.Point(12, 344);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(173, 20);
             this.cmbTeacher.TabIndex = 54;
+            this.cmbTeacher.ValueMember = "TeacherId";
             // 
             // radLabel5
             // 
@@ -132,6 +137,7 @@
             // 
             // cmbSubject
             // 
+            this.cmbSubject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbSubject.DisplayMember = "SubjectCode";
             this.cmbSubject.Enabled = false;
             this.cmbSubject.Location = new System.Drawing.Point(12, 164);
@@ -151,11 +157,14 @@
             // 
             // cmbRoom
             // 
+            this.cmbRoom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRoom.DisplayMember = "RoomCode";
             this.cmbRoom.Enabled = false;
             this.cmbRoom.Location = new System.Drawing.Point(12, 284);
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.Size = new System.Drawing.Size(130, 20);
             this.cmbRoom.TabIndex = 50;
+            this.cmbRoom.ValueMember = "RoomId";
             // 
             // radLabel3
             // 
@@ -167,6 +176,7 @@
             // 
             // cmbSection
             // 
+            this.cmbSection.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbSection.DisplayMember = "Section";
             this.cmbSection.Enabled = false;
             this.cmbSection.Location = new System.Drawing.Point(12, 104);
@@ -186,13 +196,14 @@
             // 
             // cmbTimeslot
             // 
-            this.cmbTimeslot.DisplayMember = "TimeslotInfo";
+            this.cmbTimeslot.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTimeslot.DisplayMember = "TimeSlotInfo";
             this.cmbTimeslot.Enabled = false;
             this.cmbTimeslot.Location = new System.Drawing.Point(12, 224);
             this.cmbTimeslot.Name = "cmbTimeslot";
             this.cmbTimeslot.Size = new System.Drawing.Size(173, 20);
             this.cmbTimeslot.TabIndex = 46;
-            this.cmbTimeslot.ValueMember = "TimeslotCode";
+            this.cmbTimeslot.ValueMember = "TimeSlotCode";
             this.cmbTimeslot.SelectedValueChanged += new System.EventHandler(this.cmbTimeslot_SelectedValueChanged);
             // 
             // radLabel1
@@ -205,6 +216,7 @@
             // 
             // cmbGradeLevel
             // 
+            this.cmbGradeLevel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbGradeLevel.DisplayMember = "Description";
             this.cmbGradeLevel.Location = new System.Drawing.Point(12, 46);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
@@ -241,36 +253,47 @@
             this.gvSchedule.MasterTemplate.AllowDragToGroup = false;
             this.gvSchedule.MasterTemplate.AllowSearchRow = true;
             gridViewTextBoxColumn1.FieldName = "SubjectCode";
-            gridViewTextBoxColumn1.HeaderText = "Subject";
+            gridViewTextBoxColumn1.HeaderText = "SubjectCode";
+            gridViewTextBoxColumn1.IsVisible = false;
             gridViewTextBoxColumn1.Name = "SubjectCode";
             gridViewTextBoxColumn1.Width = 150;
-            gridViewTextBoxColumn2.FieldName = "TimeslotInfo";
-            gridViewTextBoxColumn2.HeaderText = "Schedule";
-            gridViewTextBoxColumn2.Name = "TimeslotInfo";
+            gridViewTextBoxColumn2.FieldName = "SubjectDescription";
+            gridViewTextBoxColumn2.HeaderText = "Subject";
+            gridViewTextBoxColumn2.Name = "SubjectDescription";
             gridViewTextBoxColumn2.Width = 200;
-            gridViewTextBoxColumn3.FieldName = "RoomCode";
-            gridViewTextBoxColumn3.HeaderText = "Room";
-            gridViewTextBoxColumn3.Name = "RoomCode";
-            gridViewTextBoxColumn3.Width = 150;
-            gridViewTextBoxColumn4.FieldName = "TeacherName";
-            gridViewTextBoxColumn4.HeaderText = "Teacher";
-            gridViewTextBoxColumn4.Name = "TeacherName";
-            gridViewTextBoxColumn4.Width = 250;
-            gridViewTextBoxColumn5.FieldName = "SubjectAssignmentsId";
-            gridViewTextBoxColumn5.HeaderText = "column5";
-            gridViewTextBoxColumn5.IsVisible = false;
-            gridViewTextBoxColumn5.Name = "SubjectAssignmentId";
-            gridViewTextBoxColumn6.FieldName = "Section";
-            gridViewTextBoxColumn6.HeaderText = "Section";
-            gridViewTextBoxColumn6.Name = "Section";
-            gridViewTextBoxColumn6.Width = 75;
+            gridViewTextBoxColumn3.FieldName = "TimeslotInfo";
+            gridViewTextBoxColumn3.HeaderText = "Schedule";
+            gridViewTextBoxColumn3.Name = "TimeslotInfo";
+            gridViewTextBoxColumn3.Width = 300;
+            gridViewTextBoxColumn4.FieldName = "RoomCode";
+            gridViewTextBoxColumn4.HeaderText = "Room";
+            gridViewTextBoxColumn4.Name = "RoomCode";
+            gridViewTextBoxColumn4.Width = 150;
+            gridViewTextBoxColumn5.FieldName = "TeacherName";
+            gridViewTextBoxColumn5.HeaderText = "Teacher";
+            gridViewTextBoxColumn5.Name = "TeacherName";
+            gridViewTextBoxColumn5.Width = 250;
+            gridViewTextBoxColumn6.FieldName = "SubjectAssignmentsId";
+            gridViewTextBoxColumn6.HeaderText = "column5";
+            gridViewTextBoxColumn6.IsVisible = false;
+            gridViewTextBoxColumn6.Name = "SubjectAssignmentId";
+            gridViewTextBoxColumn7.FieldName = "Section";
+            gridViewTextBoxColumn7.HeaderText = "Section";
+            gridViewTextBoxColumn7.Name = "Section";
+            gridViewTextBoxColumn7.Width = 75;
+            gridViewTextBoxColumn8.FieldName = "TeacherId";
+            gridViewTextBoxColumn8.HeaderText = "TeacherId";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "TeacherID";
             this.gvSchedule.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
             gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.gvSchedule.MasterTemplate.EnableGrouping = false;
             this.gvSchedule.Name = "gvSchedule";
             this.gvSchedule.ReadOnly = true;

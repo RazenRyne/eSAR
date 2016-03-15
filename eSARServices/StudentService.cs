@@ -57,6 +57,14 @@ namespace eSARServices
             return studentLogic.UpdateStudent(ref studentBDO, ref message);
         }
 
+        public Boolean UpdateStudent(string StudentId, string section)
+        {
+            string message = string.Empty;
+            StudentBDO studentBDO = studentLogic.GetStudent(StudentId);
+            studentBDO.Section = section;
+            return studentLogic.UpdateStudent(ref studentBDO, ref message);
+        }
+
         public List<Student> GetAllStudents()
         {
 

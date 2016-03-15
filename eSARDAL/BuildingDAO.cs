@@ -244,26 +244,24 @@ namespace eSARDAL
                         DCEnt.Rooms.Attach(roomIn);
                         DCEnt.Entry(roomIn).State = System.Data.Entity.EntityState.Modified;
                     }
-
-
-
+                                       
+                }
                     if (CompareBuilding(buildingInDB, b))
                     {
-                         DCEnt.SaveChanges();                                                                                                                                          //    DCEnt.Entry(r).State = System.Data.Entity.EntityState.Modified;
-                     }
+                        DCEnt.SaveChanges();                                                                                                                                          //    DCEnt.Entry(r).State = System.Data.Entity.EntityState.Modified;
+                    }
                     else
                     {
-                     
+
                         buildingInDB.BuildingCode = b.BuildingCode;
                         buildingInDB.BuildingName = b.BuildingName;
                         buildingInDB.Description = b.Description;
-                  
+
                         DCEnt.Entry(buildingInDB).State = System.Data.Entity.EntityState.Modified;
                         DCEnt.SaveChanges();
-                    }                 
+                    }
+
                 }
-             
-            }
             }
             catch (DbEntityValidationException dbEx)
             {

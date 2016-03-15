@@ -44,6 +44,8 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmControlSubjects));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.btnChangeSection = new Telerik.WinControls.UI.RadButton();
+            this.txtSection = new Telerik.WinControls.UI.RadTextBox();
             this.cbSection = new Telerik.WinControls.UI.RadDropDownList();
             this.btnRemove = new Telerik.WinControls.UI.RadButton();
             this.btnAdd = new Telerik.WinControls.UI.RadButton();
@@ -69,10 +71,10 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
-            this.txtSection = new Telerik.WinControls.UI.RadTextBox();
-            this.btnChangeSection = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeSection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -105,8 +107,6 @@
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangeSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +139,22 @@
             this.radPanel1.Size = new System.Drawing.Size(997, 548);
             this.radPanel1.TabIndex = 1;
             // 
+            // btnChangeSection
+            // 
+            this.btnChangeSection.Location = new System.Drawing.Point(794, 15);
+            this.btnChangeSection.Name = "btnChangeSection";
+            this.btnChangeSection.Size = new System.Drawing.Size(116, 24);
+            this.btnChangeSection.TabIndex = 51;
+            this.btnChangeSection.Text = "Change Section";
+            this.btnChangeSection.Click += new System.EventHandler(this.btnChangeSection_Click);
+            // 
+            // txtSection
+            // 
+            this.txtSection.Location = new System.Drawing.Point(441, 11);
+            this.txtSection.Name = "txtSection";
+            this.txtSection.Size = new System.Drawing.Size(76, 20);
+            this.txtSection.TabIndex = 50;
+            // 
             // cbSection
             // 
             this.cbSection.DisplayMember = "Section";
@@ -148,8 +164,7 @@
             this.cbSection.TabIndex = 49;
             this.cbSection.ValueMember = "GradeSectionCode";
             this.cbSection.Visible = false;
-            this.cbSection.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.txtSection_SelectedIndexChanged);
-            this.cbSection.SelectedValueChanged += new System.EventHandler(this.txtSection_SelectedValueChanged);
+            this.cbSection.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbSection_SelectedIndexChanged);
             // 
             // btnRemove
             // 
@@ -446,22 +461,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtSection
-            // 
-            this.txtSection.Location = new System.Drawing.Point(441, 11);
-            this.txtSection.Name = "txtSection";
-            this.txtSection.Size = new System.Drawing.Size(76, 20);
-            this.txtSection.TabIndex = 50;
-            // 
-            // btnChangeSection
-            // 
-            this.btnChangeSection.Location = new System.Drawing.Point(794, 15);
-            this.btnChangeSection.Name = "btnChangeSection";
-            this.btnChangeSection.Size = new System.Drawing.Size(116, 24);
-            this.btnChangeSection.TabIndex = 51;
-            this.btnChangeSection.Text = "Change Section";
-            this.btnChangeSection.Click += new System.EventHandler(this.btnChangeSection_Click);
-            // 
             // frmControlSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +482,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeSection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
@@ -515,8 +516,6 @@
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangeSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
