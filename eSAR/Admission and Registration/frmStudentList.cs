@@ -23,6 +23,8 @@ namespace eSAR.Admission_and_Registration
         private Student studentSelected;
         private List<Student> studentList;
         List<GradeLevel> gradeLevel;
+        List<GradeSection> sections;
+
         public frmStudentList()
         {
             InitializeComponent();
@@ -79,6 +81,9 @@ namespace eSAR.Admission_and_Registration
             gradeLevel = new List<GradeLevel>(glService.GetAllGradeLevels());
             if (gradeLevel.Count > 0)
                 gradeLevel[0].Description = "None";
+
+            IGradeSectionService sectionService = new GradeSectionService();
+            sections = new List<GradeSection>(sectionService.GetAllGradeSections());
 
             IRegistrationService registrationService = new RegistrationService();
             RegisteredStudents= new List<string>(registrationService.GetEnrolledStudents(GlobalClass.currentsy));
@@ -144,22 +149,72 @@ namespace eSAR.Admission_and_Registration
         {
             if (gvStudent.CurrentRow.Index >= 0)
             {
+                String next = getNext(studentSelected.GradeLevel);
+                List<GradeSection> gradeSec = sections.FindAll(p => p.GradeLevel.Equals(next));
                 if (RegisteredStudents.Contains(studentSelected.StudentId))
+                {
                     MessageBox.Show(this, "Student Already Registered!");
+                }
+                else if (gradeSec.Count == 0)
+                {
+                    MessageBox.Show(this, "No Section Created for that Grade Level yet. Please contact admin.");
+                }
                 else
                 {
                     frmStudentRegister fmStudentRegister = new frmStudentRegister();
                     fmStudentRegister.StudentId = studentSelected.StudentId;
-                  //  if(String.IsNullOrEmpty(studentSelected.GradeLevel))
-                        fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
+                    //  if(String.IsNullOrEmpty(studentSelected.GradeLevel))
+
+                    fmStudentRegister.GradeLevel = studentSelected.GradeLevel;
                     fmStudentRegister.RegisterStudent = studentSelected;
                     fmStudentRegister.Gender = studentSelected.Gender;
                     fmStudentRegister.Show(this);
                 }
             }
         }
+        private String getNext(String g)
+        {
+            switch (g)
+            {
+                case "0":
+                  return "N";
+                case "N":
+                    return "K1";
+                 
+                case "K1":
+                    return "K2";
+                  
+                case "K2":
+                    return "1";
+                    
+                case "1":
+                    return "2";
+                   
+                case "2":
+                    return "3";
+                  
+                case "3":
+                    return "4";
+                  
+                case "4":
+                    return "5";
+                   
+                case "5":
+                    return "6";
+                  
+                case "6":
+                    return "7";
+                   
+                case "8":
+                    return "9";
+                    
+                case "9":
+                    return "10";
+                default: return "0"; 
+            }
+        }
 
-       
+
         private void btnControl_Click(object sender, EventArgs e)
         {
             if (gvStudent.CurrentRow.Index >= 0)
