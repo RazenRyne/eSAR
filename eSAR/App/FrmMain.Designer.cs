@@ -187,7 +187,7 @@
             this.btnTeacher.Image = global::eSAR.Properties.Resources.users;
             this.btnTeacher.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTeacher.Name = "btnTeacher";
-            this.btnTeacher.Text = "Manage Faculty";
+            this.btnTeacher.Text = "Manage Faculty and Staff";
             this.btnTeacher.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 

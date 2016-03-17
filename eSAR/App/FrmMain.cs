@@ -272,7 +272,7 @@ namespace eSAR.App
                     case "Student List":
                         fmStudentList.LoadStudents();
                         break;
-                    case "Faculty List":
+                    case "Faculty and Staff List":
                         fmTeacherList.LoadTeachers();
                         break;
                     case "Building List":
@@ -329,7 +329,7 @@ namespace eSAR.App
                 case "Student List":
                     StudentDockWindow = null;
                     break;
-                case "Faculty List":
+                case "Faculty and Staff List":
                     TeacherDockWindow = null;
                     break;
                 case "Building List":

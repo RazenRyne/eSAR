@@ -166,7 +166,7 @@ namespace eSAR.Admission_and_Registration
                 }
                 else if (gradeSec.Count == 0)
                 {
-                    MessageBox.Show(this, "No Section Created for that Grade Level yet. Please contact admin.");
+                    MessageBox.Show("Cannot register student, No Section created yet. \n Please contact admin.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
