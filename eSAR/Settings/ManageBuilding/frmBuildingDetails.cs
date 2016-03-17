@@ -164,7 +164,7 @@ namespace eSAR.Settings.ManageBuilding
 
         private void gvRooms_CellValidating(object sender, Telerik.WinControls.UI.CellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 3) // 1 should be your column index
+            if (e.ColumnIndex == 1 || e.ColumnIndex == 3) // 1 should be your column index
             {
                 int i;
 
