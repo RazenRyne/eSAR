@@ -74,10 +74,6 @@ namespace eSAR.Settings.ManageUser
 
         }
 
-        private void gvUser_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {

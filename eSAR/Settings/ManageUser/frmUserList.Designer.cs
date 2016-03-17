@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.btnAdd = new Telerik.WinControls.UI.RadButton();
             this.btnEdit = new Telerik.WinControls.UI.RadButton();
@@ -100,36 +100,36 @@
             this.gvUser.MasterTemplate.AllowDeleteRow = false;
             this.gvUser.MasterTemplate.AllowDragToGroup = false;
             this.gvUser.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn6.FieldName = "UserId";
-            gridViewTextBoxColumn6.HeaderText = "";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.MaxLength = 0;
-            gridViewTextBoxColumn6.MinWidth = 0;
-            gridViewTextBoxColumn6.Name = "UserID";
-            gridViewTextBoxColumn6.VisibleInColumnChooser = false;
-            gridViewTextBoxColumn6.Width = 20;
-            gridViewTextBoxColumn7.FieldName = "UserName";
-            gridViewTextBoxColumn7.HeaderText = "User Name";
-            gridViewTextBoxColumn7.Name = "UserName";
-            gridViewTextBoxColumn7.Width = 200;
-            gridViewTextBoxColumn8.FieldName = "FirstName";
-            gridViewTextBoxColumn8.HeaderText = "First Name";
-            gridViewTextBoxColumn8.Name = "FirstName";
-            gridViewTextBoxColumn8.Width = 256;
-            gridViewTextBoxColumn9.FieldName = "MiddleName";
-            gridViewTextBoxColumn9.HeaderText = "Middle Name";
-            gridViewTextBoxColumn9.Name = "MiddleName";
-            gridViewTextBoxColumn9.Width = 250;
-            gridViewTextBoxColumn10.FieldName = "LastName";
-            gridViewTextBoxColumn10.HeaderText = "Last Name";
-            gridViewTextBoxColumn10.Name = "LastName";
-            gridViewTextBoxColumn10.Width = 250;
+            gridViewTextBoxColumn1.FieldName = "UserId";
+            gridViewTextBoxColumn1.HeaderText = "";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.MaxLength = 0;
+            gridViewTextBoxColumn1.MinWidth = 0;
+            gridViewTextBoxColumn1.Name = "UserID";
+            gridViewTextBoxColumn1.VisibleInColumnChooser = false;
+            gridViewTextBoxColumn1.Width = 20;
+            gridViewTextBoxColumn2.FieldName = "UserName";
+            gridViewTextBoxColumn2.HeaderText = "User Name";
+            gridViewTextBoxColumn2.Name = "UserName";
+            gridViewTextBoxColumn2.Width = 200;
+            gridViewTextBoxColumn3.FieldName = "FirstName";
+            gridViewTextBoxColumn3.HeaderText = "First Name";
+            gridViewTextBoxColumn3.Name = "FirstName";
+            gridViewTextBoxColumn3.Width = 256;
+            gridViewTextBoxColumn4.FieldName = "MiddleName";
+            gridViewTextBoxColumn4.HeaderText = "Middle Name";
+            gridViewTextBoxColumn4.Name = "MiddleName";
+            gridViewTextBoxColumn4.Width = 250;
+            gridViewTextBoxColumn5.FieldName = "LastName";
+            gridViewTextBoxColumn5.HeaderText = "Last Name";
+            gridViewTextBoxColumn5.Name = "LastName";
+            gridViewTextBoxColumn5.Width = 250;
             this.gvUser.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
             this.gvUser.MasterTemplate.ShowRowHeaderColumn = false;
             this.gvUser.Name = "gvUser";
             this.gvUser.ShowGroupPanel = false;
@@ -137,7 +137,7 @@
             this.gvUser.TabIndex = 1;
             this.gvUser.Text = "radGridView1";
             this.gvUser.SelectionChanged += new System.EventHandler(this.gvUser_SelectionChanged);
-            this.gvUser.Click += new System.EventHandler(this.gvUser_Click);
+            this.gvUser.DoubleClick += new System.EventHandler(this.btnEdit_Click);
             // 
             // frmUserList
             // 
