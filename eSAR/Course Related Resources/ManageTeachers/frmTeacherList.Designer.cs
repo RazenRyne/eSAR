@@ -148,7 +148,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "Faculty List";
+            this.Text = "Faculty and Staff List";
             this.ThemeName = "ControlDefault";
             this.Activated += new System.EventHandler(this.frmTeacherList_Activated);
             this.Load += new System.EventHandler(this.frmTeacherList_Load);
