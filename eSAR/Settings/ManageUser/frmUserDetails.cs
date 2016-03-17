@@ -131,7 +131,7 @@ namespace eSAR.Settings.ManageUser
                     if (!ComparePasswords(oldPassword, txtOldPWD.Text))
                     {
                         message = "Passwords do not match";
-                        MessageBox.Show("Incorrect Password");
+                        MessageBox.Show("Incorrect old password entered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
