@@ -10,5 +10,6 @@ namespace eSARServiceInterface
     public interface IGradeLevelService
     {
        List<GradeLevel> GetAllGradeLevels();
+        GradeLevel NextGradeLevel(String grade);
     }
 }

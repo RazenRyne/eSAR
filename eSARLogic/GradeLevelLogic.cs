@@ -22,5 +22,13 @@ namespace eSARLogic
             g = gList.Find(p => p.GradeLev == gradeLevel);
             return g.Description;
         }
+
+        public GradeLevelBDO NextGradeLevel(String grade) {
+            List<GradeLevelBDO> glist = GetAllGradeLevels();
+            GradeLevelBDO dbase = glist.Find(p => p.GradeLev.Equals(grade));
+            GradeLevelBDO gNext = glist.Find(p => p.level == dbase.level + 1);
+
+            return gNext;
+        }
     }
 }

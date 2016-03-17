@@ -31,6 +31,13 @@ namespace eSARServices
             return glogic.GetGradeLevel(gradeLevel);
         }
 
+        public GradeLevel NextGradeLevel(string grade)
+        {
+            GradeLevel gl = new GradeLevel();
+            TranslateGradeLevelBDOToeGradeLevelDTo(glogic.NextGradeLevel(grade), gl);
+            return gl;
+        }
+
         public void TranslateGradeLevelToGradeLevelBDO(GradeLevel gl, GradeLevelBDO g)
         {
             FeeService fs = new FeeService();
