@@ -105,7 +105,7 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
         private void txtUnits_TextChanged(object sender, EventArgs e)
         {
-            if (txtPayment.Text.Equals(String.Empty)) txtPayment.Text = "0";
+            //if (txtPayment.Text.Equals(String.Empty)) txtPayment.Text = "0";
         }
 
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -131,6 +131,18 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (gvStudentList.CurrentRow == null)
+                return;
+
+            if (txtPayment.Text == String.Empty)
+                return;
+            else
+            {
+                if (double.Parse(txtPayment.Text) == 0)
+                    return;
+            }
+
+
             if (GlobalClass.receiptFrom == null)
             {
                 MessageBox.Show("Set Receipt Number First");

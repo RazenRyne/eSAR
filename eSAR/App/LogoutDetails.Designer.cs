@@ -67,24 +67,27 @@
             this.btnYes.Location = new System.Drawing.Point(58, 63);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(83, 24);
-            this.btnYes.TabIndex = 50;
+            this.btnYes.TabIndex = 1;
             this.btnYes.Text = "Yes";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnNo
             // 
             this.btnNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnNo.Location = new System.Drawing.Point(147, 63);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(83, 24);
-            this.btnNo.TabIndex = 49;
+            this.btnNo.TabIndex = 2;
             this.btnNo.Text = "No";
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // LogoutDetails
             // 
+            this.AcceptButton = this.btnYes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnNo;
             this.ClientSize = new System.Drawing.Size(287, 117);
             this.ControlBox = false;
             this.Controls.Add(this.radPanel1);

@@ -80,6 +80,7 @@
             // btnCancelScholarshipDiscount
             // 
             this.btnCancelScholarshipDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelScholarshipDiscount.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelScholarshipDiscount.Location = new System.Drawing.Point(158, 111);
             this.btnCancelScholarshipDiscount.Name = "btnCancelScholarshipDiscount";
             this.btnCancelScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
@@ -112,8 +113,10 @@
             // 
             // ProspectusDetails
             // 
+            this.AcceptButton = this.btnGenerate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelScholarshipDiscount;
             this.ClientSize = new System.Drawing.Size(283, 151);
             this.ControlBox = false;
             this.Controls.Add(this.radPanel1);

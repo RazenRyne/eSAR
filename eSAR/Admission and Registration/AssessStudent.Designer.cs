@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssessStudent));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
@@ -43,6 +43,7 @@
             this.discountPercent = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
+            this.lblSectionVal = new Telerik.WinControls.UI.RadLabel();
             this.lblSection = new Telerik.WinControls.UI.RadLabel();
             this.TuitionDet = new Telerik.WinControls.UI.RadPanel();
             this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
@@ -102,7 +103,6 @@
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
-            this.lblSectionVal = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
@@ -118,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TuitionDet)).BeginInit();
             this.TuitionDet.SuspendLayout();
@@ -178,7 +179,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,6 +194,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(568, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 24);
@@ -220,18 +221,18 @@
             this.gvAssessment.MasterTemplate.AllowDeleteRow = false;
             this.gvAssessment.MasterTemplate.AllowDragToGroup = false;
             this.gvAssessment.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn3.FieldName = "FeeDescription";
-            gridViewTextBoxColumn3.HeaderText = "Fee";
-            gridViewTextBoxColumn3.Name = "FeeDescription";
-            gridViewTextBoxColumn3.Width = 400;
-            gridViewTextBoxColumn4.FieldName = "Amount";
-            gridViewTextBoxColumn4.HeaderText = "Amount";
-            gridViewTextBoxColumn4.Name = "Amount";
-            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn4.Width = 235;
+            gridViewTextBoxColumn1.FieldName = "FeeDescription";
+            gridViewTextBoxColumn1.HeaderText = "Fee";
+            gridViewTextBoxColumn1.Name = "FeeDescription";
+            gridViewTextBoxColumn1.Width = 400;
+            gridViewTextBoxColumn2.FieldName = "Amount";
+            gridViewTextBoxColumn2.HeaderText = "Amount";
+            gridViewTextBoxColumn2.Name = "Amount";
+            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn2.Width = 235;
             this.gvAssessment.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2});
             this.gvAssessment.MasterTemplate.EnableGrouping = false;
             this.gvAssessment.Name = "gvAssessment";
             this.gvAssessment.PrintStyle.BorderColor = System.Drawing.Color.Transparent;
@@ -358,6 +359,14 @@
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(689, 361);
             this.radPanel2.TabIndex = 1;
+            // 
+            // lblSectionVal
+            // 
+            this.lblSectionVal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblSectionVal.Location = new System.Drawing.Point(369, 88);
+            this.lblSectionVal.Name = "lblSectionVal";
+            this.lblSectionVal.Size = new System.Drawing.Size(2, 2);
+            this.lblSectionVal.TabIndex = 46;
             // 
             // lblSection
             // 
@@ -910,18 +919,12 @@
             this.radLabel25.Text = "     As proof that you have read the condition and agreed to it. Please sign on t" +
     "he space indicated below.";
             // 
-            // lblSectionVal
-            // 
-            this.lblSectionVal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblSectionVal.Location = new System.Drawing.Point(369, 88);
-            this.lblSectionVal.Name = "lblSectionVal";
-            this.lblSectionVal.Size = new System.Drawing.Size(2, 2);
-            this.lblSectionVal.TabIndex = 46;
-            // 
             // AssessStudent
             // 
+            this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(689, 399);
             this.Controls.Add(this.radPanel2);
             this.Controls.Add(this.radPanel1);
@@ -951,6 +954,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             this.radPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TuitionDet)).EndInit();
             this.TuitionDet.ResumeLayout(false);
@@ -1012,7 +1016,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblSectionVal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

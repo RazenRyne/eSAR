@@ -299,6 +299,7 @@
             // 
             // radButton2
             // 
+            this.radButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.radButton2.Location = new System.Drawing.Point(368, 10);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(68, 24);
@@ -317,8 +318,10 @@
             // 
             // frmStudentRegister
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.radButton2;
             this.ClientSize = new System.Drawing.Size(452, 261);
             this.Controls.Add(this.radPanel2);
             this.Controls.Add(this.btnCancel);

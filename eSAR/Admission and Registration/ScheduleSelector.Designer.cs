@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScheduleSelector));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -94,35 +94,35 @@
             // 
             this.gvSchedule.MasterTemplate.AllowAddNewRow = false;
             this.gvSchedule.MasterTemplate.AllowSearchRow = true;
-            gridViewCheckBoxColumn2.HeaderText = "";
-            gridViewCheckBoxColumn2.Name = "chkSelect";
-            gridViewCheckBoxColumn2.Width = 20;
-            gridViewTextBoxColumn6.FieldName = "SubjectCode";
-            gridViewTextBoxColumn6.HeaderText = "Subject";
-            gridViewTextBoxColumn6.Name = "SubjectCode";
-            gridViewTextBoxColumn7.FieldName = "TimeslotInfo";
-            gridViewTextBoxColumn7.HeaderText = "Timeslot";
-            gridViewTextBoxColumn7.Name = "TimeslotInfo";
-            gridViewTextBoxColumn7.Width = 150;
-            gridViewTextBoxColumn8.FieldName = "RoomCode";
-            gridViewTextBoxColumn8.HeaderText = "Room";
-            gridViewTextBoxColumn8.Name = "RoomCode";
-            gridViewTextBoxColumn8.Width = 75;
-            gridViewTextBoxColumn9.FieldName = "TeacherId";
-            gridViewTextBoxColumn9.HeaderText = "column5";
-            gridViewTextBoxColumn9.IsVisible = false;
-            gridViewTextBoxColumn9.Name = "TeacherId";
-            gridViewTextBoxColumn10.FieldName = "TeacherName";
-            gridViewTextBoxColumn10.HeaderText = "Teacher";
-            gridViewTextBoxColumn10.Name = "TeacherName";
-            gridViewTextBoxColumn10.Width = 150;
+            gridViewCheckBoxColumn1.HeaderText = "";
+            gridViewCheckBoxColumn1.Name = "chkSelect";
+            gridViewCheckBoxColumn1.Width = 20;
+            gridViewTextBoxColumn1.FieldName = "SubjectCode";
+            gridViewTextBoxColumn1.HeaderText = "Subject";
+            gridViewTextBoxColumn1.Name = "SubjectCode";
+            gridViewTextBoxColumn2.FieldName = "TimeslotInfo";
+            gridViewTextBoxColumn2.HeaderText = "Timeslot";
+            gridViewTextBoxColumn2.Name = "TimeslotInfo";
+            gridViewTextBoxColumn2.Width = 150;
+            gridViewTextBoxColumn3.FieldName = "RoomCode";
+            gridViewTextBoxColumn3.HeaderText = "Room";
+            gridViewTextBoxColumn3.Name = "RoomCode";
+            gridViewTextBoxColumn3.Width = 75;
+            gridViewTextBoxColumn4.FieldName = "TeacherId";
+            gridViewTextBoxColumn4.HeaderText = "column5";
+            gridViewTextBoxColumn4.IsVisible = false;
+            gridViewTextBoxColumn4.Name = "TeacherId";
+            gridViewTextBoxColumn5.FieldName = "TeacherName";
+            gridViewTextBoxColumn5.HeaderText = "Teacher";
+            gridViewTextBoxColumn5.Name = "TeacherName";
+            gridViewTextBoxColumn5.Width = 150;
             this.gvSchedule.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewCheckBoxColumn2,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
+            gridViewCheckBoxColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
             this.gvSchedule.MasterTemplate.EnableGrouping = false;
             this.gvSchedule.Name = "gvSchedule";
             this.gvSchedule.Size = new System.Drawing.Size(462, 345);
@@ -142,6 +142,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(403, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(67, 24);
@@ -160,8 +161,10 @@
             // 
             // ScheduleSelector
             // 
+            this.AcceptButton = this.radButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(484, 453);
             this.Controls.Add(this.radPanel2);
             this.Controls.Add(this.radPanel1);

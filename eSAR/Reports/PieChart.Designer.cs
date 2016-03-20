@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
-            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark1 = new Telerik.WinControls.UI.RadPrintWatermark();
+            Telerik.WinControls.UI.CartesianArea cartesianArea2 = new Telerik.WinControls.UI.CartesianArea();
+            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark2 = new Telerik.WinControls.UI.RadPrintWatermark();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PieChart));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.cmbGradeLevel = new Telerik.WinControls.UI.RadDropDownList();
@@ -95,6 +95,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(733, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(76, 24);
@@ -104,7 +105,7 @@
             // 
             // radChartView1
             // 
-            this.radChartView1.AreaDesign = cartesianArea1;
+            this.radChartView1.AreaDesign = cartesianArea2;
             this.radChartView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radChartView1.Location = new System.Drawing.Point(0, 0);
             this.radChartView1.Name = "radChartView1";
@@ -118,7 +119,7 @@
             // 
             this.radPrintDocument1.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radPrintDocument1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radPrintDocument1.Watermark = radPrintWatermark1;
+            this.radPrintDocument1.Watermark = radPrintWatermark2;
             // 
             // printPreviewDialog1
             // 
@@ -132,8 +133,10 @@
             // 
             // PieChart
             // 
+            this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(821, 597);
             this.Controls.Add(this.radChartView1);
             this.Controls.Add(this.radPanel1);

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
@@ -65,6 +65,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(12, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
@@ -92,18 +93,18 @@
             // 
             this.gvSY.MasterTemplate.AllowAddNewRow = false;
             this.gvSY.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn2.FieldName = "SY";
-            gridViewTextBoxColumn2.HeaderText = "School Year";
-            gridViewTextBoxColumn2.Name = "SY";
-            gridViewTextBoxColumn2.ReadOnly = true;
-            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn2.Width = 150;
-            gridViewCheckBoxColumn2.FieldName = "CurrentSY";
-            gridViewCheckBoxColumn2.HeaderText = "Current";
-            gridViewCheckBoxColumn2.Name = "CurrentSY";
+            gridViewTextBoxColumn1.FieldName = "SY";
+            gridViewTextBoxColumn1.HeaderText = "School Year";
+            gridViewTextBoxColumn1.Name = "SY";
+            gridViewTextBoxColumn1.ReadOnly = true;
+            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn1.Width = 150;
+            gridViewCheckBoxColumn1.FieldName = "CurrentSY";
+            gridViewCheckBoxColumn1.HeaderText = "Current";
+            gridViewCheckBoxColumn1.Name = "CurrentSY";
             this.gvSY.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn2,
-            gridViewCheckBoxColumn2});
+            gridViewTextBoxColumn1,
+            gridViewCheckBoxColumn1});
             this.gvSY.MasterTemplate.EnableGrouping = false;
             this.gvSY.Name = "gvSY";
             this.gvSY.Size = new System.Drawing.Size(281, 306);
@@ -151,8 +152,10 @@
             // 
             // frmSYList
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(281, 425);
             this.ControlBox = false;
             this.Controls.Add(this.gvSY);

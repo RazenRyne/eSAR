@@ -131,6 +131,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(529, 17);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
@@ -154,10 +155,9 @@
             this.txtPayment.Location = new System.Drawing.Point(34, 19);
             this.txtPayment.MaxLength = 10;
             this.txtPayment.Name = "txtPayment";
-            this.txtPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPayment.Size = new System.Drawing.Size(127, 20);
             this.txtPayment.TabIndex = 46;
-            this.txtPayment.Text = "0";
+            this.txtPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPayment.TextChanged += new System.EventHandler(this.txtUnits_TextChanged);
             this.txtPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 
@@ -182,8 +182,10 @@
             // 
             // frmPaymentDetails
             // 
+            this.AcceptButton = this.btnPay;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(624, 432);
             this.Controls.Add(this.radPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

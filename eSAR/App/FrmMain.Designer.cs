@@ -516,7 +516,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = false;
+            this.ribbonTab6.IsSelected = true;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
@@ -644,6 +644,7 @@
             this.btnScheduleList});
             this.btnScheduleListCont.Name = "btnScheduleListCont";
             this.btnScheduleListCont.Text = "";
+            this.btnScheduleListCont.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             this.btnScheduleListCont.Click += new System.EventHandler(this.btnScheduleList_Click_1);
             // 
             // btnScheduleList

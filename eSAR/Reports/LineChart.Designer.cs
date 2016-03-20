@@ -119,6 +119,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(1196, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(76, 24);
@@ -144,8 +145,10 @@
             // 
             // LineChart
             // 
+            this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1284, 598);
             this.Controls.Add(this.radPanel1);
             this.Name = "LineChart";

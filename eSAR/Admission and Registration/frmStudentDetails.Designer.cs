@@ -280,7 +280,7 @@
             // btnPromote
             // 
             this.btnPromote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPromote.Location = new System.Drawing.Point(38, 14);
+            this.btnPromote.Location = new System.Drawing.Point(22, 14);
             this.btnPromote.Name = "btnPromote";
             this.btnPromote.Size = new System.Drawing.Size(83, 24);
             this.btnPromote.TabIndex = 38;
@@ -301,6 +301,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(653, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
@@ -1244,9 +1245,11 @@
             // 
             // frmStudentDetails
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(748, 501);
             this.Controls.Add(this.pvStudent);
             this.Controls.Add(this.pnFooter);

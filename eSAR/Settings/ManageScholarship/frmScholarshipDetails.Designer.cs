@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.txtDescription = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
@@ -107,17 +107,17 @@
             // 
             // 
             this.gvScholarshipDetails.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn1.FieldName = "ScholarshipDiscountId";
-            gridViewTextBoxColumn1.HeaderText = "ID";
-            gridViewTextBoxColumn1.Name = "ScholarshipDiscountId";
-            gridViewTextBoxColumn1.Width = 70;
-            gridViewTextBoxColumn2.FieldName = "Discount";
-            gridViewTextBoxColumn2.HeaderText = "Discount";
-            gridViewTextBoxColumn2.Name = "Discount";
-            gridViewTextBoxColumn2.Width = 216;
+            gridViewTextBoxColumn3.FieldName = "ScholarshipDiscountId";
+            gridViewTextBoxColumn3.HeaderText = "ID";
+            gridViewTextBoxColumn3.Name = "ScholarshipDiscountId";
+            gridViewTextBoxColumn3.Width = 70;
+            gridViewTextBoxColumn4.FieldName = "Discount";
+            gridViewTextBoxColumn4.HeaderText = "Discount";
+            gridViewTextBoxColumn4.Name = "Discount";
+            gridViewTextBoxColumn4.Width = 216;
             this.gvScholarshipDetails.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.gvScholarshipDetails.Name = "gvScholarshipDetails";
             this.gvScholarshipDetails.ShowGroupPanel = false;
             this.gvScholarshipDetails.Size = new System.Drawing.Size(485, 245);
@@ -205,6 +205,7 @@
             // btnBackScholarship
             // 
             this.btnBackScholarship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackScholarship.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBackScholarship.Location = new System.Drawing.Point(443, 14);
             this.btnBackScholarship.Name = "btnBackScholarship";
             this.btnBackScholarship.Size = new System.Drawing.Size(83, 24);
@@ -214,8 +215,10 @@
             // 
             // frmScholarshipDetails
             // 
+            this.AcceptButton = this.btnSaveScholarship;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnBackScholarship;
             this.ClientSize = new System.Drawing.Size(538, 470);
             this.Controls.Add(this.radPanel3);
             this.Controls.Add(this.radPanel1);
