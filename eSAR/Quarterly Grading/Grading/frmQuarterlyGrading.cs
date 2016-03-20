@@ -333,7 +333,46 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void btnUnlock_Click(object sender, EventArgs e)
         {
-        
-       }
+            foreach (StudentSubject ss in classList)
+            {
+                if (ss.FirstPeriodicRating > 0 && ss.FirstEntered.HasValue && ss.LockFirst == true && ss.FirstLocked.HasValue)
+                {
+                    ss.FirstLocked = null;
+                    ss.LockFirst = false;
+                }
+                if (ss.SecondPeriodicRating > 0 && ss.SecondEntered.HasValue && ss.LockSecond == true && ss.SecondLocked.HasValue)
+                {
+                    ss.SecondLocked = null;
+                    ss.LockSecond = false;
+                }
+                if (ss.ThirdPeriodicRating > 0 && ss.ThirdEntered.HasValue && ss.LockThird == true && ss.ThirdLocked.HasValue)
+                {
+                    ss.ThirdLocked = null;
+                    ss.LockThird = false;
+                }
+                if (ss.FourthPeriodicRating > 0 && ss.FourthEntered.HasValue && ss.LockFourth == true && ss.FourthLocked.HasValue)
+                {
+                    ss.FourthLocked = null;
+                    ss.LockFourth = false;
+                }
+            }
+
+            IGradingService gradingService = new GradingService();
+            if (gradingService.SaveClassGrades(classList))
+            {
+                foreach (StudentSubject ss in classList)
+                    Log("U", "StudentSubjects", ss);
+
+
+                MessageBox.Show("Grades UnLocked Successfully");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Failed UnLocking Grades");
+
+            }
+
+        }
     }
 }
