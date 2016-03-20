@@ -134,6 +134,14 @@ namespace eSAR.Billing_and_Payment.StudentPayment
             if (gvStudentList.CurrentRow == null)
                 return;
 
+            if (txtPayment.Text == String.Empty)
+                return;
+            else
+            {
+                if (double.Parse(txtPayment.Text) == 0)
+                    return;
+            }
+
 
             if (GlobalClass.receiptFrom == null)
             {

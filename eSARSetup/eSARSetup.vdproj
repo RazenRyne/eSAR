@@ -178,12 +178,6 @@
         "Entry"
         {
         "MsmKey" = "8:_4E29B541C2C1A1D8595B22E7858C4366"
-        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4E29B541C2C1A1D8595B22E7858C4366"
         "OwnerKey" = "8:_DCB8DF098FAAA742553CC58C2D95AA23"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -191,6 +185,12 @@
         {
         "MsmKey" = "8:_4E29B541C2C1A1D8595B22E7858C4366"
         "OwnerKey" = "8:_8423454C20C54F813D05A7A2947CE679"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4E29B541C2C1A1D8595B22E7858C4366"
+        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2677,15 +2677,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:eSAR"
-        "ProductCode" = "8:{11389292-9BF0-407C-8707-BB52CD423D39}"
-        "PackageCode" = "8:{6172F6BC-EDDC-42D8-B568-9F76341AA3D2}"
+        "ProductCode" = "8:{B3CEAA4C-7F54-4EDD-A403-9FA243278C2C}"
+        "PackageCode" = "8:{1B76069E-A049-48B1-B4AB-7A5745508E57}"
         "UpgradeCode" = "8:{3F4BCF15-888A-42F4-A3A4-2CCDA26DE69D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.1.2"
         "Manufacturer" = "8:eSAR"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
