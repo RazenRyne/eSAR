@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.Reporting.TypeReportSource typeReportSource1 = new Telerik.Reporting.TypeReportSource();
+            Telerik.Reporting.TypeReportSource typeReportSource2 = new Telerik.Reporting.TypeReportSource();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnExport = new Telerik.WinControls.UI.RadButton();
             this.btnClose = new Telerik.WinControls.UI.RadButton();
@@ -64,6 +64,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(665, 17);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(83, 24);
@@ -76,17 +77,19 @@
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            typeReportSource1.Parameters.Add(new Telerik.Reporting.Parameter("StudentID", null));
-            typeReportSource1.TypeName = "eSARReportLibrary.PermanentRecord, eSARReportLibrary, Version=1.0.0.0, Culture=ne" +
+            typeReportSource2.Parameters.Add(new Telerik.Reporting.Parameter("StudentID", null));
+            typeReportSource2.TypeName = "eSARReportLibrary.PermanentRecord, eSARReportLibrary, Version=1.0.0.0, Culture=ne" +
     "utral, PublicKeyToken=null";
-            this.reportViewer1.ReportSource = typeReportSource1;
+            this.reportViewer1.ReportSource = typeReportSource2;
             this.reportViewer1.Size = new System.Drawing.Size(760, 645);
             this.reportViewer1.TabIndex = 4;
             // 
             // GeneratePermanentRec
             // 
+            this.AcceptButton = this.btnExport;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(760, 698);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.radPanel2);

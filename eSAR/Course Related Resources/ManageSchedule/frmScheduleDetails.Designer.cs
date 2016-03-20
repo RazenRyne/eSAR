@@ -346,6 +346,7 @@
             // btnCancelSchedule
             // 
             this.btnCancelSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelSchedule.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelSchedule.Location = new System.Drawing.Point(769, 14);
             this.btnCancelSchedule.Name = "btnCancelSchedule";
             this.btnCancelSchedule.Size = new System.Drawing.Size(83, 24);
@@ -355,8 +356,10 @@
             // 
             // frmScheduleDetails
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelSchedule;
             this.ClientSize = new System.Drawing.Size(1076, 578);
             this.Controls.Add(this.radPanel3);
             this.Controls.Add(this.radPanel2);

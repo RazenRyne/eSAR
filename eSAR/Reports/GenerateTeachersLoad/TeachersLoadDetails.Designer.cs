@@ -64,6 +64,7 @@
             // btnSaveScholarshipDiscount
             // 
             this.btnSaveScholarshipDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveScholarshipDiscount.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSaveScholarshipDiscount.Location = new System.Drawing.Point(58, 63);
             this.btnSaveScholarshipDiscount.Name = "btnSaveScholarshipDiscount";
             this.btnSaveScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
@@ -73,6 +74,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(147, 63);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(83, 24);
@@ -90,8 +92,10 @@
             // 
             // TeachersLoadDetails
             // 
+            this.AcceptButton = this.btnSaveScholarshipDiscount;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(287, 117);
             this.ControlBox = false;
             this.Controls.Add(this.radPanel1);

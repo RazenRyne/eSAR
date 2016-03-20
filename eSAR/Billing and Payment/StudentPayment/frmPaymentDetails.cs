@@ -131,6 +131,10 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (gvStudentList.CurrentRow == null)
+                return;
+
+
             if (GlobalClass.receiptFrom == null)
             {
                 MessageBox.Show("Set Receipt Number First");
