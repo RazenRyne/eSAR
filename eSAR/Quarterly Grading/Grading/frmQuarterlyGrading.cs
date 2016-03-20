@@ -330,5 +330,10 @@ namespace eSAR.Quarterly_Grading.Grading
             };
             logService.AddLogs(log);
         }
+
+        private void btnUnlock_Click(object sender, EventArgs e)
+        {
+        
+       }
     }
 }

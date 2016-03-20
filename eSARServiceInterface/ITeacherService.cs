@@ -21,7 +21,7 @@ namespace eSARServiceInterface
         Teacher GetTeacher(string teacherId, ref string message);
          
         Boolean DeactivateTeacher(string teacherId, ref string message);
-        Boolean ActivateTeacher(string fname, string mname, string lname);
+        Teacher ActivateTeacher(string fname, string mname, string lname);
 
 
         String GenerateTeacherId();

@@ -25,10 +25,12 @@ namespace eSAR.Settings
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
-            Boolean activated = false;
+            Teacher activated = null;
             activated = teachService.ActivateTeacher(txtFName.Text, txtMName.Text, txtLName.Text);
-            if (activated)
+
+            if (activated !=null)
             {
+                Log("U", "Teachers", activated);
                 MessageBox.Show("Teacher Successfully Activated");
                 this.Close();
             }
@@ -39,6 +41,22 @@ namespace eSAR.Settings
                 this.txtLName.Text = " ";
             }
           
+        }
+
+        private void Log(string clud, string table, Object obj)
+        {
+            ILogService logService = new LogService();
+            string json = JsonConvert.SerializeObject(obj);
+            Log log = new Log
+            {
+                CLUD = clud,
+                LogDate = DateTime.Now,
+                TableName = table,
+                UserId = GlobalClass.user.UserId,
+                UserName = GlobalClass.user.UserName,
+                PassedData = json
+            };
+            logService.AddLogs(log);
         }
 
         private void radButton1_Click(object sender, EventArgs e)

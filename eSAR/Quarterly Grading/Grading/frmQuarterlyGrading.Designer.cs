@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.cmbQuarter = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
@@ -119,18 +119,18 @@
             // cmbQuarter
             // 
             this.cmbQuarter.DisplayMember = "Description";
-            radListDataItem7.Text = "All";
-            radListDataItem8.Text = "First Quarter";
-            radListDataItem9.Text = "Second Quarter";
-            radListDataItem10.Text = "Third Quarter";
-            radListDataItem11.Text = "Fourth Quarter";
-            radListDataItem12.Text = "Final Rating";
-            this.cmbQuarter.Items.Add(radListDataItem7);
-            this.cmbQuarter.Items.Add(radListDataItem8);
-            this.cmbQuarter.Items.Add(radListDataItem9);
-            this.cmbQuarter.Items.Add(radListDataItem10);
-            this.cmbQuarter.Items.Add(radListDataItem11);
-            this.cmbQuarter.Items.Add(radListDataItem12);
+            radListDataItem1.Text = "All";
+            radListDataItem2.Text = "First Quarter";
+            radListDataItem3.Text = "Second Quarter";
+            radListDataItem4.Text = "Third Quarter";
+            radListDataItem5.Text = "Fourth Quarter";
+            radListDataItem6.Text = "Final Rating";
+            this.cmbQuarter.Items.Add(radListDataItem1);
+            this.cmbQuarter.Items.Add(radListDataItem2);
+            this.cmbQuarter.Items.Add(radListDataItem3);
+            this.cmbQuarter.Items.Add(radListDataItem4);
+            this.cmbQuarter.Items.Add(radListDataItem5);
+            this.cmbQuarter.Items.Add(radListDataItem6);
             this.cmbQuarter.Location = new System.Drawing.Point(651, 92);
             this.cmbQuarter.Name = "cmbQuarter";
             this.cmbQuarter.Size = new System.Drawing.Size(108, 20);
@@ -200,57 +200,57 @@
             this.gvGrades.MasterTemplate.AllowAddNewRow = false;
             this.gvGrades.MasterTemplate.AllowDragToGroup = false;
             this.gvGrades.MasterTemplate.AutoExpandGroups = true;
-            gridViewTextBoxColumn10.FieldName = "StudentId";
-            gridViewTextBoxColumn10.HeaderText = "ID Num";
-            gridViewTextBoxColumn10.Name = "StudentId";
-            gridViewTextBoxColumn10.ReadOnly = true;
-            gridViewTextBoxColumn10.Width = 80;
-            gridViewTextBoxColumn11.FieldName = "StudentName";
-            gridViewTextBoxColumn11.HeaderText = "Student Name";
-            gridViewTextBoxColumn11.Name = "StudentName";
-            gridViewTextBoxColumn11.ReadOnly = true;
-            gridViewTextBoxColumn11.Width = 200;
-            gridViewTextBoxColumn12.FieldName = "FirstPeriodicRating";
-            gridViewTextBoxColumn12.HeaderText = "1ST Q";
-            gridViewTextBoxColumn12.IsVisible = false;
-            gridViewTextBoxColumn12.Name = "FirstPeriodicRating";
-            gridViewTextBoxColumn13.FieldName = "SecondPeriodicRating";
-            gridViewTextBoxColumn13.HeaderText = "2ND Q";
-            gridViewTextBoxColumn13.IsVisible = false;
-            gridViewTextBoxColumn13.Name = "SecondPeriodicRating";
-            gridViewTextBoxColumn14.FieldName = "ThirdPeriodicRating";
-            gridViewTextBoxColumn14.HeaderText = "3RD Q";
-            gridViewTextBoxColumn14.IsVisible = false;
-            gridViewTextBoxColumn14.Name = "ThirdPeriodicRating";
-            gridViewTextBoxColumn15.FieldName = "FourthPeriodicRating";
-            gridViewTextBoxColumn15.HeaderText = "4TH Q";
-            gridViewTextBoxColumn15.IsVisible = false;
-            gridViewTextBoxColumn15.Name = "FourthPeriodicRating";
-            gridViewTextBoxColumn16.FieldName = "FinalRating";
-            gridViewTextBoxColumn16.HeaderText = "Final Grade";
-            gridViewTextBoxColumn16.IsVisible = false;
-            gridViewTextBoxColumn16.Name = "FinalRating";
-            gridViewTextBoxColumn16.ReadOnly = true;
-            gridViewTextBoxColumn17.FieldName = "Proficiency";
-            gridViewTextBoxColumn17.HeaderText = "Prof.";
-            gridViewTextBoxColumn17.IsVisible = false;
-            gridViewTextBoxColumn17.Name = "Proficiency";
-            gridViewTextBoxColumn17.ReadOnly = true;
-            gridViewTextBoxColumn18.FieldName = "Remarks";
-            gridViewTextBoxColumn18.HeaderText = "Remarks";
-            gridViewTextBoxColumn18.IsVisible = false;
-            gridViewTextBoxColumn18.Name = "Remarks";
-            gridViewTextBoxColumn18.Width = 150;
+            gridViewTextBoxColumn1.FieldName = "StudentId";
+            gridViewTextBoxColumn1.HeaderText = "ID Num";
+            gridViewTextBoxColumn1.Name = "StudentId";
+            gridViewTextBoxColumn1.ReadOnly = true;
+            gridViewTextBoxColumn1.Width = 80;
+            gridViewTextBoxColumn2.FieldName = "StudentName";
+            gridViewTextBoxColumn2.HeaderText = "Student Name";
+            gridViewTextBoxColumn2.Name = "StudentName";
+            gridViewTextBoxColumn2.ReadOnly = true;
+            gridViewTextBoxColumn2.Width = 200;
+            gridViewTextBoxColumn3.FieldName = "FirstPeriodicRating";
+            gridViewTextBoxColumn3.HeaderText = "1ST Q";
+            gridViewTextBoxColumn3.IsVisible = false;
+            gridViewTextBoxColumn3.Name = "FirstPeriodicRating";
+            gridViewTextBoxColumn4.FieldName = "SecondPeriodicRating";
+            gridViewTextBoxColumn4.HeaderText = "2ND Q";
+            gridViewTextBoxColumn4.IsVisible = false;
+            gridViewTextBoxColumn4.Name = "SecondPeriodicRating";
+            gridViewTextBoxColumn5.FieldName = "ThirdPeriodicRating";
+            gridViewTextBoxColumn5.HeaderText = "3RD Q";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "ThirdPeriodicRating";
+            gridViewTextBoxColumn6.FieldName = "FourthPeriodicRating";
+            gridViewTextBoxColumn6.HeaderText = "4TH Q";
+            gridViewTextBoxColumn6.IsVisible = false;
+            gridViewTextBoxColumn6.Name = "FourthPeriodicRating";
+            gridViewTextBoxColumn7.FieldName = "FinalRating";
+            gridViewTextBoxColumn7.HeaderText = "Final Grade";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "FinalRating";
+            gridViewTextBoxColumn7.ReadOnly = true;
+            gridViewTextBoxColumn8.FieldName = "Proficiency";
+            gridViewTextBoxColumn8.HeaderText = "Prof.";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Proficiency";
+            gridViewTextBoxColumn8.ReadOnly = true;
+            gridViewTextBoxColumn9.FieldName = "Remarks";
+            gridViewTextBoxColumn9.HeaderText = "Remarks";
+            gridViewTextBoxColumn9.IsVisible = false;
+            gridViewTextBoxColumn9.Name = "Remarks";
+            gridViewTextBoxColumn9.Width = 150;
             this.gvGrades.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.gvGrades.MasterTemplate.EnableGrouping = false;
             this.gvGrades.Name = "gvGrades";
             this.gvGrades.Size = new System.Drawing.Size(775, 422);
@@ -322,6 +322,7 @@
             this.btnUnlock.Size = new System.Drawing.Size(77, 24);
             this.btnUnlock.TabIndex = 5;
             this.btnUnlock.Text = "UNLOCK";
+            this.btnUnlock.Click += new System.EventHandler(this.btnUnlock_Click);
             // 
             // btnPrint
             // 
