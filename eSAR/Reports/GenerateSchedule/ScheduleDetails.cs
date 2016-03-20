@@ -31,5 +31,10 @@ namespace eSAR.Reports.GenerateSchedule
             this.Close();
             GlobalClass.WindowScheduleDetails = false;
         }
+
+        private void btnSaveScholarshipDiscount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

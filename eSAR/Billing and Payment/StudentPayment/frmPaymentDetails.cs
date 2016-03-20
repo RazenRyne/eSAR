@@ -105,7 +105,7 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
         private void txtUnits_TextChanged(object sender, EventArgs e)
         {
-            if (txtPayment.Text.Equals(String.Empty)) txtPayment.Text = "0";
+            //if (txtPayment.Text.Equals(String.Empty)) txtPayment.Text = "0";
         }
 
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)

@@ -58,7 +58,7 @@
             // 
             this.txtIDNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDNumber.Location = new System.Drawing.Point(100, 23);
-            this.txtIDNumber.MaxLength = 5;
+            this.txtIDNumber.MaxLength = 8;
             this.txtIDNumber.Name = "txtIDNumber";
             this.txtIDNumber.Size = new System.Drawing.Size(140, 20);
             this.txtIDNumber.TabIndex = 55;
@@ -79,6 +79,7 @@
             this.btnSaveScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
             this.btnSaveScholarshipDiscount.TabIndex = 50;
             this.btnSaveScholarshipDiscount.Text = "Print";
+            this.btnSaveScholarshipDiscount.Click += new System.EventHandler(this.btnSaveScholarshipDiscount_Click);
             // 
             // btnClose
             // 

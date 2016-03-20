@@ -155,10 +155,9 @@
             this.txtPayment.Location = new System.Drawing.Point(34, 19);
             this.txtPayment.MaxLength = 10;
             this.txtPayment.Name = "txtPayment";
-            this.txtPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPayment.Size = new System.Drawing.Size(127, 20);
             this.txtPayment.TabIndex = 46;
-            this.txtPayment.Text = "0";
+            this.txtPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPayment.TextChanged += new System.EventHandler(this.txtUnits_TextChanged);
             this.txtPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 

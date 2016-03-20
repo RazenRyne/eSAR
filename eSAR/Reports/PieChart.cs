@@ -76,11 +76,11 @@ namespace eSAR.Reports
             {
                 iCntReligionMale = stEnrolled.FindAll(x => x.student.Religion == religion && x.student.Gender == "M").Count;
                 if (iCntReligionMale  > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntReligionMale, religion));
+                    series.DataPoints.Add(new PieDataPoint(iCntReligionMale, religion + " Boys"));
 
                 iCntReligionFemale = stEnrolled.FindAll(x => x.student.Religion == religion && x.student.Gender == "F").Count;
                 if (iCntReligionFemale > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntReligionFemale, religion));
+                    series.DataPoints.Add(new PieDataPoint(iCntReligionFemale, religion + " Girls"));
             }
 
             this.radChartView1.Series.Add(series);
@@ -103,12 +103,12 @@ namespace eSAR.Reports
             {
                 iCntGradeLevelMale = stEnrolled.FindAll(x => x.student.GradeLevel == gl.GradeLev && x.student.Gender == "M").Count;
                 if (iCntGradeLevelMale > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntGradeLevelMale, gl.Description));
+                    series.DataPoints.Add(new PieDataPoint(iCntGradeLevelMale, gl.Description + " Boys"));
        
 
                 iCntGradeLevelFemale = stEnrolled.FindAll(x => x.student.GradeLevel == gl.GradeLev && x.student.Gender == "F").Count;
                 if (iCntGradeLevelFemale > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntGradeLevelFemale, gl.Description));
+                    series.DataPoints.Add(new PieDataPoint(iCntGradeLevelFemale, gl.Description + " Girls"));
             }
 
             this.radChartView1.Series.Add(series);
@@ -132,11 +132,11 @@ namespace eSAR.Reports
             {
                 iCntGradeSectionMale = stEnrolled.FindAll(x => x.GradeLevel == gradelevel && x.GradeSectionCode == section.GradeSectionCode && x.student.Gender == "M").Count;
                 if (iCntGradeSectionMale > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntGradeSectionMale, section.Section));
+                    series.DataPoints.Add(new PieDataPoint(iCntGradeSectionMale, section.Section + " Boys"));
 
                 iCntGradeSectionFemale = stEnrolled.FindAll(x => x.GradeLevel == gradelevel && x.GradeSectionCode == section.GradeSectionCode && x.student.Gender == "F").Count;
                 if (iCntGradeSectionFemale > 0)
-                    series.DataPoints.Add(new PieDataPoint(iCntGradeSectionFemale, section.Section));
+                    series.DataPoints.Add(new PieDataPoint(iCntGradeSectionFemale, section.Section + " Girls"));
             }
           
             this.radChartView1.Series.Add(series);
