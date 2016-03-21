@@ -33,14 +33,20 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdvisersLoad));
+            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark1 = new Telerik.WinControls.UI.RadPrintWatermark();
             this.gvGradeSection = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.btnAddGrades = new Telerik.WinControls.UI.RadButton();
+            this.btnPrint = new Telerik.WinControls.UI.RadButton();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.radPrintDocument1 = new Telerik.WinControls.UI.RadPrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.gvGradeSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvGradeSection.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddGrades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +98,7 @@
             // 
             // radPanel2
             // 
+            this.radPanel2.Controls.Add(this.btnPrint);
             this.radPanel2.Controls.Add(this.btnAddGrades);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel2.Location = new System.Drawing.Point(0, 410);
@@ -102,12 +109,38 @@
             // btnAddGrades
             // 
             this.btnAddGrades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddGrades.Location = new System.Drawing.Point(716, 6);
+            this.btnAddGrades.Location = new System.Drawing.Point(628, 6);
             this.btnAddGrades.Name = "btnAddGrades";
             this.btnAddGrades.Size = new System.Drawing.Size(77, 24);
             this.btnAddGrades.TabIndex = 0;
             this.btnAddGrades.Text = "Add Grades";
             this.btnAddGrades.Click += new System.EventHandler(this.btnAddGrades_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Location = new System.Drawing.Point(711, 6);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(77, 24);
+            this.btnPrint.TabIndex = 5;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // radPrintDocument1
+            // 
+            this.radPrintDocument1.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radPrintDocument1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radPrintDocument1.Watermark = radPrintWatermark1;
             // 
             // frmAdvisersLoad
             // 
@@ -130,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAddGrades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -140,5 +174,8 @@
         private Telerik.WinControls.UI.RadGridView gvGradeSection;
         private Telerik.WinControls.UI.RadPanel radPanel2;
         private Telerik.WinControls.UI.RadButton btnAddGrades;
+        private Telerik.WinControls.UI.RadButton btnPrint;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Telerik.WinControls.UI.RadPrintDocument radPrintDocument1;
     }
 }

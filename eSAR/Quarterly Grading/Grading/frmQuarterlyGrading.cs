@@ -374,5 +374,21 @@ namespace eSAR.Quarterly_Grading.Grading
             }
 
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            RadPrintDocument document = new RadPrintDocument();
+            document.DefaultPageSettings.Landscape = true;
+            document.HeaderHeight = 60;
+            document.HeaderFont = new Font("Arial", 10, FontStyle.Bold);
+            document.MiddleHeader = "Dansalan College Foundation, Inc. \r\n Marinaut, Marawi City, Lanao del Sur";
+            document.MiddleFooter = "Page [Page #] of [Total Pages]";
+            document.AssociatedObject = this.gvGrades;
+            radPrintDocument1 = document;
+
+            RadPrintPreviewDialog dialog = new RadPrintPreviewDialog();
+            dialog.Document = this.radPrintDocument1;
+            dialog.ShowDialog();
+        }
     }
 }

@@ -82,6 +82,7 @@
             this.btnGenerate.Size = new System.Drawing.Size(136, 24);
             this.btnGenerate.TabIndex = 7;
             this.btnGenerate.Text = "Load Permanent Record";
+            this.btnGenerate.Visible = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // btnControl
