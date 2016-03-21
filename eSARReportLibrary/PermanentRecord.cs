@@ -22,11 +22,7 @@ namespace eSARReportLibrary
             //
             // TODO: Add any constructor code after InitializeComponent call
             //
-        }
-
-        private void detail_ItemDataBound(object sender, EventArgs e)
-        {
-            tblTraits.Height = tblSubject.Height + tblAttendance.Height;
-        }
+        }  
+      
     }
 }

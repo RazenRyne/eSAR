@@ -26,12 +26,13 @@ namespace eSARReportLibrary
 
         private void PromoReportTemplate1_ItemDataBound(object sender, EventArgs e)
         {
-            txtHeader1.Width = crosstab1.Width;
-            txtHeader2.Width = crosstab1.Width;
-            txtHeader3.Width = crosstab1.Width;
-            txtHeader4.Width = crosstab1.Width;
-            txtHeader5.Width = crosstab1.Width;
-            txtTitle.Width = crosstab1.Width;
+            txtHeader1.Width = this.Width;
+            txtHeader2.Width = this.Width;
+            txtHeader3.Width = this.Width;
+            txtHeader4.Width = this.Width;
+            txtHeader5.Width = this.Width;
+            txtTitle.Width = this.Width;
         }
+
     }
 }
