@@ -409,6 +409,15 @@ namespace eSAR.Admission_and_Registration
             logService.AddLogs(log);
         }
 
+        private void txtPrevGPA_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrevGPA.Text == string.Empty) txtPrevGPA.Text = "0";
+        }
+
+        private void txtFail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFail.Text == string.Empty) txtFail.Text = "0";
+        }
     }
 }
  

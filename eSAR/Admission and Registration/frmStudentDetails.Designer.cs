@@ -487,6 +487,7 @@
             this.txtFail.TabIndex = 11;
             this.txtFail.Text = "0.00";
             this.txtFail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFail.TextChanged += new System.EventHandler(this.txtFail_TextChanged);
             this.txtFail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 
             // radLabel20
@@ -505,6 +506,7 @@
             this.txtPrevGPA.TabIndex = 10;
             this.txtPrevGPA.Text = "0.00";
             this.txtPrevGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrevGPA.TextChanged += new System.EventHandler(this.txtPrevGPA_TextChanged);
             this.txtPrevGPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 
             // radLabel19
