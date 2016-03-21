@@ -207,6 +207,7 @@ namespace eSARDAL
             gbdo.Description = g.Description;
             gbdo.GradeLev = g.GradeLevel1;
             gbdo.Category = g.Category;
+            gbdo.level = g.level;
         }
 
         public void ConvertGradeLevelBDOToGradeLevel(GradeLevelBDO gbdo, GradeLevel g)
@@ -214,6 +215,7 @@ namespace eSARDAL
             g.Description = gbdo.Description;
             g.GradeLevel1 = gbdo.GradeLev;
             g.Category = gbdo.Category;
+            g.level = gbdo.level;
         }
 
 

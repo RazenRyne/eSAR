@@ -160,7 +160,7 @@ namespace eSAR.Admission_and_Registration
             {
                 String next = "";
                 if (String.IsNullOrEmpty(studentSelected.GradeLevel)){
-                    next = "N";
+                    next = getNext(studentSelected.GradeBeforeDC);
                 }
                 else {
                     next = getNext(studentSelected.GradeLevel);
