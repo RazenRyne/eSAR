@@ -24,6 +24,8 @@ namespace eSAR.Admission_and_Registration
             get { return this.RegStude; }
             set { RegStude = value; }
         }
+
+        public List<GradeSection> sectionsForGradeLevel = new List<GradeSection>();
         public string SY { get; set; }
         List<ScholarshipDiscount> Discounts;
         public string GradeLevel { get; set; }
@@ -84,67 +86,72 @@ namespace eSAR.Admission_and_Registration
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
-            IRegistrationService registrationService = new RegistrationService();
+            if (sectionsForGradeLevel.Count > 0)
+            {
 
-            EnrolMe.StudentSY = RegisterStudent.StudentId + SY;
-            EnrolMe.StudentId = RegisterStudent.StudentId;
-            EnrolMe.SY = SY;
-            EnrolMe.GradeLevel = GradeLevel;
-            EnrolMe.Dismissed = false;
-            if (!String.IsNullOrEmpty(cmbScholarship.SelectedValue.ToString()))
-            {
-                EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
-            }
-            EnrolMe.Rank = (int)RegisterStudent.ranking;
-            //EnrolMe.GradeSectionCode=
-            if (EnrolMe.Stat.Equals("b") || EnrolMe.Stat.Equals("c"))
-            {
-                if (registrationService.EnrolStudent(EnrolMe))
+                IRegistrationService registrationService = new RegistrationService();
+
+                EnrolMe.StudentSY = RegisterStudent.StudentId + SY;
+                EnrolMe.StudentId = RegisterStudent.StudentId;
+                EnrolMe.SY = SY;
+                EnrolMe.GradeLevel = GradeLevel;
+                EnrolMe.Dismissed = false;
+                if (!String.IsNullOrEmpty(cmbScholarship.SelectedValue.ToString()))
                 {
-                    Log("C", "StudentEnrolments", EnrolMe);
-                    Log("U", "Students", EnrolMe);
-                    Log("C", "StudentTraits", EnrolMe);
+                    EnrolMe.DiscountId = Int32.Parse(cmbScholarship.SelectedValue.ToString());
+                }
+                EnrolMe.Rank = (int)RegisterStudent.ranking;
+                //EnrolMe.GradeSectionCode=
+                if (EnrolMe.Stat.Equals("b") || EnrolMe.Stat.Equals("c"))
+                {
+                    if (registrationService.EnrolStudent(EnrolMe))
+                    {
+                        Log("C", "StudentEnrolments", EnrolMe);
+                        Log("U", "Students", EnrolMe);
+                        Log("C", "StudentTraits", EnrolMe);
 
-                    MessageBox.Show(this, "Student Successfully Registered.");
-                    frmControlSubjects fmControlSubjects = new frmControlSubjects();
-                    fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
-                  //  fmControlSubjects.changed = false;
-                    fmControlSubjects.ShowDialog(this);
+                        MessageBox.Show(this, "Student Successfully Registered.");
+                        frmControlSubjects fmControlSubjects = new frmControlSubjects();
+                        fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                        //  fmControlSubjects.changed = false;
+                        fmControlSubjects.ShowDialog(this);
 
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Student Registration Failed.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(this, "Student Registration Failed.");
+                    if (registrationService.EnrolStudent(EnrolMe))
+                    {
+                        Log("C", "StudentEnrolments", EnrolMe);
+                        Log("U", "Students", EnrolMe);
+                        Log("C", "StudentTraits", EnrolMe);
+
+                        MessageBox.Show(this, "Student Successfully Registered.");
+
+                        frmControlSubjects fmControlSubjects = new frmControlSubjects();
+                        fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                        //  fmControlSubjects.changed = false;
+                        fmControlSubjects.ShowDialog(this);
+
+
+                    }
+                    else
+                        MessageBox.Show(this, "Student Registration Failed.");
                 }
             }
-            else
-            {
-                if (registrationService.EnrolStudent(EnrolMe))
-                {
-                    Log("C", "StudentEnrolments", EnrolMe);
-                    Log("U", "Students", EnrolMe);
-                    Log("C", "StudentTraits", EnrolMe);
-                    
-                    MessageBox.Show(this, "Student Successfully Registered.");
-
-                    frmControlSubjects fmControlSubjects = new frmControlSubjects();
-                    fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
-                  //  fmControlSubjects.changed = false;
-                    fmControlSubjects.ShowDialog(this);
-
-                    
-                }
-                else
-                    MessageBox.Show(this, "Student Registration Failed.");
-            }
+            else MessageBox.Show(this, "Student Registration Failed: No sections for GradeLevel " + GradeLevel);
             this.Close();
         }
 
         private void frmStudentRegister_Load(object sender, EventArgs e)
         {
             IRegistrationService registrationService = new RegistrationService();
-
+            IGradeSectionService gsService = new GradeSectionService();
+            
             if (String.IsNullOrEmpty(RegisterStudent.GradeLevel))
             {
                 chkRetain.Checked = false;
@@ -199,7 +206,7 @@ namespace eSAR.Admission_and_Registration
             cmbScholarship.ValueMember = "ScholarshipDiscountId";
             cmbScholarship.DisplayMember = "Scholarship";
             cmbScholarship.SelectedValue = RegisterStudent.ScholarshipDiscountId;
-
+            sectionsForGradeLevel = gsService.GetAllSectionsForGrade(GradeLevel);
         }
 
         private Boolean IsNew(Student student)
