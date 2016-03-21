@@ -269,8 +269,8 @@ namespace eSAR.Admission_and_Registration
 
                 PrintPane();
                 calculate.Visible = true;
-                labelVisibility(true);
-                TuitionDet.Visible = false;
+                labelVisibility(false);
+                TuitionDet.Visible = true;
 
             }
         }
@@ -280,7 +280,7 @@ namespace eSAR.Admission_and_Registration
             labelVisibility(false);
             calculate_Click(null, null);
             TuitionDet.Visible = true;
-            lblDetTotalVal.Text = Total.Text;
+            lblDetTotalVal.Text = "Php " + Total.Text;
 
             double iTuitionFee = 0;
             double iTuitionPerGrade = 0;
@@ -291,10 +291,10 @@ namespace eSAR.Admission_and_Registration
                 iTuitionFee = 0;
 
             iTuitionPerGrade = iTuitionFee / 4;
-            lblDet1Val.Text = iTuitionPerGrade.ToString();
-            lblDet2Val.Text = iTuitionPerGrade.ToString();
-            lblDet3Val.Text = iTuitionPerGrade.ToString();
-            lblDet4Val.Text = iTuitionPerGrade.ToString();
+            lblDet1Val.Text = "Php " + iTuitionPerGrade.ToString();
+            lblDet2Val.Text = "Php " + iTuitionPerGrade.ToString();
+            lblDet3Val.Text = "Php " + iTuitionPerGrade.ToString();
+            lblDet4Val.Text = "Php " + iTuitionPerGrade.ToString();
 
         }
 
@@ -338,13 +338,14 @@ namespace eSAR.Admission_and_Registration
 
             RadPrintDocument document = new RadPrintDocument();
             document.AssociatedObject = new PanelPrinter(this.radPanel2);
+
             RadPrintPreviewDialog dialog = new RadPrintPreviewDialog(document);
             dialog.ShowDialog();
 
 
             txtDate.Visible = false;
             radPanel2.Size = new Size(702, 361);
-            this.Size = new Size(710, 431);
+            this.Size = new Size(702, 316);
         }
 
     }
@@ -365,7 +366,7 @@ namespace eSAR.Admission_and_Registration
 
         public bool EndPrint(RadPrintDocument sender, PrintEventArgs args)
         {
-            return false;
+            return true;
         }
 
         public Form GetSettingsDialog(RadPrintDocument document)

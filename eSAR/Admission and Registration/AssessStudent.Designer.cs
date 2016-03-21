@@ -31,6 +31,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssessStudent));
+            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark1 = new Telerik.WinControls.UI.RadPrintWatermark();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btnCancel = new Telerik.WinControls.UI.RadButton();
             this.btnPrint = new Telerik.WinControls.UI.RadButton();
@@ -103,6 +104,8 @@
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.radPrintDocument1 = new Telerik.WinControls.UI.RadPrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
@@ -187,9 +190,9 @@
             this.radPanel1.Controls.Add(this.btnCancel);
             this.radPanel1.Controls.Add(this.btnPrint);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radPanel1.Location = new System.Drawing.Point(0, 364);
+            this.radPanel1.Location = new System.Drawing.Point(0, 251);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(689, 35);
+            this.radPanel1.Size = new System.Drawing.Size(694, 35);
             this.radPanel1.TabIndex = 0;
             // 
             // btnCancel
@@ -236,7 +239,7 @@
             this.gvAssessment.MasterTemplate.EnableGrouping = false;
             this.gvAssessment.Name = "gvAssessment";
             this.gvAssessment.PrintStyle.BorderColor = System.Drawing.Color.Transparent;
-            this.gvAssessment.Size = new System.Drawing.Size(682, 114);
+            this.gvAssessment.Size = new System.Drawing.Size(688, 114);
             this.gvAssessment.TabIndex = 0;
             this.gvAssessment.Text = "radGridView1";
             // 
@@ -357,7 +360,7 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(689, 361);
+            this.radPanel2.Size = new System.Drawing.Size(694, 361);
             this.radPanel2.TabIndex = 1;
             // 
             // lblSectionVal
@@ -753,7 +756,7 @@
             this.radLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel19.AutoSize = false;
             this.radLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.radLabel19.Location = new System.Drawing.Point(3, 12);
+            this.radLabel19.Location = new System.Drawing.Point(8, 12);
             this.radLabel19.Name = "radLabel19";
             this.radLabel19.Size = new System.Drawing.Size(682, 18);
             this.radLabel19.TabIndex = 25;
@@ -919,15 +922,31 @@
             this.radLabel25.Text = "     As proof that you have read the condition and agreed to it. Please sign on t" +
     "he space indicated below.";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // radPrintDocument1
+            // 
+            this.radPrintDocument1.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radPrintDocument1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radPrintDocument1.Watermark = radPrintWatermark1;
+            // 
             // AssessStudent
             // 
             this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(689, 399);
-            this.Controls.Add(this.radPanel2);
+            this.ClientSize = new System.Drawing.Size(694, 286);
             this.Controls.Add(this.radPanel1);
+            this.Controls.Add(this.radPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssessStudent";
@@ -1095,5 +1114,7 @@
         private Telerik.WinControls.UI.RadLabel lblDet1;
         private Telerik.WinControls.UI.RadLabel lblSection;
         private Telerik.WinControls.UI.RadLabel lblSectionVal;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Telerik.WinControls.UI.RadPrintDocument radPrintDocument1;
     }
 }
