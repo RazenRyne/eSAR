@@ -132,7 +132,9 @@ namespace eSARReportLibrary
             this.pnlContent,
             this.pnlSignature,
             this.table1,
-            this.pnlBlank1});
+            this.pnlBlank1,
+            this.textBox19,
+            this.textBox20});
             this.detail.Name = "detail";
             // 
             // pnlHeader
@@ -196,11 +198,11 @@ namespace eSARReportLibrary
             this.textBox61});
             this.pnlOR.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.8490993976593018D), Telerik.Reporting.Drawing.Unit.Inch(0.6501573920249939D));
             this.pnlOR.Name = "pnlOR";
-            this.pnlOR.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.6999609470367432D), Telerik.Reporting.Drawing.Unit.Inch(0.5D));
+            this.pnlOR.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.7009010314941406D), Telerik.Reporting.Drawing.Unit.Inch(0.44984245300292969D));
             // 
             // textBox4
             // 
-            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.19992129504680634D));
+            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.049842674285173416D));
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7999588251113892D), Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D));
             this.textBox4.Style.Font.Bold = false;
@@ -211,7 +213,7 @@ namespace eSARReportLibrary
             // 
             // textBox5
             // 
-            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.4999206066131592D), Telerik.Reporting.Drawing.Unit.Inch(0.099920988082885742D));
+            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.4999206066131592D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.250980019569397D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox5.Style.Color = System.Drawing.Color.DarkRed;
@@ -221,7 +223,7 @@ namespace eSARReportLibrary
             // 
             // textBox6
             // 
-            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.4999206066131592D), Telerik.Reporting.Drawing.Unit.Inch(0.30000001192092896D));
+            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5009009838104248D), Telerik.Reporting.Drawing.Unit.Inch(0.20007880032062531D));
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2000001668930054D), Telerik.Reporting.Drawing.Unit.Inch(0.1999211311340332D));
             this.textBox6.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -231,7 +233,7 @@ namespace eSARReportLibrary
             // 
             // textBox61
             // 
-            this.textBox61.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.75097918510437D), Telerik.Reporting.Drawing.Unit.Inch(0.099921070039272308D));
+            this.textBox61.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.75097918510437D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.948941171169281D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox61.Style.Color = System.Drawing.Color.DarkRed;
@@ -257,15 +259,15 @@ namespace eSARReportLibrary
             this.textBox62,
             this.textBox63,
             this.textBox64});
-            this.pnlContent.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.8491388559341431D), Telerik.Reporting.Drawing.Unit.Inch(1.1502362489700317D));
+            this.pnlContent.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.8491388559341431D), Telerik.Reporting.Drawing.Unit.Inch(1.1000785827636719D));
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.7008609771728516D), Telerik.Reporting.Drawing.Unit.Inch(1.6497639417648315D));
+            this.pnlContent.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.7008609771728516D), Telerik.Reporting.Drawing.Unit.Inch(1.4399212598800659D));
             // 
             // textBox7
             // 
             this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.29992103576660156D), Telerik.Reporting.Drawing.Unit.Inch(0.049763839691877365D));
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.4000003337860107D), Telerik.Reporting.Drawing.Unit.Inch(0.25D));
+            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.4009406566619873D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
             this.textBox7.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
@@ -275,7 +277,7 @@ namespace eSARReportLibrary
             // 
             this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.099998950958252D), Telerik.Reporting.Drawing.Unit.Inch(0.049763839691877365D));
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5999219417572021D), Telerik.Reporting.Drawing.Unit.Inch(0.25D));
+            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5999219417572021D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
             this.textBox8.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox8.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox8.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
@@ -283,7 +285,7 @@ namespace eSARReportLibrary
             // 
             // textBox9
             // 
-            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.34976372122764587D));
+            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.29992151260375977D));
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox9.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -293,7 +295,7 @@ namespace eSARReportLibrary
             // 
             // textBox10
             // 
-            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.55090075731277466D), Telerik.Reporting.Drawing.Unit.Inch(0.34976372122764587D));
+            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.55090075731277466D), Telerik.Reporting.Drawing.Unit.Inch(0.29992151260375977D));
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.94913798570632935D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -303,7 +305,7 @@ namespace eSARReportLibrary
             // 
             // textBox11
             // 
-            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.5000385046005249D), Telerik.Reporting.Drawing.Unit.Inch(0.34976372122764587D));
+            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.5000385046005249D), Telerik.Reporting.Drawing.Unit.Inch(0.29992151260375977D));
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1998820304870605D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox11.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -313,37 +315,37 @@ namespace eSARReportLibrary
             // 
             // textBox12
             // 
-            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.7508611679077148D), Telerik.Reporting.Drawing.Unit.Inch(0.64976376295089722D));
+            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.7508611679077148D), Telerik.Reporting.Drawing.Unit.Inch(0.49992147088050842D));
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9500000476837158D), Telerik.Reporting.Drawing.Unit.Inch(0.20999999344348908D));
             this.textBox12.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox12.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
+            this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox12.Value = "= Parameters.BusinessStyle.Value";
             // 
             // textBox13
             // 
-            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9259593904716894E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.64976376295089722D));
+            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9259593904716894E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.49992147088050842D));
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.700822114944458D), Telerik.Reporting.Drawing.Unit.Inch(0.20999999344348908D));
             this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox13.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox13.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
+            this.textBox13.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox13.Value = "engaged in the business style of  ________________________________";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9259593904716894E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.85984259843826294D));
+            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9259593904716894E-05D), Telerik.Reporting.Drawing.Unit.Inch(0.69992142915725708D));
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.6998817920684814D), Telerik.Reporting.Drawing.Unit.Inch(0.19964471459388733D));
             this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox14.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox14.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
+            this.textBox14.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox14.Value = "the sum of __________________________________________________";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.0008608500356785953D), Telerik.Reporting.Drawing.Unit.Inch(1.0595660209655762D));
+            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.0008608500356785953D), Telerik.Reporting.Drawing.Unit.Inch(0.89992141723632812D));
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.7000000476837158D), Telerik.Reporting.Drawing.Unit.Inch(0.2199999988079071D));
             this.textBox15.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -353,7 +355,7 @@ namespace eSARReportLibrary
             // 
             // textBox16
             // 
-            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.0008608500356785953D), Telerik.Reporting.Drawing.Unit.Inch(1.2796448469161987D));
+            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.0008608500356785953D), Telerik.Reporting.Drawing.Unit.Inch(1.0999213457107544D));
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2500004768371582D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox16.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -363,7 +365,7 @@ namespace eSARReportLibrary
             // 
             // textBox17
             // 
-            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.25086116790771484D), Telerik.Reporting.Drawing.Unit.Inch(1.2796448469161987D));
+            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.25086116790771484D), Telerik.Reporting.Drawing.Unit.Inch(1.0999213457107544D));
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.89992094039916992D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox17.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -373,7 +375,7 @@ namespace eSARReportLibrary
             // 
             // textBox18
             // 
-            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.1508611440658569D), Telerik.Reporting.Drawing.Unit.Inch(1.2796448469161987D));
+            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.1508611440658569D), Telerik.Reporting.Drawing.Unit.Inch(1.0999213457107544D));
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5499999523162842D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox18.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -383,7 +385,7 @@ namespace eSARReportLibrary
             // 
             // textBox62
             // 
-            this.textBox62.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.3508613109588623D), Telerik.Reporting.Drawing.Unit.Inch(0.34976372122764587D));
+            this.textBox62.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.3508613109588623D), Telerik.Reporting.Drawing.Unit.Inch(0.29992151260375977D));
             this.textBox62.Name = "textBox62";
             this.textBox62.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3490200042724609D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox62.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -393,7 +395,7 @@ namespace eSARReportLibrary
             // 
             // textBox63
             // 
-            this.textBox63.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.65003901720047D), Telerik.Reporting.Drawing.Unit.Inch(0.84976369142532349D));
+            this.textBox63.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.65003901720047D), Telerik.Reporting.Drawing.Unit.Inch(0.69992142915725708D));
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.7008218765258789D), Telerik.Reporting.Drawing.Unit.Inch(0.40000024437904358D));
             this.textBox63.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -403,7 +405,7 @@ namespace eSARReportLibrary
             // 
             // textBox64
             // 
-            this.textBox64.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5508613586425781D), Telerik.Reporting.Drawing.Unit.Inch(1.2796448469161987D));
+            this.textBox64.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5508613586425781D), Telerik.Reporting.Drawing.Unit.Inch(1.0999213457107544D));
             this.textBox64.Name = "textBox64";
             this.textBox64.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0999996662139893D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox64.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -414,17 +416,15 @@ namespace eSARReportLibrary
             // pnlSignature
             // 
             this.pnlSignature.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.textBox19,
-            this.textBox20,
             this.textBox32,
             this.textBox33});
-            this.pnlSignature.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(2.8006322383880615D));
+            this.pnlSignature.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D), Telerik.Reporting.Drawing.Unit.Inch(2.6000001430511475D));
             this.pnlSignature.Name = "pnlSignature";
             this.pnlSignature.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(5.5499606132507324D), Telerik.Reporting.Drawing.Unit.Inch(0.84932839870452881D));
             // 
             // textBox19
             // 
-            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.7499608993530273D), Telerik.Reporting.Drawing.Unit.Inch(3.9418537198798731E-05D));
+            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.7490193843841553D), Telerik.Reporting.Drawing.Unit.Inch(2.6000001430511475D));
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7999999523162842D), Telerik.Reporting.Drawing.Unit.Inch(0.19932830333709717D));
             this.textBox19.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -434,7 +434,7 @@ namespace eSARReportLibrary
             // 
             // textBox20
             // 
-            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.8500006198883057D), Telerik.Reporting.Drawing.Unit.Inch(0.19936783611774445D));
+            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.8490591049194336D), Telerik.Reporting.Drawing.Unit.Inch(2.7993285655975342D));
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6999605894088745D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox20.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -468,22 +468,22 @@ namespace eSARReportLibrary
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.95000004768371582D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.5499998927116394D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999997735023499D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999988794326782D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D)));
             this.table1.Body.SetCellContent(0, 0, this.textBox22);
             this.table1.Body.SetCellContent(0, 1, this.textBox24);
             this.table1.Body.SetCellContent(0, 2, this.textBox26);
@@ -600,12 +600,12 @@ namespace eSARReportLibrary
             tableGroup5.Groupings.Add(new Telerik.Reporting.Grouping(null));
             tableGroup5.Name = "detailTableGroup";
             this.table1.RowGroups.Add(tableGroup5);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7488628625869751D), Telerik.Reporting.Drawing.Unit.Inch(2.8000001907348633D));
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7488629817962647D), Telerik.Reporting.Drawing.Unit.Inch(2.5399997234344482D));
             // 
             // textBox22
             // 
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox22.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox22.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox22.Style.Font.Name = "Angsana New";
@@ -616,21 +616,21 @@ namespace eSARReportLibrary
             // textBox24
             // 
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5499998927116394D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox24.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox24.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             // 
             // textBox26
             // 
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886287748813629D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox26.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox26.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             // 
             // textBox23
             // 
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox23.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox23.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox23.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -647,7 +647,7 @@ namespace eSARReportLibrary
             // textBox25
             // 
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox25.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox25.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox25.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -664,7 +664,7 @@ namespace eSARReportLibrary
             // textBox27
             // 
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox27.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox27.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox27.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -678,7 +678,7 @@ namespace eSARReportLibrary
             // textBox28
             // 
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000002205371857D));
             this.textBox28.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox28.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox28.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
@@ -693,7 +693,7 @@ namespace eSARReportLibrary
             // textBox29
             // 
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000002205371857D));
             this.textBox29.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox29.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox29.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
@@ -708,7 +708,7 @@ namespace eSARReportLibrary
             // textBox30
             // 
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000002205371857D));
             this.textBox30.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox30.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox30.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -721,7 +721,7 @@ namespace eSARReportLibrary
             // textBox34
             // 
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox34.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox34.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox34.StyleName = "";
@@ -729,7 +729,7 @@ namespace eSARReportLibrary
             // textBox35
             // 
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox35.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox35.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox35.StyleName = "";
@@ -737,7 +737,7 @@ namespace eSARReportLibrary
             // textBox36
             // 
             this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox36.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox36.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox36.StyleName = "";
@@ -745,7 +745,7 @@ namespace eSARReportLibrary
             // textBox37
             // 
             this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox37.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox37.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox37.StyleName = "";
@@ -753,7 +753,7 @@ namespace eSARReportLibrary
             // textBox38
             // 
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox38.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox38.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox38.StyleName = "";
@@ -761,7 +761,7 @@ namespace eSARReportLibrary
             // textBox39
             // 
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox39.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox39.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox39.StyleName = "";
@@ -769,7 +769,7 @@ namespace eSARReportLibrary
             // textBox40
             // 
             this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000003278255463D));
+            this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox40.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox40.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -780,7 +780,7 @@ namespace eSARReportLibrary
             // textBox41
             // 
             this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000003278255463D));
+            this.textBox41.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox41.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox41.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox41.StyleName = "";
@@ -788,7 +788,7 @@ namespace eSARReportLibrary
             // textBox42
             // 
             this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000003278255463D));
+            this.textBox42.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox42.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox42.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox42.StyleName = "";
@@ -796,7 +796,7 @@ namespace eSARReportLibrary
             // textBox43
             // 
             this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox43.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox43.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox43.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -807,7 +807,7 @@ namespace eSARReportLibrary
             // textBox44
             // 
             this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox44.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox44.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox44.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox44.StyleName = "";
@@ -815,7 +815,7 @@ namespace eSARReportLibrary
             // textBox45
             // 
             this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox45.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox45.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox45.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox45.StyleName = "";
@@ -823,7 +823,7 @@ namespace eSARReportLibrary
             // textBox46
             // 
             this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox46.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox46.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox46.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox46.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -834,7 +834,7 @@ namespace eSARReportLibrary
             // textBox47
             // 
             this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox47.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox47.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox47.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox47.StyleName = "";
@@ -842,7 +842,7 @@ namespace eSARReportLibrary
             // textBox48
             // 
             this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox48.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox48.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox48.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox48.StyleName = "";
@@ -850,7 +850,7 @@ namespace eSARReportLibrary
             // textBox49
             // 
             this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox49.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox49.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox49.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox49.StyleName = "";
@@ -858,7 +858,7 @@ namespace eSARReportLibrary
             // textBox50
             // 
             this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox50.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox50.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox50.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox50.StyleName = "";
@@ -866,7 +866,7 @@ namespace eSARReportLibrary
             // textBox51
             // 
             this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000000298023224D));
+            this.textBox51.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox51.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox51.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox51.StyleName = "";
@@ -874,7 +874,7 @@ namespace eSARReportLibrary
             // textBox52
             // 
             this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox52.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox52.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox52.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox52.Style.Font.Name = "Angsana New";
@@ -886,7 +886,7 @@ namespace eSARReportLibrary
             // textBox53
             // 
             this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox53.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox53.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox53.StyleName = "";
@@ -894,7 +894,7 @@ namespace eSARReportLibrary
             // textBox54
             // 
             this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox54.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox54.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox54.StyleName = "";
@@ -902,7 +902,7 @@ namespace eSARReportLibrary
             // textBox55
             // 
             this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.19999998807907105D));
+            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox55.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox55.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox55.Style.Font.Name = "Angsana New";
@@ -914,7 +914,7 @@ namespace eSARReportLibrary
             // textBox56
             // 
             this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.19999998807907105D));
+            this.textBox56.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox56.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox56.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox56.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -923,7 +923,7 @@ namespace eSARReportLibrary
             // textBox57
             // 
             this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.19999998807907105D));
+            this.textBox57.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox57.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox57.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox57.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -932,7 +932,7 @@ namespace eSARReportLibrary
             // textBox58
             // 
             this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox58.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9500001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox58.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox58.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox58.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -945,7 +945,7 @@ namespace eSARReportLibrary
             // textBox59
             // 
             this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox59.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54999995231628418D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox59.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox59.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox59.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -954,7 +954,7 @@ namespace eSARReportLibrary
             // textBox60
             // 
             this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886289238929749D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox60.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.24886290729045868D), Telerik.Reporting.Drawing.Unit.Inch(0.18000000715255737D));
             this.textBox60.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox60.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
             this.textBox60.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -963,7 +963,7 @@ namespace eSARReportLibrary
             // textBox31
             // 
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7488628625869751D), Telerik.Reporting.Drawing.Unit.Inch(0.20000001788139343D));
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7488629817962647D), Telerik.Reporting.Drawing.Unit.Inch(0.17999999225139618D));
             this.textBox31.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox31.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox31.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.75D);
@@ -977,7 +977,7 @@ namespace eSARReportLibrary
             // 
             this.pnlBlank1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.7489811182022095D), Telerik.Reporting.Drawing.Unit.Inch(0.00019741058349609375D));
             this.pnlBlank1.Name = "pnlBlank1";
-            this.pnlBlank1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.10000000149011612D), Telerik.Reporting.Drawing.Unit.Inch(2.7998027801513672D));
+            this.pnlBlank1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.10000000149011612D), Telerik.Reporting.Drawing.Unit.Inch(2.5398023128509521D));
             // 
             // BillingReceipt
             // 

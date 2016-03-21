@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark2 = new Telerik.WinControls.UI.RadPrintWatermark();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark1 = new Telerik.WinControls.UI.RadPrintWatermark();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeacherLoad));
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.gvSubjects = new Telerik.WinControls.UI.RadGridView();
@@ -76,47 +76,47 @@
             this.gvSubjects.MasterTemplate.AllowDragToGroup = false;
             this.gvSubjects.MasterTemplate.AllowEditRow = false;
             this.gvSubjects.MasterTemplate.AutoExpandGroups = true;
-            gridViewTextBoxColumn9.FieldName = "SubjectCode";
-            gridViewTextBoxColumn9.HeaderText = "Subject Code";
-            gridViewTextBoxColumn9.Name = "SubjectCode";
-            gridViewTextBoxColumn9.Width = 74;
-            gridViewTextBoxColumn10.FieldName = "SubjectDescription";
-            gridViewTextBoxColumn10.HeaderText = "Description";
-            gridViewTextBoxColumn10.Name = "SubjectDescription";
-            gridViewTextBoxColumn10.Width = 200;
-            gridViewTextBoxColumn11.FieldName = "Section";
-            gridViewTextBoxColumn11.HeaderText = "Section";
-            gridViewTextBoxColumn11.Name = "Section";
-            gridViewTextBoxColumn11.Width = 70;
-            gridViewTextBoxColumn12.FieldName = "SubjectAssignments";
-            gridViewTextBoxColumn12.HeaderText = "SubjectAssignments";
-            gridViewTextBoxColumn12.IsVisible = false;
-            gridViewTextBoxColumn12.Name = "SubjectAssignments";
-            gridViewTextBoxColumn13.FieldName = "TimeslotInfo";
-            gridViewTextBoxColumn13.HeaderText = "Class Schedule";
-            gridViewTextBoxColumn13.Name = "TimeslotInfo";
-            gridViewTextBoxColumn13.Width = 475;
-            gridViewTextBoxColumn14.FieldName = "RoomCode";
-            gridViewTextBoxColumn14.HeaderText = "Room";
-            gridViewTextBoxColumn14.Name = "RoomCode";
-            gridViewTextBoxColumn14.Width = 70;
-            gridViewTextBoxColumn15.FieldName = "TeacherName";
-            gridViewTextBoxColumn15.HeaderText = "Teacher";
-            gridViewTextBoxColumn15.Name = "TeacherName";
-            gridViewTextBoxColumn15.Width = 150;
-            gridViewTextBoxColumn16.FieldName = "TeacherId";
-            gridViewTextBoxColumn16.HeaderText = "column1";
-            gridViewTextBoxColumn16.IsVisible = false;
-            gridViewTextBoxColumn16.Name = "TeacherId";
+            gridViewTextBoxColumn1.FieldName = "SubjectCode";
+            gridViewTextBoxColumn1.HeaderText = "Subject Code";
+            gridViewTextBoxColumn1.Name = "SubjectCode";
+            gridViewTextBoxColumn1.Width = 74;
+            gridViewTextBoxColumn2.FieldName = "SubjectDescription";
+            gridViewTextBoxColumn2.HeaderText = "Description";
+            gridViewTextBoxColumn2.Name = "SubjectDescription";
+            gridViewTextBoxColumn2.Width = 200;
+            gridViewTextBoxColumn3.FieldName = "Section";
+            gridViewTextBoxColumn3.HeaderText = "Section";
+            gridViewTextBoxColumn3.Name = "Section";
+            gridViewTextBoxColumn3.Width = 70;
+            gridViewTextBoxColumn4.FieldName = "SubjectAssignments";
+            gridViewTextBoxColumn4.HeaderText = "SubjectAssignments";
+            gridViewTextBoxColumn4.IsVisible = false;
+            gridViewTextBoxColumn4.Name = "SubjectAssignments";
+            gridViewTextBoxColumn5.FieldName = "TimeslotInfo";
+            gridViewTextBoxColumn5.HeaderText = "Class Schedule";
+            gridViewTextBoxColumn5.Name = "TimeslotInfo";
+            gridViewTextBoxColumn5.Width = 475;
+            gridViewTextBoxColumn6.FieldName = "RoomCode";
+            gridViewTextBoxColumn6.HeaderText = "Room";
+            gridViewTextBoxColumn6.Name = "RoomCode";
+            gridViewTextBoxColumn6.Width = 70;
+            gridViewTextBoxColumn7.FieldName = "TeacherName";
+            gridViewTextBoxColumn7.HeaderText = "Teacher";
+            gridViewTextBoxColumn7.Name = "TeacherName";
+            gridViewTextBoxColumn7.Width = 150;
+            gridViewTextBoxColumn8.FieldName = "TeacherId";
+            gridViewTextBoxColumn8.HeaderText = "column1";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "TeacherId";
             this.gvSubjects.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.gvSubjects.MasterTemplate.VerticalScrollState = Telerik.WinControls.UI.ScrollState.AlwaysShow;
             this.gvSubjects.Name = "gvSubjects";
             this.gvSubjects.Size = new System.Drawing.Size(1061, 407);
@@ -157,7 +157,7 @@
             // 
             this.radPrintDocument1.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radPrintDocument1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radPrintDocument1.Watermark = radPrintWatermark2;
+            this.radPrintDocument1.Watermark = radPrintWatermark1;
             // 
             // printPreviewDialog1
             // 
