@@ -165,6 +165,16 @@ namespace eSARServices
 
         }
 
+        public bool UpdateStudentBalance(string studentSy, string studentID, float assessmentfee)
+        {
+            string message = "";
+            StudentService ss = new StudentService();
+            Student stu = new Student();
+            stu = ss.GetStudent(studentID, ref message);
+            stu.RunningBalance = stu.RunningBalance + assessmentfee;            
+            return ss.UpdateStudent(ref stu, ref message);
+        }
+
         public List<StudentAssessment> AssessMe(StudentEnrollment student)
         {
             FeeService fs = new FeeService();

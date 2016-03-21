@@ -274,13 +274,13 @@
         "Entry"
         {
         "MsmKey" = "8:_71F175DE177C46DBB1D007C718126616"
-        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
+        "OwnerKey" = "8:_FD01B1C2DA28ED4A826EEBA720239360"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_71F175DE177C46DBB1D007C718126616"
-        "OwnerKey" = "8:_FD01B1C2DA28ED4A826EEBA720239360"
+        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -790,13 +790,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
+        "OwnerKey" = "8:_1578D0C5B98991839146B711151DEBC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_71F175DE177C46DBB1D007C718126616"
+        "OwnerKey" = "8:_B3FB35FC096D46E5A9B81BA186DE40ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1000,6 +1000,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_71F175DE177C46DBB1D007C718126616"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8423454C20C54F813D05A7A2947CE679"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1061,12 +1067,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_809331D94AE270C34FB289FFFF8F2EF1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1578D0C5B98991839146B711151DEBC3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -2677,15 +2677,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:eSAR"
-        "ProductCode" = "8:{B3CEAA4C-7F54-4EDD-A403-9FA243278C2C}"
-        "PackageCode" = "8:{1B76069E-A049-48B1-B4AB-7A5745508E57}"
+        "ProductCode" = "8:{4D3AA6E7-1CB4-4669-8CDA-514E430DD048}"
+        "PackageCode" = "8:{9BB39881-B8DC-4F2D-B30E-AB13D09C1233}"
         "UpgradeCode" = "8:{3F4BCF15-888A-42F4-A3A4-2CCDA26DE69D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.2"
+        "ProductVersion" = "8:1.1.6"
         "Manufacturer" = "8:eSAR"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

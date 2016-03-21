@@ -1036,8 +1036,10 @@ namespace eSARReportLibrary
             this.detail,
             this.pageFooterSection1});
             this.Name = "GradingSheetTemplate1";
-            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D));
-            this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.Letter;
+            this.PageSettings.Landscape = true;
+            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.5D));
+            this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.PageSettings.PaperSize = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(8.5D), Telerik.Reporting.Drawing.Unit.Inch(13D));
             reportParameter1.Name = "SY";
             reportParameter1.Value = "2015-2016";
             reportParameter2.Name = "GradeLevel";

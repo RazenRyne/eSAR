@@ -80,7 +80,10 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
 
         private void gvTeacher_SelectionChanged(object sender, EventArgs e)
         {
-            int selectedIndex = gvTeacher.CurrentRow.Index;
+            int selectedIndex = -1;
+
+            if (gvTeacher.CurrentRow != null)
+                selectedIndex = gvTeacher.CurrentRow.Index;
 
 
             if (selectedIndex >= 0)

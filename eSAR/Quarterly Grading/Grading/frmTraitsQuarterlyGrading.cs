@@ -12,6 +12,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Data;
+using Telerik.WinControls.UI;
 
 namespace eSAR.Quarterly_Grading.Grading
 {
@@ -306,6 +307,22 @@ namespace eSAR.Quarterly_Grading.Grading
             gvTraitsGrades.Columns["SecondPeriodicRating"].ReadOnly = false;
             gvTraitsGrades.Columns["ThirdPeriodicRating"].ReadOnly = false;
             gvTraitsGrades.Columns["FourthPeriodicRating"].ReadOnly = false;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            RadPrintDocument document = new RadPrintDocument();
+            document.DefaultPageSettings.Landscape = true;
+            document.HeaderHeight = 60;
+            document.HeaderFont = new Font("Arial", 10, FontStyle.Bold);
+            document.MiddleHeader = "Dansalan College Foundation, Inc. \r\n Marinaut, Marawi City, Lanao del Sur";
+            document.MiddleFooter = "Page [Page #] of [Total Pages]";
+            document.AssociatedObject = this.gvTraitsGrades;
+            radPrintDocument1 = document;
+
+            RadPrintPreviewDialog dialog = new RadPrintPreviewDialog();
+            dialog.Document = this.radPrintDocument1;
+            dialog.ShowDialog();
         }
     }
 }

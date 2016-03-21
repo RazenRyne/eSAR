@@ -28,6 +28,9 @@ namespace eSARLogic
             GradeLevelBDO dbase = new GradeLevelBDO();
                 dbase = glist.Find(p => p.GradeLev.Equals(grade));
             GradeLevelBDO gNext = new GradeLevelBDO();
+                if (dbase.level == null)
+                    dbase.level = -1;
+
                 gNext = glist.Find(p => p.level == (dbase.level + 1));
 
             return gNext;

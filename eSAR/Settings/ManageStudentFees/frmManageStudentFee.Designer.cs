@@ -146,6 +146,7 @@
             this.txtNumPay.Size = new System.Drawing.Size(101, 20);
             this.txtNumPay.TabIndex = 19;
             this.txtNumPay.Text = "1";
+            this.txtNumPay.Visible = false;
             this.txtNumPay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumPay_KeyPress);
             // 
             // txtDescription
@@ -194,6 +195,7 @@
             this.radLabel2.Size = new System.Drawing.Size(118, 18);
             this.radLabel2.TabIndex = 13;
             this.radLabel2.Text = "Number of Payments :";
+            this.radLabel2.Visible = false;
             // 
             // radLabel1
             // 

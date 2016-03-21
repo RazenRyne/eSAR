@@ -70,6 +70,7 @@
             this.btnSaveScholarshipDiscount.Size = new System.Drawing.Size(83, 24);
             this.btnSaveScholarshipDiscount.TabIndex = 50;
             this.btnSaveScholarshipDiscount.Text = "Print";
+            this.btnSaveScholarshipDiscount.Click += new System.EventHandler(this.LoadMe);
             // 
             // btnClose
             // 
