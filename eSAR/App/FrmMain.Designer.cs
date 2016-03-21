@@ -57,6 +57,7 @@
             this.radRibbonBarGroup7 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnSY = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup18 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btnActivateTeacher = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab4 = new Telerik.WinControls.UI.RibbonTab();
             this.btnPaymentCont = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnPayment = new Telerik.WinControls.UI.RadButtonElement();
@@ -101,7 +102,6 @@
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement14 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement9 = new Telerik.WinControls.UI.RadButtonElement();
-            this.btnActivateTeacher = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
             this.radDock1.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             // 
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 174);
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.mnuLogOut,
             this.Exit});
@@ -407,7 +407,18 @@
             this.radRibbonBarGroup18.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnActivateTeacher});
             this.radRibbonBarGroup18.Name = "radRibbonBarGroup18";
-            this.radRibbonBarGroup18.Text = "Activate Resources";
+            this.radRibbonBarGroup18.Text = "";
+            // 
+            // btnActivateTeacher
+            // 
+            this.btnActivateTeacher.AccessibleDescription = "Activate Teacher";
+            this.btnActivateTeacher.AccessibleName = "Activate Teacher";
+            this.btnActivateTeacher.Image = global::eSAR.Properties.Resources.users;
+            this.btnActivateTeacher.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnActivateTeacher.Name = "btnActivateTeacher";
+            this.btnActivateTeacher.Text = "Activate Teacher";
+            this.btnActivateTeacher.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnActivateTeacher.Click += new System.EventHandler(this.radButtonElement11_Click);
             // 
             // ribbonTab4
             // 
@@ -516,7 +527,7 @@
             // 
             this.ribbonTab6.AccessibleDescription = "Reports";
             this.ribbonTab6.AccessibleName = "Reports";
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnProspectus,
             this.btnPromotionalList,
@@ -813,7 +824,7 @@
             this.radDock1.Controls.Add(this.documentContainer1);
             this.radDock1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radDock1.IsCleanUpTarget = true;
-            this.radDock1.Location = new System.Drawing.Point(0, 162);
+            this.radDock1.Location = new System.Drawing.Point(0, 174);
             this.radDock1.MainDocumentContainer = this.documentContainer1;
             this.radDock1.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow;
             this.radDock1.Name = "radDock1";
@@ -821,7 +832,7 @@
             // 
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radDock1.Size = new System.Drawing.Size(1028, 555);
+            this.radDock1.Size = new System.Drawing.Size(1028, 543);
             this.radDock1.TabIndex = 7;
             this.radDock1.TabStop = false;
             this.radDock1.Text = "radDock1";
@@ -862,15 +873,6 @@
             this.radButtonElement9.Name = "radButtonElement9";
             this.radButtonElement9.Text = "Manage SY";
             this.radButtonElement9.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // btnActivateTeacher
-            // 
-            this.btnActivateTeacher.AccessibleDescription = "Activate Teacher";
-            this.btnActivateTeacher.AccessibleName = "Activate Teacher";
-            this.btnActivateTeacher.Name = "btnActivateTeacher";
-            this.btnActivateTeacher.Text = "Activate Teacher";
-            this.btnActivateTeacher.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnActivateTeacher.Click += new System.EventHandler(this.radButtonElement11_Click);
             // 
             // FrmMain
             // 

@@ -515,17 +515,23 @@ namespace eSAR.Course_Related_Resources.ManageTeachers
 
         private void gvChildren_UserAddedRow(object sender, GridViewRowEventArgs e)
         {
+            
             int index = this.gvChildren.RowCount - 1;
             teachChild[index].TeacherId = this.txtTeacherID.Text;
 
-            String fName = this.teachChild[index].FirstName.ToString();
-            String mName = this.teachChild[index].MiddleName.ToString();
-            String lName = this.teachChild[index].LastName.ToString();
+            String fName = this.teachChild[index].FirstName;
+            String mName = this.teachChild[index].MiddleName;
+            String lName = this.teachChild[index].LastName;
+
+            if (string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(mName) || string.IsNullOrEmpty(lName))
+                return;
 
             String cName = fName.Trim() + mName.Trim() + lName.Trim();
 
-
-            teachChildCompare = new List<TeacherChildren>(SelectedTeacher.TeacherChildrens);
+            if (SelectedTeacher != null)
+                teachChildCompare = new List<TeacherChildren>(SelectedTeacher.TeacherChildrens);
+            else
+                teachChildCompare = new List<TeacherChildren>();
 
             foreach (TeacherChildren tc in teachChildCompare)
             {
