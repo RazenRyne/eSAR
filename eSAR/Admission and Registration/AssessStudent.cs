@@ -24,6 +24,8 @@ namespace eSAR.Admission_and_Registration
         public StudentEnrollment StudentAssessed = new StudentEnrollment();
         public SchoolYear currentSY = new SchoolYear();
 
+        List<StudentAssessment> listStudentAssessed = new List<StudentAssessment>();
+
         // Public Variables
         public double subTotalValue = 0;
         public double amountTuition = 0;
@@ -144,6 +146,8 @@ namespace eSAR.Admission_and_Registration
             discountbyAmountSubTotal.Text = subTotalValue.ToString("0.##");
 
 
+            listStudentAssessed = registrationService.GetStudentAssessment(StudentId, currentSY.SY);
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -247,8 +251,7 @@ namespace eSAR.Admission_and_Registration
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
-        {
-
+        {   
             calculate.Visible = false;
             IRegistrationService registrationService = new RegistrationService();
             ILogService logService = new LogService();
@@ -268,6 +271,8 @@ namespace eSAR.Admission_and_Registration
                 logService.AddLogs(log);
 
                 PrintPane();
+                if (listStudentAssessed.Count <= 0)
+                    registrationService.UpdateStudentBalance(StudentAssessed.StudentSY, StudentAssessed.StudentId, float.Parse(Total.Text));
                 calculate.Visible = true;
                 labelVisibility(false);
                 TuitionDet.Visible = true;
