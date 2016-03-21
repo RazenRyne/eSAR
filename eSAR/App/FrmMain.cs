@@ -18,6 +18,7 @@ using eSAR.Settings.ManageScholarship;
 using eSAR.Settings.ManageCurriculum;
 using eSAR.Settings.ManageTraitsbyLevel;
 using eSAR.Settings.ManageStudentFees;
+using eSAR.Settings;
 using eSAR.Course_Related_Resources.ManageGradeLevelSection;
 using eSAR.Course_Related_Resources.ManageSchedule;
 using eSAR.Billing_and_Payment.StudentPayment;
@@ -80,6 +81,7 @@ namespace eSAR.App
         frmTeacherLoad fmTeacherLoad;
         frmAdvisersLoad fmAdvisersLoad;
         frmStudentSelection fmStudentSelection;
+        FrmActivateTeacher fmActivateTeacher;
 
         public FrmMain()
         {
@@ -95,6 +97,7 @@ namespace eSAR.App
             {
                 this.btnStudent.Enabled = true;
                 this.btnTeacher.Enabled = false;
+                this.btnActivateTeacher.Enabled = false;
                 this.btnLearningArea.Enabled = false;
                 this.btnManageSchedule.Enabled = false;
                 this.btnUser.Enabled = false;
@@ -119,10 +122,12 @@ namespace eSAR.App
                 this.radRibbonBarGroup15.Enabled = false;
                 this.radRibbonBarGroup17.Enabled = false;
                 this.radButtonElement2.Enabled = true;
+                this.radRibbonBarGroup18.Enabled = false;
             } else if (GlobalClass.userTypeCode == "princ")
             {
                 this.btnStudent.Enabled = false;
                 this.btnTeacher.Enabled = true;
+                this.btnActivateTeacher.Enabled = false;
                 this.btnLearningArea.Enabled = true;
                 this.btnManageSchedule.Enabled = true;
                 this.btnUser.Enabled = false;
@@ -147,10 +152,12 @@ namespace eSAR.App
                 this.radRibbonBarGroup15.Enabled = true;
                 this.radRibbonBarGroup17.Enabled = true;
                 this.radButtonElement2.Enabled = true;
+                this.radRibbonBarGroup18.Enabled = false;
             } else if (GlobalClass.userTypeCode == "reg")
             {
                 this.btnStudent.Enabled = true;
                 this.btnTeacher.Enabled = false;
+                this.btnActivateTeacher.Enabled = false;
                 this.btnLearningArea.Enabled = false;
                 this.btnManageSchedule.Enabled = false;
                 this.btnUser.Enabled = false;
@@ -175,10 +182,12 @@ namespace eSAR.App
                 this.radRibbonBarGroup15.Enabled = true;
                 this.radRibbonBarGroup17.Enabled = true;
                 this.radButtonElement2.Enabled = true;
+                this.radRibbonBarGroup18.Enabled = false;
             } else if(GlobalClass.userTypeCode == "teach")
             {
                 this.btnStudent.Enabled = false;
                 this.btnTeacher.Enabled = false;
+                this.btnActivateTeacher.Enabled = false;
                 this.btnLearningArea.Enabled = false;
                 this.btnManageSchedule.Enabled = false;
                 this.btnUser.Enabled = false;
@@ -203,8 +212,8 @@ namespace eSAR.App
                 this.radRibbonBarGroup15.Enabled = false;
                 this.radRibbonBarGroup17.Enabled = false;
                 this.radButtonElement2.Enabled = true;
+                this.radRibbonBarGroup18.Enabled = false;
             }
-
 
             
         }
@@ -463,6 +472,10 @@ namespace eSAR.App
         {
             fmSYList = new frmSYList();
             fmSYList.ShowDialog();
+
+            //fmActivateTeacher = new FrmActivateTeacher();
+            //fmActivateTeacher.ShowDialog(this);
+            //fmActivateTeacher.Location = new Point(25, 25);
         }
 
         private void btnScholarship_Click(object sender, EventArgs e)
@@ -869,6 +882,13 @@ namespace eSAR.App
         private void radButtonElement7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void radButtonElement11_Click(object sender, EventArgs e)
+        {
+            fmActivateTeacher = new FrmActivateTeacher();
+            fmActivateTeacher.ShowDialog(this);
+            fmActivateTeacher.Location = new Point(25, 25);
         }
     }
 }

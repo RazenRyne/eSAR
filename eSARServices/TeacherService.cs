@@ -34,6 +34,27 @@ namespace eSARServices
             return tLogic.UpdateTeacher(ref tbdo, ref message);
         }
 
+        public Teacher ActivateTeacher(string fname, string mname, string lname)
+        {
+            String message = " ";
+            Teacher teacher = new Teacher();
+            TeacherBDO tbdo = new TeacherBDO();
+            tbdo = tLogic.GetTeacher(lname, fname, mname);
+           
+            if (tbdo == null)
+            {
+                return null;
+            }
+            else {
+                tbdo.Deactivated = false;
+                tLogic.UpdateTeacher(ref tbdo, ref message);
+                TranslateTeacherBDOToTeacherDTO(tbdo, teacher);
+                return teacher;
+            }
+
+        }
+
+
         public List<Teacher> GetAllTeachers()
         {
             return ToTeacherList(tLogic.GetAllTeachers());

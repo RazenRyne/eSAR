@@ -75,7 +75,7 @@ namespace eSARLogic
         public TeacherBDO GetTeacher(string lastname, string firstname, string mname)
         {
             TeacherBDO t = new TeacherBDO();
-            t = teacherDAO.GetTeacherBDO(lastname, firstname,mname);
+            t = teacherDAO.GetTeacherBDO(lastname, firstname, mname);
             if (t != null)
             {
                 t.TeacherChildrens = teacherDAO.GetAllChildren(t.TeacherId);
