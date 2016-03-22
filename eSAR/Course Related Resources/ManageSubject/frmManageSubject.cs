@@ -72,10 +72,10 @@ namespace eSAR.Course_Related_Resources.ManageSubject
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Op.Equals("new"))
+            //if (Op.Equals("new"))
                 Save();
-            else
-                this.Close();
+            //else
+            //    this.Close();
         }
 
         private void Save()

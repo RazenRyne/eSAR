@@ -42,7 +42,7 @@ namespace eSAR.Course_Related_Resources.ManageSchedule
         {
             //Disable();
             cmbGradeLevel.DataSource = gradeLevels;
-            cmbGradeLevel.SelectedIndex = 0;
+            //cmbGradeLevel.SelectedIndex = 0;
         }
 
         public void LoadSchedules()
