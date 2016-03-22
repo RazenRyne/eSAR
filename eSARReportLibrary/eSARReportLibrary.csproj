@@ -57,27 +57,37 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Reporting, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Reporting, Version=9.1.15.731, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.1.15.731, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillingReceipt.cs" />
+    <Compile Include="BillingReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BillingReceipt.Designer.cs">
       <DependentUpon>BillingReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradingSheetTemplate1.cs" />
+    <Compile Include="GradingSheetTemplate1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GradingSheetTemplate1.Designer.cs">
       <DependentUpon>GradingSheetTemplate1.cs</DependentUpon>
     </Compile>
-    <Compile Include="gradingSheetTraits.cs" />
+    <Compile Include="gradingSheetTraits.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="gradingSheetTraits.Designer.cs">
       <DependentUpon>gradingSheetTraits.cs</DependentUpon>
     </Compile>
-    <Compile Include="PermanentRecord.cs" />
+    <Compile Include="PermanentRecord.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PermanentRecord.Designer.cs">
       <DependentUpon>PermanentRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="PromoReportTemplate1.cs" />
+    <Compile Include="PromoReportTemplate1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PromoReportTemplate1.Designer.cs">
       <DependentUpon>PromoReportTemplate1.cs</DependentUpon>
     </Compile>
