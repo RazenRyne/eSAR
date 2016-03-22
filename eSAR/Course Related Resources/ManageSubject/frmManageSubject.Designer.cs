@@ -83,7 +83,7 @@
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(759, 485);
+            this.radPanel1.Size = new System.Drawing.Size(792, 488);
             this.radPanel1.TabIndex = 0;
             // 
             // radGroupBox1
@@ -93,7 +93,7 @@
             this.radGroupBox1.HeaderText = "Subjects";
             this.radGroupBox1.Location = new System.Drawing.Point(17, 131);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(738, 340);
+            this.radGroupBox1.Size = new System.Drawing.Size(772, 340);
             this.radGroupBox1.TabIndex = 40;
             this.radGroupBox1.Text = "Subjects";
             // 
@@ -126,7 +126,7 @@
             this.gvSubjects.MasterTemplate.EnableGrouping = false;
             this.gvSubjects.MasterTemplate.HorizontalScrollState = Telerik.WinControls.UI.ScrollState.AlwaysHide;
             this.gvSubjects.Name = "gvSubjects";
-            this.gvSubjects.Size = new System.Drawing.Size(727, 312);
+            this.gvSubjects.Size = new System.Drawing.Size(763, 312);
             this.gvSubjects.TabIndex = 6;
             this.gvSubjects.Text = "Subjects";
             this.gvSubjects.CellBeginEdit += new Telerik.WinControls.UI.GridViewCellCancelEventHandler(this.gvSubjects_CellBeginEdit);
@@ -257,15 +257,15 @@
             this.radPanel2.Controls.Add(this.btnSave);
             this.radPanel2.Controls.Add(this.btnCancel);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radPanel2.Location = new System.Drawing.Point(0, 485);
+            this.radPanel2.Location = new System.Drawing.Point(0, 488);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(759, 53);
+            this.radPanel2.Size = new System.Drawing.Size(792, 53);
             this.radPanel2.TabIndex = 1;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(572, 16);
+            this.btnSave.Location = new System.Drawing.Point(605, 16);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 24);
             this.btnSave.TabIndex = 7;
@@ -276,7 +276,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(661, 16);
+            this.btnCancel.Location = new System.Drawing.Point(694, 16);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
             this.btnCancel.TabIndex = 8;
@@ -289,7 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(759, 538);
+            this.ClientSize = new System.Drawing.Size(792, 541);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
