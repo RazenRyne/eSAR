@@ -36,8 +36,6 @@ namespace eSAR.Settings.ManageTimeSlot
         private void frmTimeSlotDetails_Load(object sender, EventArgs e)
         {
             string[] stringArray = new string[7];
-            chkSaturday.Enabled = false;
-            chkFriday.Enabled = false;
 
             if (Op.Equals("edit"))
             {

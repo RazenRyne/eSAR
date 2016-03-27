@@ -90,6 +90,9 @@ namespace eSAR.Reports.GenerateGradingSheets
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             string teacherName = string.Empty;
+            if (cmbSection.SelectedIndex == -1)
+                return;
+
             if (teach != null)
             {
                 teacherName = teach.LastName + ", " + teach.FirstName + " ";

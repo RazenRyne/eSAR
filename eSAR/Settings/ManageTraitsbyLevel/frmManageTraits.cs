@@ -102,8 +102,7 @@ namespace eSAR.Settings.ManageTraitsbyLevel
 
                 if (ret)
                     MessageBox.Show(this, "Saved Successfully");
-                else
-                    MessageBox.Show(this, "Error Saving");
+                
             }
 
             this.Close();

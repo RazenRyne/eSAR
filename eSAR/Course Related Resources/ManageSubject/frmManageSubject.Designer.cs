@@ -83,7 +83,7 @@
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(792, 488);
+            this.radPanel1.Size = new System.Drawing.Size(804, 488);
             this.radPanel1.TabIndex = 0;
             // 
             // radGroupBox1
@@ -152,13 +152,13 @@
             this.radGroupBox2.HeaderText = "Learning Area";
             this.radGroupBox2.Location = new System.Drawing.Point(16, 13);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(666, 109);
+            this.radGroupBox2.Size = new System.Drawing.Size(773, 109);
             this.radGroupBox2.TabIndex = 0;
             this.radGroupBox2.Text = "Learning Area";
             // 
             // txtRatePerSubject
             // 
-            this.txtRatePerSubject.Location = new System.Drawing.Point(385, 75);
+            this.txtRatePerSubject.Location = new System.Drawing.Point(485, 72);
             this.txtRatePerSubject.Name = "txtRatePerSubject";
             this.txtRatePerSubject.Size = new System.Drawing.Size(88, 20);
             this.txtRatePerSubject.TabIndex = 25;
@@ -167,7 +167,7 @@
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(277, 74);
+            this.radLabel4.Location = new System.Drawing.Point(377, 71);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(90, 18);
             this.radLabel4.TabIndex = 26;
@@ -183,7 +183,7 @@
             // 
             // txtRate
             // 
-            this.txtRate.Location = new System.Drawing.Point(385, 49);
+            this.txtRate.Location = new System.Drawing.Point(485, 46);
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(88, 20);
             this.txtRate.TabIndex = 5;
@@ -193,7 +193,7 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(293, 50);
+            this.radLabel3.Location = new System.Drawing.Point(393, 47);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(74, 18);
             this.radLabel3.TabIndex = 24;
@@ -202,7 +202,7 @@
             // txtDescription
             // 
             this.txtDescription.AutoSize = false;
-            this.txtDescription.Location = new System.Drawing.Point(383, 21);
+            this.txtDescription.Location = new System.Drawing.Point(483, 18);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(251, 21);
@@ -210,7 +210,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(301, 26);
+            this.radLabel2.Location = new System.Drawing.Point(401, 23);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(66, 18);
             this.radLabel2.TabIndex = 23;
@@ -259,13 +259,13 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel2.Location = new System.Drawing.Point(0, 488);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(792, 53);
+            this.radPanel2.Size = new System.Drawing.Size(804, 53);
             this.radPanel2.TabIndex = 1;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(605, 16);
+            this.btnSave.Location = new System.Drawing.Point(617, 16);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 24);
             this.btnSave.TabIndex = 7;
@@ -276,7 +276,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(694, 16);
+            this.btnCancel.Location = new System.Drawing.Point(706, 16);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 24);
             this.btnCancel.TabIndex = 8;
@@ -289,7 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(792, 541);
+            this.ClientSize = new System.Drawing.Size(804, 541);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

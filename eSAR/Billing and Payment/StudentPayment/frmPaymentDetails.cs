@@ -40,8 +40,6 @@ namespace eSAR.Billing_and_Payment.StudentPayment
         public frmPaymentDetails()
         {
             InitializeComponent();
-            this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -142,6 +140,9 @@ namespace eSAR.Billing_and_Payment.StudentPayment
                     return;
             }
 
+            if (Student.RunningBalance == 0)
+                return;
+            
 
             if (GlobalClass.receiptFrom == null)
             {

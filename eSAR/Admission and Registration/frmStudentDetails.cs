@@ -297,11 +297,12 @@ namespace eSAR.Admission_and_Registration
             student.DateAdmitted = System.DateTime.Now;
             student.Religion = cbReligion.Text;
             student.StudentLRN = txtLRN.Text;
-               
 
 
             if (Op.Equals("edit"))
             {
+                student.GradeLevel = SelectedStudent.GradeLevel;
+                student.Section = SelectedStudent.Section;
                 ret = studentService.UpdateStudent(ref student, ref message);
                 Log("U", "Students", student);
                 

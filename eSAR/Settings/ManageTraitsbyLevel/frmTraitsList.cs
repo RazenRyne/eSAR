@@ -58,6 +58,9 @@ namespace eSAR.Settings.ManageTraitsbyLevel
 
         private void btEdit_Click(object sender, EventArgs e)
         {
+            if (gvTraits.CurrentRow == null)
+                return;
+
             if (gvTraits.CurrentRow.Index >= 0)
             {
                 frmManageTraits fmManageTraits = new frmManageTraits();

@@ -42,6 +42,9 @@ namespace eSAR.Course_Related_Resources.ManageGradeLevelSection
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (gvGradeSection.CurrentRow == null)
+                return;
+
             if (gvGradeSection.CurrentRow.Index >= 0)
             {
                 ManageGradeLevelSection fmManageGradeSection = new ManageGradeLevelSection();

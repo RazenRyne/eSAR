@@ -58,7 +58,7 @@
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(770, 475);
+            this.radPanel1.Size = new System.Drawing.Size(841, 475);
             this.radPanel1.TabIndex = 0;
             // 
             // gvLearningArea
@@ -115,7 +115,7 @@
             this.gvLearningArea.MasterTemplate.ShowFilteringRow = false;
             this.gvLearningArea.Name = "gvLearningArea";
             this.gvLearningArea.ShowGroupPanel = false;
-            this.gvLearningArea.Size = new System.Drawing.Size(770, 425);
+            this.gvLearningArea.Size = new System.Drawing.Size(841, 425);
             this.gvLearningArea.TabIndex = 0;
             this.gvLearningArea.SelectionChanged += new System.EventHandler(this.gvLearningArea_SelectionChanged);
             this.gvLearningArea.DoubleClick += new System.EventHandler(this.btnEditBuilding_Click);
@@ -127,13 +127,13 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPanel2.Location = new System.Drawing.Point(0, 425);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(770, 50);
+            this.radPanel2.Size = new System.Drawing.Size(841, 50);
             this.radPanel2.TabIndex = 41;
             // 
             // btnAddBuilding
             // 
             this.btnAddBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBuilding.Location = new System.Drawing.Point(586, 14);
+            this.btnAddBuilding.Location = new System.Drawing.Point(657, 14);
             this.btnAddBuilding.Name = "btnAddBuilding";
             this.btnAddBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnAddBuilding.TabIndex = 1;
@@ -143,7 +143,7 @@
             // btnEditBuilding
             // 
             this.btnEditBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBuilding.Location = new System.Drawing.Point(675, 14);
+            this.btnEditBuilding.Location = new System.Drawing.Point(746, 14);
             this.btnEditBuilding.Name = "btnEditBuilding";
             this.btnEditBuilding.Size = new System.Drawing.Size(83, 24);
             this.btnEditBuilding.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 475);
+            this.ClientSize = new System.Drawing.Size(841, 475);
             this.Controls.Add(this.radPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLearningAreas";

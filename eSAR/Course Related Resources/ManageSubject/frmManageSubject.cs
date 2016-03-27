@@ -166,14 +166,15 @@ namespace eSAR.Course_Related_Resources.ManageSubject
             {
                 SetFields();
                 SetSubjectGrid();
+                this.Size = new Size(812, 571);
             }
 
             if (Op.Equals("new"))
             {
                 BindSubjectGrid();
-                gvSubjects.Enabled = false;
+                gvSubjects.Enabled = false; 
                 btnSave.Enabled = false;
-                this.Size = new Size(772, 485);
+                this.Size = new Size(812, 209);
             }
         }
 

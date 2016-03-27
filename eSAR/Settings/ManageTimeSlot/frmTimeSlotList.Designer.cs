@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.gvTimeSlot = new Telerik.WinControls.UI.RadGridView();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.btnAdd = new Telerik.WinControls.UI.RadButton();
@@ -60,27 +60,27 @@
             this.gvTimeSlot.MasterTemplate.AllowDragToGroup = false;
             this.gvTimeSlot.MasterTemplate.AllowEditRow = false;
             this.gvTimeSlot.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn5.FieldName = "TimeslotCode";
-            gridViewTextBoxColumn5.HeaderText = "Code";
-            gridViewTextBoxColumn5.Name = "TimeslotCode";
-            gridViewTextBoxColumn5.Width = 150;
-            gridViewTextBoxColumn6.FieldName = "TimeStart";
-            gridViewTextBoxColumn6.HeaderText = "Time Start";
-            gridViewTextBoxColumn6.Name = "TimeStart";
-            gridViewTextBoxColumn6.Width = 256;
-            gridViewTextBoxColumn7.FieldName = "TimeEnd";
-            gridViewTextBoxColumn7.HeaderText = "Time End";
-            gridViewTextBoxColumn7.Name = "TimeEnd";
-            gridViewTextBoxColumn7.Width = 250;
-            gridViewTextBoxColumn8.FieldName = "Days";
-            gridViewTextBoxColumn8.HeaderText = "Days";
-            gridViewTextBoxColumn8.Name = "Days";
-            gridViewTextBoxColumn8.Width = 250;
+            gridViewTextBoxColumn1.FieldName = "TimeslotCode";
+            gridViewTextBoxColumn1.HeaderText = "Code";
+            gridViewTextBoxColumn1.Name = "TimeslotCode";
+            gridViewTextBoxColumn1.Width = 150;
+            gridViewTextBoxColumn2.FieldName = "TimeStart";
+            gridViewTextBoxColumn2.HeaderText = "Time Start";
+            gridViewTextBoxColumn2.Name = "TimeStart";
+            gridViewTextBoxColumn2.Width = 256;
+            gridViewTextBoxColumn3.FieldName = "TimeEnd";
+            gridViewTextBoxColumn3.HeaderText = "Time End";
+            gridViewTextBoxColumn3.Name = "TimeEnd";
+            gridViewTextBoxColumn3.Width = 250;
+            gridViewTextBoxColumn4.FieldName = "Days";
+            gridViewTextBoxColumn4.HeaderText = "Days";
+            gridViewTextBoxColumn4.Name = "Days";
+            gridViewTextBoxColumn4.Width = 250;
             this.gvTimeSlot.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.gvTimeSlot.MasterTemplate.ShowRowHeaderColumn = false;
             this.gvTimeSlot.Name = "gvTimeSlot";
             this.gvTimeSlot.ShowGroupPanel = false;

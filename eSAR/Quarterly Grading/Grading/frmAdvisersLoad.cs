@@ -93,6 +93,9 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void btnAddGrades_Click(object sender, EventArgs e)
         {
+            if (gvGradeSection.CurrentRow == null)
+                return;
+            
             frmTraitsQuarterlyGrading fmTraitsGrading = new frmTraitsQuarterlyGrading();
             fmTraitsGrading.gradeSectionCode = gSectionSelected.GradeSectionCode;
             fmTraitsGrading.sy = sy;

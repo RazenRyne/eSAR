@@ -127,7 +127,7 @@
             // 
             // 
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 174);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1028, 162);
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.mnuLogOut,
             this.Exit});
@@ -256,7 +256,7 @@
             // 
             this.ribbonTab3.AccessibleDescription = "Settings";
             this.ribbonTab3.AccessibleName = "Settings";
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup3,
             this.radRibbonBarGroup4,
@@ -425,7 +425,7 @@
             this.ribbonTab4.AccessibleDescription = "Billing and Payment";
             this.ribbonTab4.AccessibleName = "Billing and Payment";
             this.ribbonTab4.ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.ribbonTab4.IsSelected = false;
+            this.ribbonTab4.IsSelected = true;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnPaymentCont,
             this.btnManageReceiptCont});
@@ -824,7 +824,7 @@
             this.radDock1.Controls.Add(this.documentContainer1);
             this.radDock1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radDock1.IsCleanUpTarget = true;
-            this.radDock1.Location = new System.Drawing.Point(0, 174);
+            this.radDock1.Location = new System.Drawing.Point(0, 162);
             this.radDock1.MainDocumentContainer = this.documentContainer1;
             this.radDock1.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow;
             this.radDock1.Name = "radDock1";
@@ -832,7 +832,7 @@
             // 
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radDock1.Size = new System.Drawing.Size(1028, 543);
+            this.radDock1.Size = new System.Drawing.Size(1028, 555);
             this.radDock1.TabIndex = 7;
             this.radDock1.TabStop = false;
             this.radDock1.Text = "radDock1";

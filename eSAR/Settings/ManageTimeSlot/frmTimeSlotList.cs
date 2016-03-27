@@ -34,6 +34,9 @@ namespace eSAR.Settings.ManageTimeSlot
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (gvTimeSlot.CurrentRow == null)
+                return;
+
             frmTimeSlotDetails fmTimeslotDetails = new frmTimeSlotDetails();
             fmTimeslotDetails.timeslotList = timeslotList;
             fmTimeslotDetails.SelectedTimeslot = timeslotSelected;
@@ -125,5 +128,7 @@ namespace eSAR.Settings.ManageTimeSlot
             };
             logService.AddLogs(log);
         }
+
+      
     }
 }

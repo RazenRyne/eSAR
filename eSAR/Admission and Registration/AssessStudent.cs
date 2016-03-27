@@ -295,11 +295,10 @@ namespace eSAR.Admission_and_Registration
             else
                 iTuitionFee = 0;
 
-            iTuitionPerGrade = iTuitionFee / 4;
+            iTuitionPerGrade = iTuitionFee / 3;
             lblDet1Val.Text = "Php " + iTuitionPerGrade.ToString();
             lblDet2Val.Text = "Php " + iTuitionPerGrade.ToString();
             lblDet3Val.Text = "Php " + iTuitionPerGrade.ToString();
-            lblDet4Val.Text = "Php " + iTuitionPerGrade.ToString();
 
         }
 

@@ -48,14 +48,12 @@
             this.lblSection = new Telerik.WinControls.UI.RadLabel();
             this.TuitionDet = new Telerik.WinControls.UI.RadPanel();
             this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
-            this.lblDet4Val = new Telerik.WinControls.UI.RadLabel();
             this.radLabel35 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet3Val = new Telerik.WinControls.UI.RadLabel();
             this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet2Val = new Telerik.WinControls.UI.RadLabel();
             this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet1Val = new Telerik.WinControls.UI.RadLabel();
-            this.lblDet4 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet3 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet2 = new Telerik.WinControls.UI.RadLabel();
             this.lblDet1 = new Telerik.WinControls.UI.RadLabel();
@@ -126,14 +124,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.TuitionDet)).BeginInit();
             this.TuitionDet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDet4Val)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet3Val)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet2Val)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet1Val)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet1)).BeginInit();
@@ -383,14 +379,12 @@
             // 
             this.TuitionDet.BackColor = System.Drawing.Color.White;
             this.TuitionDet.Controls.Add(this.radLabel36);
-            this.TuitionDet.Controls.Add(this.lblDet4Val);
             this.TuitionDet.Controls.Add(this.radLabel35);
             this.TuitionDet.Controls.Add(this.lblDet3Val);
             this.TuitionDet.Controls.Add(this.radLabel34);
             this.TuitionDet.Controls.Add(this.lblDet2Val);
             this.TuitionDet.Controls.Add(this.radLabel33);
             this.TuitionDet.Controls.Add(this.lblDet1Val);
-            this.TuitionDet.Controls.Add(this.lblDet4);
             this.TuitionDet.Controls.Add(this.lblDet3);
             this.TuitionDet.Controls.Add(this.lblDet2);
             this.TuitionDet.Controls.Add(this.lblDet1);
@@ -399,7 +393,7 @@
             this.TuitionDet.Controls.Add(this.lblDetTotal);
             this.TuitionDet.Location = new System.Drawing.Point(3, 251);
             this.TuitionDet.Name = "TuitionDet";
-            this.TuitionDet.Size = new System.Drawing.Size(683, 105);
+            this.TuitionDet.Size = new System.Drawing.Size(688, 105);
             this.TuitionDet.TabIndex = 2;
             this.TuitionDet.Visible = false;
             // 
@@ -410,14 +404,6 @@
             this.radLabel36.Name = "radLabel36";
             this.radLabel36.Size = new System.Drawing.Size(2, 2);
             this.radLabel36.TabIndex = 27;
-            // 
-            // lblDet4Val
-            // 
-            this.lblDet4Val.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDet4Val.Location = new System.Drawing.Point(110, 79);
-            this.lblDet4Val.Name = "lblDet4Val";
-            this.lblDet4Val.Size = new System.Drawing.Size(2, 2);
-            this.lblDet4Val.TabIndex = 27;
             // 
             // radLabel35
             // 
@@ -466,15 +452,6 @@
             this.lblDet1Val.Name = "lblDet1Val";
             this.lblDet1Val.Size = new System.Drawing.Size(2, 2);
             this.lblDet1Val.TabIndex = 24;
-            // 
-            // lblDet4
-            // 
-            this.lblDet4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDet4.Location = new System.Drawing.Point(18, 79);
-            this.lblDet4.Name = "lblDet4";
-            this.lblDet4.Size = new System.Drawing.Size(91, 18);
-            this.lblDet4.TabIndex = 23;
-            this.lblDet4.Text = "Fourth Grading:";
             // 
             // lblDet3
             // 
@@ -979,14 +956,12 @@
             this.TuitionDet.ResumeLayout(false);
             this.TuitionDet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDet4Val)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet3Val)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet2Val)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet1Val)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDet1)).EndInit();
@@ -1100,7 +1075,6 @@
         private Telerik.WinControls.UI.RadLabel lblDetTotalVal;
         private Telerik.WinControls.UI.RadLabel lblDetTotal;
         private Telerik.WinControls.UI.RadLabel radLabel36;
-        private Telerik.WinControls.UI.RadLabel lblDet4Val;
         private Telerik.WinControls.UI.RadLabel radLabel34;
         private Telerik.WinControls.UI.RadLabel radLabel35;
         private Telerik.WinControls.UI.RadLabel lblDet3Val;
@@ -1108,7 +1082,6 @@
         private Telerik.WinControls.UI.RadLabel lblDet2Val;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadLabel lblDet1Val;
-        private Telerik.WinControls.UI.RadLabel lblDet4;
         private Telerik.WinControls.UI.RadLabel lblDet3;
         private Telerik.WinControls.UI.RadLabel lblDet2;
         private Telerik.WinControls.UI.RadLabel lblDet1;

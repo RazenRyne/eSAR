@@ -99,6 +99,9 @@ namespace eSAR.Quarterly_Grading.Grading
 
         private void btnAddGrade_Click(object sender, EventArgs e)
         {
+            if (gvSubjects.CurrentRow == null)
+                return;
+
             frmQuarterlyGrading fmGrading = new frmQuarterlyGrading();
             fmGrading.selectedSubject = subjectSelected;
             fmGrading.teach = teacher;

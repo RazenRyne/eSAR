@@ -239,7 +239,6 @@ namespace eSAR.App
             {
                 UserDockWindow.Show();
             }
-            //this.radDock1.ActiveWindow = UserDockWindow;
         }
 
         
@@ -472,10 +471,7 @@ namespace eSAR.App
         {
             fmSYList = new frmSYList();
             fmSYList.ShowDialog();
-
-            //fmActivateTeacher = new FrmActivateTeacher();
-            //fmActivateTeacher.ShowDialog(this);
-            //fmActivateTeacher.Location = new Point(25, 25);
+            
         }
 
         private void btnScholarship_Click(object sender, EventArgs e)
@@ -684,7 +680,6 @@ namespace eSAR.App
             {
                 PaymentReport attendanceDetails = new PaymentReport();
                 attendanceDetails.Show(this);
-                attendanceDetails.Location = new Point(25, 25);
                 GlobalClass.WindowAttendanceDetails = true;
             }
         }
@@ -695,7 +690,6 @@ namespace eSAR.App
         {
                 BillingDetails billingDetails = new BillingDetails();
                 billingDetails.ShowDialog(this);
-                billingDetails.Location = new Point(25, 25);
         }
 
         //private void btnScheduleList_Click(object sender, EventArgs e)
@@ -736,7 +730,6 @@ namespace eSAR.App
             
                 ProspectusDetails prospectusDetails = new ProspectusDetails();
                 prospectusDetails.ShowDialog(this);
-                prospectusDetails.Location = new Point(25, 25);
         }
 
         private void radButtonElement4_Click(object sender, EventArgs e)
@@ -827,7 +820,6 @@ namespace eSAR.App
                 {
                     frmPaymentDetails fmPaymentDetails = new frmPaymentDetails();
                     fmPaymentDetails.Show(this);
-                    fmPaymentDetails.Location = new Point(25, 25);
                     GlobalClass.WindowStatusPaymentDetails = true;
                 }
             }
@@ -842,7 +834,6 @@ namespace eSAR.App
             else {
                 frmManageReceipt fmManageReceipt = new frmManageReceipt();
                 fmManageReceipt.Show(this);
-                fmManageReceipt.Location = new Point(50, 50);
                 GlobalClass.WindowStatusManageReceipt = true;
             }
         }
@@ -857,7 +848,6 @@ namespace eSAR.App
         {
             ScheduleDetails scheduleDetails = new ScheduleDetails();
             scheduleDetails.ShowDialog(this);
-            scheduleDetails.Location = new Point(25, 25);
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -888,7 +878,6 @@ namespace eSAR.App
         {
             fmActivateTeacher = new FrmActivateTeacher();
             fmActivateTeacher.ShowDialog(this);
-            fmActivateTeacher.Location = new Point(25, 25);
         }
     }
 }
