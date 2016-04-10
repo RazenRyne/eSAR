@@ -279,6 +279,11 @@ namespace eSAR.Course_Related_Resources.ManageSubject
                 if (e.ColumnIndex == 3)
                 {
                     oldGL = gvSubjects.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    if (subjects[e.RowIndex].SubjectID != 0)
+                    {
+                        e.Cancel = true;
+                    }
+
                 }
             }
         }
@@ -398,5 +403,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
             };
             logService.AddLogs(log);
         }
+
+    
     }
 }
