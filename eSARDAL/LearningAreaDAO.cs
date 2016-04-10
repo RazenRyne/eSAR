@@ -159,6 +159,7 @@ namespace eSARDAL
                     l.RatePerUnit = laBDO.RatePerUnit;
                     l.Units = laBDO.Units;
                     l.Subjects = ToSubjectList(laBDO.Subjects);
+
                     if (laInDB.Subjects.Count == 0)
                      {
                          foreach (Subject s in l.Subjects)
@@ -166,99 +167,73 @@ namespace eSARDAL
                             laInDB.Subjects.Add(s);
                         }
                 }
-                else if (laInDB.Subjects.Count < l.Subjects.Count)
-                {
-                        //compare 2 lists check the non existing to the other
-                        List<Subject> sToAdd = new List<Subject>();
-                       sToAdd= CompareSubjectLists(l.Subjects.ToList<Subject>(),laInDB.Subjects.ToList<Subject>());
-                        //List<Subject> newSubToAdd = new List<Subject>();
-                        //newSubToAdd = sToAdd.ToList<Subject>();
-                        if (sToAdd != null)
-                    {
-                        foreach (Subject child in sToAdd)
-                        {
-                            laInDB.Subjects.Add(child);
-                        }
-                    }
-
-                        List<Subject> sToRemove = new List<Subject>();
-                        sToRemove = CompareSubjectLists(laInDB.Subjects.ToList<Subject>(), l.Subjects.ToList<Subject>());
-
-                        if (sToRemove != null)
-                    {
-                        foreach (Subject child in sToRemove)
-                        {
-                            laInDB.Subjects.Remove(child);
-                        }
-                    }
-
-                }
-                else if (laInDB.Subjects.Count > l.Subjects.Count)
-                {
-                        //compare 2 lists check the non existing to the other
-                        List<Subject> sToAdd = new List<Subject>();
-                        sToAdd = CompareSubjectLists(l.Subjects.ToList<Subject>(), laInDB.Subjects.ToList<Subject>());
-                        if (sToAdd != null)
-                    {
-                        foreach (Subject child in sToAdd)
-                        {
-                            laInDB.Subjects.Add(child);
-                        }
-                    }
-
-                        List<Subject> sToRemove = new List<Subject>();
-                        sToRemove = CompareSubjectLists(laInDB.Subjects.ToList<Subject>(), l.Subjects.ToList<Subject>());
-                        if (sToRemove != null)
-                    {
-                        foreach (Subject child in sToRemove)
-                        {
-                            laInDB.Subjects.Remove(child);
-                        }
-                    }
-                }
-                else if (laInDB.Subjects.Count == l.Subjects.Count)
+                
+                else 
                 {
                     toRemove = new List<Subject>();
                     toAdd = new List<Subject>();
                     toUpdate = new List<Subject>();
 
-                    foreach (Subject s in l.Subjects)
-                    {
-                        int c = laInDB.Subjects.Where(sub => sub.SubjectCode == s.SubjectCode).Count();
-                        if (c == 0)
-                            toAdd.Add(s);
-                    }
-                    foreach (Subject c in toAdd)
-                    {
-                        DCEnt.Subjects.Add(c);
-                        DCEnt.Entry(c).State = System.Data.Entity.EntityState.Added;
-                         //   DCEnt.SaveChanges();
+                        foreach (Subject s in l.Subjects)
+                        {
+                            Subject subj = new Subject();
+                            subj = laInDB.Subjects.Where(sub => sub.SubjectCode == s.SubjectCode).FirstOrDefault();
+
+                            if (subj == null)
+                            {
+                                DCEnt.Subjects.Add(s);
+                                DCEnt.Entry(s).State = System.Data.Entity.EntityState.Added;
+                            }
+                            else
+                            {
+                                if (!CompareSubject(subj, s))
+                                {
+                                    toUpdate.Add(s);
+                                }
+                            }
                      }
-                    foreach (Subject s in laInDB.Subjects)
+
+                        //Add new Subject
+                        if (toAdd.Count > 0)
+                        {
+                            foreach (Subject c in toAdd)
+                            {
+                                DCEnt.Subjects.Add(c);
+                                DCEnt.Entry(c).State = System.Data.Entity.EntityState.Added;
+                            }
+                        }
+
+                    foreach (Subject c in laInDB.Subjects)
                     {
-                        int c = l.Subjects.Where(sub => sub.SubjectCode == s.SubjectCode).Count();
-                        if (c == 0)
-                            toRemove.Add(s);
+                            Subject subj = new Subject();
+                            subj = l.Subjects.Where(sub => sub.SubjectCode == c.SubjectCode).FirstOrDefault();
+                            Subject upSubj = new Subject();
+                            upSubj = toUpdate.Where(sub => sub.SubjectCode == c.SubjectCode).FirstOrDefault();
+
+                            //toRemove subject
+                            if (subj == null)
+                            {
+                                DCEnt.Subjects.Remove(c);
+                                DCEnt.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                            }
+
+                            //toUpdate subject
+                            if (upSubj != null)
+                            {
+                                c.Description = upSubj.Description;
+                                c.MPW = upSubj.MPW;
+
+                                DCEnt.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                            }
+
 
                     }
-                    foreach (Subject c in toRemove)
-                    {
-                        DCEnt.Subjects.Remove(c);
-                        DCEnt.Entry(c).State = System.Data.Entity.EntityState.Deleted;
-                      //  DCEnt.SaveChanges();
-                    }
-
-                        DCEnt.LearningAreas.Remove(laInDB);
-                       
+              
 
                         DCEnt.LearningAreas.Attach(laInDB);
                         DCEnt.Entry(laInDB).State = System.Data.Entity.EntityState.Modified;
-                       // DCEnt.SaveChanges();
                     }
                    
-                        //foreach (Subject s in laInDB.Subjects)
-                        //    DCEnt.Entry(s).State = s.SubjectID == 0 ? System.Data.Entity.EntityState.Added : System.Data.Entity.EntityState.Modified;
-
                        
                         int num = DCEnt.SaveChanges();
                               
@@ -299,6 +274,13 @@ namespace eSARDAL
         private Boolean CompareLearningArea(LearningArea inDB, LearningArea inNew)
         {
             if (inDB.LearningAreaCode == inNew.LearningAreaCode && inDB.Description == inNew.Description && inDB.Academic==inNew.Academic && inDB.RatePerUnit==inNew.RatePerUnit && inDB.Units==inNew.Units)
+                return true;
+            else return false;
+        }
+
+        private Boolean CompareSubject(Subject inDB, Subject inNew)
+        {
+            if (inDB.LearningAreaCode == inNew.LearningAreaCode && inDB.SubjectCode == inNew.SubjectCode && inDB.Description == inNew.Description && inDB.MPW == inNew.MPW)
                 return true;
             else return false;
         }
