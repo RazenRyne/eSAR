@@ -621,53 +621,7 @@ namespace eSAR.App
 
         }
 
-        //private void btnPayment_Click(object sender, EventArgs e)
-        //{
-        //    if (GlobalClass.receiptFrom == null)
-        //    {
-        //        MessageBox.Show("Set Receipt Number First");
-        //    }
-        //    else {
-
-        //        if (GlobalClass.WindowStatusPaymentDetails == true)
-        //        {
-
-        //        }
-        //        else
-        //        {
-        //            frmPaymentDetails fmPaymentDetails = new frmPaymentDetails();
-        //            fmPaymentDetails.Show(this);
-        //            fmPaymentDetails.Location = new Point(25, 25);
-        //            GlobalClass.WindowStatusPaymentDetails = true;
-        //        }
-        //    }
-        //}
-
-    
-
-        //private void btnManageReceipt_Click(Object sender, EventArgs e)
-        //{
-        //    if (GlobalClass.WindowStatusManageReceipt == true)
-        //    {
-                
-        //    } else {
-        //        frmManageReceipt fmManageReceipt = new frmManageReceipt();
-        //        fmManageReceipt.Show(this);
-        //        fmManageReceipt.Location = new Point(50, 50);
-        //        GlobalClass.WindowStatusManageReceipt = true;
-        //    }
-            
-        //}
-
-       
-
-  
-
-        //private void btnTeachersLoadList_Click(object sender, EventArgs e)
-        //{
-        //        frmTeacherLoad fmTeachLoad = new frmTeacherLoad();
-        //        fmTeachLoad.ShowDialog();
-        //}
+     
 
        
         private void btnAttendanceList_Click(object sender, EventArgs e)

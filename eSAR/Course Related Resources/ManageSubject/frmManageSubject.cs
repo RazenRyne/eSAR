@@ -135,7 +135,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
                     {
                         Op = "edit";
                         txtLearningAreaCode.Enabled = false;
-                        this.Size = new Size(704, 568);
+                        this.Size = new Size(812, 571);
                         gvSubjects.Enabled = true;
                     }
                 }
@@ -276,7 +276,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
         {
             if (e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == 2)
+                if (e.ColumnIndex == 3)
                 {
                     oldGL = gvSubjects.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 }
@@ -302,7 +302,7 @@ namespace eSAR.Course_Related_Resources.ManageSubject
 
                 if (e.NewValue != e.OldValue)
                 {
-                    if (gvSubjects.CurrentColumn.Index == 2)
+                    if (gvSubjects.CurrentColumn.Index == 3)
                     {
                         if (subjects.FindAll(x => x.GradeLevel == e.NewValue.ToString()).Count <= 0)
                         {                            
