@@ -399,7 +399,7 @@
             // txtLRN
             // 
             this.txtLRN.Location = new System.Drawing.Point(236, 49);
-            this.txtLRN.MaxLength = 8;
+            this.txtLRN.MaxLength = 2000;
             this.txtLRN.Name = "txtLRN";
             this.txtLRN.Size = new System.Drawing.Size(206, 20);
             this.txtLRN.TabIndex = 1;
@@ -582,7 +582,7 @@
             // txtHA_Province
             // 
             this.txtHA_Province.Location = new System.Drawing.Point(400, 47);
-            this.txtHA_Province.MaxLength = 50;
+            this.txtHA_Province.MaxLength = 2000;
             this.txtHA_Province.Name = "txtHA_Province";
             this.txtHA_Province.Size = new System.Drawing.Size(250, 20);
             this.txtHA_Province.TabIndex = 24;
@@ -590,7 +590,7 @@
             // txtHA_Brgy
             // 
             this.txtHA_Brgy.Location = new System.Drawing.Point(62, 49);
-            this.txtHA_Brgy.MaxLength = 50;
+            this.txtHA_Brgy.MaxLength = 2000;
             this.txtHA_Brgy.Name = "txtHA_Brgy";
             this.txtHA_Brgy.Size = new System.Drawing.Size(250, 20);
             this.txtHA_Brgy.TabIndex = 22;
@@ -614,7 +614,7 @@
             // txtHA_Town
             // 
             this.txtHA_Town.Location = new System.Drawing.Point(400, 21);
-            this.txtHA_Town.MaxLength = 50;
+            this.txtHA_Town.MaxLength = 2000;
             this.txtHA_Town.Name = "txtHA_Town";
             this.txtHA_Town.Size = new System.Drawing.Size(250, 20);
             this.txtHA_Town.TabIndex = 23;
@@ -630,7 +630,7 @@
             // txtHA_Street
             // 
             this.txtHA_Street.Location = new System.Drawing.Point(62, 23);
-            this.txtHA_Street.MaxLength = 50;
+            this.txtHA_Street.MaxLength = 2000;
             this.txtHA_Street.Name = "txtHA_Street";
             this.txtHA_Street.Size = new System.Drawing.Size(250, 20);
             this.txtHA_Street.TabIndex = 21;
@@ -665,7 +665,7 @@
             // txtPOB_Province
             // 
             this.txtPOB_Province.Location = new System.Drawing.Point(400, 47);
-            this.txtPOB_Province.MaxLength = 50;
+            this.txtPOB_Province.MaxLength = 2000;
             this.txtPOB_Province.Name = "txtPOB_Province";
             this.txtPOB_Province.Size = new System.Drawing.Size(250, 20);
             this.txtPOB_Province.TabIndex = 20;
@@ -673,7 +673,7 @@
             // txtPOB_Brgy
             // 
             this.txtPOB_Brgy.Location = new System.Drawing.Point(62, 49);
-            this.txtPOB_Brgy.MaxLength = 50;
+            this.txtPOB_Brgy.MaxLength = 2000;
             this.txtPOB_Brgy.Name = "txtPOB_Brgy";
             this.txtPOB_Brgy.Size = new System.Drawing.Size(250, 20);
             this.txtPOB_Brgy.TabIndex = 18;
@@ -697,7 +697,7 @@
             // txtPOB_Town
             // 
             this.txtPOB_Town.Location = new System.Drawing.Point(400, 21);
-            this.txtPOB_Town.MaxLength = 50;
+            this.txtPOB_Town.MaxLength = 2000;
             this.txtPOB_Town.Name = "txtPOB_Town";
             this.txtPOB_Town.Size = new System.Drawing.Size(250, 20);
             this.txtPOB_Town.TabIndex = 19;
@@ -713,7 +713,7 @@
             // txtPOB_Street
             // 
             this.txtPOB_Street.Location = new System.Drawing.Point(62, 23);
-            this.txtPOB_Street.MaxLength = 50;
+            this.txtPOB_Street.MaxLength = 2000;
             this.txtPOB_Street.Name = "txtPOB_Street";
             this.txtPOB_Street.Size = new System.Drawing.Size(250, 20);
             this.txtPOB_Street.TabIndex = 17;
@@ -771,7 +771,7 @@
             // txtSchoolLastAttended
             // 
             this.txtSchoolLastAttended.Location = new System.Drawing.Point(236, 145);
-            this.txtSchoolLastAttended.MaxLength = 50;
+            this.txtSchoolLastAttended.MaxLength = 2000;
             this.txtSchoolLastAttended.Name = "txtSchoolLastAttended";
             this.txtSchoolLastAttended.Size = new System.Drawing.Size(292, 20);
             this.txtSchoolLastAttended.TabIndex = 5;
