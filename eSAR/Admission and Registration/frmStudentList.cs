@@ -159,16 +159,16 @@ namespace eSAR.Admission_and_Registration
             if (gvStudent.CurrentRow.Index >= 0)
             {
                 String next = "";
-                if (String.IsNullOrEmpty(studentSelected.GradeLevel)){
-                    next = "N";
-                }
-                else if (!(String.IsNullOrEmpty(studentSelected.GradeBeforeDC)))
+                if (String.IsNullOrEmpty(studentSelected.GradeLevel))
                 {
-                    next = getNext(studentSelected.GradeBeforeDC);
+                    if (!(String.IsNullOrEmpty(studentSelected.GradeBeforeDC)))
+                    {
+                        next = getNext(studentSelected.GradeBeforeDC);
 
-                }
-                else {
-                    next = "N";
+                    }
+                    else {
+                        next = "N";
+                    }
                 }
                 List<GradeSection> gradeSec = sections.FindAll(p => p.GradeLevel.Equals(next));
                 if (RegisteredStudents.Contains(studentSelected.StudentId))
