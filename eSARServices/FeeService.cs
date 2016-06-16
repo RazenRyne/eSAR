@@ -60,16 +60,21 @@ namespace eSARServices
         public void TranslateFeeBDOToFee(FeeBDO fbdo, Fee f)
         {
             GradeLevelService gService = new GradeLevelService();
-            f.Deactivated = fbdo.Deactivated;
-            f.FeeID = fbdo.FeeID;
-            f.FeeDescription = fbdo.FeeDescription;
-            f.NumPay = (int)fbdo.NumPay;
-            f.DiscountFullPay = (float)fbdo.DiscountFullPay;
-            f.Amount = fbdo.Amount;
-            //gService.
-            f.GradeLev = gService.GetGradeLevel(fbdo.GradeLevel);
-            f.GradeLevel = fbdo.GradeLevel;
-            f.SYImplemented = fbdo.SYImplemented;
+            if (fbdo != null)
+            {
+                f.Deactivated = fbdo.Deactivated;
+                f.FeeID = fbdo.FeeID;
+                f.FeeDescription = fbdo.FeeDescription;
+                fbdo.NumPay = fbdo.NumPay ?? 0;
+                f.NumPay = (int)fbdo.NumPay;
+                fbdo.DiscountFullPay = fbdo.DiscountFullPay ?? 0;
+                f.DiscountFullPay = (float)fbdo.DiscountFullPay;
+                f.Amount = fbdo.Amount;
+                //gService.
+                f.GradeLev = gService.GetGradeLevel(fbdo.GradeLevel);
+                f.GradeLevel = fbdo.GradeLevel;
+                f.SYImplemented = fbdo.SYImplemented;
+            }
 
         }
 

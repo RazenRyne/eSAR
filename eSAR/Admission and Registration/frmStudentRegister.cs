@@ -111,10 +111,10 @@ namespace eSAR.Admission_and_Registration
                         Log("C", "StudentTraits", EnrolMe);
 
                         MessageBox.Show(this, "Student Successfully Registered.");
-                        frmControlSubjects fmControlSubjects = new frmControlSubjects();
-                        fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                        //frmControlSubjects fmControlSubjects = new frmControlSubjects();
+                        //fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
                         //  fmControlSubjects.changed = false;
-                        fmControlSubjects.ShowDialog(this);
+                       // fmControlSubjects.ShowDialog(this);
 
                     }
                     else
@@ -132,10 +132,10 @@ namespace eSAR.Admission_and_Registration
 
                         MessageBox.Show(this, "Student Successfully Registered.");
 
-                        frmControlSubjects fmControlSubjects = new frmControlSubjects();
-                        fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
+                       // frmControlSubjects fmControlSubjects = new frmControlSubjects();
+                        //fmControlSubjects.controlStudentId = RegisterStudent.StudentId;
                         //  fmControlSubjects.changed = false;
-                        fmControlSubjects.ShowDialog(this);
+                      //  fmControlSubjects.ShowDialog(this);
 
 
                     }

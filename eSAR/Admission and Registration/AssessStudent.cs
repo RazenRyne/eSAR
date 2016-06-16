@@ -78,8 +78,13 @@ namespace eSAR.Admission_and_Registration
 
             sd = scholarships.Find(v => v.ScholarshipDiscountId == scholarshipDiscountId);
 
+            fees[0].Amount = fees[0].Amount ?? 0;
             amountTuition = (double)fees[0].Amount;
-            enrollment = (double)fees[1].Amount;
+            if (fees.Count > 1)
+            {
+                fees[1].Amount = fees[1].Amount ?? 0;
+                enrollment = (double)fees[1].Amount;
+            }
 
             // Read Only TextBox
             tuitionFee.ReadOnly = true;

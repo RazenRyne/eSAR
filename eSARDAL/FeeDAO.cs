@@ -225,16 +225,20 @@ namespace eSARDAL
         public void ConvertFeeToFeeBDO(Fee f, FeeBDO fBDO)
         {
             GradeLevelDAO gdao = new GradeLevelDAO();
+            if (f != null)
+            {
+                fBDO.Deactivated = f.Deactivated;
+                fBDO.FeeID = f.FeeID;
+                fBDO.FeeDescription = f.FeeDescription;
+                fBDO.NumPay = f.NumPay;
+                fBDO.DiscountFullPay = f.DiscountFullPay;
+                fBDO.Amount = f.Amount;
 
-            fBDO.Deactivated = f.Deactivated;
-            fBDO.FeeID = f.FeeID;
-            fBDO.FeeDescription = f.FeeDescription;
-            fBDO.NumPay = f.NumPay;
-            fBDO.DiscountFullPay = f.DiscountFullPay;
-            fBDO.Amount = f.Amount;
-
-            fBDO.GradeLevel = f.GradeLevel;
-            fBDO.SYImplemented = f.SYImplemented;
+                fBDO.GradeLevel = f.GradeLevel;
+                fBDO.SYImplemented = f.SYImplemented;
+            }
+            else
+                fBDO = new FeeBDO();
         }
 
         public void ConvertFeeBDOToFee(FeeBDO fbdo, Fee f)

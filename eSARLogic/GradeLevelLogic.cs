@@ -20,7 +20,10 @@ namespace eSARLogic
             gList = GetAllGradeLevels();
             GradeLevelBDO g = new GradeLevelBDO();
             g = gList.Find(p => p.GradeLev == gradeLevel);
-            return g.Description;
+            if (g != null)
+                return g.Description;
+            else
+                return null;
         }
 
         public GradeLevelBDO NextGradeLevel(String grade) {

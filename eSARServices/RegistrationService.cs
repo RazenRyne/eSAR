@@ -179,8 +179,11 @@ namespace eSARServices
         {
             FeeService fs = new FeeService();
             List<Fee> feeList = new List<Fee>();
+            Fee FeeforAll = new Fee();
             feeList = fs.GetAllFeesForGradeLevel(student.GradeLevel, student.SY);
-            feeList.Add(fs.GetFeeForAll(student.SY));
+            FeeforAll = fs.GetFeeForAll(student.SY);
+            if (FeeforAll.Amount != null)
+                feeList.Add(FeeforAll);
             foreach (Fee f in feeList)
             {
                 StudentAssessmentBDO sabdo = new StudentAssessmentBDO()
