@@ -54,7 +54,7 @@ namespace eSAR.Billing_and_Payment.StudentPayment
 
             string StudentID = txtStudentID.Text.ToString();
 
-            //Student = registrationService.GetStudent(txtStudentID.Text, ref message);
+            Student = registrationService.GetStudent(txtStudentID.Text, ref message);
 
             Studentv2 = studentService.GetStudent(txtStudentID.Text, ref message);
 
@@ -139,6 +139,7 @@ namespace eSAR.Billing_and_Payment.StudentPayment
                 if (double.Parse(txtPayment.Text) == 0)
                     return;
             }
+
 
             if (Student.RunningBalance == 0)
                 return;
