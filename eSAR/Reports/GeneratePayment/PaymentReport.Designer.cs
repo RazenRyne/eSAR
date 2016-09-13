@@ -78,9 +78,10 @@
             this.gridView.MasterTemplate.AllowSearchRow = true;
             this.gridView.MasterTemplate.AutoExpandGroups = true;
             gridViewTextBoxColumn1.FieldName = "StudentId";
-            gridViewTextBoxColumn1.HeaderText = "StudentID";
-            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.HeaderText = "Student ID";
             gridViewTextBoxColumn1.Name = "StudentID";
+            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn1.Width = 100;
             gridViewTextBoxColumn2.FieldName = "StudentName";
             gridViewTextBoxColumn2.HeaderText = "Student";
             gridViewTextBoxColumn2.Name = "Student";
@@ -105,7 +106,7 @@
             gridViewTextBoxColumn7.HeaderText = "Amount";
             gridViewTextBoxColumn7.Name = "Amount";
             gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn7.Width = 150;
             this.gridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,

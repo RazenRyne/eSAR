@@ -36,6 +36,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.pnFooter = new Telerik.WinControls.UI.RadPanel();
             this.btnGenerate = new Telerik.WinControls.UI.RadButton();
             this.btnControl = new Telerik.WinControls.UI.RadButton();
@@ -184,13 +185,17 @@
             gridViewTextBoxColumn6.HeaderText = "Grade Level";
             gridViewTextBoxColumn6.IsVisible = false;
             gridViewTextBoxColumn6.Name = "GradeLevel";
-            gridViewTextBoxColumn7.HeaderText = "Grade Level";
-            gridViewTextBoxColumn7.Name = "GradeLevelDesc";
-            gridViewTextBoxColumn7.Width = 100;
-            gridViewTextBoxColumn8.FieldName = "Section";
-            gridViewTextBoxColumn8.HeaderText = "Section";
-            gridViewTextBoxColumn8.Name = "Section";
+            gridViewTextBoxColumn7.FieldName = "GradeBeforeDC";
+            gridViewTextBoxColumn7.HeaderText = "GradeBeforeDC";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "GradeBeforeDC";
+            gridViewTextBoxColumn8.HeaderText = "Grade Level";
+            gridViewTextBoxColumn8.Name = "GradeLevelDesc";
             gridViewTextBoxColumn8.Width = 100;
+            gridViewTextBoxColumn9.FieldName = "Section";
+            gridViewTextBoxColumn9.HeaderText = "Section";
+            gridViewTextBoxColumn9.Name = "Section";
+            gridViewTextBoxColumn9.Width = 100;
             this.gvStudent.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -199,7 +204,8 @@
             gridViewTextBoxColumn5,
             gridViewTextBoxColumn6,
             gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8});
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.gvStudent.MasterTemplate.EnableAlternatingRowColor = true;
             this.gvStudent.MasterTemplate.PageSize = 50;
             this.gvStudent.Name = "gvStudent";

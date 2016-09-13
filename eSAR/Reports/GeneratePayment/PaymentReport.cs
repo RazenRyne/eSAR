@@ -49,13 +49,19 @@ namespace eSAR.Reports.GeneratePayment
  
             this.gridView.GroupDescriptors.Add(descriptor);
 
-            GridViewSummaryItem summaryItem = new GridViewSummaryItem("Amount", "Total: {0}", GridAggregateFunction.Sum);
-           
+            GridViewSummaryItem summaryItem;
+
+            if (IDnum != "All")
+                summaryItem = new GridViewSummaryItem("Amount", "Total: {0}  Balance: " + payment[0].Balance, GridAggregateFunction.Sum);
+            else
+                summaryItem = new GridViewSummaryItem("Amount", "Total: {0}", GridAggregateFunction.Sum);
+
+
 
             GridViewSummaryRowItem summaryRowItem = new GridViewSummaryRowItem();
             summaryRowItem.Add(summaryItem);
 
-            this.gridView.SummaryRowsBottom.Add(summaryRowItem);
+            this.gridView.SummaryRowsBottom.Add(summaryRowItem);       
 
         }
 

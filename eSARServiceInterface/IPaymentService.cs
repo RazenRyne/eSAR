@@ -19,7 +19,7 @@ namespace eSARServiceInterface
         Payment GetPayment(int ORNo, ref string message);
          
         List<Payment> GetAllStudentsPayments(string studentID);
-         
-        String GetStudentName(string studentid);
+
+        String[] GetStudentName(string studentid);
     }
 }

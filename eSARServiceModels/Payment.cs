@@ -35,6 +35,8 @@ namespace eSARServiceModels
         public float Amount { get; set; }
          
         public string Adres { get; set; }
+
+        public float Balance { get; set; }
         // 
         //public List<PaymentDetail> PaymentDetails
         //{

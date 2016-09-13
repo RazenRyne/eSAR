@@ -315,6 +315,13 @@ namespace eSAR.Admission_and_Registration
                             szGradeLev = cellInfo.Value.ToString();
                     }
 
+                    if (cellInfo.ColumnInfo.Name == "GradeBeforeDC")
+                    {
+                        if (cellInfo.Value != null)
+                            if (szGradeLev == string.Empty || szGradeLev == null)
+                                szGradeLev = cellInfo.Value.ToString();
+                    }
+
 
                     if (cellInfo.ColumnInfo.Name == "GradeLevelDesc")
                     {

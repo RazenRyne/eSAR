@@ -131,7 +131,7 @@ namespace eSAR.Admission_and_Registration
             txtGuardian_Income.Text = SelectedStudent.GuardiansAverageYearlyIncome.ToString();
             txtGuardian_Occupation.Text = SelectedStudent.GuardiansOccupation;
             txtCurrentGradeLevel.Text = SelectedStudent.GradeLevel;
-            if (txtCurrentGradeLevel.Text == string.Empty)
+            if (SelectedStudent.GradeLevel != null)
             {
                 radLabel6.Visible = false;
                 cmbGradeLevel.Visible = false;

@@ -28,9 +28,12 @@ namespace eSARServices
             List<Payment> plist = new List<Payment>();
             foreach (PaymentBDO pbdo in plogic.GetALlPayments())
             {
+                string[] arrStudent = new string[2];
                 Payment p = new Payment();
                 TranslatePaymentBDOToPayment(pbdo, p);
-                p.StudentName = GetStudentName(pbdo.StudentId);
+                arrStudent = GetStudentName(pbdo.StudentId);
+                p.StudentName = arrStudent[0];
+                p.Balance = float.Parse(arrStudent[1]);
                 plist.Add(p);
             }
             return plist;
@@ -41,21 +44,27 @@ namespace eSARServices
             List<Payment> plist = new List<Payment>();
             foreach (PaymentBDO pbdo in plogic.GetALlStudentsPayments(studentID))
             {
+                string[] arrStudent = new string[2];
                 Payment p = new Payment();
                 TranslatePaymentBDOToPayment(pbdo, p);
-                p.StudentName = GetStudentName(pbdo.StudentId);
+                arrStudent = GetStudentName(pbdo.StudentId);
+                p.StudentName = arrStudent[0];
+                p.Balance = float.Parse(arrStudent[1]);
                 plist.Add(p);
             }
             return plist;
         }
 
 
-        public String GetStudentName(string studentid)
+        public String[] GetStudentName(string studentid)
         {
             StudentBDO stuBDO = new StudentBDO();
             stuBDO = stuLogic.GetStudent(studentid);
+            string[] arrStudent = new string[2];
+            arrStudent[0] = stuBDO.LastName + ", " + stuBDO.FirstName + " " + stuBDO.MiddleName;
+            arrStudent[1] = stuBDO.RunningBalance.ToString();
 
-            return stuBDO.LastName + ", " + stuBDO.FirstName + " " + stuBDO.MiddleName;
+            return arrStudent;
         }
 
 
