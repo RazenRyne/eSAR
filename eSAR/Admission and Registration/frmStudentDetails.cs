@@ -55,6 +55,7 @@ namespace eSAR.Admission_and_Registration
             {
                 GenerateStudentID();
                 cmbGradeLevel.SelectedIndex = 0;
+                btnEditID.Visible = false;
             }
 
             if (Op.Equals("edit"))
@@ -419,6 +420,8 @@ namespace eSAR.Admission_and_Registration
         {
             if (txtFail.Text == string.Empty) txtFail.Text = "0";
         }
+
+       
     }
 }
  

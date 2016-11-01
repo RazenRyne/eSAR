@@ -143,6 +143,7 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radCheckBox1 = new Telerik.WinControls.UI.RadCheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnEditID = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnFooter)).BeginInit();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
@@ -254,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -334,6 +336,7 @@
             // 
             this.radPanel2.AutoScroll = true;
             this.radPanel2.AutoScrollMinSize = new System.Drawing.Size(2, 0);
+            this.radPanel2.Controls.Add(this.btnEditID);
             this.radPanel2.Controls.Add(this.txtCurrentGradeLevel);
             this.radPanel2.Controls.Add(this.radLabel21);
             this.radPanel2.Controls.Add(this.btnInsertImage);
@@ -395,6 +398,7 @@
             this.btnInsertImage.Size = new System.Drawing.Size(100, 20);
             this.btnInsertImage.TabIndex = 38;
             this.btnInsertImage.Text = "Insert Image";
+            this.btnInsertImage.Click += new System.EventHandler(this.btnInsertImage_Click);
             // 
             // txtLRN
             // 
@@ -1245,6 +1249,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnEditID
+            // 
+            this.btnEditID.Location = new System.Drawing.Point(303, 25);
+            this.btnEditID.Name = "btnEditID";
+            this.btnEditID.Size = new System.Drawing.Size(46, 20);
+            this.btnEditID.TabIndex = 39;
+            this.btnEditID.Text = "Edit...";
+            // 
             // frmStudentDetails
             // 
             this.AcceptButton = this.btnSave;
@@ -1384,6 +1396,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1488,5 +1501,6 @@
         private Telerik.WinControls.UI.RadButton btnInsertImage;
         private Telerik.WinControls.UI.RadTextBox txtCurrentGradeLevel;
         private Telerik.WinControls.UI.RadLabel radLabel21;
+        private Telerik.WinControls.UI.RadButton btnEditID;
     }
 }
